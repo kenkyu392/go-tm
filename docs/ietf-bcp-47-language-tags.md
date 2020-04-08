@@ -44,7 +44,6 @@
 | bo-NP  | Tibetan (Federal Democratic Republic of Nepal)       |
 | br-FR  | Breton (France)                                      |
 | bs-BA  | Bosnian (Bosnia and Herzegovina)                     |
-| bs-BS  | Bosnian (Cyrillic)                                   |
 | ca-AD  | Catalan (Andorra)                                    |
 | ca-ES  | Catalan (Spain)                                      |
 | ca-FR  | Catalan (France)                                     |
