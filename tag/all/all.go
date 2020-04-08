@@ -44,6 +44,8 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/tibetan"
 	_ "github.com/kenkyu392/go-tm/tag/tigrinya"
 	_ "github.com/kenkyu392/go-tm/tag/turkish"
+	_ "github.com/kenkyu392/go-tm/tag/urdu"
+	_ "github.com/kenkyu392/go-tm/tag/uzbek"
 	_ "github.com/kenkyu392/go-tm/tag/yoruba"
 )
 
@@ -169,8 +171,6 @@ tw-GH,Twi (Ghana)
 ty-PF,Tahitian (French Polynesia)
 ug-CN,Uyghur (People's Republic of China)
 uk-UA,Ukrainian (Ukraine)
-uz-AF,Uzbek (Afghanistan)
-uz-UZ,Uzbek (Uzbekistan)
 vi-VN,Vietnamese (Vietnam)
 wa-BE,Walloon (Belgium)
 wo-SN,Wolof (Senegal)
@@ -301,8 +301,6 @@ func init() {
 	tag.Register("ty-PF", "Tahitian (French Polynesia)")
 	tag.Register("ug-CN", "Uyghur (People's Republic of China)")
 	tag.Register("uk-UA", "Ukrainian (Ukraine)")
-	tag.Register("uz-AF", "Uzbek (Afghanistan)")
-	tag.Register("uz-UZ", "Uzbek (Uzbekistan)")
 	tag.Register("vi-VN", "Vietnamese (Vietnam)")
 	tag.Register("wa-BE", "Walloon (Belgium)")
 	tag.Register("wo-SN", "Wolof (Senegal)")
