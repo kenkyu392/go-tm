@@ -25,6 +25,7 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/italian"
 	_ "github.com/kenkyu392/go-tm/tag/japanese"
 	_ "github.com/kenkyu392/go-tm/tag/korean"
+	_ "github.com/kenkyu392/go-tm/tag/kurdish"
 	_ "github.com/kenkyu392/go-tm/tag/lingala"
 	_ "github.com/kenkyu392/go-tm/tag/malay"
 	_ "github.com/kenkyu392/go-tm/tag/oromo"
@@ -105,8 +106,6 @@ km-KH,Khmer (Cambodia)
 kn-IN,Kannada (India)
 kok-IN,Konkani (India)
 ks-IN,Kashmiri (India)
-ku-IQ,Kurdish (Iraq)
-ku-IR,Kurdish (Islamic Republic of Iran)
 kv-RU,Komi (Russia)
 kw-GB,Cornish (United Kingdom)
 ky-KG,Kyrgyz (Kyrgyz Republic)
@@ -245,8 +244,6 @@ func init() {
 	tag.Register("kn-IN", "Kannada (India)")
 	tag.Register("kok-IN", "Konkani (India)")
 	tag.Register("ks-IN", "Kashmiri (India)")
-	tag.Register("ku-IQ", "Kurdish (Iraq)")
-	tag.Register("ku-IR", "Kurdish (Islamic Republic of Iran)")
 	tag.Register("kv-RU", "Komi (Russia)")
 	tag.Register("kw-GB", "Cornish (United Kingdom)")
 	tag.Register("ky-KG", "Kyrgyz (Kyrgyz Republic)")
