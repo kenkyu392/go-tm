@@ -325,7 +325,6 @@
 | tl-PH  | Tagalog (Philippines)                                |
 | tn-BW  | Setswana (Botswana)                                  |
 | tn-ZA  | Setswana (South Africa)                              |
-| tn-ZA  | Setswana (South Africa)                              |
 | to-TO  | Tongan (Tonga)                                       |
 | tr-CY  | Turkish (Cyprus)                                     |
 | tr-TR  | Turkish (Turkey)                                     |
