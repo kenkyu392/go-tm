@@ -11,6 +11,7 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/catalan"
 	_ "github.com/kenkyu392/go-tm/tag/chamorro"
 	_ "github.com/kenkyu392/go-tm/tag/chinese"
+	_ "github.com/kenkyu392/go-tm/tag/croatian"
 	_ "github.com/kenkyu392/go-tm/tag/dari"
 	_ "github.com/kenkyu392/go-tm/tag/dhivehi"
 	_ "github.com/kenkyu392/go-tm/tag/dutch"
@@ -86,8 +87,6 @@ gu-IN,Gujarati (India)
 gv-IM,Manx (Isle of Man)
 he-IL,Hebrew (Israel)
 ho-PG,Hiri Motu (Independent State of Papua New Guinea)
-hr-BA,Croatian (Bosnia and Herzegovina)
-hr-HR,Croatian (Croatia)
 hsb-DE,Upper Sorbian (Germany)
 ht-HT,Haitian (Republic of Haiti)
 hu-HU,Hungarian (Hungary)
@@ -228,8 +227,6 @@ func init() {
 	tag.Register("gv-IM", "Manx (Isle of Man)")
 	tag.Register("he-IL", "Hebrew (Israel)")
 	tag.Register("ho-PG", "Hiri Motu (Independent State of Papua New Guinea)")
-	tag.Register("hr-BA", "Croatian (Bosnia and Herzegovina)")
-	tag.Register("hr-HR", "Croatian (Croatia)")
 	tag.Register("hsb-DE", "Upper Sorbian (Germany)")
 	tag.Register("ht-HT", "Haitian (Republic of Haiti)")
 	tag.Register("hu-HU", "Hungarian (Hungary)")
