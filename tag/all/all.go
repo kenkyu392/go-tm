@@ -28,6 +28,7 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/kurdish"
 	_ "github.com/kenkyu392/go-tm/tag/lingala"
 	_ "github.com/kenkyu392/go-tm/tag/malay"
+	_ "github.com/kenkyu392/go-tm/tag/nepali"
 	_ "github.com/kenkyu392/go-tm/tag/oromo"
 	_ "github.com/kenkyu392/go-tm/tag/persian"
 	_ "github.com/kenkyu392/go-tm/tag/portuguese"
@@ -127,8 +128,6 @@ my-MM,Burmese (Myanmar)
 na-NR,Nauruan (Republic of Nauru)
 nb-NO,Norwegian (Bokmål)
 nd-ZW,North Ndebele (Zimbabwe)
-ne-IN,Nepali (India)
-ne-NP,Nepali (Nepal)
 ng-NA,Ndonga (Republic of Namibia)
 nn-NO,Norwegian (Nynorsk)
 nso-ZA,Northern Sotho (South Africa)
@@ -257,8 +256,6 @@ func init() {
 	tag.Register("na-NR", "Nauruan (Republic of Nauru)")
 	tag.Register("nb-NO", "Norwegian (Bokmål)")
 	tag.Register("nd-ZW", "North Ndebele (Zimbabwe)")
-	tag.Register("ne-IN", "Nepali (India)")
-	tag.Register("ne-NP", "Nepali (Federal Democratic Republic of Nepal)")
 	tag.Register("ng-NA", "Ndonga (Republic of Namibia)")
 	tag.Register("nn-NO", "Norwegian (Nynorsk)")
 	tag.Register("nso-ZA", "Northern Sotho (South Africa)")
