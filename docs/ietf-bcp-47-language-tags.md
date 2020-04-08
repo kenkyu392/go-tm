@@ -64,8 +64,8 @@
 | de-LI  | German (Liechtenstein)                               |
 | de-LU  | German (Luxembourg)                                  |
 | dsb-DE | Lower Sorbian (Germany)                              |
-| dv-IN  | Divehi (India)                                       |
-| dv-MV  | Dihevi (Maldives)                                    |
+| dv-IN  | Dhivehi (India)                                      |
+| dv-MV  | Dhivehi (Maldives)                                   |
 | dz-BT  | Dzongkha (Bhutan)                                    |
 | el-CY  | Greek (Cyprus)                                       |
 | el-GR  | Greek (Greece)                                       |
