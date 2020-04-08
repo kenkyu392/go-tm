@@ -1,4 +1,4 @@
-package english
+package romanian
 
 import (
 	"github.com/kenkyu392/go-tm/tag"

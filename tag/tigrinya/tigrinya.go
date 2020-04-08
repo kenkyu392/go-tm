@@ -1,4 +1,4 @@
-package yoruba
+package tigrinya
 
 import (
 	"github.com/kenkyu392/go-tm/tag"
