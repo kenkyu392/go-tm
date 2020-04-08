@@ -102,9 +102,8 @@
 | es-VE  | Spanish (Venezuela)                                  |
 | et-EE  | Estonian (Estonia)                                   |
 | eu-ES  | Basque (Spain)                                       |
-| fa-AF  | Dari (Afghanistan)                                   |
-| fa-IR  | Dari (Islamic Republic of Iran)                      |
-| fa-IR  | Farsi/Persian (Islamic Republic of Iran)             |
+| fa-AF  | Persian (Afghanistan)                                |
+| fa-IR  | Persian (Islamic Republic of Iran)                   |
 | fi-FI  | Finnish (Finland)                                    |
 | fj-FJ  | Fijian (Fiji)                                        |
 | fo-DK  | Faroese (Denmark)                                    |

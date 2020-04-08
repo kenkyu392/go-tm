@@ -12,7 +12,6 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/chamorro"
 	_ "github.com/kenkyu392/go-tm/tag/chinese"
 	_ "github.com/kenkyu392/go-tm/tag/croatian"
-	_ "github.com/kenkyu392/go-tm/tag/dari"
 	_ "github.com/kenkyu392/go-tm/tag/dhivehi"
 	_ "github.com/kenkyu392/go-tm/tag/dutch"
 	_ "github.com/kenkyu392/go-tm/tag/english"
@@ -30,6 +29,7 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/lingala"
 	_ "github.com/kenkyu392/go-tm/tag/malay"
 	_ "github.com/kenkyu392/go-tm/tag/oromo"
+	_ "github.com/kenkyu392/go-tm/tag/persian"
 	_ "github.com/kenkyu392/go-tm/tag/portuguese"
 	_ "github.com/kenkyu392/go-tm/tag/quechua"
 	_ "github.com/kenkyu392/go-tm/tag/romanian"
@@ -74,7 +74,6 @@ dsb-DE,Lower Sorbian (Germany)
 dz-BT,Dzongkha (Bhutan)
 et-EE,Estonian (Estonia)
 eu-ES,Basque (Spain)
-fa-IR,Farsi/Persian (Islamic Republic of Iran)
 fi-FI,Finnish (Finland)
 fj-FJ,Fijian (Fiji)
 fy-NL,Frisian (Netherlands)
@@ -209,7 +208,6 @@ func init() {
 	tag.Register("dz-BT", "Dzongkha (Bhutan)")
 	tag.Register("et-EE", "Estonian (Estonia)")
 	tag.Register("eu-ES", "Basque (Spain)")
-	tag.Register("fa-IR", "Farsi/Persian (Islamic Republic of Iran)")
 	tag.Register("fi-FI", "Finnish (Finland)")
 	tag.Register("fj-FJ", "Fijian (Fiji)")
 	tag.Register("fy-NL", "Frisian (Netherlands)")
