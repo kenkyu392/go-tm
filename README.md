@@ -8,6 +8,10 @@
 - OASIS XLIFF 2.1
 - SDL XLIFF (OASIS XLIFF 1.2)
 
+## Examples
+
+- [IETF BCP 47 Language Tags](docs/ietf-bcp-47-language-tags.md)
+
 ## License
 
-[MIT](https://github.com/kenkyu392/go-tm/blob/master/LICENSE)
+[MIT](LICENSE)
