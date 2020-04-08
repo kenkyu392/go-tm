@@ -161,6 +161,7 @@
 | gl-ES  | Galician (Spain)                                     |
 | gn-PY  | Guarani (Paraguay)                                   |
 | grc-GR | Ancient Greek (Greece)                               |
+| gre-GR | Modern Greek (Greece)                                |
 | gu-IN  | Gujarati (India)                                     |
 | gv-IM  | Manx (Isle of Man)                                   |
 | ha-GH  | Hausa (Republic of Ghana)                            |

@@ -19,6 +19,7 @@ import (
 	_ "github.com/kenkyu392/go-tm/tag/faroese"
 	_ "github.com/kenkyu392/go-tm/tag/french"
 	_ "github.com/kenkyu392/go-tm/tag/german"
+	_ "github.com/kenkyu392/go-tm/tag/greek"
 	_ "github.com/kenkyu392/go-tm/tag/hausa"
 	_ "github.com/kenkyu392/go-tm/tag/hindi"
 	_ "github.com/kenkyu392/go-tm/tag/ial"
@@ -71,8 +72,6 @@ cy-GB,Welsh (United Kingdom)
 da-DK,Danish (Denmark)
 dsb-DE,Lower Sorbian (Germany)
 dz-BT,Dzongkha (Bhutan)
-el-CY,Greek (Cyprus)
-el-GR,Greek (Greece)
 et-EE,Estonian (Estonia)
 eu-ES,Basque (Spain)
 fa-IR,Farsi/Persian (Islamic Republic of Iran)
@@ -83,7 +82,6 @@ ga-IE,Irish (Ireland)
 gd-GB,Scottish Gaelic (United Kingdom)
 gl-ES,Galician (Spain)
 gn-PY,Guarani (Paraguay)
-grc-GR,Ancient Greek (Greece)
 gu-IN,Gujarati (India)
 gv-IM,Manx (Isle of Man)
 he-IL,Hebrew (Israel)
@@ -209,8 +207,6 @@ func init() {
 	tag.Register("da-DK", "Danish (Denmark)")
 	tag.Register("dsb-DE", "Lower Sorbian (Germany)")
 	tag.Register("dz-BT", "Dzongkha (Bhutan)")
-	tag.Register("el-CY", "Greek (Cyprus)")
-	tag.Register("el-GR", "Greek (Greece)")
 	tag.Register("et-EE", "Estonian (Estonia)")
 	tag.Register("eu-ES", "Basque (Spain)")
 	tag.Register("fa-IR", "Farsi/Persian (Islamic Republic of Iran)")
@@ -221,7 +217,6 @@ func init() {
 	tag.Register("gd-GB", "Scottish Gaelic (United Kingdom)")
 	tag.Register("gl-ES", "Galician (Spain)")
 	tag.Register("gn-PY", "Guarani (Paraguay)")
-	tag.Register("grc-GR", "Ancient Greek (Greece)")
 	tag.Register("gu-IN", "Gujarati (India)")
 	tag.Register("gv-IM", "Manx (Isle of Man)")
 	tag.Register("he-IL", "Hebrew (Israel)")
