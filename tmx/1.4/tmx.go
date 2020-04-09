@@ -12,6 +12,7 @@ import (
 // const ...
 const (
 	Version                                = "1.4"
+	FileExtension                          = "xlf"
 	DefaultXMLNS                           = "http://www.lisa.org/tmx14"
 	DefaultXMLHeader                       = "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\n"
 	DefaultCreationTool                    = "encoding/tmx"
@@ -40,6 +41,15 @@ func New(sourceTag, targetTag language.Tag) *TMX {
 	}
 }
 
+// TMX ...
+type TMX struct {
+	XMLName xml.Name `xml:"tmx"`
+	XMLNS   string   `xml:"xmlns,attr"`
+	Version string   `xml:"version,attr"`
+	Header  Header
+	Body    Body
+}
+
 // Header : The <header> element contains zero, one or more <note> elements; zero, one or more <ude> elements; and zero, one or more <prop> elements.
 type Header struct {
 	XMLName xml.Name `xml:"header"`
@@ -62,16 +72,16 @@ type Header struct {
 	// Its value must be in ASCII, in the format YYYYMMDDThhmmssZ.
 	// (e.g. 19970811T133402Z for August 11th 1997 at 1:34pm 2 seconds.)
 	// This is one of the options described in ISO 8601:1988. The value is always given in UTC (as indicated by the terminal Z).
-	CreationDate string `xml:"creationdate,attr"`
+	CreationDate string `xml:"creationdate,attr,omitempty"`
 	// The creationid attribute specifies the user who created the element.
-	CreationID string `xml:"creationid,attr"`
+	CreationID string `xml:"creationid,attr,omitempty"`
 	// The changedate attribute specifies the date of the modification of the element.
 	// Its value must be in ASCII, in the format YYYYMMDDThhmmssZ.
 	// (e.g. 19970811T133402Z for August 11th 1997 at 1:34pm 2 seconds.)
 	// This is one of the options described in ISO 8601:1988. The value is always given in UTC (as indicated by the terminal Z).
-	ChangeDate string `xml:"changedate,attr"`
+	ChangeDate string `xml:"changedate,attr,omitempty"`
 	// The changeid attribute specifies the user who modified the element.
-	ChangeID string `xml:"changeid,attr"`
+	ChangeID string `xml:"changeid,attr,omitempty"`
 }
 
 // Body : The <body> element encloses the main data, the set of <tu> elements that are comprised within the file.
@@ -95,25 +105,16 @@ type TUV struct {
 	// Its value must be in ASCII, in the format YYYYMMDDThhmmssZ.
 	// (e.g. 19970811T133402Z for August 11th 1997 at 1:34pm 2 seconds.)
 	// This is one of the options described in ISO 8601:1988. The value is always given in UTC (as indicated by the terminal Z).
-	CreationDate string `xml:"creationdate,attr"`
+	CreationDate string `xml:"creationdate,attr,omitempty"`
 	// The creationid attribute specifies the user who created the element.
-	CreationID string `xml:"creationid,attr"`
+	CreationID string `xml:"creationid,attr,omitempty"`
 	// The changedate attribute specifies the date of the modification of the element.
 	// Its value must be in ASCII, in the format YYYYMMDDThhmmssZ.
 	// (e.g. 19970811T133402Z for August 11th 1997 at 1:34pm 2 seconds.)
 	// This is one of the options described in ISO 8601:1988. The value is always given in UTC (as indicated by the terminal Z).
-	ChangeDate string `xml:"changedate,attr"`
+	ChangeDate string `xml:"changedate,attr,omitempty"`
 	// The changeid attribute specifies the user who modified the element.
-	ChangeID string `xml:"changeid,attr"`
-}
-
-// TMX ...
-type TMX struct {
-	XMLName xml.Name `xml:"tmx"`
-	XMLNS   string   `xml:"xmlns,attr"`
-	Version string   `xml:"version,attr"`
-	Header  Header
-	Body    Body
+	ChangeID string `xml:"changeid,attr,omitempty"`
 }
 
 // WriteTo is io.WriterTo interface implements.
@@ -149,9 +150,6 @@ func (t *TMX) AddTU(source *TUV, target *TUV) error {
 	if target == nil {
 		return errors.New("tmx: target is empty")
 	}
-	now := time.Now()
-	setDefaultToTUV(source, now)
-	setDefaultToTUV(target, now)
 	if source.XMLLang == "" {
 		source.XMLLang = t.Header.SourceLang
 	}
@@ -164,18 +162,53 @@ func (t *TMX) AddTU(source *TUV, target *TUV) error {
 	return nil
 }
 
-func setDefaultToTUV(tuv *TUV, now time.Time) {
-	now = now.UTC()
-	if tuv.CreationDate == "" {
-		tuv.CreationDate = now.Format(TimeFormat)
+// NewTUV ...
+func NewTUV(opts ...TUVOption) *TUV {
+	tuv := new(TUV)
+	for _, opt := range opts {
+		opt(tuv)
 	}
-	if tuv.CreationID == "" {
-		tuv.CreationID = DefaultUser
+	return tuv
+}
+
+// TUVOption ...
+type TUVOption func(tuv *TUV)
+
+// DefaultTUVOption ...
+func DefaultTUVOption() TUVOption {
+	return func(tuv *TUV) {
+		now := time.Now()
+		CreationTUVOption(now, DefaultUser)
+		ChangeTUVOption(now, DefaultUser)
 	}
-	if tuv.ChangeDate == "" {
-		tuv.ChangeDate = now.Format(TimeFormat)
+}
+
+// XMLLangTUVOption ...
+func XMLLangTUVOption(tag language.Tag) TUVOption {
+	return func(tuv *TUV) {
+		tuv.XMLLang = tag.String()
 	}
-	if tuv.ChangeID == "" {
-		tuv.ChangeID = DefaultUser
+}
+
+// SegmentTUVOption ...
+func SegmentTUVOption(segment string) TUVOption {
+	return func(tuv *TUV) {
+		tuv.Segment = segment
+	}
+}
+
+// CreationTUVOption ...
+func CreationTUVOption(t time.Time, id string) TUVOption {
+	return func(tuv *TUV) {
+		tuv.CreationDate = t.UTC().Format(TimeFormat)
+		tuv.CreationID = id
+	}
+}
+
+// ChangeTUVOption ...
+func ChangeTUVOption(t time.Time, id string) TUVOption {
+	return func(tuv *TUV) {
+		tuv.ChangeDate = t.UTC().Format(TimeFormat)
+		tuv.ChangeID = id
 	}
 }
