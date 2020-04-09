@@ -10,6 +10,7 @@ import (
 // const ...
 const (
 	Version                  = "1.2"
+	FileExtension            = "xlf"
 	DefaultXMLNS             = "urn:oasis:names:tc:xliff:document:1.2"
 	DefaultXMLHeader         = "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\n"
 	DefaultFileOriginal      = "encoding/1.2/xliff"
