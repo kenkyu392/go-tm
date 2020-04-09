@@ -1,14 +1,12 @@
 package tmx
 
 import (
-	"bytes"
 	"encoding/xml"
 	"errors"
 	"io"
 	"time"
 
 	"github.com/kenkyu392/go-tm/internal"
-	"golang.org/x/text/encoding"
 	"golang.org/x/text/language"
 )
 
@@ -45,8 +43,7 @@ func New(opts ...Option) *TMX {
 			ChangeDate:                      "",
 			ChangeID:                        "",
 		},
-		XMLHeader:   internal.UTF16XMLHeader,
-		XMLEncoding: internal.UTF16BEEncoding,
+		encodeToXML: internal.EncodeToUTF16BEXML,
 	}
 	for _, opt := range opts {
 		opt(tmx)
@@ -57,27 +54,24 @@ func New(opts ...Option) *TMX {
 // Option ...
 type Option func(tmx *TMX)
 
-// UseUTF8EncodingOption ...
-func UseUTF8EncodingOption() Option {
+// UseUTF8XMLEncodingOption ...
+func UseUTF8XMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.XMLHeader = internal.UTF8XMLHeader
-		tmx.XMLEncoding = internal.UTF8Encoding
+		tmx.encodeToXML = internal.EncodeToUTF8XML
 	}
 }
 
-// UseUTF16BEEncodingOption ...
-func UseUTF16BEEncodingOption() Option {
+// UseUTF16BEXMLEncodingOption ...
+func UseUTF16BEXMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.XMLHeader = internal.UTF16XMLHeader
-		tmx.XMLEncoding = internal.UTF16BEEncoding
+		tmx.encodeToXML = internal.EncodeToUTF16BEXML
 	}
 }
 
-// UseUTF16LEEncodingOption ...
-func UseUTF16LEEncodingOption() Option {
+// UseUTF16LEXMLEncodingOption ...
+func UseUTF16LEXMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.XMLHeader = internal.UTF16XMLHeader
-		tmx.XMLEncoding = internal.UTF16LEEncoding
+		tmx.encodeToXML = internal.EncodeToUTF16LEXML
 	}
 }
 
@@ -148,8 +142,7 @@ type TMX struct {
 	Header  Header
 	Body    Body
 
-	XMLHeader   string            `xml:"-"`
-	XMLEncoding encoding.Encoding `xml:"-"`
+	encodeToXML internal.EncodeToXMLFunc
 }
 
 // Header : The <header> element contains zero, one or more <note> elements; zero, one or more <ude> elements; and zero, one or more <prop> elements.
@@ -221,22 +214,7 @@ type TUV struct {
 
 // WriteTo is io.WriterTo interface implements.
 func (t *TMX) WriteTo(w io.Writer) (int64, error) {
-	ew := t.XMLEncoding.NewEncoder().Writer(w)
-	raw, err := xml.MarshalIndent(t, "", "  ")
-	if err != nil {
-		return 0, err
-	}
-	n, err := ew.Write(append([]byte(t.XMLHeader), raw...))
-	return int64(n), err
-}
-
-// Encode ...
-func (t *TMX) Encode() ([]byte, error) {
-	buf := new(bytes.Buffer)
-	if _, err := t.WriteTo(buf); err != nil {
-		return nil, err
-	}
-	return buf.Bytes(), nil
+	return t.encodeToXML(w, t)
 }
 
 // AddTU ...

@@ -2,6 +2,7 @@ package tmx
 
 import (
 	"bytes"
+	"fmt"
 	"testing"
 
 	"golang.org/x/text/language"
@@ -13,7 +14,7 @@ func TestNew(t *testing.T) {
 	frFR := language.MustParse("fr-FR")
 	tmx := New(
 		SourceLangOption(jaJP),
-		UseUTF8EncodingOption(),
+		UseUTF8XMLEncodingOption(),
 	)
 	tmx.AddTU(
 		NewTUV(
@@ -45,18 +46,11 @@ func TestNew(t *testing.T) {
 		),
 	)
 
-	t.Run("case=Encode", func(t *testing.T) {
-		raw, err := tmx.Encode()
-		if err != nil {
-			t.Errorf("tmx: %+v", err)
-		}
-		t.Logf("%s\n", raw)
-	})
 	t.Run("case=WriteTo", func(t *testing.T) {
 		buf := &bytes.Buffer{}
 		if _, err := tmx.WriteTo(buf); err != nil {
 			t.Errorf("tmx: %+v", err)
 		}
-		t.Logf("%s\n", buf.Bytes())
+		fmt.Printf("%s\n", buf.Bytes())
 	})
 }
