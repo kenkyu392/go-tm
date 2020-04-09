@@ -47,7 +47,7 @@ func Register(tagName string, displayName string) {
 	}
 
 	langs = append(langs, Language{
-		Tag:         mustParse(tagName),
+		Tag:         language.MustParse(tagName),
 		TagName:     tagName,
 		DisplayName: displayName,
 	})
