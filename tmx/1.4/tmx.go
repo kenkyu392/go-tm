@@ -1,33 +1,35 @@
 package tmx
 
 import (
+	"bytes"
 	"encoding/xml"
 	"errors"
 	"io"
 	"time"
 
+	"github.com/kenkyu392/go-tm/internal"
+	"golang.org/x/text/encoding"
 	"golang.org/x/text/language"
 )
 
 // const ...
 const (
 	Version                                = "1.4"
-	FileExtension                          = "xlf"
+	FileExtension                          = "tmx"
+	MIMEType                               = "application/x-tmx+xml"
 	DefaultXMLNS                           = "http://www.lisa.org/tmx14"
-	DefaultXMLHeader                       = "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\n"
-	DefaultCreationTool                    = "encoding/tmx"
+	DefaultCreationTool                    = "go-tmx"
 	DefaultCreationToolVersion             = "1.0.0"
 	DefaultDataType                        = "PlainText"
 	DefaultSegmentType                     = "sentence"
-	DefaultOriginalTranslationMemoryFormat = "encoding/tmx"
+	DefaultOriginalTranslationMemoryFormat = "GO TMX"
 	DefaultUser                            = "anonymous"
 	TimeFormat                             = "20060102T150405Z"
 )
 
 // New : [Translation Memory eXchange](https://en.wikipedia.org/wiki/Translation_Memory_eXchange)
-func New(sourceTag, targetTag language.Tag) *TMX {
-	defaultDate := time.Now().UTC().Format(TimeFormat)
-	return &TMX{
+func New(opts ...Option) *TMX {
+	tmx := &TMX{
 		XMLNS:   DefaultXMLNS,
 		Version: Version,
 		Header: Header{
@@ -36,13 +38,105 @@ func New(sourceTag, targetTag language.Tag) *TMX {
 			DataType:                        DefaultDataType,
 			SegmentType:                     DefaultSegmentType,
 			OriginalTranslationMemoryFormat: DefaultOriginalTranslationMemoryFormat,
-			SourceLang:                      sourceTag.String(),
-			AdminLang:                       targetTag.String(),
-			CreationDate:                    defaultDate,
-			CreationID:                      DefaultUser,
-			ChangeDate:                      defaultDate,
-			ChangeID:                        DefaultUser,
+			SourceLang:                      "",
+			AdminLang:                       "",
+			CreationDate:                    "",
+			CreationID:                      "",
+			ChangeDate:                      "",
+			ChangeID:                        "",
 		},
+		XMLHeader:   internal.UTF16XMLHeader,
+		XMLEncoding: internal.UTF16BEEncoding,
+	}
+	for _, opt := range opts {
+		opt(tmx)
+	}
+	return tmx
+}
+
+// Option ...
+type Option func(tmx *TMX)
+
+// UseUTF8EncodingOption ...
+func UseUTF8EncodingOption() Option {
+	return func(tmx *TMX) {
+		tmx.XMLHeader = internal.UTF8XMLHeader
+		tmx.XMLEncoding = internal.UTF8Encoding
+	}
+}
+
+// UseUTF16BEEncodingOption ...
+func UseUTF16BEEncodingOption() Option {
+	return func(tmx *TMX) {
+		tmx.XMLHeader = internal.UTF16XMLHeader
+		tmx.XMLEncoding = internal.UTF16BEEncoding
+	}
+}
+
+// UseUTF16LEEncodingOption ...
+func UseUTF16LEEncodingOption() Option {
+	return func(tmx *TMX) {
+		tmx.XMLHeader = internal.UTF16XMLHeader
+		tmx.XMLEncoding = internal.UTF16LEEncoding
+	}
+}
+
+// OriginalTranslationMemoryFormatOption ...
+func OriginalTranslationMemoryFormatOption(otmf string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.OriginalTranslationMemoryFormat = otmf
+	}
+}
+
+// DataTypeOption ...
+func DataTypeOption(dataType string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.DataType = dataType
+	}
+}
+
+// SegmentTypeOption ...
+func SegmentTypeOption(segmentType string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.SegmentType = segmentType
+	}
+}
+
+// SourceLangOption ...
+func SourceLangOption(tag language.Tag) Option {
+	return func(tmx *TMX) {
+		tmx.Header.SourceLang = tag.String()
+	}
+}
+
+// AdminLangOption ...
+func AdminLangOption(tag language.Tag) Option {
+	return func(tmx *TMX) {
+		tmx.Header.AdminLang = tag.String()
+	}
+}
+
+// CreationToolOption ...
+func CreationToolOption(name, version string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.CreationTool = name
+		tmx.Header.CreationToolVersion = Version
+	}
+}
+
+// CreationOption ...
+func CreationOption(t time.Time, id string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.CreationDate = t.UTC().Format(TimeFormat)
+		tmx.Header.CreationID = id
+	}
+}
+
+// ChangeOption ...
+func ChangeOption(t time.Time, id string) Option {
+	return func(tmx *TMX) {
+		tmx.Header.ChangeDate = t.UTC().Format(TimeFormat)
+		tmx.Header.ChangeID = id
 	}
 }
 
@@ -53,6 +147,9 @@ type TMX struct {
 	Version string   `xml:"version,attr"`
 	Header  Header
 	Body    Body
+
+	XMLHeader   string            `xml:"-"`
+	XMLEncoding encoding.Encoding `xml:"-"`
 }
 
 // Header : The <header> element contains zero, one or more <note> elements; zero, one or more <ude> elements; and zero, one or more <prop> elements.
@@ -68,11 +165,11 @@ type Header struct {
 	// See the Implementation Notes for examples of how to use segtype.
 	SegmentType string `xml:"segtype,attr"`
 	// The o-tmf (Original Translation Memory Format) element specifies the format of the Translation Memory file from which the TMX document or segment thereof have been generated.
-	OriginalTranslationMemoryFormat string `xml:"o-tmf,attr"`
+	OriginalTranslationMemoryFormat string `xml:"o-tmf,attr,omitempty"`
 	// The srclang attribute specifies the language or locale of the source text. Its value must be one of the values used by a xml:lang attribute or the value "*all*" to indicate that any language combination can be used.
-	SourceLang string `xml:"srclang,attr"`
+	SourceLang string `xml:"srclang,attr,omitempty"`
 	// The adminlang attribute is used in the <header> element to specify the default language for the administrative and informative elements <note> and <prop>. Its value must be one of the values used by a xml:lang attribute.
-	AdminLang string `xml:"adminlang,attr"`
+	AdminLang string `xml:"adminlang,attr,omitempty"`
 	// The creationdate attribute specifies the date of the creation of the element.
 	// Its value must be in ASCII, in the format YYYYMMDDThhmmssZ.
 	// (e.g. 19970811T133402Z for August 11th 1997 at 1:34pm 2 seconds.)
@@ -124,39 +221,22 @@ type TUV struct {
 
 // WriteTo is io.WriterTo interface implements.
 func (t *TMX) WriteTo(w io.Writer) (int64, error) {
+	ew := t.XMLEncoding.NewEncoder().Writer(w)
 	raw, err := xml.MarshalIndent(t, "", "  ")
 	if err != nil {
 		return 0, err
 	}
-	n, err := w.Write(append([]byte(DefaultXMLHeader), raw...))
+	n, err := ew.Write(append([]byte(t.XMLHeader), raw...))
 	return int64(n), err
 }
 
-// Bytes ...
-func (t *TMX) Bytes() ([]byte, error) {
-	contents, err := xml.MarshalIndent(t, "", "  ")
-	if err != nil {
+// Encode ...
+func (t *TMX) Encode() ([]byte, error) {
+	buf := new(bytes.Buffer)
+	if _, err := t.WriteTo(buf); err != nil {
 		return nil, err
 	}
-	return append([]byte(DefaultXMLHeader), contents...), nil
-}
-
-// SetToolInfo ...
-func (t *TMX) SetToolInfo(name, version string) {
-	t.Header.CreationTool = name
-	t.Header.CreationToolVersion = version
-}
-
-// SetCreationInfo ...
-func (t *TMX) SetCreationInfo(date time.Time, id string) {
-	t.Header.CreationDate = date.UTC().Format(TimeFormat)
-	t.Header.CreationID = id
-}
-
-// SetChangeInfo ...
-func (t *TMX) SetChangeInfo(date time.Time, id string) {
-	t.Header.ChangeDate = date.UTC().Format(TimeFormat)
-	t.Header.ChangeID = id
+	return buf.Bytes(), nil
 }
 
 // AddTU ...
@@ -171,26 +251,6 @@ func (t *TMX) AddTU(list ...*TUV) error {
 	}
 	t.Body.TUList = append(t.Body.TUList, &TU{
 		TUVList: list,
-	})
-	return nil
-}
-
-// AddTUPair ...
-func (t *TMX) AddTUPair(source *TUV, target *TUV) error {
-	if source == nil {
-		return errors.New("tmx: source is empty")
-	}
-	if target == nil {
-		return errors.New("tmx: target is empty")
-	}
-	if source.XMLLang == "" {
-		source.XMLLang = t.Header.SourceLang
-	}
-	if target.XMLLang == "" {
-		target.XMLLang = t.Header.AdminLang
-	}
-	t.Body.TUList = append(t.Body.TUList, &TU{
-		TUVList: []*TUV{source, target},
 	})
 	return nil
 }

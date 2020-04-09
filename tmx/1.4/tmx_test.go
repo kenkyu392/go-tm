@@ -11,15 +11,19 @@ func TestNew(t *testing.T) {
 	jaJP := language.MustParse("ja-JP")
 	enUS := language.MustParse("en-US")
 	frFR := language.MustParse("fr-FR")
-
-	tmx := New(jaJP, enUS)
-	tmx.AddTUPair(
+	tmx := New(
+		SourceLangOption(jaJP),
+		UseUTF8EncodingOption(),
+	)
+	tmx.AddTU(
 		NewTUV(
 			DefaultTUVOption(),
+			XMLLangTUVOption(jaJP),
 			SegmentTUVOption("吾輩は猫である"),
 		),
 		NewTUV(
 			DefaultTUVOption(),
+			XMLLangTUVOption(enUS),
 			SegmentTUVOption("I Am a Cat"),
 		),
 	)
@@ -41,8 +45,8 @@ func TestNew(t *testing.T) {
 		),
 	)
 
-	t.Run("case=Bytes", func(t *testing.T) {
-		raw, err := tmx.Bytes()
+	t.Run("case=Encode", func(t *testing.T) {
+		raw, err := tmx.Encode()
 		if err != nil {
 			t.Errorf("tmx: %+v", err)
 		}
