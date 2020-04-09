@@ -26,6 +26,7 @@ const (
 
 // New : [Translation Memory eXchange](https://en.wikipedia.org/wiki/Translation_Memory_eXchange)
 func New(sourceTag, targetTag language.Tag) *TMX {
+	defaultDate := time.Now().UTC().Format(TimeFormat)
 	return &TMX{
 		XMLNS:   DefaultXMLNS,
 		Version: Version,
@@ -37,6 +38,10 @@ func New(sourceTag, targetTag language.Tag) *TMX {
 			OriginalTranslationMemoryFormat: DefaultOriginalTranslationMemoryFormat,
 			SourceLang:                      sourceTag.String(),
 			AdminLang:                       targetTag.String(),
+			CreationDate:                    defaultDate,
+			CreationID:                      DefaultUser,
+			ChangeDate:                      defaultDate,
+			ChangeID:                        DefaultUser,
 		},
 	}
 }
@@ -142,8 +147,36 @@ func (t *TMX) SetToolInfo(name, version string) {
 	t.Header.CreationToolVersion = version
 }
 
+// SetCreationInfo ...
+func (t *TMX) SetCreationInfo(date time.Time, id string) {
+	t.Header.CreationDate = date.UTC().Format(TimeFormat)
+	t.Header.CreationID = id
+}
+
+// SetChangeInfo ...
+func (t *TMX) SetChangeInfo(date time.Time, id string) {
+	t.Header.ChangeDate = date.UTC().Format(TimeFormat)
+	t.Header.ChangeID = id
+}
+
 // AddTU ...
-func (t *TMX) AddTU(source *TUV, target *TUV) error {
+func (t *TMX) AddTU(list ...*TUV) error {
+	for _, tuv := range list {
+		if tuv == nil {
+			return errors.New("tmx: tuv is empty")
+		}
+		if tuv.XMLLang == "" {
+			return errors.New("tmx: tuv lang is empty")
+		}
+	}
+	t.Body.TUList = append(t.Body.TUList, &TU{
+		TUVList: list,
+	})
+	return nil
+}
+
+// AddTUPair ...
+func (t *TMX) AddTUPair(source *TUV, target *TUV) error {
 	if source == nil {
 		return errors.New("tmx: source is empty")
 	}

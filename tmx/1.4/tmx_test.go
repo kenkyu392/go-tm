@@ -8,9 +8,12 @@ import (
 )
 
 func TestNew(t *testing.T) {
-	tmx := New(language.MustParse("ja-JP"), language.MustParse("en-US"))
+	jaJP := language.MustParse("ja-JP")
+	enUS := language.MustParse("en-US")
+	frFR := language.MustParse("fr-FR")
 
-	tmx.AddTU(
+	tmx := New(jaJP, enUS)
+	tmx.AddTUPair(
 		NewTUV(
 			DefaultTUVOption(),
 			SegmentTUVOption("吾輩は猫である"),
@@ -23,11 +26,18 @@ func TestNew(t *testing.T) {
 	tmx.AddTU(
 		NewTUV(
 			DefaultTUVOption(),
+			XMLLangTUVOption(jaJP),
 			SegmentTUVOption("人間失格"),
 		),
 		NewTUV(
 			DefaultTUVOption(),
+			XMLLangTUVOption(enUS),
 			SegmentTUVOption("No Longer Human"),
+		),
+		NewTUV(
+			DefaultTUVOption(),
+			XMLLangTUVOption(frFR),
+			SegmentTUVOption("La déchéance d'un homme"),
 		),
 	)
 
