@@ -2,7 +2,13 @@
 
 **:warning: This package is currently under development and features may change.**
 
-go-tm is a package that provides functions and utilities for reading and writing XML files in localization format, such as translation memory and term-base.
+L10N and T9N file format (TMX, TBX, XLIFF, etc.) libraries for [Go][].
+
+## Overview
+
+go-tm is a package that provides functions and utilities for reading and writing translation and localization format XML files such as translation memories and term-bases.
+
+The functions and utilities provided by this package are useful for developing programs that generate localization files such as translation memories and term-bases from existing translation files (XLSX, CSV, and other types of files).
 
 - **Supports file formats such as TMX, TBX, and XLIFF.**
   - _Translation Memory eXchange_
