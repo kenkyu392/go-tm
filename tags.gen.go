@@ -5,7 +5,7 @@ import (
 	"golang.org/x/text/language"
 )
 
-// var ...
+// The following 338 languages are defined.
 var (
 	Tag_aaDJ  = language.MustParse("aa-DJ")  // Afar (Djibouti)
 	Tag_aaER  = language.MustParse("aa-ER")  // Afar (Eritrea)
