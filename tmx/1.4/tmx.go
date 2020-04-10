@@ -3,10 +3,10 @@ package tmx
 import (
 	"encoding/xml"
 	"errors"
-	"io"
 	"time"
 
 	"github.com/kenkyu392/go-tm/internal"
+	"golang.org/x/text/encoding"
 	"golang.org/x/text/language"
 )
 
@@ -43,7 +43,7 @@ func New(opts ...Option) *TMX {
 			ChangeDate:                      "",
 			ChangeID:                        "",
 		},
-		encodeToXML: internal.EncodeToUTF16BEXML,
+		encoding: internal.UTF16BEEncoding,
 	}
 	for _, opt := range opts {
 		opt(tmx)
@@ -57,21 +57,21 @@ type Option func(tmx *TMX)
 // UseUTF8XMLEncodingOption ...
 func UseUTF8XMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.encodeToXML = internal.EncodeToUTF8XML
+		tmx.encoding = internal.UTF8Encoding
 	}
 }
 
 // UseUTF16BEXMLEncodingOption ...
 func UseUTF16BEXMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.encodeToXML = internal.EncodeToUTF16BEXML
+		tmx.encoding = internal.UTF16BEEncoding
 	}
 }
 
 // UseUTF16LEXMLEncodingOption ...
 func UseUTF16LEXMLEncodingOption() Option {
 	return func(tmx *TMX) {
-		tmx.encodeToXML = internal.EncodeToUTF16LEXML
+		tmx.encoding = internal.UTF16LEEncoding
 	}
 }
 
@@ -142,7 +142,7 @@ type TMX struct {
 	Header  Header
 	Body    Body
 
-	encodeToXML internal.EncodeToXMLFunc
+	encoding encoding.Encoding
 }
 
 // Header : The <header> element contains zero, one or more <note> elements; zero, one or more <ude> elements; and zero, one or more <prop> elements.
@@ -212,9 +212,9 @@ type TUV struct {
 	ChangeID string `xml:"changeid,attr,omitempty"`
 }
 
-// WriteTo is io.WriterTo interface implements.
-func (t *TMX) WriteTo(w io.Writer) (int64, error) {
-	return t.encodeToXML(w, t)
+// Encoding is tm.TM interface implements.
+func (t *TMX) Encoding() encoding.Encoding {
+	return t.encoding
 }
 
 // AddTU ...

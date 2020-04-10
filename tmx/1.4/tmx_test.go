@@ -2,9 +2,9 @@ package tmx
 
 import (
 	"bytes"
-	"fmt"
 	"testing"
 
+	"github.com/kenkyu392/go-tm"
 	"golang.org/x/text/language"
 )
 
@@ -46,11 +46,18 @@ func TestNew(t *testing.T) {
 		),
 	)
 
-	t.Run("case=WriteTo", func(t *testing.T) {
-		buf := &bytes.Buffer{}
-		if _, err := tmx.WriteTo(buf); err != nil {
+	t.Run("case=Encode", func(t *testing.T) {
+		raw, err := tm.Encode(tmx)
+		if err != nil {
 			t.Errorf("tmx: %+v", err)
 		}
-		fmt.Printf("%s\n", buf.Bytes())
+		t.Logf("%s\n", raw)
+	})
+	t.Run("case=EncodeTo", func(t *testing.T) {
+		buf := &bytes.Buffer{}
+		if err := tm.EncodeTo(buf, tmx); err != nil {
+			t.Errorf("tmx: %+v", err)
+		}
+		t.Logf("%s\n", buf.Bytes())
 	})
 }
