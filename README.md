@@ -2,7 +2,7 @@
 
 **:warning: This package is currently under development and features may change.**
 
-L10N and T9N file format (TMX, TBX, XLIFF, etc.) libraries for [Go][].
+L10N and T9N file format (TMX, TBX, XLIFF, etc.) libraries for [Go](https://golang.org/).
 
 ## Overview
 
