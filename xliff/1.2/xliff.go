@@ -5,9 +5,8 @@ import (
 	"errors"
 	"time"
 
+	"github.com/kenkyu392/go-tm"
 	"github.com/kenkyu392/go-tm/internal"
-	"golang.org/x/text/encoding"
-	"golang.org/x/text/language"
 )
 
 // const ...
@@ -46,8 +45,8 @@ func New(opts ...Option) (*XLIFF, error) {
 				},
 			},
 		},
-		encoding: internal.UTF16BEEncoding,
 	}
+	xlf.SetEncoding(internal.UTF16BEEncoding)
 	for _, opt := range opts {
 		opt(xlf)
 	}
@@ -58,6 +57,17 @@ func New(opts ...Option) (*XLIFF, error) {
 		return nil, errors.New("xliff: target language is empty")
 	}
 	return xlf, nil
+}
+
+// XLIFF ...
+type XLIFF struct {
+	XMLName  xml.Name `xml:"xliff"`
+	XMLNS    string   `xml:"xmlns,attr"`
+	XMLSpace string   `xml:"http://www.w3.org/XML/1998/namespace space,attr"`
+	Version  string   `xml:"version,attr"`
+	File     File
+
+	tm.TM
 }
 
 // File : http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#file
@@ -134,77 +144,6 @@ type TransUnit struct {
 type Segment struct {
 	Lang    string `xml:"http://www.w3.org/XML/1998/namespace lang,attr"`
 	Content string `xml:",innerxml"`
-}
-
-// XLIFF ...
-type XLIFF struct {
-	XMLName  xml.Name `xml:"xliff"`
-	XMLNS    string   `xml:"xmlns,attr"`
-	XMLSpace string   `xml:"http://www.w3.org/XML/1998/namespace space,attr"`
-	Version  string   `xml:"version,attr"`
-	File     File
-
-	encoding encoding.Encoding
-}
-
-// Option ...
-type Option func(x *XLIFF)
-
-// UseUTF8XMLEncodingOption ...
-func UseUTF8XMLEncodingOption() Option {
-	return func(x *XLIFF) {
-		x.encoding = internal.UTF8Encoding
-	}
-}
-
-// UseUTF16BEXMLEncodingOption ...
-func UseUTF16BEXMLEncodingOption() Option {
-	return func(x *XLIFF) {
-		x.encoding = internal.UTF16BEEncoding
-	}
-}
-
-// UseUTF16LEXMLEncodingOption ...
-func UseUTF16LEXMLEncodingOption() Option {
-	return func(x *XLIFF) {
-		x.encoding = internal.UTF16LEEncoding
-	}
-}
-
-// SourceLanguageOption ...
-func SourceLanguageOption(tag language.Tag) Option {
-	return func(x *XLIFF) {
-		x.File.SourceLanguage = tag.String()
-	}
-}
-
-// TargetLanguageOption ...
-func TargetLanguageOption(tag language.Tag) Option {
-	return func(x *XLIFF) {
-		x.File.TargetLanguage = tag.String()
-	}
-}
-
-// DataTypeOption ...
-func DataTypeOption(dataType string) Option {
-	return func(x *XLIFF) {
-		x.File.DataType = dataType
-	}
-}
-
-// ToolOption ...
-func ToolOption(id, name, version, company string) Option {
-	return func(x *XLIFF) {
-		x.File.Header.Tool.ID = id
-		x.File.Header.Tool.Name = name
-		x.File.Header.Tool.Version = version
-		x.File.Header.Tool.Company = company
-	}
-}
-
-// Encoding is tm.TM interface implements.
-func (x *XLIFF) Encoding() encoding.Encoding {
-	return x.encoding
 }
 
 // Unit ...

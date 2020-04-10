@@ -5,15 +5,12 @@ import (
 	"testing"
 
 	"github.com/kenkyu392/go-tm"
-	"golang.org/x/text/language"
 )
 
 func TestNew(t *testing.T) {
-	jaJP := language.MustParse("ja-JP")
-	enUS := language.MustParse("en-US")
 	xlf, err := New(
-		SourceLanguageOption(jaJP),
-		TargetLanguageOption(enUS),
+		SourceLanguageOption(tm.Tag_jaJP),
+		TargetLanguageOption(tm.Tag_enUS),
 		UseUTF8XMLEncodingOption(),
 	)
 	if err != nil {

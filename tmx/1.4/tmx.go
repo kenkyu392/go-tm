@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
+	"github.com/kenkyu392/go-tm"
 	"github.com/kenkyu392/go-tm/internal"
-	"golang.org/x/text/encoding"
 	"golang.org/x/text/language"
 )
 
@@ -43,95 +43,12 @@ func New(opts ...Option) (*TMX, error) {
 			ChangeDate:                      "",
 			ChangeID:                        "",
 		},
-		encoding: internal.UTF16BEEncoding,
 	}
+	tmx.SetEncoding(internal.UTF16BEEncoding)
 	for _, opt := range opts {
 		opt(tmx)
 	}
 	return tmx, nil
-}
-
-// Option ...
-type Option func(tmx *TMX)
-
-// UseUTF8XMLEncodingOption ...
-func UseUTF8XMLEncodingOption() Option {
-	return func(tmx *TMX) {
-		tmx.encoding = internal.UTF8Encoding
-	}
-}
-
-// UseUTF16BEXMLEncodingOption ...
-func UseUTF16BEXMLEncodingOption() Option {
-	return func(tmx *TMX) {
-		tmx.encoding = internal.UTF16BEEncoding
-	}
-}
-
-// UseUTF16LEXMLEncodingOption ...
-func UseUTF16LEXMLEncodingOption() Option {
-	return func(tmx *TMX) {
-		tmx.encoding = internal.UTF16LEEncoding
-	}
-}
-
-// OriginalTranslationMemoryFormatOption ...
-func OriginalTranslationMemoryFormatOption(otmf string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.OriginalTranslationMemoryFormat = otmf
-	}
-}
-
-// DataTypeOption ...
-func DataTypeOption(dataType string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.DataType = dataType
-	}
-}
-
-// SegmentTypeOption ...
-func SegmentTypeOption(segmentType string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.SegmentType = segmentType
-	}
-}
-
-// SourceLangOption ...
-func SourceLangOption(tag language.Tag) Option {
-	return func(tmx *TMX) {
-		tmx.Header.SourceLang = tag.String()
-	}
-}
-
-// AdminLangOption ...
-func AdminLangOption(tag language.Tag) Option {
-	return func(tmx *TMX) {
-		tmx.Header.AdminLang = tag.String()
-	}
-}
-
-// CreationToolOption ...
-func CreationToolOption(name, version string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.CreationTool = name
-		tmx.Header.CreationToolVersion = Version
-	}
-}
-
-// CreationOption ...
-func CreationOption(t time.Time, id string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.CreationDate = t.UTC().Format(TimeFormat)
-		tmx.Header.CreationID = id
-	}
-}
-
-// ChangeOption ...
-func ChangeOption(t time.Time, id string) Option {
-	return func(tmx *TMX) {
-		tmx.Header.ChangeDate = t.UTC().Format(TimeFormat)
-		tmx.Header.ChangeID = id
-	}
 }
 
 // TMX ...
@@ -142,7 +59,7 @@ type TMX struct {
 	Header  Header
 	Body    Body
 
-	encoding encoding.Encoding
+	tm.TM
 }
 
 // Header : The <header> element contains zero, one or more <note> elements; zero, one or more <ude> elements; and zero, one or more <prop> elements.
@@ -214,11 +131,6 @@ type TUV struct {
 	ChangeID string `xml:"changeid,attr,omitempty"`
 }
 
-// Encoding is tm.TM interface implements.
-func (t *TMX) Encoding() encoding.Encoding {
-	return t.encoding
-}
-
 // AddTU ...
 func (t *TMX) AddTU(id string, list ...*TUV) error {
 	for _, tuv := range list {
@@ -247,15 +159,6 @@ func NewTUV(opts ...TUVOption) *TUV {
 
 // TUVOption ...
 type TUVOption func(tuv *TUV)
-
-// DefaultTUVOption ...
-func DefaultTUVOption() TUVOption {
-	return func(tuv *TUV) {
-		now := time.Now()
-		CreationTUVOption(now, DefaultUser)
-		ChangeTUVOption(now, DefaultUser)
-	}
-}
 
 // XMLLangTUVOption ...
 func XMLLangTUVOption(tag language.Tag) TUVOption {
