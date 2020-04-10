@@ -12,11 +12,15 @@ func TestNew(t *testing.T) {
 	jaJP := language.MustParse("ja-JP")
 	enUS := language.MustParse("en-US")
 	frFR := language.MustParse("fr-FR")
-	tmx := New(
+	tmx, err := New(
 		SourceLangOption(jaJP),
 		UseUTF8XMLEncodingOption(),
 	)
+	if err != nil {
+		t.Errorf("tmx: %+v", err)
+	}
 	tmx.AddTU(
+		"ID001",
 		NewTUV(
 			DefaultTUVOption(),
 			XMLLangTUVOption(jaJP),
@@ -29,6 +33,7 @@ func TestNew(t *testing.T) {
 		),
 	)
 	tmx.AddTU(
+		"ID001",
 		NewTUV(
 			DefaultTUVOption(),
 			XMLLangTUVOption(jaJP),

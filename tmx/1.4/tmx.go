@@ -26,7 +26,7 @@ const (
 )
 
 // New : [Translation Memory eXchange](https://en.wikipedia.org/wiki/Translation_Memory_eXchange)
-func New(opts ...Option) *TMX {
+func New(opts ...Option) (*TMX, error) {
 	tmx := &TMX{
 		XMLNS:   DefaultXMLNS,
 		Version: Version,
@@ -48,7 +48,7 @@ func New(opts ...Option) *TMX {
 	for _, opt := range opts {
 		opt(tmx)
 	}
-	return tmx
+	return tmx, nil
 }
 
 // Option ...
@@ -188,6 +188,8 @@ type Body struct {
 // TU : Each <tu> (Translation Unit) element contains zero, one or more <note> elements or <prop> elements, followed by one or more <tuv> elements. Logically, a complete translation-memory database will contain at least two <tuv> elements in each Translation Unit.
 type TU struct {
 	XMLName xml.Name `xml:"tu"`
+	// The ID attribute specifies an identifier for the <TU> element. Its value is not defined by the standard (it could be unique or not, numeric or alphanumeric, etc.).
+	ID      string `xml:"id,attr,omitempty"`
 	TUVList []*TUV
 }
 
@@ -218,7 +220,7 @@ func (t *TMX) Encoding() encoding.Encoding {
 }
 
 // AddTU ...
-func (t *TMX) AddTU(list ...*TUV) error {
+func (t *TMX) AddTU(id string, list ...*TUV) error {
 	for _, tuv := range list {
 		if tuv == nil {
 			return errors.New("tmx: tuv is empty")
@@ -228,6 +230,7 @@ func (t *TMX) AddTU(list ...*TUV) error {
 		}
 	}
 	t.Body.TUList = append(t.Body.TUList, &TU{
+		ID:      id,
 		TUVList: list,
 	})
 	return nil
