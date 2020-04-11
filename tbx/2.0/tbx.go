@@ -2,17 +2,42 @@ package tbx
 
 import (
 	"encoding/xml"
+	"errors"
 
 	"github.com/kenkyu392/go-tm"
+	"github.com/kenkyu392/go-tm/internal"
 )
 
 // const ...
 const (
-	Version            = "2.0"
-	FileExtension      = "tbx"
-	MIMEType           = "application/x-tbx+xml"
-	DefaultDescripType = "definition"
+	Version               = "2.0"
+	FileExtension         = "tbx"
+	MIMEType              = "application/x-tbx+xml"
+	Type                  = "TBX"
+	DescripTypeDefinition = "definition"
 )
+
+// New ...
+func New(opts ...Option) (*TBX, error) {
+	tbx := &TBX{
+		Type:    Type,
+		XMLLang: "",
+		Header: Header{
+			FileDescription: FileDescription{
+				TitleStatement:    "",
+				SourceDescription: "",
+			},
+		},
+		Body: Body{
+			TermEntryList: make([]*TermEntry, 0),
+		},
+	}
+	tbx.SetEncoding(internal.UTF16BEEncoding)
+	for _, opt := range opts {
+		opt(tbx)
+	}
+	return tbx, nil
+}
 
 // TBX ...
 type TBX struct {
@@ -33,9 +58,11 @@ type Header struct {
 
 // FileDescription is a nesting element containing child elements that describe the TBX document instance.
 type FileDescription struct {
-	XMLName           xml.Name `xml:"fileDesc"`
-	TitleStatement    string   `xml:"titleStmt>title"`
-	SourceDescription string   `xml:"sourceDesc>p"`
+	XMLName xml.Name `xml:"fileDesc"`
+	// TitleStatement is a nesting element containing the title and any notes about the TBX document instance.
+	TitleStatement string `xml:"titleStmt>title"`
+	// sourceDesc is a information about the source of the TBX document instance.
+	SourceDescription string `xml:"sourceDesc>p"`
 }
 
 // Body is a nesting element that contains terminological entries (<termEntry>).
@@ -101,4 +128,20 @@ type TermNote struct {
 	XMLName xml.Name `xml:"termNote"`
 	XMLText string   `xml:",innerxml"`
 	Type    string   `xml:"type,attr"`
+}
+
+// AddTermEntry ...
+func (t *TBX) AddTermEntry(id string, list ...*LangSet) error {
+	for _, item := range list {
+		if item == nil {
+			return errors.New("tbx: langSet is empty")
+		}
+		if item.XMLLang == "" {
+			item.XMLLang = t.XMLLang
+		}
+	}
+	t.Body.TermEntryList = append(t.Body.TermEntryList, &TermEntry{
+		ID: id, LangSetList: list,
+	})
+	return nil
 }
