@@ -38,11 +38,74 @@ go get -u github.com/kenkyu392/go-tm
 
 ## Usage
 
+_XLIFF 1.2 :_
+
 ```go
 package main
 
-func main() {
+import (
+	"github.com/kenkyu392/go-tm"
+	xliff "github.com/kenkyu392/go-tm/xliff/1.2"
+)
 
+func main() {
+	xlf, err := xliff.New(
+		// Set the source and target languages for the XLIFF file.
+		xliff.SourceLanguageOption(tm.Tag_jaJP),
+		xliff.TargetLanguageOption(tm.Tag_enUS),
+		// You can specify the encoding of the XML file.
+		xliff.UseUTF8XMLEncodingOption(),
+	)
+	if err != nil {
+		panic(err)
+	}
+
+	// Add a translation unit to the file.
+	xlf.AddTransUnit(
+		// Translation Unit ID.
+		"ID001",
+		// Source text and comments.
+		&xliff.Unit{
+			Text: "吾輩は猫である",
+			Notes: []string{
+				"著者：夏目漱石",
+				"発行日：1905年～1906年",
+			},
+		},
+		// Target text and comments.
+		&xliff.Unit{
+			Text: "I Am a Cat",
+			Notes: []string{
+				"Author‎: ‎Natsume Sōseki",
+				"Publication date: 1905–1906",
+			},
+		},
+	)
+	raw, err := tm.Encode(xlf)
+	if err != nil {
+		panic(err)
+	}
+	println(string(raw))
+  /*
+	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xml:space="preserve" version="1.2">
+	  <file date="2020-01-01T00:00:00Z" original="original.xlf" datatype="plaintext" source-language="ja-JP" target-language="en-US">
+	    <header>
+	      <tool tool-id="go-tm" tool-name="GoTM XLIFF" tool-version="0.1.0"></tool>
+	    </header>
+	    <body>
+	      <trans-unit xml:space="preserve" id="ID001">
+	        <source xml:lang="ja-JP">吾輩は猫である</source>
+	        <target xml:lang="en-US">I Am a Cat</target>
+	        <note xml:lang="ja-JP">著者：夏目漱石</note>
+	        <note xml:lang="ja-JP">発行日：1905年～1906年</note>
+	        <note xml:lang="en-US">Author‎: ‎Natsume Sōseki</note>
+	        <note xml:lang="en-US">Publication date: 1905–1906</note>
+	      </trans-unit>
+	    </body>
+	  </file>
+	</xliff>
+	*/
 }
 ```
 
