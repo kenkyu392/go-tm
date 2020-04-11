@@ -1,7 +1,8 @@
 # WIP: go-tm
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/github/license/kenkyu392/go-tm.svg)](LICENSE)
 [![GoDoc](https://godoc.org/github.com/kenkyu392/go-tm?status.svg)](https://godoc.org/github.com/kenkyu392/go-tm)
+[![Go Report Card](https://goreportcard.com/badge/github.com/kenkyu392/go-tm)](https://goreportcard.com/report/github.com/kenkyu392/go-tm)
 [![Go](https://img.shields.io/badge/go-1.14+-00ADD8.svg)](https://golang.org/)
 [![Version](https://img.shields.io/badge/version-0.0.X-00A29C.svg)](README.md)
 
@@ -86,7 +87,7 @@ func main() {
 		panic(err)
 	}
 	println(string(raw))
-  /*
+	/*
 	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 	<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xml:space="preserve" version="1.2">
 	  <file date="2020-01-01T00:00:00Z" original="original.xlf" datatype="plaintext" source-language="ja-JP" target-language="en-US">
