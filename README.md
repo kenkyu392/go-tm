@@ -17,15 +17,15 @@ The functions and utilities provided by this package are useful for developing p
 
 - **Supports file formats such as TMX, TBX, and XLIFF.**
   - _Translation Memory eXchange_
-    - LISA TMX 1.4
+    - [x] LISA TMX 1.4
   - _[TermBase eXchange](https://www.tbxinfo.net/)_
-    - LISA TBX 2.0 (ISO 30042:2008)
-    - LISA TBX 3.0 (ISO 30042:2019)
+    - [ ] LISA TBX 2.0 (ISO 30042:2008)
+    - [ ] LISA TBX 3.0 (ISO 30042:2019)
   - _XML Localization Interchange File Format_
-    - OASIS XLIFF 1.2
-    - OASIS XLIFF 2.0
-    - OASIS XLIFF 2.1
-    - SDL XLIFF (OASIS XLIFF 1.2)
+    - [x] OASIS XLIFF 1.2
+    - [ ] OASIS XLIFF 2.0
+    - [ ] OASIS XLIFF 2.1
+    - [ ] SDL XLIFF (OASIS XLIFF 1.2)
 - **Over 300 [IETF BCP 47 language tags](docs/ietf-bcp-47-language-tags.md) are defined.**
 
 Other useful functions and utilities will be added to the package.
