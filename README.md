@@ -22,7 +22,7 @@ The functions and utilities provided by this package are useful for developing p
   - _Translation Memory eXchange_
     - [x] LISA TMX 1.4
   - _[TermBase eXchange](https://www.tbxinfo.net/)_
-    - [ ] LISA TBX 2.0 (ISO 30042:2008)
+    - [x] LISA TBX 2.0 (ISO 30042:2008)
     - [ ] LISA TBX 3.0 (ISO 30042:2019)
   - _XML Localization Interchange File Format_
     - [x] OASIS XLIFF 1.2

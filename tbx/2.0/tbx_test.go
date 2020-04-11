@@ -23,7 +23,7 @@ func TestNew(t *testing.T) {
 		"1905",
 		[]*LangSet{
 			{
-				XMLLang: tm.Tag_enUS.String(),
+				XMLLang: tm.TagName_enUS,
 				Descrip: Descrip{
 					XMLText: `"I Am a Cat" is a satirical novel written in 1905–1906 by Natsume Sōseki about Japanese society during the Meiji period (1868–1912).`,
 					Type:    DescripTypeDefinition,
@@ -34,7 +34,7 @@ func TestNew(t *testing.T) {
 				},
 			},
 			{
-				XMLLang: tm.Tag_jaJP.String(),
+				XMLLang: tm.TagName_jaJP,
 				Descrip: Descrip{
 					XMLText: `「私は猫です」は、1905〜1906年に夏目漱石が書いた明治時代（1868〜1912）の日本社会についての風刺小説です。`,
 					Type:    DescripTypeDefinition,

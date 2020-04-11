@@ -43,12 +43,17 @@ func outPath(dir, file string) (string, error) {
 	return filepath.Join(outDir, file), nil
 }
 
+const codeDefinitionBlock = `// %s
+TagOriginalName_%s = "%s"
+Tag_%s = language.MustParse(TagOriginalName_%s)
+TagName_%s = Tag_%s.String() // The tag name may have changed from the original name after parsing.`
+
 func genCode() string {
 	list := make([]string, 0)
 	for _, v := range tag.Languages() {
 		t := v.TagName
 		vt := strings.ReplaceAll(t, "-", "")
-		list = append(list, fmt.Sprintf(`Tag_%s = language.MustParse("%s") // %s`, vt, t, v.DisplayName))
+		list = append(list, fmt.Sprintf(codeDefinitionBlock, v.DisplayName, vt, t, vt, vt, vt, vt))
 	}
 	// sort.Strings(list)
 	return fmt.Sprintf(tmpl, len(list), strings.TrimSpace(strings.Join(list, "\n\t")))

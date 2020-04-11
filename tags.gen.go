@@ -7,342 +7,1356 @@ import (
 
 // The following 338 languages are defined.
 var (
-	Tag_aaDJ  = language.MustParse("aa-DJ")  // Afar (Djibouti)
-	Tag_aaER  = language.MustParse("aa-ER")  // Afar (Eritrea)
-	Tag_aaET  = language.MustParse("aa-ET")  // Afar (Ethiopia)
-	Tag_afNA  = language.MustParse("af-NA")  // Afrikaans (Namibia)
-	Tag_afZA  = language.MustParse("af-ZA")  // Afrikaans (South Africa)
-	Tag_sqAL  = language.MustParse("sq-AL")  // Albanian (Albania)
-	Tag_sqMK  = language.MustParse("sq-MK")  // Albanian (North Macedonia)
-	Tag_arAE  = language.MustParse("ar-AE")  // Arabic (United Arab Emirates)
-	Tag_arBH  = language.MustParse("ar-BH")  // Arabic (Bahrein)
-	Tag_arDZ  = language.MustParse("ar-DZ")  // Arabic (Algeria)
-	Tag_arEG  = language.MustParse("ar-EG")  // Arabic (Egypt)
-	Tag_arIQ  = language.MustParse("ar-IQ")  // Arabic (Iraq)
-	Tag_arJO  = language.MustParse("ar-JO")  // Arabic (Jordan)
-	Tag_arKM  = language.MustParse("ar-KM")  // Arabic (Comoros)
-	Tag_arKW  = language.MustParse("ar-KW")  // Arabic (Kuwait)
-	Tag_arLB  = language.MustParse("ar-LB")  // Arabic (Lebanon)
-	Tag_arLY  = language.MustParse("ar-LY")  // Arabic (Lybia)
-	Tag_arMA  = language.MustParse("ar-MA")  // Arabic (Morocco)
-	Tag_arOM  = language.MustParse("ar-OM")  // Arabic (Oman)
-	Tag_arQA  = language.MustParse("ar-QA")  // Arabic (Quatar)
-	Tag_arSA  = language.MustParse("ar-SA")  // Arabic (Saudi Arabia)
-	Tag_arSY  = language.MustParse("ar-SY")  // Arabic (Syria)
-	Tag_arTD  = language.MustParse("ar-TD")  // Arabic (Chad)
-	Tag_arTN  = language.MustParse("ar-TN")  // Arabic (Tunisia)
-	Tag_arYE  = language.MustParse("ar-YE")  // Arabic (Yemen)
-	Tag_caAD  = language.MustParse("ca-AD")  // Catalan (Andorra)
-	Tag_caES  = language.MustParse("ca-ES")  // Catalan (Spain)
-	Tag_caFR  = language.MustParse("ca-FR")  // Catalan (France)
-	Tag_caIT  = language.MustParse("ca-IT")  // Catalan (Italy)
-	Tag_chGU  = language.MustParse("ch-GU")  // Chamorro (Guam)
-	Tag_chUS  = language.MustParse("ch-US")  // Chamorro (United States of America)
-	Tag_zhCN  = language.MustParse("zh-CN")  // Chinese (People's Republic of China)
-	Tag_zhHK  = language.MustParse("zh-HK")  // Chinese (Hong Kong)
-	Tag_zhSG  = language.MustParse("zh-SG")  // Chinese (Singapore)
-	Tag_zhTW  = language.MustParse("zh-TW")  // Chinese (Taiwan)
-	Tag_hrBA  = language.MustParse("hr-BA")  // Croatian (Bosnia and Herzegovina)
-	Tag_hrHR  = language.MustParse("hr-HR")  // Croatian (Croatia)
-	Tag_dvIN  = language.MustParse("dv-IN")  // Dhivehi (India)
-	Tag_dvMV  = language.MustParse("dv-MV")  // Dhivehi (Maldives)
-	Tag_nlAW  = language.MustParse("nl-AW")  // Dutch (Aruba)
-	Tag_nlBE  = language.MustParse("nl-BE")  // Dutch (Belgium)
-	Tag_nlBQ  = language.MustParse("nl-BQ")  // Dutch (Bonaire, Sint Eustatius and Saba)
-	Tag_nlCW  = language.MustParse("nl-CW")  // Dutch (Curaçao)
-	Tag_nlNL  = language.MustParse("nl-NL")  // Dutch (Netherlands)
-	Tag_nlSR  = language.MustParse("nl-SR")  // Dutch (Suriname)
-	Tag_nlSX  = language.MustParse("nl-SX")  // Dutch (Sint Maarten)
-	Tag_enAU  = language.MustParse("en-AU")  // English (Australia)
-	Tag_enBZ  = language.MustParse("en-BZ")  // English (Belize)
-	Tag_enCA  = language.MustParse("en-CA")  // English (Canada)
-	Tag_enGB  = language.MustParse("en-GB")  // English (United Kingdom)
-	Tag_enIE  = language.MustParse("en-IE")  // English (Ireland)
-	Tag_enJM  = language.MustParse("en-JM")  // English (Jamaica)
-	Tag_enNZ  = language.MustParse("en-NZ")  // English (New Zealand)
-	Tag_enTT  = language.MustParse("en-TT")  // English (Trinidad and Tobago)
-	Tag_enUS  = language.MustParse("en-US")  // English (United States of America)
-	Tag_enZA  = language.MustParse("en-ZA")  // English (South Africa)
-	Tag_enZW  = language.MustParse("en-ZW")  // English (Zimbabwe)
-	Tag_foDK  = language.MustParse("fo-DK")  // Faroese (Denmark)
-	Tag_foFO  = language.MustParse("fo-FO")  // Faroese (Faroe Islands)
-	Tag_frBE  = language.MustParse("fr-BE")  // French (Belgium)
-	Tag_frBF  = language.MustParse("fr-BF")  // French (Burkina Faso)
-	Tag_frBI  = language.MustParse("fr-BI")  // French (Burundi)
-	Tag_frBJ  = language.MustParse("fr-BJ")  // French (Benin)
-	Tag_frBL  = language.MustParse("fr-BL")  // French (Saint Barthélemy)
-	Tag_frCA  = language.MustParse("fr-CA")  // French (Canada)
-	Tag_frCD  = language.MustParse("fr-CD")  // French (Democratic Republic of the Congo)
-	Tag_frCF  = language.MustParse("fr-CF")  // French (Central African Republic)
-	Tag_frCG  = language.MustParse("fr-CG")  // French (Republic of the Congo)
-	Tag_frCH  = language.MustParse("fr-CH")  // French (Switzerland)
-	Tag_frCI  = language.MustParse("fr-CI")  // French (Côte d'Ivoire)
-	Tag_frCM  = language.MustParse("fr-CM")  // French (Cameroon)
-	Tag_frDJ  = language.MustParse("fr-DJ")  // French (Djibouti)
-	Tag_frDZ  = language.MustParse("fr-DZ")  // French (Algeria)
-	Tag_frFR  = language.MustParse("fr-FR")  // French (France)
-	Tag_frGA  = language.MustParse("fr-GA")  // French (Gabon)
-	Tag_frGF  = language.MustParse("fr-GF")  // French (French Guiana)
-	Tag_frGN  = language.MustParse("fr-GN")  // French (Guinea)
-	Tag_frGP  = language.MustParse("fr-GP")  // French (Guadeloupe)
-	Tag_frGQ  = language.MustParse("fr-GQ")  // French (Equatorial Guinea)
-	Tag_frHT  = language.MustParse("fr-HT")  // French (Haiti)
-	Tag_frKM  = language.MustParse("fr-KM")  // French (Comoros)
-	Tag_frLU  = language.MustParse("fr-LU")  // French (Luxembourg)
-	Tag_frMA  = language.MustParse("fr-MA")  // French (Morocco)
-	Tag_frMC  = language.MustParse("fr-MC")  // French (Principality of Monaco)
-	Tag_frMF  = language.MustParse("fr-MF")  // French (Saint Martin)
-	Tag_frMG  = language.MustParse("fr-MG")  // French (Madagascar)
-	Tag_frML  = language.MustParse("fr-ML")  // French (Mali)
-	Tag_frMQ  = language.MustParse("fr-MQ")  // French (Martinique)
-	Tag_frMR  = language.MustParse("fr-MR")  // French (Mauritania)
-	Tag_frMU  = language.MustParse("fr-MU")  // French (Mauritius)
-	Tag_frNC  = language.MustParse("fr-NC")  // French (New Caledonia)
-	Tag_frNE  = language.MustParse("fr-NE")  // French (Niger)
-	Tag_frPF  = language.MustParse("fr-PF")  // French (French Polynesia)
-	Tag_frPM  = language.MustParse("fr-PM")  // French (Saint Pierre and Miquelon)
-	Tag_frRE  = language.MustParse("fr-RE")  // French (Reunion)
-	Tag_frRW  = language.MustParse("fr-RW")  // French (Rwanda)
-	Tag_frSC  = language.MustParse("fr-SC")  // French (Seychelles)
-	Tag_frSN  = language.MustParse("fr-SN")  // French (Senegal)
-	Tag_frSY  = language.MustParse("fr-SY")  // French (Syria)
-	Tag_frTD  = language.MustParse("fr-TD")  // French (Chad)
-	Tag_frTG  = language.MustParse("fr-TG")  // French (Togo)
-	Tag_frTN  = language.MustParse("fr-TN")  // French (Tunisia)
-	Tag_frVU  = language.MustParse("fr-VU")  // French (Vanuatu)
-	Tag_frWF  = language.MustParse("fr-WF")  // French (Wallis and Futuna)
-	Tag_frYT  = language.MustParse("fr-YT")  // French (Mayotte)
-	Tag_deAT  = language.MustParse("de-AT")  // German (Austria)
-	Tag_deBE  = language.MustParse("de-BE")  // German (Belgium)
-	Tag_deCH  = language.MustParse("de-CH")  // German (Switzerland)
-	Tag_deDE  = language.MustParse("de-DE")  // German (Germany)
-	Tag_deIT  = language.MustParse("de-IT")  // German (Italy)
-	Tag_deLI  = language.MustParse("de-LI")  // German (Liechtenstein)
-	Tag_deLU  = language.MustParse("de-LU")  // German (Luxembourg)
-	Tag_elCY  = language.MustParse("el-CY")  // Greek (Cyprus)
-	Tag_elGR  = language.MustParse("el-GR")  // Greek (Greece)
-	Tag_grcGR = language.MustParse("grc-GR") // Ancient Greek (Greece)
-	Tag_greGR = language.MustParse("gre-GR") // Modern Greek (Greece)
-	Tag_haGH  = language.MustParse("ha-GH")  // Hausa (Republic of Ghana)
-	Tag_haNE  = language.MustParse("ha-NE")  // Hausa (Niger)
-	Tag_haNG  = language.MustParse("ha-NG")  // Hausa (Nigeria)
-	Tag_hiIN  = language.MustParse("hi-IN")  // Hindi (India)
-	Tag_eo    = language.MustParse("eo")     // Esperanto (World)
-	Tag_io    = language.MustParse("io")     // Ido (World)
-	Tag_vo    = language.MustParse("vo")     // Volapük (World)
-	Tag_itCH  = language.MustParse("it-CH")  // Italian (Switzerland)
-	Tag_itIT  = language.MustParse("it-IT")  // Italian (Italy)
-	Tag_itSM  = language.MustParse("it-SM")  // Italian (San Marino)
-	Tag_itVA  = language.MustParse("it-VA")  // Italian (Vatican City State)
-	Tag_jaJP  = language.MustParse("ja-JP")  // Japanese (Japan)
-	Tag_koKP  = language.MustParse("ko-KP")  // Korean (North Korea)
-	Tag_koKR  = language.MustParse("ko-KR")  // (Korea)
-	Tag_kuIQ  = language.MustParse("ku-IQ")  // Kurdish (Iraq)
-	Tag_kuIR  = language.MustParse("ku-IR")  // Kurdish (Islamic Republic of Iran)
-	Tag_lnAO  = language.MustParse("ln-AO")  // Lingala (Angola)
-	Tag_lnCD  = language.MustParse("ln-CD")  // Lingala (Democratic Republic of the Congo)
-	Tag_lnCF  = language.MustParse("ln-CF")  // Lingala (Central African Republic)
-	Tag_lnCG  = language.MustParse("ln-CG")  // Lingala (Republic of the Congo)
-	Tag_msBN  = language.MustParse("ms-BN")  // Malay (Brunei Darussalam)
-	Tag_msMY  = language.MustParse("ms-MY")  // Malay (Malaysia)
-	Tag_neIN  = language.MustParse("ne-IN")  // Nepali (India)
-	Tag_neNP  = language.MustParse("ne-NP")  // Nepali (Federal Democratic Republic of Nepal)
-	Tag_omET  = language.MustParse("om-ET")  // Oromo (Ethiopia)
-	Tag_omKE  = language.MustParse("om-KE")  // Oromo (Kenya)
-	Tag_faAF  = language.MustParse("fa-AF")  // Persian (Afghanistan)
-	Tag_faIR  = language.MustParse("fa-IR")  // Persian (Islamic Republic of Iran)
-	Tag_ptBR  = language.MustParse("pt-BR")  // Portuguese (Brazil)
-	Tag_ptPT  = language.MustParse("pt-PT")  // Portuguese (Portugal)
-	Tag_quBO  = language.MustParse("qu-BO")  // Quechua (Bolivia)
-	Tag_quEC  = language.MustParse("qu-EC")  // Quechua (Ecuador)
-	Tag_quPE  = language.MustParse("qu-PE")  // Quechua (Peru)
-	Tag_roMD  = language.MustParse("ro-MD")  // Romanian (Moldova)
-	Tag_roRO  = language.MustParse("ro-RO")  // Romanian (Romania)
-	Tag_ruBY  = language.MustParse("ru-BY")  // Russian (Belarus)
-	Tag_ruKG  = language.MustParse("ru-KG")  // Russian (Kyrgyzstan)
-	Tag_ruKZ  = language.MustParse("ru-KZ")  // Russian (Kazakhstan)
-	Tag_ruMD  = language.MustParse("ru-MD")  // Russian (Moldova)
-	Tag_ruRU  = language.MustParse("ru-RU")  // Russian (Russia)
-	Tag_ruUA  = language.MustParse("ru-UA")  // Russian (Ukraine)
-	Tag_smaNO = language.MustParse("sma-NO") // Southern Sami (Norway)
-	Tag_smaSE = language.MustParse("sma-SE") // Southern Sami (Sweden)
-	Tag_smeFI = language.MustParse("sme-FI") // Northern Sami (Finland)
-	Tag_smeNO = language.MustParse("sme-NO") // Northern Sami (Norway)
-	Tag_smeSE = language.MustParse("sme-SE") // Northern Sami (Sweden)
-	Tag_smjNO = language.MustParse("smj-NO") // Lule Sami (Norway)
-	Tag_smjSE = language.MustParse("smj-SE") // Lule Sami (Sweden)
-	Tag_smnFI = language.MustParse("smn-FI") // Inari Sami (Finland)
-	Tag_smsFI = language.MustParse("sms-FI") // Skolt Sami (Finland)
-	Tag_srBA  = language.MustParse("sr-BA")  // Serbian (Bosnia and Herzegovina)
-	Tag_srCS  = language.MustParse("sr-CS")  // Serbian (Serbia and Montenegro)
-	Tag_srME  = language.MustParse("sr-ME")  // Serbian (Montenegro)
-	Tag_srRS  = language.MustParse("sr-RS")  // Serbian (Serbia)
-	Tag_tnBW  = language.MustParse("tn-BW")  // Setswana (Botswana)
-	Tag_tnZA  = language.MustParse("tn-ZA")  // Setswana (South Africa)
-	Tag_soDJ  = language.MustParse("so-DJ")  // Somali (Djibouti)
-	Tag_soET  = language.MustParse("so-ET")  // Somali (Ethiopia)
-	Tag_soKE  = language.MustParse("so-KE")  // Somali (Kenya)
-	Tag_soSO  = language.MustParse("so-SO")  // Somali (Somalia)
-	Tag_esAR  = language.MustParse("es-AR")  // Spanish (Argentina)
-	Tag_esBO  = language.MustParse("es-BO")  // Spanish (Bolivia)
-	Tag_esCL  = language.MustParse("es-CL")  // Spanish (Chile)
-	Tag_esCO  = language.MustParse("es-CO")  // Spanish (Colombia)
-	Tag_esCR  = language.MustParse("es-CR")  // Spanish (Costa Rica)
-	Tag_esDO  = language.MustParse("es-DO")  // Spanish (Dominican Republic)
-	Tag_esEC  = language.MustParse("es-EC")  // Spanish (Ecuador)
-	Tag_esES  = language.MustParse("es-ES")  // Spanish (Spain)
-	Tag_esGT  = language.MustParse("es-GT")  // Spanish (Guatemala)
-	Tag_esHN  = language.MustParse("es-HN")  // Spanish (Honduras)
-	Tag_esMX  = language.MustParse("es-MX")  // Spanish (Mexico)
-	Tag_esNI  = language.MustParse("es-NI")  // Spanish (Nicaragua)
-	Tag_esPA  = language.MustParse("es-PA")  // Spanish (Panama)
-	Tag_esPE  = language.MustParse("es-PE")  // Spanish (Peru)
-	Tag_esPR  = language.MustParse("es-PR")  // Spanish (Puerto-Rico)
-	Tag_esPY  = language.MustParse("es-PY")  // Spanish (Paraguay)
-	Tag_esSV  = language.MustParse("es-SV")  // Spanish (El Salvador)
-	Tag_esUY  = language.MustParse("es-UY")  // Spanish (Uruguay)
-	Tag_esVE  = language.MustParse("es-VE")  // Spanish (Venezuela)
-	Tag_swKE  = language.MustParse("sw-KE")  // Swahili (Kenya)
-	Tag_swTZ  = language.MustParse("sw-TZ")  // Swahili (Tanzania)
-	Tag_swUG  = language.MustParse("sw-UG")  // Swahili (Uganda)
-	Tag_svFI  = language.MustParse("sv-FI")  // Swedish (Finland)
-	Tag_svSE  = language.MustParse("sv-SE")  // Swedish (Sweden)
-	Tag_boCN  = language.MustParse("bo-CN")  // Tibetan (People's Republic of China)
-	Tag_boIN  = language.MustParse("bo-IN")  // Tibetan (India)
-	Tag_boNP  = language.MustParse("bo-NP")  // Tibetan (Federal Democratic Republic of Nepal)
-	Tag_tiER  = language.MustParse("ti-ER")  // Tigrinya (Eritrea)
-	Tag_tiET  = language.MustParse("ti-ET")  // Tigrinya (Ethiopia)
-	Tag_trCY  = language.MustParse("tr-CY")  // Turkish (Cyprus)
-	Tag_trTR  = language.MustParse("tr-TR")  // Turkish (Turkey)
-	Tag_urIN  = language.MustParse("ur-IN")  // Urdu (India)
-	Tag_urPK  = language.MustParse("ur-PK")  // Urdu (Islamic Republic of Pakistan)
-	Tag_uzAF  = language.MustParse("uz-AF")  // Uzbek (Afghanistan)
-	Tag_uzUZ  = language.MustParse("uz-UZ")  // Uzbek (Uzbekistan)
-	Tag_yoBJ  = language.MustParse("yo-BJ")  // Yoruba (Benin)
-	Tag_yoNG  = language.MustParse("yo-NG")  // Yoruba (Nigeria)
-	Tag_abRU  = language.MustParse("ab-RU")  // Abkhaz (Russia)
-	Tag_aeIR  = language.MustParse("ae-IR")  // Avestan (Islamic Republic of Iran)
-	Tag_akGH  = language.MustParse("ak-GH")  // Akan (Republic of Ghana)
-	Tag_amET  = language.MustParse("am-ET")  // Amharic (Ethiopia)
-	Tag_asIN  = language.MustParse("as-IN")  // Assamese (India)
-	Tag_astES = language.MustParse("ast-ES") // Asturian (Spain)
-	Tag_ayBO  = language.MustParse("ay-BO")  // Aymara (Bolivia)
-	Tag_azAZ  = language.MustParse("az-AZ")  // Azerbaijani (Azerbaijan)
-	Tag_baRU  = language.MustParse("ba-RU")  // Bashkir (Russia)
-	Tag_beBY  = language.MustParse("be-BY")  // Belarusian (Belarus)
-	Tag_bgBG  = language.MustParse("bg-BG")  // Bulgarian (Bulgaria)
-	Tag_bhIN  = language.MustParse("bh-IN")  // Bihari (India)
-	Tag_biVU  = language.MustParse("bi-VU")  // Bislama (Vanuatu)
-	Tag_bnIN  = language.MustParse("bn-IN")  // Bengali (India)
-	Tag_brFR  = language.MustParse("br-FR")  // Breton (France)
-	Tag_bsBA  = language.MustParse("bs-BA")  // Bosnian (Bosnia and Herzegovina)
-	Tag_ceRU  = language.MustParse("ce-RU")  // Chechen (Russia)
-	Tag_coFR  = language.MustParse("co-FR")  // Corsican (France)
-	Tag_csCZ  = language.MustParse("cs-CZ")  // Czech (Czech Republic)
-	Tag_cvRU  = language.MustParse("cv-RU")  // Chuvash (Russia)
-	Tag_cyGB  = language.MustParse("cy-GB")  // Welsh (United Kingdom)
-	Tag_daDK  = language.MustParse("da-DK")  // Danish (Denmark)
-	Tag_dsbDE = language.MustParse("dsb-DE") // Lower Sorbian (Germany)
-	Tag_dzBT  = language.MustParse("dz-BT")  // Dzongkha (Bhutan)
-	Tag_etEE  = language.MustParse("et-EE")  // Estonian (Estonia)
-	Tag_euES  = language.MustParse("eu-ES")  // Basque (Spain)
-	Tag_fiFI  = language.MustParse("fi-FI")  // Finnish (Finland)
-	Tag_fjFJ  = language.MustParse("fj-FJ")  // Fijian (Fiji)
-	Tag_fyNL  = language.MustParse("fy-NL")  // Frisian (Netherlands)
-	Tag_gaIE  = language.MustParse("ga-IE")  // Irish (Ireland)
-	Tag_gdGB  = language.MustParse("gd-GB")  // Scottish Gaelic (United Kingdom)
-	Tag_glES  = language.MustParse("gl-ES")  // Galician (Spain)
-	Tag_gnPY  = language.MustParse("gn-PY")  // Guarani (Paraguay)
-	Tag_guIN  = language.MustParse("gu-IN")  // Gujarati (India)
-	Tag_gvIM  = language.MustParse("gv-IM")  // Manx (Isle of Man)
-	Tag_heIL  = language.MustParse("he-IL")  // Hebrew (Israel)
-	Tag_hoPG  = language.MustParse("ho-PG")  // Hiri Motu (Independent State of Papua New Guinea)
-	Tag_hsbDE = language.MustParse("hsb-DE") // Upper Sorbian (Germany)
-	Tag_htHT  = language.MustParse("ht-HT")  // Haitian (Republic of Haiti)
-	Tag_huHU  = language.MustParse("hu-HU")  // Hungarian (Hungary)
-	Tag_hyAM  = language.MustParse("hy-AM")  // Armenian (Armenia)
-	Tag_hzNA  = language.MustParse("hz-NA")  // Herero (Republic of Namibia)
-	Tag_idID  = language.MustParse("id-ID")  // Indonesian (Indonesia)
-	Tag_ikUS  = language.MustParse("ik-US")  // Inupiaq (United States of America)
-	Tag_isIS  = language.MustParse("is-IS")  // Icelandic (Iceland)
-	Tag_iuCA  = language.MustParse("iu-CA")  // Inuktitut (Canada)
-	Tag_jvID  = language.MustParse("jv-ID")  // Javanese (Indonesia)
-	Tag_kaGE  = language.MustParse("ka-GE")  // Georgian (Georgia)
-	Tag_kgCG  = language.MustParse("kg-CG")  // Kongo (Republic of the Congo)
-	Tag_kkKZ  = language.MustParse("kk-KZ")  // Kazakh (Kazakhstan)
-	Tag_klGL  = language.MustParse("kl-GL")  // Kalaallisut/Greenlandic (Greenland)
-	Tag_kmKH  = language.MustParse("km-KH")  // Khmer (Cambodia)
-	Tag_knIN  = language.MustParse("kn-IN")  // Kannada (India)
-	Tag_kokIN = language.MustParse("kok-IN") // Konkani (India)
-	Tag_ksIN  = language.MustParse("ks-IN")  // Kashmiri (India)
-	Tag_kvRU  = language.MustParse("kv-RU")  // Komi (Russia)
-	Tag_kwGB  = language.MustParse("kw-GB")  // Cornish (United Kingdom)
-	Tag_kyKG  = language.MustParse("ky-KG")  // Kyrgyz (Kyrgyz Republic)
-	Tag_laVA  = language.MustParse("la-VA")  // Latin (Vatican City State)
-	Tag_lbLU  = language.MustParse("lb-LU")  // Luxembourgish (Luxembourg)
-	Tag_liLU  = language.MustParse("li-LU")  // Limburgish (Luxembourg)
-	Tag_loLA  = language.MustParse("lo-LA")  // Lao (Lao People's Democratic Republic)
-	Tag_ltLT  = language.MustParse("lt-LT")  // Lithuanian (Lithuania)
-	Tag_lvLV  = language.MustParse("lv-LV")  // Latvian (Latvia)
-	Tag_mgMG  = language.MustParse("mg-MG")  // Malagasy (Madagascar)
-	Tag_mhMH  = language.MustParse("mh-MH")  // Marshallese (Republic of the Marshall Islands)
-	Tag_miNZ  = language.MustParse("mi-NZ")  // Maori (New Zealand)
-	Tag_mkMK  = language.MustParse("mk-MK")  // Macedonian (North Macedonia)
-	Tag_mlIN  = language.MustParse("ml-IN")  // Malayalam (India)
-	Tag_mnMN  = language.MustParse("mn-MN")  // Mongolian (Mongolia)
-	Tag_moMD  = language.MustParse("mo-MD")  // Moldovan (Republic of Moldova)
-	Tag_mrIN  = language.MustParse("mr-IN")  // Marathi (India)
-	Tag_mtMT  = language.MustParse("mt-MT")  // Maltese (Malta)
-	Tag_myMM  = language.MustParse("my-MM")  // Burmese (Myanmar)
-	Tag_naNR  = language.MustParse("na-NR")  // Nauruan (Republic of Nauru)
-	Tag_nbNO  = language.MustParse("nb-NO")  // Norwegian (Bokmål)
-	Tag_ndZW  = language.MustParse("nd-ZW")  // North Ndebele (Zimbabwe)
-	Tag_ngNA  = language.MustParse("ng-NA")  // Ndonga (Republic of Namibia)
-	Tag_nnNO  = language.MustParse("nn-NO")  // Norwegian (Nynorsk)
-	Tag_nsoZA = language.MustParse("nso-ZA") // Northern Sotho (South Africa)
-	Tag_nyMW  = language.MustParse("ny-MW")  // Chewa (Malawi)
-	Tag_ocFR  = language.MustParse("oc-FR")  // Occitan (France)
-	Tag_orIN  = language.MustParse("or-IN")  // Oriya (India)
-	Tag_osGE  = language.MustParse("os-GE")  // Ossetian (Georgia)
-	Tag_osRU  = language.MustParse("os-RU")  // Ossetian (Russia)
-	Tag_paIN  = language.MustParse("pa-IN")  // Panjabi/Punjabi (India)
-	Tag_piIN  = language.MustParse("pi-IN")  // Pali (India)
-	Tag_plPL  = language.MustParse("pl-PL")  // Polish (Poland)
-	Tag_psAF  = language.MustParse("ps-AF")  // Pushto/Pashto (Afghanistan)
-	Tag_rmCH  = language.MustParse("rm-CH")  // Romansh (Switzerland)
-	Tag_rnBI  = language.MustParse("rn-BI")  // Rundi (Burundi)
-	Tag_rwRW  = language.MustParse("rw-RW")  // Kinyarwanda (Rwanda)
-	Tag_saIN  = language.MustParse("sa-IN")  // Sanskrit (India)
-	Tag_scIT  = language.MustParse("sc-IT")  // Sardinian (Italy)
-	Tag_sdPK  = language.MustParse("sd-PK")  // Sindhi (Islamic Republic of Pakistan)
-	Tag_sgCF  = language.MustParse("sg-CF")  // Sango (Central African Republic)
-	Tag_siIN  = language.MustParse("si-IN")  // Sinhalese (India)
-	Tag_siLK  = language.MustParse("si-LK")  // Sinhala (Democratic Socialist Republic of Sri Lanka)
-	Tag_skSK  = language.MustParse("sk-SK")  // Slovak (Slovakia)
-	Tag_slSI  = language.MustParse("sl-SI")  // Slovenian (Slovenia)
-	Tag_smWS  = language.MustParse("sm-WS")  // Samoan (Independent State of Samoa)
-	Tag_snZW  = language.MustParse("sn-ZW")  // Shona (Zimbabwe)
-	Tag_suID  = language.MustParse("su-ID")  // Sundanese (Indonesia)
-	Tag_syrTR = language.MustParse("syr-TR") // Syriac (Syria)
-	Tag_taIN  = language.MustParse("ta-IN")  // Tamil (India)
-	Tag_teIN  = language.MustParse("te-IN")  // Telugu (India)
-	Tag_tetID = language.MustParse("tet-ID") // Tetum (Indonesia)
-	Tag_tetTL = language.MustParse("tet-TL") // Tetum (Democratic Republic of Timor-Leste)
-	Tag_tgTJ  = language.MustParse("tg-TJ")  // Tajik (Tajikistan)
-	Tag_thTH  = language.MustParse("th-TH")  // Thai (Thailand)
-	Tag_tkTM  = language.MustParse("tk-TM")  // Turkmen (Turkmenistan)
-	Tag_tlPH  = language.MustParse("tl-PH")  // Tagalog (Philippines)
-	Tag_toTO  = language.MustParse("to-TO")  // Tongan (Tonga)
-	Tag_tsZA  = language.MustParse("ts-ZA")  // Tsonga (South Africa)
-	Tag_ttRU  = language.MustParse("tt-RU")  // Tatar (Russia)
-	Tag_twGH  = language.MustParse("tw-GH")  // Twi (Ghana)
-	Tag_tyPF  = language.MustParse("ty-PF")  // Tahitian (French Polynesia)
-	Tag_ugCN  = language.MustParse("ug-CN")  // Uyghur (People's Republic of China)
-	Tag_ukUA  = language.MustParse("uk-UA")  // Ukrainian (Ukraine)
-	Tag_viVN  = language.MustParse("vi-VN")  // Vietnamese (Vietnam)
-	Tag_waBE  = language.MustParse("wa-BE")  // Walloon (Belgium)
-	Tag_woSN  = language.MustParse("wo-SN")  // Wolof (Senegal)
-	Tag_xhZA  = language.MustParse("xh-ZA")  // Xhosa (South Africa)
-	Tag_yiBA  = language.MustParse("yi-BA")  // Yiddish (Bosnia and Herzegovina)
-	Tag_zuZA  = language.MustParse("zu-ZA")  // Zulu (South Africa)
+	// Afar (Djibouti)
+	TagOriginalName_aaDJ = "aa-DJ"
+	Tag_aaDJ             = language.MustParse(TagOriginalName_aaDJ)
+	TagName_aaDJ         = Tag_aaDJ.String() // The tag name may have changed from the original name after parsing.
+	// Afar (Eritrea)
+	TagOriginalName_aaER = "aa-ER"
+	Tag_aaER             = language.MustParse(TagOriginalName_aaER)
+	TagName_aaER         = Tag_aaER.String() // The tag name may have changed from the original name after parsing.
+	// Afar (Ethiopia)
+	TagOriginalName_aaET = "aa-ET"
+	Tag_aaET             = language.MustParse(TagOriginalName_aaET)
+	TagName_aaET         = Tag_aaET.String() // The tag name may have changed from the original name after parsing.
+	// Afrikaans (Namibia)
+	TagOriginalName_afNA = "af-NA"
+	Tag_afNA             = language.MustParse(TagOriginalName_afNA)
+	TagName_afNA         = Tag_afNA.String() // The tag name may have changed from the original name after parsing.
+	// Afrikaans (South Africa)
+	TagOriginalName_afZA = "af-ZA"
+	Tag_afZA             = language.MustParse(TagOriginalName_afZA)
+	TagName_afZA         = Tag_afZA.String() // The tag name may have changed from the original name after parsing.
+	// Albanian (Albania)
+	TagOriginalName_sqAL = "sq-AL"
+	Tag_sqAL             = language.MustParse(TagOriginalName_sqAL)
+	TagName_sqAL         = Tag_sqAL.String() // The tag name may have changed from the original name after parsing.
+	// Albanian (North Macedonia)
+	TagOriginalName_sqMK = "sq-MK"
+	Tag_sqMK             = language.MustParse(TagOriginalName_sqMK)
+	TagName_sqMK         = Tag_sqMK.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (United Arab Emirates)
+	TagOriginalName_arAE = "ar-AE"
+	Tag_arAE             = language.MustParse(TagOriginalName_arAE)
+	TagName_arAE         = Tag_arAE.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Bahrein)
+	TagOriginalName_arBH = "ar-BH"
+	Tag_arBH             = language.MustParse(TagOriginalName_arBH)
+	TagName_arBH         = Tag_arBH.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Algeria)
+	TagOriginalName_arDZ = "ar-DZ"
+	Tag_arDZ             = language.MustParse(TagOriginalName_arDZ)
+	TagName_arDZ         = Tag_arDZ.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Egypt)
+	TagOriginalName_arEG = "ar-EG"
+	Tag_arEG             = language.MustParse(TagOriginalName_arEG)
+	TagName_arEG         = Tag_arEG.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Iraq)
+	TagOriginalName_arIQ = "ar-IQ"
+	Tag_arIQ             = language.MustParse(TagOriginalName_arIQ)
+	TagName_arIQ         = Tag_arIQ.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Jordan)
+	TagOriginalName_arJO = "ar-JO"
+	Tag_arJO             = language.MustParse(TagOriginalName_arJO)
+	TagName_arJO         = Tag_arJO.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Comoros)
+	TagOriginalName_arKM = "ar-KM"
+	Tag_arKM             = language.MustParse(TagOriginalName_arKM)
+	TagName_arKM         = Tag_arKM.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Kuwait)
+	TagOriginalName_arKW = "ar-KW"
+	Tag_arKW             = language.MustParse(TagOriginalName_arKW)
+	TagName_arKW         = Tag_arKW.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Lebanon)
+	TagOriginalName_arLB = "ar-LB"
+	Tag_arLB             = language.MustParse(TagOriginalName_arLB)
+	TagName_arLB         = Tag_arLB.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Lybia)
+	TagOriginalName_arLY = "ar-LY"
+	Tag_arLY             = language.MustParse(TagOriginalName_arLY)
+	TagName_arLY         = Tag_arLY.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Morocco)
+	TagOriginalName_arMA = "ar-MA"
+	Tag_arMA             = language.MustParse(TagOriginalName_arMA)
+	TagName_arMA         = Tag_arMA.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Oman)
+	TagOriginalName_arOM = "ar-OM"
+	Tag_arOM             = language.MustParse(TagOriginalName_arOM)
+	TagName_arOM         = Tag_arOM.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Quatar)
+	TagOriginalName_arQA = "ar-QA"
+	Tag_arQA             = language.MustParse(TagOriginalName_arQA)
+	TagName_arQA         = Tag_arQA.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Saudi Arabia)
+	TagOriginalName_arSA = "ar-SA"
+	Tag_arSA             = language.MustParse(TagOriginalName_arSA)
+	TagName_arSA         = Tag_arSA.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Syria)
+	TagOriginalName_arSY = "ar-SY"
+	Tag_arSY             = language.MustParse(TagOriginalName_arSY)
+	TagName_arSY         = Tag_arSY.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Chad)
+	TagOriginalName_arTD = "ar-TD"
+	Tag_arTD             = language.MustParse(TagOriginalName_arTD)
+	TagName_arTD         = Tag_arTD.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Tunisia)
+	TagOriginalName_arTN = "ar-TN"
+	Tag_arTN             = language.MustParse(TagOriginalName_arTN)
+	TagName_arTN         = Tag_arTN.String() // The tag name may have changed from the original name after parsing.
+	// Arabic (Yemen)
+	TagOriginalName_arYE = "ar-YE"
+	Tag_arYE             = language.MustParse(TagOriginalName_arYE)
+	TagName_arYE         = Tag_arYE.String() // The tag name may have changed from the original name after parsing.
+	// Catalan (Andorra)
+	TagOriginalName_caAD = "ca-AD"
+	Tag_caAD             = language.MustParse(TagOriginalName_caAD)
+	TagName_caAD         = Tag_caAD.String() // The tag name may have changed from the original name after parsing.
+	// Catalan (Spain)
+	TagOriginalName_caES = "ca-ES"
+	Tag_caES             = language.MustParse(TagOriginalName_caES)
+	TagName_caES         = Tag_caES.String() // The tag name may have changed from the original name after parsing.
+	// Catalan (France)
+	TagOriginalName_caFR = "ca-FR"
+	Tag_caFR             = language.MustParse(TagOriginalName_caFR)
+	TagName_caFR         = Tag_caFR.String() // The tag name may have changed from the original name after parsing.
+	// Catalan (Italy)
+	TagOriginalName_caIT = "ca-IT"
+	Tag_caIT             = language.MustParse(TagOriginalName_caIT)
+	TagName_caIT         = Tag_caIT.String() // The tag name may have changed from the original name after parsing.
+	// Chamorro (Guam)
+	TagOriginalName_chGU = "ch-GU"
+	Tag_chGU             = language.MustParse(TagOriginalName_chGU)
+	TagName_chGU         = Tag_chGU.String() // The tag name may have changed from the original name after parsing.
+	// Chamorro (United States of America)
+	TagOriginalName_chUS = "ch-US"
+	Tag_chUS             = language.MustParse(TagOriginalName_chUS)
+	TagName_chUS         = Tag_chUS.String() // The tag name may have changed from the original name after parsing.
+	// Chinese (People's Republic of China)
+	TagOriginalName_zhCN = "zh-CN"
+	Tag_zhCN             = language.MustParse(TagOriginalName_zhCN)
+	TagName_zhCN         = Tag_zhCN.String() // The tag name may have changed from the original name after parsing.
+	// Chinese (Hong Kong)
+	TagOriginalName_zhHK = "zh-HK"
+	Tag_zhHK             = language.MustParse(TagOriginalName_zhHK)
+	TagName_zhHK         = Tag_zhHK.String() // The tag name may have changed from the original name after parsing.
+	// Chinese (Singapore)
+	TagOriginalName_zhSG = "zh-SG"
+	Tag_zhSG             = language.MustParse(TagOriginalName_zhSG)
+	TagName_zhSG         = Tag_zhSG.String() // The tag name may have changed from the original name after parsing.
+	// Chinese (Taiwan)
+	TagOriginalName_zhTW = "zh-TW"
+	Tag_zhTW             = language.MustParse(TagOriginalName_zhTW)
+	TagName_zhTW         = Tag_zhTW.String() // The tag name may have changed from the original name after parsing.
+	// Croatian (Bosnia and Herzegovina)
+	TagOriginalName_hrBA = "hr-BA"
+	Tag_hrBA             = language.MustParse(TagOriginalName_hrBA)
+	TagName_hrBA         = Tag_hrBA.String() // The tag name may have changed from the original name after parsing.
+	// Croatian (Croatia)
+	TagOriginalName_hrHR = "hr-HR"
+	Tag_hrHR             = language.MustParse(TagOriginalName_hrHR)
+	TagName_hrHR         = Tag_hrHR.String() // The tag name may have changed from the original name after parsing.
+	// Dhivehi (India)
+	TagOriginalName_dvIN = "dv-IN"
+	Tag_dvIN             = language.MustParse(TagOriginalName_dvIN)
+	TagName_dvIN         = Tag_dvIN.String() // The tag name may have changed from the original name after parsing.
+	// Dhivehi (Maldives)
+	TagOriginalName_dvMV = "dv-MV"
+	Tag_dvMV             = language.MustParse(TagOriginalName_dvMV)
+	TagName_dvMV         = Tag_dvMV.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Aruba)
+	TagOriginalName_nlAW = "nl-AW"
+	Tag_nlAW             = language.MustParse(TagOriginalName_nlAW)
+	TagName_nlAW         = Tag_nlAW.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Belgium)
+	TagOriginalName_nlBE = "nl-BE"
+	Tag_nlBE             = language.MustParse(TagOriginalName_nlBE)
+	TagName_nlBE         = Tag_nlBE.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Bonaire, Sint Eustatius and Saba)
+	TagOriginalName_nlBQ = "nl-BQ"
+	Tag_nlBQ             = language.MustParse(TagOriginalName_nlBQ)
+	TagName_nlBQ         = Tag_nlBQ.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Curaçao)
+	TagOriginalName_nlCW = "nl-CW"
+	Tag_nlCW             = language.MustParse(TagOriginalName_nlCW)
+	TagName_nlCW         = Tag_nlCW.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Netherlands)
+	TagOriginalName_nlNL = "nl-NL"
+	Tag_nlNL             = language.MustParse(TagOriginalName_nlNL)
+	TagName_nlNL         = Tag_nlNL.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Suriname)
+	TagOriginalName_nlSR = "nl-SR"
+	Tag_nlSR             = language.MustParse(TagOriginalName_nlSR)
+	TagName_nlSR         = Tag_nlSR.String() // The tag name may have changed from the original name after parsing.
+	// Dutch (Sint Maarten)
+	TagOriginalName_nlSX = "nl-SX"
+	Tag_nlSX             = language.MustParse(TagOriginalName_nlSX)
+	TagName_nlSX         = Tag_nlSX.String() // The tag name may have changed from the original name after parsing.
+	// English (Australia)
+	TagOriginalName_enAU = "en-AU"
+	Tag_enAU             = language.MustParse(TagOriginalName_enAU)
+	TagName_enAU         = Tag_enAU.String() // The tag name may have changed from the original name after parsing.
+	// English (Belize)
+	TagOriginalName_enBZ = "en-BZ"
+	Tag_enBZ             = language.MustParse(TagOriginalName_enBZ)
+	TagName_enBZ         = Tag_enBZ.String() // The tag name may have changed from the original name after parsing.
+	// English (Canada)
+	TagOriginalName_enCA = "en-CA"
+	Tag_enCA             = language.MustParse(TagOriginalName_enCA)
+	TagName_enCA         = Tag_enCA.String() // The tag name may have changed from the original name after parsing.
+	// English (United Kingdom)
+	TagOriginalName_enGB = "en-GB"
+	Tag_enGB             = language.MustParse(TagOriginalName_enGB)
+	TagName_enGB         = Tag_enGB.String() // The tag name may have changed from the original name after parsing.
+	// English (Ireland)
+	TagOriginalName_enIE = "en-IE"
+	Tag_enIE             = language.MustParse(TagOriginalName_enIE)
+	TagName_enIE         = Tag_enIE.String() // The tag name may have changed from the original name after parsing.
+	// English (Jamaica)
+	TagOriginalName_enJM = "en-JM"
+	Tag_enJM             = language.MustParse(TagOriginalName_enJM)
+	TagName_enJM         = Tag_enJM.String() // The tag name may have changed from the original name after parsing.
+	// English (New Zealand)
+	TagOriginalName_enNZ = "en-NZ"
+	Tag_enNZ             = language.MustParse(TagOriginalName_enNZ)
+	TagName_enNZ         = Tag_enNZ.String() // The tag name may have changed from the original name after parsing.
+	// English (Trinidad and Tobago)
+	TagOriginalName_enTT = "en-TT"
+	Tag_enTT             = language.MustParse(TagOriginalName_enTT)
+	TagName_enTT         = Tag_enTT.String() // The tag name may have changed from the original name after parsing.
+	// English (United States of America)
+	TagOriginalName_enUS = "en-US"
+	Tag_enUS             = language.MustParse(TagOriginalName_enUS)
+	TagName_enUS         = Tag_enUS.String() // The tag name may have changed from the original name after parsing.
+	// English (South Africa)
+	TagOriginalName_enZA = "en-ZA"
+	Tag_enZA             = language.MustParse(TagOriginalName_enZA)
+	TagName_enZA         = Tag_enZA.String() // The tag name may have changed from the original name after parsing.
+	// English (Zimbabwe)
+	TagOriginalName_enZW = "en-ZW"
+	Tag_enZW             = language.MustParse(TagOriginalName_enZW)
+	TagName_enZW         = Tag_enZW.String() // The tag name may have changed from the original name after parsing.
+	// Faroese (Denmark)
+	TagOriginalName_foDK = "fo-DK"
+	Tag_foDK             = language.MustParse(TagOriginalName_foDK)
+	TagName_foDK         = Tag_foDK.String() // The tag name may have changed from the original name after parsing.
+	// Faroese (Faroe Islands)
+	TagOriginalName_foFO = "fo-FO"
+	Tag_foFO             = language.MustParse(TagOriginalName_foFO)
+	TagName_foFO         = Tag_foFO.String() // The tag name may have changed from the original name after parsing.
+	// French (Belgium)
+	TagOriginalName_frBE = "fr-BE"
+	Tag_frBE             = language.MustParse(TagOriginalName_frBE)
+	TagName_frBE         = Tag_frBE.String() // The tag name may have changed from the original name after parsing.
+	// French (Burkina Faso)
+	TagOriginalName_frBF = "fr-BF"
+	Tag_frBF             = language.MustParse(TagOriginalName_frBF)
+	TagName_frBF         = Tag_frBF.String() // The tag name may have changed from the original name after parsing.
+	// French (Burundi)
+	TagOriginalName_frBI = "fr-BI"
+	Tag_frBI             = language.MustParse(TagOriginalName_frBI)
+	TagName_frBI         = Tag_frBI.String() // The tag name may have changed from the original name after parsing.
+	// French (Benin)
+	TagOriginalName_frBJ = "fr-BJ"
+	Tag_frBJ             = language.MustParse(TagOriginalName_frBJ)
+	TagName_frBJ         = Tag_frBJ.String() // The tag name may have changed from the original name after parsing.
+	// French (Saint Barthélemy)
+	TagOriginalName_frBL = "fr-BL"
+	Tag_frBL             = language.MustParse(TagOriginalName_frBL)
+	TagName_frBL         = Tag_frBL.String() // The tag name may have changed from the original name after parsing.
+	// French (Canada)
+	TagOriginalName_frCA = "fr-CA"
+	Tag_frCA             = language.MustParse(TagOriginalName_frCA)
+	TagName_frCA         = Tag_frCA.String() // The tag name may have changed from the original name after parsing.
+	// French (Democratic Republic of the Congo)
+	TagOriginalName_frCD = "fr-CD"
+	Tag_frCD             = language.MustParse(TagOriginalName_frCD)
+	TagName_frCD         = Tag_frCD.String() // The tag name may have changed from the original name after parsing.
+	// French (Central African Republic)
+	TagOriginalName_frCF = "fr-CF"
+	Tag_frCF             = language.MustParse(TagOriginalName_frCF)
+	TagName_frCF         = Tag_frCF.String() // The tag name may have changed from the original name after parsing.
+	// French (Republic of the Congo)
+	TagOriginalName_frCG = "fr-CG"
+	Tag_frCG             = language.MustParse(TagOriginalName_frCG)
+	TagName_frCG         = Tag_frCG.String() // The tag name may have changed from the original name after parsing.
+	// French (Switzerland)
+	TagOriginalName_frCH = "fr-CH"
+	Tag_frCH             = language.MustParse(TagOriginalName_frCH)
+	TagName_frCH         = Tag_frCH.String() // The tag name may have changed from the original name after parsing.
+	// French (Côte d'Ivoire)
+	TagOriginalName_frCI = "fr-CI"
+	Tag_frCI             = language.MustParse(TagOriginalName_frCI)
+	TagName_frCI         = Tag_frCI.String() // The tag name may have changed from the original name after parsing.
+	// French (Cameroon)
+	TagOriginalName_frCM = "fr-CM"
+	Tag_frCM             = language.MustParse(TagOriginalName_frCM)
+	TagName_frCM         = Tag_frCM.String() // The tag name may have changed from the original name after parsing.
+	// French (Djibouti)
+	TagOriginalName_frDJ = "fr-DJ"
+	Tag_frDJ             = language.MustParse(TagOriginalName_frDJ)
+	TagName_frDJ         = Tag_frDJ.String() // The tag name may have changed from the original name after parsing.
+	// French (Algeria)
+	TagOriginalName_frDZ = "fr-DZ"
+	Tag_frDZ             = language.MustParse(TagOriginalName_frDZ)
+	TagName_frDZ         = Tag_frDZ.String() // The tag name may have changed from the original name after parsing.
+	// French (France)
+	TagOriginalName_frFR = "fr-FR"
+	Tag_frFR             = language.MustParse(TagOriginalName_frFR)
+	TagName_frFR         = Tag_frFR.String() // The tag name may have changed from the original name after parsing.
+	// French (Gabon)
+	TagOriginalName_frGA = "fr-GA"
+	Tag_frGA             = language.MustParse(TagOriginalName_frGA)
+	TagName_frGA         = Tag_frGA.String() // The tag name may have changed from the original name after parsing.
+	// French (French Guiana)
+	TagOriginalName_frGF = "fr-GF"
+	Tag_frGF             = language.MustParse(TagOriginalName_frGF)
+	TagName_frGF         = Tag_frGF.String() // The tag name may have changed from the original name after parsing.
+	// French (Guinea)
+	TagOriginalName_frGN = "fr-GN"
+	Tag_frGN             = language.MustParse(TagOriginalName_frGN)
+	TagName_frGN         = Tag_frGN.String() // The tag name may have changed from the original name after parsing.
+	// French (Guadeloupe)
+	TagOriginalName_frGP = "fr-GP"
+	Tag_frGP             = language.MustParse(TagOriginalName_frGP)
+	TagName_frGP         = Tag_frGP.String() // The tag name may have changed from the original name after parsing.
+	// French (Equatorial Guinea)
+	TagOriginalName_frGQ = "fr-GQ"
+	Tag_frGQ             = language.MustParse(TagOriginalName_frGQ)
+	TagName_frGQ         = Tag_frGQ.String() // The tag name may have changed from the original name after parsing.
+	// French (Haiti)
+	TagOriginalName_frHT = "fr-HT"
+	Tag_frHT             = language.MustParse(TagOriginalName_frHT)
+	TagName_frHT         = Tag_frHT.String() // The tag name may have changed from the original name after parsing.
+	// French (Comoros)
+	TagOriginalName_frKM = "fr-KM"
+	Tag_frKM             = language.MustParse(TagOriginalName_frKM)
+	TagName_frKM         = Tag_frKM.String() // The tag name may have changed from the original name after parsing.
+	// French (Luxembourg)
+	TagOriginalName_frLU = "fr-LU"
+	Tag_frLU             = language.MustParse(TagOriginalName_frLU)
+	TagName_frLU         = Tag_frLU.String() // The tag name may have changed from the original name after parsing.
+	// French (Morocco)
+	TagOriginalName_frMA = "fr-MA"
+	Tag_frMA             = language.MustParse(TagOriginalName_frMA)
+	TagName_frMA         = Tag_frMA.String() // The tag name may have changed from the original name after parsing.
+	// French (Principality of Monaco)
+	TagOriginalName_frMC = "fr-MC"
+	Tag_frMC             = language.MustParse(TagOriginalName_frMC)
+	TagName_frMC         = Tag_frMC.String() // The tag name may have changed from the original name after parsing.
+	// French (Saint Martin)
+	TagOriginalName_frMF = "fr-MF"
+	Tag_frMF             = language.MustParse(TagOriginalName_frMF)
+	TagName_frMF         = Tag_frMF.String() // The tag name may have changed from the original name after parsing.
+	// French (Madagascar)
+	TagOriginalName_frMG = "fr-MG"
+	Tag_frMG             = language.MustParse(TagOriginalName_frMG)
+	TagName_frMG         = Tag_frMG.String() // The tag name may have changed from the original name after parsing.
+	// French (Mali)
+	TagOriginalName_frML = "fr-ML"
+	Tag_frML             = language.MustParse(TagOriginalName_frML)
+	TagName_frML         = Tag_frML.String() // The tag name may have changed from the original name after parsing.
+	// French (Martinique)
+	TagOriginalName_frMQ = "fr-MQ"
+	Tag_frMQ             = language.MustParse(TagOriginalName_frMQ)
+	TagName_frMQ         = Tag_frMQ.String() // The tag name may have changed from the original name after parsing.
+	// French (Mauritania)
+	TagOriginalName_frMR = "fr-MR"
+	Tag_frMR             = language.MustParse(TagOriginalName_frMR)
+	TagName_frMR         = Tag_frMR.String() // The tag name may have changed from the original name after parsing.
+	// French (Mauritius)
+	TagOriginalName_frMU = "fr-MU"
+	Tag_frMU             = language.MustParse(TagOriginalName_frMU)
+	TagName_frMU         = Tag_frMU.String() // The tag name may have changed from the original name after parsing.
+	// French (New Caledonia)
+	TagOriginalName_frNC = "fr-NC"
+	Tag_frNC             = language.MustParse(TagOriginalName_frNC)
+	TagName_frNC         = Tag_frNC.String() // The tag name may have changed from the original name after parsing.
+	// French (Niger)
+	TagOriginalName_frNE = "fr-NE"
+	Tag_frNE             = language.MustParse(TagOriginalName_frNE)
+	TagName_frNE         = Tag_frNE.String() // The tag name may have changed from the original name after parsing.
+	// French (French Polynesia)
+	TagOriginalName_frPF = "fr-PF"
+	Tag_frPF             = language.MustParse(TagOriginalName_frPF)
+	TagName_frPF         = Tag_frPF.String() // The tag name may have changed from the original name after parsing.
+	// French (Saint Pierre and Miquelon)
+	TagOriginalName_frPM = "fr-PM"
+	Tag_frPM             = language.MustParse(TagOriginalName_frPM)
+	TagName_frPM         = Tag_frPM.String() // The tag name may have changed from the original name after parsing.
+	// French (Reunion)
+	TagOriginalName_frRE = "fr-RE"
+	Tag_frRE             = language.MustParse(TagOriginalName_frRE)
+	TagName_frRE         = Tag_frRE.String() // The tag name may have changed from the original name after parsing.
+	// French (Rwanda)
+	TagOriginalName_frRW = "fr-RW"
+	Tag_frRW             = language.MustParse(TagOriginalName_frRW)
+	TagName_frRW         = Tag_frRW.String() // The tag name may have changed from the original name after parsing.
+	// French (Seychelles)
+	TagOriginalName_frSC = "fr-SC"
+	Tag_frSC             = language.MustParse(TagOriginalName_frSC)
+	TagName_frSC         = Tag_frSC.String() // The tag name may have changed from the original name after parsing.
+	// French (Senegal)
+	TagOriginalName_frSN = "fr-SN"
+	Tag_frSN             = language.MustParse(TagOriginalName_frSN)
+	TagName_frSN         = Tag_frSN.String() // The tag name may have changed from the original name after parsing.
+	// French (Syria)
+	TagOriginalName_frSY = "fr-SY"
+	Tag_frSY             = language.MustParse(TagOriginalName_frSY)
+	TagName_frSY         = Tag_frSY.String() // The tag name may have changed from the original name after parsing.
+	// French (Chad)
+	TagOriginalName_frTD = "fr-TD"
+	Tag_frTD             = language.MustParse(TagOriginalName_frTD)
+	TagName_frTD         = Tag_frTD.String() // The tag name may have changed from the original name after parsing.
+	// French (Togo)
+	TagOriginalName_frTG = "fr-TG"
+	Tag_frTG             = language.MustParse(TagOriginalName_frTG)
+	TagName_frTG         = Tag_frTG.String() // The tag name may have changed from the original name after parsing.
+	// French (Tunisia)
+	TagOriginalName_frTN = "fr-TN"
+	Tag_frTN             = language.MustParse(TagOriginalName_frTN)
+	TagName_frTN         = Tag_frTN.String() // The tag name may have changed from the original name after parsing.
+	// French (Vanuatu)
+	TagOriginalName_frVU = "fr-VU"
+	Tag_frVU             = language.MustParse(TagOriginalName_frVU)
+	TagName_frVU         = Tag_frVU.String() // The tag name may have changed from the original name after parsing.
+	// French (Wallis and Futuna)
+	TagOriginalName_frWF = "fr-WF"
+	Tag_frWF             = language.MustParse(TagOriginalName_frWF)
+	TagName_frWF         = Tag_frWF.String() // The tag name may have changed from the original name after parsing.
+	// French (Mayotte)
+	TagOriginalName_frYT = "fr-YT"
+	Tag_frYT             = language.MustParse(TagOriginalName_frYT)
+	TagName_frYT         = Tag_frYT.String() // The tag name may have changed from the original name after parsing.
+	// German (Austria)
+	TagOriginalName_deAT = "de-AT"
+	Tag_deAT             = language.MustParse(TagOriginalName_deAT)
+	TagName_deAT         = Tag_deAT.String() // The tag name may have changed from the original name after parsing.
+	// German (Belgium)
+	TagOriginalName_deBE = "de-BE"
+	Tag_deBE             = language.MustParse(TagOriginalName_deBE)
+	TagName_deBE         = Tag_deBE.String() // The tag name may have changed from the original name after parsing.
+	// German (Switzerland)
+	TagOriginalName_deCH = "de-CH"
+	Tag_deCH             = language.MustParse(TagOriginalName_deCH)
+	TagName_deCH         = Tag_deCH.String() // The tag name may have changed from the original name after parsing.
+	// German (Germany)
+	TagOriginalName_deDE = "de-DE"
+	Tag_deDE             = language.MustParse(TagOriginalName_deDE)
+	TagName_deDE         = Tag_deDE.String() // The tag name may have changed from the original name after parsing.
+	// German (Italy)
+	TagOriginalName_deIT = "de-IT"
+	Tag_deIT             = language.MustParse(TagOriginalName_deIT)
+	TagName_deIT         = Tag_deIT.String() // The tag name may have changed from the original name after parsing.
+	// German (Liechtenstein)
+	TagOriginalName_deLI = "de-LI"
+	Tag_deLI             = language.MustParse(TagOriginalName_deLI)
+	TagName_deLI         = Tag_deLI.String() // The tag name may have changed from the original name after parsing.
+	// German (Luxembourg)
+	TagOriginalName_deLU = "de-LU"
+	Tag_deLU             = language.MustParse(TagOriginalName_deLU)
+	TagName_deLU         = Tag_deLU.String() // The tag name may have changed from the original name after parsing.
+	// Greek (Cyprus)
+	TagOriginalName_elCY = "el-CY"
+	Tag_elCY             = language.MustParse(TagOriginalName_elCY)
+	TagName_elCY         = Tag_elCY.String() // The tag name may have changed from the original name after parsing.
+	// Greek (Greece)
+	TagOriginalName_elGR = "el-GR"
+	Tag_elGR             = language.MustParse(TagOriginalName_elGR)
+	TagName_elGR         = Tag_elGR.String() // The tag name may have changed from the original name after parsing.
+	// Ancient Greek (Greece)
+	TagOriginalName_grcGR = "grc-GR"
+	Tag_grcGR             = language.MustParse(TagOriginalName_grcGR)
+	TagName_grcGR         = Tag_grcGR.String() // The tag name may have changed from the original name after parsing.
+	// Modern Greek (Greece)
+	TagOriginalName_greGR = "gre-GR"
+	Tag_greGR             = language.MustParse(TagOriginalName_greGR)
+	TagName_greGR         = Tag_greGR.String() // The tag name may have changed from the original name after parsing.
+	// Hausa (Republic of Ghana)
+	TagOriginalName_haGH = "ha-GH"
+	Tag_haGH             = language.MustParse(TagOriginalName_haGH)
+	TagName_haGH         = Tag_haGH.String() // The tag name may have changed from the original name after parsing.
+	// Hausa (Niger)
+	TagOriginalName_haNE = "ha-NE"
+	Tag_haNE             = language.MustParse(TagOriginalName_haNE)
+	TagName_haNE         = Tag_haNE.String() // The tag name may have changed from the original name after parsing.
+	// Hausa (Nigeria)
+	TagOriginalName_haNG = "ha-NG"
+	Tag_haNG             = language.MustParse(TagOriginalName_haNG)
+	TagName_haNG         = Tag_haNG.String() // The tag name may have changed from the original name after parsing.
+	// Hindi (India)
+	TagOriginalName_hiIN = "hi-IN"
+	Tag_hiIN             = language.MustParse(TagOriginalName_hiIN)
+	TagName_hiIN         = Tag_hiIN.String() // The tag name may have changed from the original name after parsing.
+	// Esperanto (World)
+	TagOriginalName_eo = "eo"
+	Tag_eo             = language.MustParse(TagOriginalName_eo)
+	TagName_eo         = Tag_eo.String() // The tag name may have changed from the original name after parsing.
+	// Ido (World)
+	TagOriginalName_io = "io"
+	Tag_io             = language.MustParse(TagOriginalName_io)
+	TagName_io         = Tag_io.String() // The tag name may have changed from the original name after parsing.
+	// Volapük (World)
+	TagOriginalName_vo = "vo"
+	Tag_vo             = language.MustParse(TagOriginalName_vo)
+	TagName_vo         = Tag_vo.String() // The tag name may have changed from the original name after parsing.
+	// Italian (Switzerland)
+	TagOriginalName_itCH = "it-CH"
+	Tag_itCH             = language.MustParse(TagOriginalName_itCH)
+	TagName_itCH         = Tag_itCH.String() // The tag name may have changed from the original name after parsing.
+	// Italian (Italy)
+	TagOriginalName_itIT = "it-IT"
+	Tag_itIT             = language.MustParse(TagOriginalName_itIT)
+	TagName_itIT         = Tag_itIT.String() // The tag name may have changed from the original name after parsing.
+	// Italian (San Marino)
+	TagOriginalName_itSM = "it-SM"
+	Tag_itSM             = language.MustParse(TagOriginalName_itSM)
+	TagName_itSM         = Tag_itSM.String() // The tag name may have changed from the original name after parsing.
+	// Italian (Vatican City State)
+	TagOriginalName_itVA = "it-VA"
+	Tag_itVA             = language.MustParse(TagOriginalName_itVA)
+	TagName_itVA         = Tag_itVA.String() // The tag name may have changed from the original name after parsing.
+	// Japanese (Japan)
+	TagOriginalName_jaJP = "ja-JP"
+	Tag_jaJP             = language.MustParse(TagOriginalName_jaJP)
+	TagName_jaJP         = Tag_jaJP.String() // The tag name may have changed from the original name after parsing.
+	// Korean (North Korea)
+	TagOriginalName_koKP = "ko-KP"
+	Tag_koKP             = language.MustParse(TagOriginalName_koKP)
+	TagName_koKP         = Tag_koKP.String() // The tag name may have changed from the original name after parsing.
+	// (Korea)
+	TagOriginalName_koKR = "ko-KR"
+	Tag_koKR             = language.MustParse(TagOriginalName_koKR)
+	TagName_koKR         = Tag_koKR.String() // The tag name may have changed from the original name after parsing.
+	// Kurdish (Iraq)
+	TagOriginalName_kuIQ = "ku-IQ"
+	Tag_kuIQ             = language.MustParse(TagOriginalName_kuIQ)
+	TagName_kuIQ         = Tag_kuIQ.String() // The tag name may have changed from the original name after parsing.
+	// Kurdish (Islamic Republic of Iran)
+	TagOriginalName_kuIR = "ku-IR"
+	Tag_kuIR             = language.MustParse(TagOriginalName_kuIR)
+	TagName_kuIR         = Tag_kuIR.String() // The tag name may have changed from the original name after parsing.
+	// Lingala (Angola)
+	TagOriginalName_lnAO = "ln-AO"
+	Tag_lnAO             = language.MustParse(TagOriginalName_lnAO)
+	TagName_lnAO         = Tag_lnAO.String() // The tag name may have changed from the original name after parsing.
+	// Lingala (Democratic Republic of the Congo)
+	TagOriginalName_lnCD = "ln-CD"
+	Tag_lnCD             = language.MustParse(TagOriginalName_lnCD)
+	TagName_lnCD         = Tag_lnCD.String() // The tag name may have changed from the original name after parsing.
+	// Lingala (Central African Republic)
+	TagOriginalName_lnCF = "ln-CF"
+	Tag_lnCF             = language.MustParse(TagOriginalName_lnCF)
+	TagName_lnCF         = Tag_lnCF.String() // The tag name may have changed from the original name after parsing.
+	// Lingala (Republic of the Congo)
+	TagOriginalName_lnCG = "ln-CG"
+	Tag_lnCG             = language.MustParse(TagOriginalName_lnCG)
+	TagName_lnCG         = Tag_lnCG.String() // The tag name may have changed from the original name after parsing.
+	// Malay (Brunei Darussalam)
+	TagOriginalName_msBN = "ms-BN"
+	Tag_msBN             = language.MustParse(TagOriginalName_msBN)
+	TagName_msBN         = Tag_msBN.String() // The tag name may have changed from the original name after parsing.
+	// Malay (Malaysia)
+	TagOriginalName_msMY = "ms-MY"
+	Tag_msMY             = language.MustParse(TagOriginalName_msMY)
+	TagName_msMY         = Tag_msMY.String() // The tag name may have changed from the original name after parsing.
+	// Nepali (India)
+	TagOriginalName_neIN = "ne-IN"
+	Tag_neIN             = language.MustParse(TagOriginalName_neIN)
+	TagName_neIN         = Tag_neIN.String() // The tag name may have changed from the original name after parsing.
+	// Nepali (Federal Democratic Republic of Nepal)
+	TagOriginalName_neNP = "ne-NP"
+	Tag_neNP             = language.MustParse(TagOriginalName_neNP)
+	TagName_neNP         = Tag_neNP.String() // The tag name may have changed from the original name after parsing.
+	// Oromo (Ethiopia)
+	TagOriginalName_omET = "om-ET"
+	Tag_omET             = language.MustParse(TagOriginalName_omET)
+	TagName_omET         = Tag_omET.String() // The tag name may have changed from the original name after parsing.
+	// Oromo (Kenya)
+	TagOriginalName_omKE = "om-KE"
+	Tag_omKE             = language.MustParse(TagOriginalName_omKE)
+	TagName_omKE         = Tag_omKE.String() // The tag name may have changed from the original name after parsing.
+	// Persian (Afghanistan)
+	TagOriginalName_faAF = "fa-AF"
+	Tag_faAF             = language.MustParse(TagOriginalName_faAF)
+	TagName_faAF         = Tag_faAF.String() // The tag name may have changed from the original name after parsing.
+	// Persian (Islamic Republic of Iran)
+	TagOriginalName_faIR = "fa-IR"
+	Tag_faIR             = language.MustParse(TagOriginalName_faIR)
+	TagName_faIR         = Tag_faIR.String() // The tag name may have changed from the original name after parsing.
+	// Portuguese (Brazil)
+	TagOriginalName_ptBR = "pt-BR"
+	Tag_ptBR             = language.MustParse(TagOriginalName_ptBR)
+	TagName_ptBR         = Tag_ptBR.String() // The tag name may have changed from the original name after parsing.
+	// Portuguese (Portugal)
+	TagOriginalName_ptPT = "pt-PT"
+	Tag_ptPT             = language.MustParse(TagOriginalName_ptPT)
+	TagName_ptPT         = Tag_ptPT.String() // The tag name may have changed from the original name after parsing.
+	// Quechua (Bolivia)
+	TagOriginalName_quBO = "qu-BO"
+	Tag_quBO             = language.MustParse(TagOriginalName_quBO)
+	TagName_quBO         = Tag_quBO.String() // The tag name may have changed from the original name after parsing.
+	// Quechua (Ecuador)
+	TagOriginalName_quEC = "qu-EC"
+	Tag_quEC             = language.MustParse(TagOriginalName_quEC)
+	TagName_quEC         = Tag_quEC.String() // The tag name may have changed from the original name after parsing.
+	// Quechua (Peru)
+	TagOriginalName_quPE = "qu-PE"
+	Tag_quPE             = language.MustParse(TagOriginalName_quPE)
+	TagName_quPE         = Tag_quPE.String() // The tag name may have changed from the original name after parsing.
+	// Romanian (Moldova)
+	TagOriginalName_roMD = "ro-MD"
+	Tag_roMD             = language.MustParse(TagOriginalName_roMD)
+	TagName_roMD         = Tag_roMD.String() // The tag name may have changed from the original name after parsing.
+	// Romanian (Romania)
+	TagOriginalName_roRO = "ro-RO"
+	Tag_roRO             = language.MustParse(TagOriginalName_roRO)
+	TagName_roRO         = Tag_roRO.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Belarus)
+	TagOriginalName_ruBY = "ru-BY"
+	Tag_ruBY             = language.MustParse(TagOriginalName_ruBY)
+	TagName_ruBY         = Tag_ruBY.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Kyrgyzstan)
+	TagOriginalName_ruKG = "ru-KG"
+	Tag_ruKG             = language.MustParse(TagOriginalName_ruKG)
+	TagName_ruKG         = Tag_ruKG.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Kazakhstan)
+	TagOriginalName_ruKZ = "ru-KZ"
+	Tag_ruKZ             = language.MustParse(TagOriginalName_ruKZ)
+	TagName_ruKZ         = Tag_ruKZ.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Moldova)
+	TagOriginalName_ruMD = "ru-MD"
+	Tag_ruMD             = language.MustParse(TagOriginalName_ruMD)
+	TagName_ruMD         = Tag_ruMD.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Russia)
+	TagOriginalName_ruRU = "ru-RU"
+	Tag_ruRU             = language.MustParse(TagOriginalName_ruRU)
+	TagName_ruRU         = Tag_ruRU.String() // The tag name may have changed from the original name after parsing.
+	// Russian (Ukraine)
+	TagOriginalName_ruUA = "ru-UA"
+	Tag_ruUA             = language.MustParse(TagOriginalName_ruUA)
+	TagName_ruUA         = Tag_ruUA.String() // The tag name may have changed from the original name after parsing.
+	// Southern Sami (Norway)
+	TagOriginalName_smaNO = "sma-NO"
+	Tag_smaNO             = language.MustParse(TagOriginalName_smaNO)
+	TagName_smaNO         = Tag_smaNO.String() // The tag name may have changed from the original name after parsing.
+	// Southern Sami (Sweden)
+	TagOriginalName_smaSE = "sma-SE"
+	Tag_smaSE             = language.MustParse(TagOriginalName_smaSE)
+	TagName_smaSE         = Tag_smaSE.String() // The tag name may have changed from the original name after parsing.
+	// Northern Sami (Finland)
+	TagOriginalName_smeFI = "sme-FI"
+	Tag_smeFI             = language.MustParse(TagOriginalName_smeFI)
+	TagName_smeFI         = Tag_smeFI.String() // The tag name may have changed from the original name after parsing.
+	// Northern Sami (Norway)
+	TagOriginalName_smeNO = "sme-NO"
+	Tag_smeNO             = language.MustParse(TagOriginalName_smeNO)
+	TagName_smeNO         = Tag_smeNO.String() // The tag name may have changed from the original name after parsing.
+	// Northern Sami (Sweden)
+	TagOriginalName_smeSE = "sme-SE"
+	Tag_smeSE             = language.MustParse(TagOriginalName_smeSE)
+	TagName_smeSE         = Tag_smeSE.String() // The tag name may have changed from the original name after parsing.
+	// Lule Sami (Norway)
+	TagOriginalName_smjNO = "smj-NO"
+	Tag_smjNO             = language.MustParse(TagOriginalName_smjNO)
+	TagName_smjNO         = Tag_smjNO.String() // The tag name may have changed from the original name after parsing.
+	// Lule Sami (Sweden)
+	TagOriginalName_smjSE = "smj-SE"
+	Tag_smjSE             = language.MustParse(TagOriginalName_smjSE)
+	TagName_smjSE         = Tag_smjSE.String() // The tag name may have changed from the original name after parsing.
+	// Inari Sami (Finland)
+	TagOriginalName_smnFI = "smn-FI"
+	Tag_smnFI             = language.MustParse(TagOriginalName_smnFI)
+	TagName_smnFI         = Tag_smnFI.String() // The tag name may have changed from the original name after parsing.
+	// Skolt Sami (Finland)
+	TagOriginalName_smsFI = "sms-FI"
+	Tag_smsFI             = language.MustParse(TagOriginalName_smsFI)
+	TagName_smsFI         = Tag_smsFI.String() // The tag name may have changed from the original name after parsing.
+	// Serbian (Bosnia and Herzegovina)
+	TagOriginalName_srBA = "sr-BA"
+	Tag_srBA             = language.MustParse(TagOriginalName_srBA)
+	TagName_srBA         = Tag_srBA.String() // The tag name may have changed from the original name after parsing.
+	// Serbian (Serbia and Montenegro)
+	TagOriginalName_srCS = "sr-CS"
+	Tag_srCS             = language.MustParse(TagOriginalName_srCS)
+	TagName_srCS         = Tag_srCS.String() // The tag name may have changed from the original name after parsing.
+	// Serbian (Montenegro)
+	TagOriginalName_srME = "sr-ME"
+	Tag_srME             = language.MustParse(TagOriginalName_srME)
+	TagName_srME         = Tag_srME.String() // The tag name may have changed from the original name after parsing.
+	// Serbian (Serbia)
+	TagOriginalName_srRS = "sr-RS"
+	Tag_srRS             = language.MustParse(TagOriginalName_srRS)
+	TagName_srRS         = Tag_srRS.String() // The tag name may have changed from the original name after parsing.
+	// Setswana (Botswana)
+	TagOriginalName_tnBW = "tn-BW"
+	Tag_tnBW             = language.MustParse(TagOriginalName_tnBW)
+	TagName_tnBW         = Tag_tnBW.String() // The tag name may have changed from the original name after parsing.
+	// Setswana (South Africa)
+	TagOriginalName_tnZA = "tn-ZA"
+	Tag_tnZA             = language.MustParse(TagOriginalName_tnZA)
+	TagName_tnZA         = Tag_tnZA.String() // The tag name may have changed from the original name after parsing.
+	// Somali (Djibouti)
+	TagOriginalName_soDJ = "so-DJ"
+	Tag_soDJ             = language.MustParse(TagOriginalName_soDJ)
+	TagName_soDJ         = Tag_soDJ.String() // The tag name may have changed from the original name after parsing.
+	// Somali (Ethiopia)
+	TagOriginalName_soET = "so-ET"
+	Tag_soET             = language.MustParse(TagOriginalName_soET)
+	TagName_soET         = Tag_soET.String() // The tag name may have changed from the original name after parsing.
+	// Somali (Kenya)
+	TagOriginalName_soKE = "so-KE"
+	Tag_soKE             = language.MustParse(TagOriginalName_soKE)
+	TagName_soKE         = Tag_soKE.String() // The tag name may have changed from the original name after parsing.
+	// Somali (Somalia)
+	TagOriginalName_soSO = "so-SO"
+	Tag_soSO             = language.MustParse(TagOriginalName_soSO)
+	TagName_soSO         = Tag_soSO.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Argentina)
+	TagOriginalName_esAR = "es-AR"
+	Tag_esAR             = language.MustParse(TagOriginalName_esAR)
+	TagName_esAR         = Tag_esAR.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Bolivia)
+	TagOriginalName_esBO = "es-BO"
+	Tag_esBO             = language.MustParse(TagOriginalName_esBO)
+	TagName_esBO         = Tag_esBO.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Chile)
+	TagOriginalName_esCL = "es-CL"
+	Tag_esCL             = language.MustParse(TagOriginalName_esCL)
+	TagName_esCL         = Tag_esCL.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Colombia)
+	TagOriginalName_esCO = "es-CO"
+	Tag_esCO             = language.MustParse(TagOriginalName_esCO)
+	TagName_esCO         = Tag_esCO.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Costa Rica)
+	TagOriginalName_esCR = "es-CR"
+	Tag_esCR             = language.MustParse(TagOriginalName_esCR)
+	TagName_esCR         = Tag_esCR.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Dominican Republic)
+	TagOriginalName_esDO = "es-DO"
+	Tag_esDO             = language.MustParse(TagOriginalName_esDO)
+	TagName_esDO         = Tag_esDO.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Ecuador)
+	TagOriginalName_esEC = "es-EC"
+	Tag_esEC             = language.MustParse(TagOriginalName_esEC)
+	TagName_esEC         = Tag_esEC.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Spain)
+	TagOriginalName_esES = "es-ES"
+	Tag_esES             = language.MustParse(TagOriginalName_esES)
+	TagName_esES         = Tag_esES.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Guatemala)
+	TagOriginalName_esGT = "es-GT"
+	Tag_esGT             = language.MustParse(TagOriginalName_esGT)
+	TagName_esGT         = Tag_esGT.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Honduras)
+	TagOriginalName_esHN = "es-HN"
+	Tag_esHN             = language.MustParse(TagOriginalName_esHN)
+	TagName_esHN         = Tag_esHN.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Mexico)
+	TagOriginalName_esMX = "es-MX"
+	Tag_esMX             = language.MustParse(TagOriginalName_esMX)
+	TagName_esMX         = Tag_esMX.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Nicaragua)
+	TagOriginalName_esNI = "es-NI"
+	Tag_esNI             = language.MustParse(TagOriginalName_esNI)
+	TagName_esNI         = Tag_esNI.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Panama)
+	TagOriginalName_esPA = "es-PA"
+	Tag_esPA             = language.MustParse(TagOriginalName_esPA)
+	TagName_esPA         = Tag_esPA.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Peru)
+	TagOriginalName_esPE = "es-PE"
+	Tag_esPE             = language.MustParse(TagOriginalName_esPE)
+	TagName_esPE         = Tag_esPE.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Puerto-Rico)
+	TagOriginalName_esPR = "es-PR"
+	Tag_esPR             = language.MustParse(TagOriginalName_esPR)
+	TagName_esPR         = Tag_esPR.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Paraguay)
+	TagOriginalName_esPY = "es-PY"
+	Tag_esPY             = language.MustParse(TagOriginalName_esPY)
+	TagName_esPY         = Tag_esPY.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (El Salvador)
+	TagOriginalName_esSV = "es-SV"
+	Tag_esSV             = language.MustParse(TagOriginalName_esSV)
+	TagName_esSV         = Tag_esSV.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Uruguay)
+	TagOriginalName_esUY = "es-UY"
+	Tag_esUY             = language.MustParse(TagOriginalName_esUY)
+	TagName_esUY         = Tag_esUY.String() // The tag name may have changed from the original name after parsing.
+	// Spanish (Venezuela)
+	TagOriginalName_esVE = "es-VE"
+	Tag_esVE             = language.MustParse(TagOriginalName_esVE)
+	TagName_esVE         = Tag_esVE.String() // The tag name may have changed from the original name after parsing.
+	// Swahili (Kenya)
+	TagOriginalName_swKE = "sw-KE"
+	Tag_swKE             = language.MustParse(TagOriginalName_swKE)
+	TagName_swKE         = Tag_swKE.String() // The tag name may have changed from the original name after parsing.
+	// Swahili (Tanzania)
+	TagOriginalName_swTZ = "sw-TZ"
+	Tag_swTZ             = language.MustParse(TagOriginalName_swTZ)
+	TagName_swTZ         = Tag_swTZ.String() // The tag name may have changed from the original name after parsing.
+	// Swahili (Uganda)
+	TagOriginalName_swUG = "sw-UG"
+	Tag_swUG             = language.MustParse(TagOriginalName_swUG)
+	TagName_swUG         = Tag_swUG.String() // The tag name may have changed from the original name after parsing.
+	// Swedish (Finland)
+	TagOriginalName_svFI = "sv-FI"
+	Tag_svFI             = language.MustParse(TagOriginalName_svFI)
+	TagName_svFI         = Tag_svFI.String() // The tag name may have changed from the original name after parsing.
+	// Swedish (Sweden)
+	TagOriginalName_svSE = "sv-SE"
+	Tag_svSE             = language.MustParse(TagOriginalName_svSE)
+	TagName_svSE         = Tag_svSE.String() // The tag name may have changed from the original name after parsing.
+	// Tibetan (People's Republic of China)
+	TagOriginalName_boCN = "bo-CN"
+	Tag_boCN             = language.MustParse(TagOriginalName_boCN)
+	TagName_boCN         = Tag_boCN.String() // The tag name may have changed from the original name after parsing.
+	// Tibetan (India)
+	TagOriginalName_boIN = "bo-IN"
+	Tag_boIN             = language.MustParse(TagOriginalName_boIN)
+	TagName_boIN         = Tag_boIN.String() // The tag name may have changed from the original name after parsing.
+	// Tibetan (Federal Democratic Republic of Nepal)
+	TagOriginalName_boNP = "bo-NP"
+	Tag_boNP             = language.MustParse(TagOriginalName_boNP)
+	TagName_boNP         = Tag_boNP.String() // The tag name may have changed from the original name after parsing.
+	// Tigrinya (Eritrea)
+	TagOriginalName_tiER = "ti-ER"
+	Tag_tiER             = language.MustParse(TagOriginalName_tiER)
+	TagName_tiER         = Tag_tiER.String() // The tag name may have changed from the original name after parsing.
+	// Tigrinya (Ethiopia)
+	TagOriginalName_tiET = "ti-ET"
+	Tag_tiET             = language.MustParse(TagOriginalName_tiET)
+	TagName_tiET         = Tag_tiET.String() // The tag name may have changed from the original name after parsing.
+	// Turkish (Cyprus)
+	TagOriginalName_trCY = "tr-CY"
+	Tag_trCY             = language.MustParse(TagOriginalName_trCY)
+	TagName_trCY         = Tag_trCY.String() // The tag name may have changed from the original name after parsing.
+	// Turkish (Turkey)
+	TagOriginalName_trTR = "tr-TR"
+	Tag_trTR             = language.MustParse(TagOriginalName_trTR)
+	TagName_trTR         = Tag_trTR.String() // The tag name may have changed from the original name after parsing.
+	// Urdu (India)
+	TagOriginalName_urIN = "ur-IN"
+	Tag_urIN             = language.MustParse(TagOriginalName_urIN)
+	TagName_urIN         = Tag_urIN.String() // The tag name may have changed from the original name after parsing.
+	// Urdu (Islamic Republic of Pakistan)
+	TagOriginalName_urPK = "ur-PK"
+	Tag_urPK             = language.MustParse(TagOriginalName_urPK)
+	TagName_urPK         = Tag_urPK.String() // The tag name may have changed from the original name after parsing.
+	// Uzbek (Afghanistan)
+	TagOriginalName_uzAF = "uz-AF"
+	Tag_uzAF             = language.MustParse(TagOriginalName_uzAF)
+	TagName_uzAF         = Tag_uzAF.String() // The tag name may have changed from the original name after parsing.
+	// Uzbek (Uzbekistan)
+	TagOriginalName_uzUZ = "uz-UZ"
+	Tag_uzUZ             = language.MustParse(TagOriginalName_uzUZ)
+	TagName_uzUZ         = Tag_uzUZ.String() // The tag name may have changed from the original name after parsing.
+	// Yoruba (Benin)
+	TagOriginalName_yoBJ = "yo-BJ"
+	Tag_yoBJ             = language.MustParse(TagOriginalName_yoBJ)
+	TagName_yoBJ         = Tag_yoBJ.String() // The tag name may have changed from the original name after parsing.
+	// Yoruba (Nigeria)
+	TagOriginalName_yoNG = "yo-NG"
+	Tag_yoNG             = language.MustParse(TagOriginalName_yoNG)
+	TagName_yoNG         = Tag_yoNG.String() // The tag name may have changed from the original name after parsing.
+	// Abkhaz (Russia)
+	TagOriginalName_abRU = "ab-RU"
+	Tag_abRU             = language.MustParse(TagOriginalName_abRU)
+	TagName_abRU         = Tag_abRU.String() // The tag name may have changed from the original name after parsing.
+	// Avestan (Islamic Republic of Iran)
+	TagOriginalName_aeIR = "ae-IR"
+	Tag_aeIR             = language.MustParse(TagOriginalName_aeIR)
+	TagName_aeIR         = Tag_aeIR.String() // The tag name may have changed from the original name after parsing.
+	// Akan (Republic of Ghana)
+	TagOriginalName_akGH = "ak-GH"
+	Tag_akGH             = language.MustParse(TagOriginalName_akGH)
+	TagName_akGH         = Tag_akGH.String() // The tag name may have changed from the original name after parsing.
+	// Amharic (Ethiopia)
+	TagOriginalName_amET = "am-ET"
+	Tag_amET             = language.MustParse(TagOriginalName_amET)
+	TagName_amET         = Tag_amET.String() // The tag name may have changed from the original name after parsing.
+	// Assamese (India)
+	TagOriginalName_asIN = "as-IN"
+	Tag_asIN             = language.MustParse(TagOriginalName_asIN)
+	TagName_asIN         = Tag_asIN.String() // The tag name may have changed from the original name after parsing.
+	// Asturian (Spain)
+	TagOriginalName_astES = "ast-ES"
+	Tag_astES             = language.MustParse(TagOriginalName_astES)
+	TagName_astES         = Tag_astES.String() // The tag name may have changed from the original name after parsing.
+	// Aymara (Bolivia)
+	TagOriginalName_ayBO = "ay-BO"
+	Tag_ayBO             = language.MustParse(TagOriginalName_ayBO)
+	TagName_ayBO         = Tag_ayBO.String() // The tag name may have changed from the original name after parsing.
+	// Azerbaijani (Azerbaijan)
+	TagOriginalName_azAZ = "az-AZ"
+	Tag_azAZ             = language.MustParse(TagOriginalName_azAZ)
+	TagName_azAZ         = Tag_azAZ.String() // The tag name may have changed from the original name after parsing.
+	// Bashkir (Russia)
+	TagOriginalName_baRU = "ba-RU"
+	Tag_baRU             = language.MustParse(TagOriginalName_baRU)
+	TagName_baRU         = Tag_baRU.String() // The tag name may have changed from the original name after parsing.
+	// Belarusian (Belarus)
+	TagOriginalName_beBY = "be-BY"
+	Tag_beBY             = language.MustParse(TagOriginalName_beBY)
+	TagName_beBY         = Tag_beBY.String() // The tag name may have changed from the original name after parsing.
+	// Bulgarian (Bulgaria)
+	TagOriginalName_bgBG = "bg-BG"
+	Tag_bgBG             = language.MustParse(TagOriginalName_bgBG)
+	TagName_bgBG         = Tag_bgBG.String() // The tag name may have changed from the original name after parsing.
+	// Bihari (India)
+	TagOriginalName_bhIN = "bh-IN"
+	Tag_bhIN             = language.MustParse(TagOriginalName_bhIN)
+	TagName_bhIN         = Tag_bhIN.String() // The tag name may have changed from the original name after parsing.
+	// Bislama (Vanuatu)
+	TagOriginalName_biVU = "bi-VU"
+	Tag_biVU             = language.MustParse(TagOriginalName_biVU)
+	TagName_biVU         = Tag_biVU.String() // The tag name may have changed from the original name after parsing.
+	// Bengali (India)
+	TagOriginalName_bnIN = "bn-IN"
+	Tag_bnIN             = language.MustParse(TagOriginalName_bnIN)
+	TagName_bnIN         = Tag_bnIN.String() // The tag name may have changed from the original name after parsing.
+	// Breton (France)
+	TagOriginalName_brFR = "br-FR"
+	Tag_brFR             = language.MustParse(TagOriginalName_brFR)
+	TagName_brFR         = Tag_brFR.String() // The tag name may have changed from the original name after parsing.
+	// Bosnian (Bosnia and Herzegovina)
+	TagOriginalName_bsBA = "bs-BA"
+	Tag_bsBA             = language.MustParse(TagOriginalName_bsBA)
+	TagName_bsBA         = Tag_bsBA.String() // The tag name may have changed from the original name after parsing.
+	// Chechen (Russia)
+	TagOriginalName_ceRU = "ce-RU"
+	Tag_ceRU             = language.MustParse(TagOriginalName_ceRU)
+	TagName_ceRU         = Tag_ceRU.String() // The tag name may have changed from the original name after parsing.
+	// Corsican (France)
+	TagOriginalName_coFR = "co-FR"
+	Tag_coFR             = language.MustParse(TagOriginalName_coFR)
+	TagName_coFR         = Tag_coFR.String() // The tag name may have changed from the original name after parsing.
+	// Czech (Czech Republic)
+	TagOriginalName_csCZ = "cs-CZ"
+	Tag_csCZ             = language.MustParse(TagOriginalName_csCZ)
+	TagName_csCZ         = Tag_csCZ.String() // The tag name may have changed from the original name after parsing.
+	// Chuvash (Russia)
+	TagOriginalName_cvRU = "cv-RU"
+	Tag_cvRU             = language.MustParse(TagOriginalName_cvRU)
+	TagName_cvRU         = Tag_cvRU.String() // The tag name may have changed from the original name after parsing.
+	// Welsh (United Kingdom)
+	TagOriginalName_cyGB = "cy-GB"
+	Tag_cyGB             = language.MustParse(TagOriginalName_cyGB)
+	TagName_cyGB         = Tag_cyGB.String() // The tag name may have changed from the original name after parsing.
+	// Danish (Denmark)
+	TagOriginalName_daDK = "da-DK"
+	Tag_daDK             = language.MustParse(TagOriginalName_daDK)
+	TagName_daDK         = Tag_daDK.String() // The tag name may have changed from the original name after parsing.
+	// Lower Sorbian (Germany)
+	TagOriginalName_dsbDE = "dsb-DE"
+	Tag_dsbDE             = language.MustParse(TagOriginalName_dsbDE)
+	TagName_dsbDE         = Tag_dsbDE.String() // The tag name may have changed from the original name after parsing.
+	// Dzongkha (Bhutan)
+	TagOriginalName_dzBT = "dz-BT"
+	Tag_dzBT             = language.MustParse(TagOriginalName_dzBT)
+	TagName_dzBT         = Tag_dzBT.String() // The tag name may have changed from the original name after parsing.
+	// Estonian (Estonia)
+	TagOriginalName_etEE = "et-EE"
+	Tag_etEE             = language.MustParse(TagOriginalName_etEE)
+	TagName_etEE         = Tag_etEE.String() // The tag name may have changed from the original name after parsing.
+	// Basque (Spain)
+	TagOriginalName_euES = "eu-ES"
+	Tag_euES             = language.MustParse(TagOriginalName_euES)
+	TagName_euES         = Tag_euES.String() // The tag name may have changed from the original name after parsing.
+	// Finnish (Finland)
+	TagOriginalName_fiFI = "fi-FI"
+	Tag_fiFI             = language.MustParse(TagOriginalName_fiFI)
+	TagName_fiFI         = Tag_fiFI.String() // The tag name may have changed from the original name after parsing.
+	// Fijian (Fiji)
+	TagOriginalName_fjFJ = "fj-FJ"
+	Tag_fjFJ             = language.MustParse(TagOriginalName_fjFJ)
+	TagName_fjFJ         = Tag_fjFJ.String() // The tag name may have changed from the original name after parsing.
+	// Frisian (Netherlands)
+	TagOriginalName_fyNL = "fy-NL"
+	Tag_fyNL             = language.MustParse(TagOriginalName_fyNL)
+	TagName_fyNL         = Tag_fyNL.String() // The tag name may have changed from the original name after parsing.
+	// Irish (Ireland)
+	TagOriginalName_gaIE = "ga-IE"
+	Tag_gaIE             = language.MustParse(TagOriginalName_gaIE)
+	TagName_gaIE         = Tag_gaIE.String() // The tag name may have changed from the original name after parsing.
+	// Scottish Gaelic (United Kingdom)
+	TagOriginalName_gdGB = "gd-GB"
+	Tag_gdGB             = language.MustParse(TagOriginalName_gdGB)
+	TagName_gdGB         = Tag_gdGB.String() // The tag name may have changed from the original name after parsing.
+	// Galician (Spain)
+	TagOriginalName_glES = "gl-ES"
+	Tag_glES             = language.MustParse(TagOriginalName_glES)
+	TagName_glES         = Tag_glES.String() // The tag name may have changed from the original name after parsing.
+	// Guarani (Paraguay)
+	TagOriginalName_gnPY = "gn-PY"
+	Tag_gnPY             = language.MustParse(TagOriginalName_gnPY)
+	TagName_gnPY         = Tag_gnPY.String() // The tag name may have changed from the original name after parsing.
+	// Gujarati (India)
+	TagOriginalName_guIN = "gu-IN"
+	Tag_guIN             = language.MustParse(TagOriginalName_guIN)
+	TagName_guIN         = Tag_guIN.String() // The tag name may have changed from the original name after parsing.
+	// Manx (Isle of Man)
+	TagOriginalName_gvIM = "gv-IM"
+	Tag_gvIM             = language.MustParse(TagOriginalName_gvIM)
+	TagName_gvIM         = Tag_gvIM.String() // The tag name may have changed from the original name after parsing.
+	// Hebrew (Israel)
+	TagOriginalName_heIL = "he-IL"
+	Tag_heIL             = language.MustParse(TagOriginalName_heIL)
+	TagName_heIL         = Tag_heIL.String() // The tag name may have changed from the original name after parsing.
+	// Hiri Motu (Independent State of Papua New Guinea)
+	TagOriginalName_hoPG = "ho-PG"
+	Tag_hoPG             = language.MustParse(TagOriginalName_hoPG)
+	TagName_hoPG         = Tag_hoPG.String() // The tag name may have changed from the original name after parsing.
+	// Upper Sorbian (Germany)
+	TagOriginalName_hsbDE = "hsb-DE"
+	Tag_hsbDE             = language.MustParse(TagOriginalName_hsbDE)
+	TagName_hsbDE         = Tag_hsbDE.String() // The tag name may have changed from the original name after parsing.
+	// Haitian (Republic of Haiti)
+	TagOriginalName_htHT = "ht-HT"
+	Tag_htHT             = language.MustParse(TagOriginalName_htHT)
+	TagName_htHT         = Tag_htHT.String() // The tag name may have changed from the original name after parsing.
+	// Hungarian (Hungary)
+	TagOriginalName_huHU = "hu-HU"
+	Tag_huHU             = language.MustParse(TagOriginalName_huHU)
+	TagName_huHU         = Tag_huHU.String() // The tag name may have changed from the original name after parsing.
+	// Armenian (Armenia)
+	TagOriginalName_hyAM = "hy-AM"
+	Tag_hyAM             = language.MustParse(TagOriginalName_hyAM)
+	TagName_hyAM         = Tag_hyAM.String() // The tag name may have changed from the original name after parsing.
+	// Herero (Republic of Namibia)
+	TagOriginalName_hzNA = "hz-NA"
+	Tag_hzNA             = language.MustParse(TagOriginalName_hzNA)
+	TagName_hzNA         = Tag_hzNA.String() // The tag name may have changed from the original name after parsing.
+	// Indonesian (Indonesia)
+	TagOriginalName_idID = "id-ID"
+	Tag_idID             = language.MustParse(TagOriginalName_idID)
+	TagName_idID         = Tag_idID.String() // The tag name may have changed from the original name after parsing.
+	// Inupiaq (United States of America)
+	TagOriginalName_ikUS = "ik-US"
+	Tag_ikUS             = language.MustParse(TagOriginalName_ikUS)
+	TagName_ikUS         = Tag_ikUS.String() // The tag name may have changed from the original name after parsing.
+	// Icelandic (Iceland)
+	TagOriginalName_isIS = "is-IS"
+	Tag_isIS             = language.MustParse(TagOriginalName_isIS)
+	TagName_isIS         = Tag_isIS.String() // The tag name may have changed from the original name after parsing.
+	// Inuktitut (Canada)
+	TagOriginalName_iuCA = "iu-CA"
+	Tag_iuCA             = language.MustParse(TagOriginalName_iuCA)
+	TagName_iuCA         = Tag_iuCA.String() // The tag name may have changed from the original name after parsing.
+	// Javanese (Indonesia)
+	TagOriginalName_jvID = "jv-ID"
+	Tag_jvID             = language.MustParse(TagOriginalName_jvID)
+	TagName_jvID         = Tag_jvID.String() // The tag name may have changed from the original name after parsing.
+	// Georgian (Georgia)
+	TagOriginalName_kaGE = "ka-GE"
+	Tag_kaGE             = language.MustParse(TagOriginalName_kaGE)
+	TagName_kaGE         = Tag_kaGE.String() // The tag name may have changed from the original name after parsing.
+	// Kongo (Republic of the Congo)
+	TagOriginalName_kgCG = "kg-CG"
+	Tag_kgCG             = language.MustParse(TagOriginalName_kgCG)
+	TagName_kgCG         = Tag_kgCG.String() // The tag name may have changed from the original name after parsing.
+	// Kazakh (Kazakhstan)
+	TagOriginalName_kkKZ = "kk-KZ"
+	Tag_kkKZ             = language.MustParse(TagOriginalName_kkKZ)
+	TagName_kkKZ         = Tag_kkKZ.String() // The tag name may have changed from the original name after parsing.
+	// Kalaallisut/Greenlandic (Greenland)
+	TagOriginalName_klGL = "kl-GL"
+	Tag_klGL             = language.MustParse(TagOriginalName_klGL)
+	TagName_klGL         = Tag_klGL.String() // The tag name may have changed from the original name after parsing.
+	// Khmer (Cambodia)
+	TagOriginalName_kmKH = "km-KH"
+	Tag_kmKH             = language.MustParse(TagOriginalName_kmKH)
+	TagName_kmKH         = Tag_kmKH.String() // The tag name may have changed from the original name after parsing.
+	// Kannada (India)
+	TagOriginalName_knIN = "kn-IN"
+	Tag_knIN             = language.MustParse(TagOriginalName_knIN)
+	TagName_knIN         = Tag_knIN.String() // The tag name may have changed from the original name after parsing.
+	// Konkani (India)
+	TagOriginalName_kokIN = "kok-IN"
+	Tag_kokIN             = language.MustParse(TagOriginalName_kokIN)
+	TagName_kokIN         = Tag_kokIN.String() // The tag name may have changed from the original name after parsing.
+	// Kashmiri (India)
+	TagOriginalName_ksIN = "ks-IN"
+	Tag_ksIN             = language.MustParse(TagOriginalName_ksIN)
+	TagName_ksIN         = Tag_ksIN.String() // The tag name may have changed from the original name after parsing.
+	// Komi (Russia)
+	TagOriginalName_kvRU = "kv-RU"
+	Tag_kvRU             = language.MustParse(TagOriginalName_kvRU)
+	TagName_kvRU         = Tag_kvRU.String() // The tag name may have changed from the original name after parsing.
+	// Cornish (United Kingdom)
+	TagOriginalName_kwGB = "kw-GB"
+	Tag_kwGB             = language.MustParse(TagOriginalName_kwGB)
+	TagName_kwGB         = Tag_kwGB.String() // The tag name may have changed from the original name after parsing.
+	// Kyrgyz (Kyrgyz Republic)
+	TagOriginalName_kyKG = "ky-KG"
+	Tag_kyKG             = language.MustParse(TagOriginalName_kyKG)
+	TagName_kyKG         = Tag_kyKG.String() // The tag name may have changed from the original name after parsing.
+	// Latin (Vatican City State)
+	TagOriginalName_laVA = "la-VA"
+	Tag_laVA             = language.MustParse(TagOriginalName_laVA)
+	TagName_laVA         = Tag_laVA.String() // The tag name may have changed from the original name after parsing.
+	// Luxembourgish (Luxembourg)
+	TagOriginalName_lbLU = "lb-LU"
+	Tag_lbLU             = language.MustParse(TagOriginalName_lbLU)
+	TagName_lbLU         = Tag_lbLU.String() // The tag name may have changed from the original name after parsing.
+	// Limburgish (Luxembourg)
+	TagOriginalName_liLU = "li-LU"
+	Tag_liLU             = language.MustParse(TagOriginalName_liLU)
+	TagName_liLU         = Tag_liLU.String() // The tag name may have changed from the original name after parsing.
+	// Lao (Lao People's Democratic Republic)
+	TagOriginalName_loLA = "lo-LA"
+	Tag_loLA             = language.MustParse(TagOriginalName_loLA)
+	TagName_loLA         = Tag_loLA.String() // The tag name may have changed from the original name after parsing.
+	// Lithuanian (Lithuania)
+	TagOriginalName_ltLT = "lt-LT"
+	Tag_ltLT             = language.MustParse(TagOriginalName_ltLT)
+	TagName_ltLT         = Tag_ltLT.String() // The tag name may have changed from the original name after parsing.
+	// Latvian (Latvia)
+	TagOriginalName_lvLV = "lv-LV"
+	Tag_lvLV             = language.MustParse(TagOriginalName_lvLV)
+	TagName_lvLV         = Tag_lvLV.String() // The tag name may have changed from the original name after parsing.
+	// Malagasy (Madagascar)
+	TagOriginalName_mgMG = "mg-MG"
+	Tag_mgMG             = language.MustParse(TagOriginalName_mgMG)
+	TagName_mgMG         = Tag_mgMG.String() // The tag name may have changed from the original name after parsing.
+	// Marshallese (Republic of the Marshall Islands)
+	TagOriginalName_mhMH = "mh-MH"
+	Tag_mhMH             = language.MustParse(TagOriginalName_mhMH)
+	TagName_mhMH         = Tag_mhMH.String() // The tag name may have changed from the original name after parsing.
+	// Maori (New Zealand)
+	TagOriginalName_miNZ = "mi-NZ"
+	Tag_miNZ             = language.MustParse(TagOriginalName_miNZ)
+	TagName_miNZ         = Tag_miNZ.String() // The tag name may have changed from the original name after parsing.
+	// Macedonian (North Macedonia)
+	TagOriginalName_mkMK = "mk-MK"
+	Tag_mkMK             = language.MustParse(TagOriginalName_mkMK)
+	TagName_mkMK         = Tag_mkMK.String() // The tag name may have changed from the original name after parsing.
+	// Malayalam (India)
+	TagOriginalName_mlIN = "ml-IN"
+	Tag_mlIN             = language.MustParse(TagOriginalName_mlIN)
+	TagName_mlIN         = Tag_mlIN.String() // The tag name may have changed from the original name after parsing.
+	// Mongolian (Mongolia)
+	TagOriginalName_mnMN = "mn-MN"
+	Tag_mnMN             = language.MustParse(TagOriginalName_mnMN)
+	TagName_mnMN         = Tag_mnMN.String() // The tag name may have changed from the original name after parsing.
+	// Moldovan (Republic of Moldova)
+	TagOriginalName_moMD = "mo-MD"
+	Tag_moMD             = language.MustParse(TagOriginalName_moMD)
+	TagName_moMD         = Tag_moMD.String() // The tag name may have changed from the original name after parsing.
+	// Marathi (India)
+	TagOriginalName_mrIN = "mr-IN"
+	Tag_mrIN             = language.MustParse(TagOriginalName_mrIN)
+	TagName_mrIN         = Tag_mrIN.String() // The tag name may have changed from the original name after parsing.
+	// Maltese (Malta)
+	TagOriginalName_mtMT = "mt-MT"
+	Tag_mtMT             = language.MustParse(TagOriginalName_mtMT)
+	TagName_mtMT         = Tag_mtMT.String() // The tag name may have changed from the original name after parsing.
+	// Burmese (Myanmar)
+	TagOriginalName_myMM = "my-MM"
+	Tag_myMM             = language.MustParse(TagOriginalName_myMM)
+	TagName_myMM         = Tag_myMM.String() // The tag name may have changed from the original name after parsing.
+	// Nauruan (Republic of Nauru)
+	TagOriginalName_naNR = "na-NR"
+	Tag_naNR             = language.MustParse(TagOriginalName_naNR)
+	TagName_naNR         = Tag_naNR.String() // The tag name may have changed from the original name after parsing.
+	// Norwegian (Bokmål)
+	TagOriginalName_nbNO = "nb-NO"
+	Tag_nbNO             = language.MustParse(TagOriginalName_nbNO)
+	TagName_nbNO         = Tag_nbNO.String() // The tag name may have changed from the original name after parsing.
+	// North Ndebele (Zimbabwe)
+	TagOriginalName_ndZW = "nd-ZW"
+	Tag_ndZW             = language.MustParse(TagOriginalName_ndZW)
+	TagName_ndZW         = Tag_ndZW.String() // The tag name may have changed from the original name after parsing.
+	// Ndonga (Republic of Namibia)
+	TagOriginalName_ngNA = "ng-NA"
+	Tag_ngNA             = language.MustParse(TagOriginalName_ngNA)
+	TagName_ngNA         = Tag_ngNA.String() // The tag name may have changed from the original name after parsing.
+	// Norwegian (Nynorsk)
+	TagOriginalName_nnNO = "nn-NO"
+	Tag_nnNO             = language.MustParse(TagOriginalName_nnNO)
+	TagName_nnNO         = Tag_nnNO.String() // The tag name may have changed from the original name after parsing.
+	// Northern Sotho (South Africa)
+	TagOriginalName_nsoZA = "nso-ZA"
+	Tag_nsoZA             = language.MustParse(TagOriginalName_nsoZA)
+	TagName_nsoZA         = Tag_nsoZA.String() // The tag name may have changed from the original name after parsing.
+	// Chewa (Malawi)
+	TagOriginalName_nyMW = "ny-MW"
+	Tag_nyMW             = language.MustParse(TagOriginalName_nyMW)
+	TagName_nyMW         = Tag_nyMW.String() // The tag name may have changed from the original name after parsing.
+	// Occitan (France)
+	TagOriginalName_ocFR = "oc-FR"
+	Tag_ocFR             = language.MustParse(TagOriginalName_ocFR)
+	TagName_ocFR         = Tag_ocFR.String() // The tag name may have changed from the original name after parsing.
+	// Oriya (India)
+	TagOriginalName_orIN = "or-IN"
+	Tag_orIN             = language.MustParse(TagOriginalName_orIN)
+	TagName_orIN         = Tag_orIN.String() // The tag name may have changed from the original name after parsing.
+	// Ossetian (Georgia)
+	TagOriginalName_osGE = "os-GE"
+	Tag_osGE             = language.MustParse(TagOriginalName_osGE)
+	TagName_osGE         = Tag_osGE.String() // The tag name may have changed from the original name after parsing.
+	// Ossetian (Russia)
+	TagOriginalName_osRU = "os-RU"
+	Tag_osRU             = language.MustParse(TagOriginalName_osRU)
+	TagName_osRU         = Tag_osRU.String() // The tag name may have changed from the original name after parsing.
+	// Panjabi/Punjabi (India)
+	TagOriginalName_paIN = "pa-IN"
+	Tag_paIN             = language.MustParse(TagOriginalName_paIN)
+	TagName_paIN         = Tag_paIN.String() // The tag name may have changed from the original name after parsing.
+	// Pali (India)
+	TagOriginalName_piIN = "pi-IN"
+	Tag_piIN             = language.MustParse(TagOriginalName_piIN)
+	TagName_piIN         = Tag_piIN.String() // The tag name may have changed from the original name after parsing.
+	// Polish (Poland)
+	TagOriginalName_plPL = "pl-PL"
+	Tag_plPL             = language.MustParse(TagOriginalName_plPL)
+	TagName_plPL         = Tag_plPL.String() // The tag name may have changed from the original name after parsing.
+	// Pushto/Pashto (Afghanistan)
+	TagOriginalName_psAF = "ps-AF"
+	Tag_psAF             = language.MustParse(TagOriginalName_psAF)
+	TagName_psAF         = Tag_psAF.String() // The tag name may have changed from the original name after parsing.
+	// Romansh (Switzerland)
+	TagOriginalName_rmCH = "rm-CH"
+	Tag_rmCH             = language.MustParse(TagOriginalName_rmCH)
+	TagName_rmCH         = Tag_rmCH.String() // The tag name may have changed from the original name after parsing.
+	// Rundi (Burundi)
+	TagOriginalName_rnBI = "rn-BI"
+	Tag_rnBI             = language.MustParse(TagOriginalName_rnBI)
+	TagName_rnBI         = Tag_rnBI.String() // The tag name may have changed from the original name after parsing.
+	// Kinyarwanda (Rwanda)
+	TagOriginalName_rwRW = "rw-RW"
+	Tag_rwRW             = language.MustParse(TagOriginalName_rwRW)
+	TagName_rwRW         = Tag_rwRW.String() // The tag name may have changed from the original name after parsing.
+	// Sanskrit (India)
+	TagOriginalName_saIN = "sa-IN"
+	Tag_saIN             = language.MustParse(TagOriginalName_saIN)
+	TagName_saIN         = Tag_saIN.String() // The tag name may have changed from the original name after parsing.
+	// Sardinian (Italy)
+	TagOriginalName_scIT = "sc-IT"
+	Tag_scIT             = language.MustParse(TagOriginalName_scIT)
+	TagName_scIT         = Tag_scIT.String() // The tag name may have changed from the original name after parsing.
+	// Sindhi (Islamic Republic of Pakistan)
+	TagOriginalName_sdPK = "sd-PK"
+	Tag_sdPK             = language.MustParse(TagOriginalName_sdPK)
+	TagName_sdPK         = Tag_sdPK.String() // The tag name may have changed from the original name after parsing.
+	// Sango (Central African Republic)
+	TagOriginalName_sgCF = "sg-CF"
+	Tag_sgCF             = language.MustParse(TagOriginalName_sgCF)
+	TagName_sgCF         = Tag_sgCF.String() // The tag name may have changed from the original name after parsing.
+	// Sinhalese (India)
+	TagOriginalName_siIN = "si-IN"
+	Tag_siIN             = language.MustParse(TagOriginalName_siIN)
+	TagName_siIN         = Tag_siIN.String() // The tag name may have changed from the original name after parsing.
+	// Sinhala (Democratic Socialist Republic of Sri Lanka)
+	TagOriginalName_siLK = "si-LK"
+	Tag_siLK             = language.MustParse(TagOriginalName_siLK)
+	TagName_siLK         = Tag_siLK.String() // The tag name may have changed from the original name after parsing.
+	// Slovak (Slovakia)
+	TagOriginalName_skSK = "sk-SK"
+	Tag_skSK             = language.MustParse(TagOriginalName_skSK)
+	TagName_skSK         = Tag_skSK.String() // The tag name may have changed from the original name after parsing.
+	// Slovenian (Slovenia)
+	TagOriginalName_slSI = "sl-SI"
+	Tag_slSI             = language.MustParse(TagOriginalName_slSI)
+	TagName_slSI         = Tag_slSI.String() // The tag name may have changed from the original name after parsing.
+	// Samoan (Independent State of Samoa)
+	TagOriginalName_smWS = "sm-WS"
+	Tag_smWS             = language.MustParse(TagOriginalName_smWS)
+	TagName_smWS         = Tag_smWS.String() // The tag name may have changed from the original name after parsing.
+	// Shona (Zimbabwe)
+	TagOriginalName_snZW = "sn-ZW"
+	Tag_snZW             = language.MustParse(TagOriginalName_snZW)
+	TagName_snZW         = Tag_snZW.String() // The tag name may have changed from the original name after parsing.
+	// Sundanese (Indonesia)
+	TagOriginalName_suID = "su-ID"
+	Tag_suID             = language.MustParse(TagOriginalName_suID)
+	TagName_suID         = Tag_suID.String() // The tag name may have changed from the original name after parsing.
+	// Syriac (Syria)
+	TagOriginalName_syrTR = "syr-TR"
+	Tag_syrTR             = language.MustParse(TagOriginalName_syrTR)
+	TagName_syrTR         = Tag_syrTR.String() // The tag name may have changed from the original name after parsing.
+	// Tamil (India)
+	TagOriginalName_taIN = "ta-IN"
+	Tag_taIN             = language.MustParse(TagOriginalName_taIN)
+	TagName_taIN         = Tag_taIN.String() // The tag name may have changed from the original name after parsing.
+	// Telugu (India)
+	TagOriginalName_teIN = "te-IN"
+	Tag_teIN             = language.MustParse(TagOriginalName_teIN)
+	TagName_teIN         = Tag_teIN.String() // The tag name may have changed from the original name after parsing.
+	// Tetum (Indonesia)
+	TagOriginalName_tetID = "tet-ID"
+	Tag_tetID             = language.MustParse(TagOriginalName_tetID)
+	TagName_tetID         = Tag_tetID.String() // The tag name may have changed from the original name after parsing.
+	// Tetum (Democratic Republic of Timor-Leste)
+	TagOriginalName_tetTL = "tet-TL"
+	Tag_tetTL             = language.MustParse(TagOriginalName_tetTL)
+	TagName_tetTL         = Tag_tetTL.String() // The tag name may have changed from the original name after parsing.
+	// Tajik (Tajikistan)
+	TagOriginalName_tgTJ = "tg-TJ"
+	Tag_tgTJ             = language.MustParse(TagOriginalName_tgTJ)
+	TagName_tgTJ         = Tag_tgTJ.String() // The tag name may have changed from the original name after parsing.
+	// Thai (Thailand)
+	TagOriginalName_thTH = "th-TH"
+	Tag_thTH             = language.MustParse(TagOriginalName_thTH)
+	TagName_thTH         = Tag_thTH.String() // The tag name may have changed from the original name after parsing.
+	// Turkmen (Turkmenistan)
+	TagOriginalName_tkTM = "tk-TM"
+	Tag_tkTM             = language.MustParse(TagOriginalName_tkTM)
+	TagName_tkTM         = Tag_tkTM.String() // The tag name may have changed from the original name after parsing.
+	// Tagalog (Philippines)
+	TagOriginalName_tlPH = "tl-PH"
+	Tag_tlPH             = language.MustParse(TagOriginalName_tlPH)
+	TagName_tlPH         = Tag_tlPH.String() // The tag name may have changed from the original name after parsing.
+	// Tongan (Tonga)
+	TagOriginalName_toTO = "to-TO"
+	Tag_toTO             = language.MustParse(TagOriginalName_toTO)
+	TagName_toTO         = Tag_toTO.String() // The tag name may have changed from the original name after parsing.
+	// Tsonga (South Africa)
+	TagOriginalName_tsZA = "ts-ZA"
+	Tag_tsZA             = language.MustParse(TagOriginalName_tsZA)
+	TagName_tsZA         = Tag_tsZA.String() // The tag name may have changed from the original name after parsing.
+	// Tatar (Russia)
+	TagOriginalName_ttRU = "tt-RU"
+	Tag_ttRU             = language.MustParse(TagOriginalName_ttRU)
+	TagName_ttRU         = Tag_ttRU.String() // The tag name may have changed from the original name after parsing.
+	// Twi (Ghana)
+	TagOriginalName_twGH = "tw-GH"
+	Tag_twGH             = language.MustParse(TagOriginalName_twGH)
+	TagName_twGH         = Tag_twGH.String() // The tag name may have changed from the original name after parsing.
+	// Tahitian (French Polynesia)
+	TagOriginalName_tyPF = "ty-PF"
+	Tag_tyPF             = language.MustParse(TagOriginalName_tyPF)
+	TagName_tyPF         = Tag_tyPF.String() // The tag name may have changed from the original name after parsing.
+	// Uyghur (People's Republic of China)
+	TagOriginalName_ugCN = "ug-CN"
+	Tag_ugCN             = language.MustParse(TagOriginalName_ugCN)
+	TagName_ugCN         = Tag_ugCN.String() // The tag name may have changed from the original name after parsing.
+	// Ukrainian (Ukraine)
+	TagOriginalName_ukUA = "uk-UA"
+	Tag_ukUA             = language.MustParse(TagOriginalName_ukUA)
+	TagName_ukUA         = Tag_ukUA.String() // The tag name may have changed from the original name after parsing.
+	// Vietnamese (Vietnam)
+	TagOriginalName_viVN = "vi-VN"
+	Tag_viVN             = language.MustParse(TagOriginalName_viVN)
+	TagName_viVN         = Tag_viVN.String() // The tag name may have changed from the original name after parsing.
+	// Walloon (Belgium)
+	TagOriginalName_waBE = "wa-BE"
+	Tag_waBE             = language.MustParse(TagOriginalName_waBE)
+	TagName_waBE         = Tag_waBE.String() // The tag name may have changed from the original name after parsing.
+	// Wolof (Senegal)
+	TagOriginalName_woSN = "wo-SN"
+	Tag_woSN             = language.MustParse(TagOriginalName_woSN)
+	TagName_woSN         = Tag_woSN.String() // The tag name may have changed from the original name after parsing.
+	// Xhosa (South Africa)
+	TagOriginalName_xhZA = "xh-ZA"
+	Tag_xhZA             = language.MustParse(TagOriginalName_xhZA)
+	TagName_xhZA         = Tag_xhZA.String() // The tag name may have changed from the original name after parsing.
+	// Yiddish (Bosnia and Herzegovina)
+	TagOriginalName_yiBA = "yi-BA"
+	Tag_yiBA             = language.MustParse(TagOriginalName_yiBA)
+	TagName_yiBA         = Tag_yiBA.String() // The tag name may have changed from the original name after parsing.
+	// Zulu (South Africa)
+	TagOriginalName_zuZA = "zu-ZA"
+	Tag_zuZA             = language.MustParse(TagOriginalName_zuZA)
+	TagName_zuZA         = Tag_zuZA.String() // The tag name may have changed from the original name after parsing.
 )
