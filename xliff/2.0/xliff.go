@@ -12,7 +12,7 @@ const (
 	Version                  = "2.0"
 	FileExtension            = "xlf"
 	MIMEType                 = "application/x-xliff+xml"
-	DefaultXMLNS             = "urn:oasis:names:tc:xliff:document:2.0"
+	XMLNS                    = "urn:oasis:names:tc:xliff:document:2.0"
 	DefaultXMLHeader         = "<?xml version=\"1.0\" encoding=\"UTF-16\"?>\n"
 	DefaultFileOriginal      = "encoding/2.0/xliff"
 	DefaultFileDataType      = "plaintext"
@@ -25,7 +25,7 @@ const (
 // http://docs.oasis-open.org/xliff/xliff-core/v2.0/xliff-core-v2.0.html
 func New(id string, sourceTag, targetTag language.Tag) *XLIFF {
 	return &XLIFF{
-		XMLNS:    DefaultXMLNS,
+		XMLNS:    XMLNS,
 		XMLSpace: internal.XMLSpacePreserve,
 		Version:  Version,
 		SrcLang:  sourceTag.String(),

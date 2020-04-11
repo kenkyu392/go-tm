@@ -9,9 +9,9 @@ import (
 
 func TestNew(t *testing.T) {
 	xlf, err := New(
+		UseUTF8XMLEncodingOption(),
 		SourceLanguageOption(tm.Tag_jaJP),
 		TargetLanguageOption(tm.Tag_enUS),
-		UseUTF8XMLEncodingOption(),
 	)
 	if err != nil {
 		t.Errorf("xliff: %+v", err)

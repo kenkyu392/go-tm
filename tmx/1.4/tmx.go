@@ -16,11 +16,11 @@ const (
 	Version                                = "1.4"
 	FileExtension                          = "tmx"
 	MIMEType                               = "application/x-tmx+xml"
-	DefaultXMLNS                           = "http://www.lisa.org/tmx14"
+	XMLNS                                  = "http://www.lisa.org/tmx14"
 	DefaultCreationTool                    = version.PackageName
 	DefaultCreationToolVersion             = version.Version
-	DefaultDataType                        = "plaintext"
-	DefaultSegmentType                     = "sentence"
+	DataTypePlainText                      = "plaintext"
+	SegmentTypeSentence                    = "sentence"
 	DefaultOriginalTranslationMemoryFormat = version.DisplayName + " TMX"
 	DefaultUserName                        = "anonymous"
 	TimeFormat                             = "20060102T150405Z"
@@ -29,13 +29,13 @@ const (
 // New : [Translation Memory eXchange](https://en.wikipedia.org/wiki/Translation_Memory_eXchange)
 func New(opts ...Option) (*TMX, error) {
 	tmx := &TMX{
-		XMLNS:   DefaultXMLNS,
+		XMLNS:   XMLNS,
 		Version: Version,
 		Header: Header{
 			CreationTool:                    DefaultCreationTool,
 			CreationToolVersion:             DefaultCreationToolVersion,
-			DataType:                        DefaultDataType,
-			SegmentType:                     DefaultSegmentType,
+			DataType:                        DataTypePlainText,
+			SegmentType:                     SegmentTypeSentence,
 			OriginalTranslationMemoryFormat: DefaultOriginalTranslationMemoryFormat,
 			SourceLang:                      "",
 			AdminLang:                       "",
@@ -43,6 +43,9 @@ func New(opts ...Option) (*TMX, error) {
 			CreationID:                      "",
 			ChangeDate:                      "",
 			ChangeID:                        "",
+		},
+		Body: Body{
+			TUList: make([]*TU, 0),
 		},
 	}
 	tmx.SetEncoding(internal.UTF16BEEncoding)

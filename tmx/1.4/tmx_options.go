@@ -52,15 +52,15 @@ func SegmentTypeOption(segmentType string) Option {
 	}
 }
 
-// SourceLangOption ...
-func SourceLangOption(tag language.Tag) Option {
+// SourceLanguageOption ...
+func SourceLanguageOption(tag language.Tag) Option {
 	return func(tmx *TMX) {
 		tmx.Header.SourceLang = tag.String()
 	}
 }
 
-// AdminLangOption ...
-func AdminLangOption(tag language.Tag) Option {
+// AdminLanguageOption ...
+func AdminLanguageOption(tag language.Tag) Option {
 	return func(tmx *TMX) {
 		tmx.Header.AdminLang = tag.String()
 	}

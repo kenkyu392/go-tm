@@ -12,9 +12,9 @@ func TestNew(t *testing.T) {
 	now := time.Unix(1577836800, 0)
 
 	tmx, err := New(
-		SourceLangOption(tm.Tag_jaJP),
-		AdminLangOption(tm.Tag_jaJP),
 		UseUTF8XMLEncodingOption(),
+		SourceLanguageOption(tm.Tag_jaJP),
+		AdminLanguageOption(tm.Tag_jaJP),
 		CreationToolOption(DefaultCreationTool, DefaultCreationToolVersion),
 		CreationOption(now, DefaultUserName),
 		ChangeOption(now, DefaultUserName),

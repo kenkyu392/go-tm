@@ -15,9 +15,9 @@ const (
 	Version                  = "1.2"
 	FileExtension            = "xlf"
 	MIMEType                 = "application/x-xliff+xml"
-	DefaultXMLNS             = "urn:oasis:names:tc:xliff:document:1.2"
+	XMLNS                    = "urn:oasis:names:tc:xliff:document:1.2"
 	DefaultFileOriginal      = "original.xlf"
-	DefaultFileDataType      = "plaintext"
+	FileDataTypePlainText    = "plaintext"
 	DefaultHeaderToolID      = version.PackageName
 	DefaultHeaderToolName    = version.DisplayName + " XLIFF"
 	DefaultHeaderToolVersion = version.Version
@@ -28,12 +28,12 @@ const (
 // http://docs.oasis-open.org/xliff/xliff-core/xliff-core.html
 func New(opts ...Option) (*XLIFF, error) {
 	xlf := &XLIFF{
-		XMLNS:    DefaultXMLNS,
+		XMLNS:    XMLNS,
 		XMLSpace: internal.XMLSpacePreserve,
 		Version:  Version,
 		File: File{
 			Date:           time.Now().UTC().Format(time.RFC3339),
-			DataType:       DefaultFileDataType,
+			DataType:       FileDataTypePlainText,
 			Original:       DefaultFileOriginal,
 			SourceLanguage: "",
 			TargetLanguage: "",
