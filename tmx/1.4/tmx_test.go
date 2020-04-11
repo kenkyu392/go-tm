@@ -9,49 +9,55 @@ import (
 )
 
 func TestNew(t *testing.T) {
+	now := time.Unix(1577836800, 0)
+
 	tmx, err := New(
 		SourceLangOption(tm.Tag_jaJP),
+		AdminLangOption(tm.Tag_jaJP),
 		UseUTF8XMLEncodingOption(),
+		CreationToolOption(DefaultCreationTool, DefaultCreationToolVersion),
+		CreationOption(now, DefaultUserName),
+		ChangeOption(now, DefaultUserName),
+		OriginalTranslationMemoryFormatOption(DefaultOriginalTranslationMemoryFormat),
 	)
 	if err != nil {
 		t.Errorf("tmx: %+v", err)
 	}
-	now := time.Now()
 
 	tmx.AddTU(
 		"ID001",
 		NewTUV(
-			CreationTUVOption(now, DefaultUser),
-			ChangeTUVOption(now, DefaultUser),
 			XMLLangTUVOption(tm.Tag_jaJP),
 			SegmentTUVOption("吾輩は猫である"),
+			CreationTUVOption(now, DefaultUserName),
+			ChangeTUVOption(now, DefaultUserName),
 		),
 		NewTUV(
-			CreationTUVOption(now, DefaultUser),
-			ChangeTUVOption(now, DefaultUser),
 			XMLLangTUVOption(tm.Tag_enUS),
 			SegmentTUVOption("I Am a Cat"),
+			CreationTUVOption(now, DefaultUserName),
+			ChangeTUVOption(now, DefaultUserName),
 		),
 	)
 	tmx.AddTU(
 		"ID001",
 		NewTUV(
-			CreationTUVOption(now, DefaultUser),
-			ChangeTUVOption(now, DefaultUser),
 			XMLLangTUVOption(tm.Tag_jaJP),
 			SegmentTUVOption("人間失格"),
+			CreationTUVOption(now, DefaultUserName),
+			ChangeTUVOption(now, DefaultUserName),
 		),
 		NewTUV(
-			CreationTUVOption(now, DefaultUser),
-			ChangeTUVOption(now, DefaultUser),
 			XMLLangTUVOption(tm.Tag_enUS),
 			SegmentTUVOption("No Longer Human"),
+			CreationTUVOption(now, DefaultUserName),
+			ChangeTUVOption(now, DefaultUserName),
 		),
 		NewTUV(
-			CreationTUVOption(now, DefaultUser),
-			ChangeTUVOption(now, DefaultUser),
 			XMLLangTUVOption(tm.Tag_frFR),
 			SegmentTUVOption("La déchéance d'un homme"),
+			CreationTUVOption(now, DefaultUserName),
+			ChangeTUVOption(now, DefaultUserName),
 		),
 	)
 

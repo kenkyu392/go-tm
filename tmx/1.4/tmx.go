@@ -7,6 +7,7 @@ import (
 
 	"github.com/kenkyu392/go-tm"
 	"github.com/kenkyu392/go-tm/internal"
+	"github.com/kenkyu392/go-tm/version"
 	"golang.org/x/text/language"
 )
 
@@ -16,12 +17,12 @@ const (
 	FileExtension                          = "tmx"
 	MIMEType                               = "application/x-tmx+xml"
 	DefaultXMLNS                           = "http://www.lisa.org/tmx14"
-	DefaultCreationTool                    = "go-tmx"
-	DefaultCreationToolVersion             = "1.0.0"
-	DefaultDataType                        = "PlainText"
+	DefaultCreationTool                    = version.PackageName
+	DefaultCreationToolVersion             = version.Version
+	DefaultDataType                        = "plaintext"
 	DefaultSegmentType                     = "sentence"
-	DefaultOriginalTranslationMemoryFormat = "GO TMX"
-	DefaultUser                            = "anonymous"
+	DefaultOriginalTranslationMemoryFormat = version.DisplayName + " TMX"
+	DefaultUserName                        = "anonymous"
 	TimeFormat                             = "20060102T150405Z"
 )
 
@@ -56,8 +57,8 @@ type TMX struct {
 	XMLName xml.Name `xml:"tmx"`
 	XMLNS   string   `xml:"xmlns,attr"`
 	Version string   `xml:"version,attr"`
-	Header  Header
-	Body    Body
+	Header  Header   `xml:"header"`
+	Body    Body     `xml:"body"`
 
 	tm.TM
 }
@@ -99,7 +100,7 @@ type Header struct {
 // Body : The <body> element encloses the main data, the set of <tu> elements that are comprised within the file.
 type Body struct {
 	XMLName xml.Name `xml:"body"`
-	TUList  []*TU
+	TUList  []*TU    `xml:"tu"`
 }
 
 // TU : Each <tu> (Translation Unit) element contains zero, one or more <note> elements or <prop> elements, followed by one or more <tuv> elements. Logically, a complete translation-memory database will contain at least two <tuv> elements in each Translation Unit.
@@ -107,7 +108,7 @@ type TU struct {
 	XMLName xml.Name `xml:"tu"`
 	// The ID attribute specifies an identifier for the <TU> element. Its value is not defined by the standard (it could be unique or not, numeric or alphanumeric, etc.).
 	ID      string `xml:"id,attr,omitempty"`
-	TUVList []*TUV
+	TUVList []*TUV `xml:"tuv"`
 }
 
 // TUV : Each <tuv> (Translation Unit Variant) element specifies text in a given language. It contains zero, one or more <note> elements or <prop> elements, followed by one <seg> element.

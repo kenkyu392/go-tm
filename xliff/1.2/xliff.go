@@ -7,6 +7,7 @@ import (
 
 	"github.com/kenkyu392/go-tm"
 	"github.com/kenkyu392/go-tm/internal"
+	"github.com/kenkyu392/go-tm/version"
 )
 
 // const ...
@@ -17,10 +18,9 @@ const (
 	DefaultXMLNS             = "urn:oasis:names:tc:xliff:document:1.2"
 	DefaultFileOriginal      = "original.xlf"
 	DefaultFileDataType      = "plaintext"
-	DefaultHeaderToolID      = "go-tmx"
-	DefaultHeaderToolName    = "go-tmx"
-	DefaultHeaderToolVersion = "1.0.0"
-	DefaultXMLSpace          = "preserve"
+	DefaultHeaderToolID      = version.PackageName
+	DefaultHeaderToolName    = version.DisplayName + " XLIFF"
+	DefaultHeaderToolVersion = version.Version
 )
 
 // New : [XML Localisation Interchange File Format](https://en.wikipedia.org/wiki/XLIFF)
@@ -29,7 +29,7 @@ const (
 func New(opts ...Option) (*XLIFF, error) {
 	xlf := &XLIFF{
 		XMLNS:    DefaultXMLNS,
-		XMLSpace: DefaultXMLSpace,
+		XMLSpace: internal.XMLSpacePreserve,
 		Version:  Version,
 		File: File{
 			Date:           time.Now().UTC().Format(time.RFC3339),
@@ -65,7 +65,7 @@ type XLIFF struct {
 	XMLNS    string   `xml:"xmlns,attr"`
 	XMLSpace string   `xml:"http://www.w3.org/XML/1998/namespace space,attr"`
 	Version  string   `xml:"version,attr"`
-	File     File
+	File     File     `xml:"file"`
 
 	tm.TM
 }
@@ -78,29 +78,34 @@ type File struct {
 	DataType       string   `xml:"datatype,attr"`
 	SourceLanguage string   `xml:"source-language,attr"`
 	TargetLanguage string   `xml:"target-language,attr"`
-	Header         Header
-	Body           Body
+	Header         Header   `xml:"header"`
+	Body           Body     `xml:"body"`
 }
 
 // Header : http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#header
 type Header struct {
 	XMLName xml.Name `xml:"header"`
-	Tool    Tool
+	Tool    Tool     `xml:"tool"`
 }
 
 // Tool : http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#tool_elem
 type Tool struct {
 	XMLName xml.Name `xml:"tool"`
-	ID      string   `xml:"tool-id,attr"`
-	Name    string   `xml:"tool-name,attr"`
-	Version string   `xml:"tool-version,attr,omitempty"`
-	Company string   `xml:"tool-company,attr,omitempty"`
+	// The tool-id attribute allows unique identification of a <tool> element.
+	// It is also used in other elements in the file to refer to the given <tool> element.
+	ID string `xml:"tool-id,attr"`
+	// The tool-name attribute specifies the name of a given tool.
+	Name string `xml:"tool-name,attr"`
+	// The tool-version attribute specifies the version of a given tool.
+	Version string `xml:"tool-version,attr,omitempty"`
+	// The tool-company attribute specifies the company from which a tool originates.
+	Company string `xml:"tool-company,attr,omitempty"`
 }
 
 // Body : http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#body
 type Body struct {
-	XMLName       xml.Name `xml:"body"`
-	TransUnitList []*TransUnit
+	XMLName       xml.Name     `xml:"body"`
+	TransUnitList []*TransUnit `xml:"trans-unit"`
 }
 
 // TransUnit : http://docs.oasis-open.org/xliff/v1.2/os/xliff-core.html#trans-unit
@@ -162,7 +167,7 @@ func (x *XLIFF) AddTransUnit(id string, source, target *Unit) error {
 	}
 
 	tu := &TransUnit{
-		XMLSpace: DefaultXMLSpace,
+		XMLSpace: internal.XMLSpacePreserve,
 		ID:       id,
 		Source: &Segment{
 			Lang:    x.File.SourceLanguage,

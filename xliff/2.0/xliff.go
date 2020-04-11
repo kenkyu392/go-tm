@@ -3,6 +3,7 @@ package xliff
 import (
 	"encoding/xml"
 
+	"github.com/kenkyu392/go-tm/internal"
 	"golang.org/x/text/language"
 )
 
@@ -18,7 +19,6 @@ const (
 	DefaultHeaderToolID      = "encoding/2.0/xliff"
 	DefaultHeaderToolName    = "encoding/2.0/xliff"
 	DefaultHeaderToolVersion = "1.0.0"
-	DefaultXMLSpace          = "preserve"
 )
 
 // New : [XML Localisation Interchange File Format](https://en.wikipedia.org/wiki/XLIFF)
@@ -26,7 +26,7 @@ const (
 func New(id string, sourceTag, targetTag language.Tag) *XLIFF {
 	return &XLIFF{
 		XMLNS:    DefaultXMLNS,
-		XMLSpace: DefaultXMLSpace,
+		XMLSpace: internal.XMLSpacePreserve,
 		Version:  Version,
 		SrcLang:  sourceTag.String(),
 		TrgLang:  targetTag.String(),
@@ -79,7 +79,7 @@ func (x *XLIFF) Marshal() ([]byte, error) {
 // Store ...
 func (x *XLIFF) Store(id, sourceText string, targetText string, notes ...string) {
 	x.File.UnitList = append(x.File.UnitList, Unit{
-		XMLSpace: DefaultXMLSpace,
+		XMLSpace: internal.XMLSpacePreserve,
 		ID:       id,
 		Source:   sourceText,
 		Target:   targetText,
