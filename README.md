@@ -1,4 +1,4 @@
-# WIP: go-tm
+# go-tm
 
 [![Test](https://github.com/kenkyu392/go-tm/workflows/test/badge.svg)](https://github.com/kenkyu392/go-tm)
 [![Codecov](https://codecov.io/gh/kenkyu392/go-tm/branch/master/graph/badge.svg)](https://codecov.io/gh/kenkyu392/go-tm)
@@ -6,7 +6,7 @@
 [![Go Report Card](https://goreportcard.com/badge/github.com/kenkyu392/go-tm)](https://goreportcard.com/report/github.com/kenkyu392/go-tm)
 [![License](https://img.shields.io/github/license/kenkyu392/go-tm.svg)](LICENSE)
 [![Go](https://img.shields.io/badge/go-1.14+-00ADD8.svg)](https://golang.org/)
-[![Version](https://img.shields.io/badge/version-0.0.X-00A29C.svg)](README.md)
+[![Version](https://img.shields.io/badge/version-0.1.X-00A29C.svg)](README.md)
 
 **:warning: This package is currently under development and features may change.**
 
