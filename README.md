@@ -1,8 +1,13 @@
 # WIP: go-tm
 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![GoDoc](https://godoc.org/github.com/kenkyu392/go-tm?status.svg)](https://godoc.org/github.com/kenkyu392/go-tm)
+[![Go](https://img.shields.io/badge/go-1.14+-00ADD8.svg)](https://golang.org/)
+[![Version](https://img.shields.io/badge/version-0.0.X-00A29C.svg)](README.md)
+
 **:warning: This package is currently under development and features may change.**
 
-L10N and T9N file format (TMX, TBX, XLIFF, etc.) libraries for [Go](https://golang.org/).
+L10N and T9N file format (TMX, TBX, XLIFF, etc.) library for [Go](https://golang.org/).
 
 ## Overview
 
@@ -24,6 +29,26 @@ The functions and utilities provided by this package are useful for developing p
 - **Over 300 [IETF BCP 47 language tags](docs/ietf-bcp-47-language-tags.md) are defined.**
 
 Other useful functions and utilities will be added to the package.
+
+## Installation
+
+```
+go get -u github.com/kenkyu392/go-tm
+```
+
+## Usage
+
+```go
+package main
+
+func main() {
+
+}
+```
+
+## Contributing
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
 
 ## License
 
