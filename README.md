@@ -41,7 +41,7 @@ go get -u github.com/kenkyu392/go-tm
 
 ## Usage
 
-_XLIFF 1.2 :_
+### _XLIFF 1.2 :_
 
 ```go
 package main
@@ -89,28 +89,144 @@ func main() {
 		panic(err)
 	}
 	println(string(raw))
-	/*
-	<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xml:space="preserve" version="1.2">
-	  <file date="2020-01-01T00:00:00Z" original="original.xlf" datatype="plaintext" source-language="ja-JP" target-language="en-US">
-	    <header>
-	      <tool tool-id="go-tm" tool-name="GoTM XLIFF" tool-version="0.1.0"></tool>
-	    </header>
-	    <body>
-	      <trans-unit xml:space="preserve" id="ID001">
-	        <source xml:lang="ja-JP">吾輩は猫である</source>
-	        <target xml:lang="en-US">I Am a Cat</target>
-	        <note xml:lang="ja-JP">著者：夏目漱石</note>
-	        <note xml:lang="ja-JP">発行日：1905年～1906年</note>
-	        <note xml:lang="en-US">Author‎: ‎Natsume Sōseki</note>
-	        <note xml:lang="en-US">Publication date: 1905–1906</note>
-	      </trans-unit>
-	    </body>
-	  </file>
-	</xliff>
-	*/
 }
 ```
+
+<details>
+<summary><b><i>Output XML :</i></b></summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xml:space="preserve" version="1.2">
+  <file date="2020-01-01T00:00:00Z" original="original.xlf" datatype="plaintext" source-language="ja-JP" target-language="en-US">
+    <header>
+      <tool tool-id="go-tm" tool-name="GoTM XLIFF" tool-version="0.1.0"></tool>
+    </header>
+    <body>
+      <trans-unit xml:space="preserve" id="ID001">
+        <source xml:lang="ja-JP">吾輩は猫である</source>
+        <target xml:lang="en-US">I Am a Cat</target>
+        <note xml:lang="ja-JP">著者：夏目漱石</note>
+        <note xml:lang="ja-JP">発行日：1905年～1906年</note>
+        <note xml:lang="en-US">Author‎: ‎Natsume Sōseki</note>
+        <note xml:lang="en-US">Publication date: 1905–1906</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
+```
+
+</details>
+
+### _TBX 2.0 :_
+
+```go
+package main
+
+import (
+	"github.com/kenkyu392/go-tm"
+	tbx "github.com/kenkyu392/go-tm/tbx/2.0"
+)
+
+func main() {
+	t, err := tbx.New(
+		// You can specify the encoding of the XML file.
+		tbx.UseUTF8XMLEncodingOption(),
+		// Set the language for the TBX file.
+		tbx.LanguageOption(tm.Tag_enUS),
+		tbx.FileDescriptionOption(
+			"Japanese Books",
+			"Japanese Books",
+		),
+	)
+	if err != nil {
+		panic(err)
+	}
+	// Add a term entry to the file.
+	t.AddTermEntry(
+		"1905",
+		[]*tbx.LangSet{
+			{
+				XMLLang: tm.TagName_enUS,
+				Descrip: tbx.Descrip{
+					XMLText: `"I Am a Cat" is a satirical novel written in 1905–1906 by Natsume Sōseki about Japanese society during the Meiji period (1868–1912).`,
+					Type:    tbx.DescripTypeDefinition,
+				},
+				TermGroup: tbx.TermGroup{
+					Term:     tbx.Term{XMLText: "I Am a Cat", ID: "10"},
+					TermNote: tbx.TermNote{XMLText: "Noun", Type: "partOfSpeech"},
+				},
+			},
+			// langSet can also add other languages.
+			{
+				XMLLang: tm.TagName_jaJP,
+				Descrip: tbx.Descrip{
+					XMLText: `「私は猫です」は、1905〜1906年に夏目漱石が書いた明治時代（1868〜1912）の日本社会についての風刺小説です。`,
+					Type:    tbx.DescripTypeDefinition,
+				},
+				TermGroup: tbx.TermGroup{
+					Term:     tbx.Term{XMLText: "吾輩は猫である", ID: "20"},
+					TermNote: tbx.TermNote{XMLText: "Noun", Type: "partOfSpeech"},
+				},
+			},
+		}...,
+	)
+	raw, err := tm.Encode(t)
+	if err != nil {
+		panic(err)
+	}
+	println(string(raw))
+}
+```
+
+<details>
+<summary><b><i>Output XML :</i></b></summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<martif xml:lang="en-US" type="TBX">
+  <martifHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Japanese Books</title>
+      </titleStmt>
+      <sourceDesc>
+        <p>Japanese Books</p>
+      </sourceDesc>
+    </fileDesc>
+  </martifHeader>
+  <text>
+    <body>
+      <termEntry id="1905">
+        <langSet xml:lang="en-US">
+          <descripGrp>
+            <descrip type="definition">"I Am a Cat" is a satirical novel written in 1905–1906 by Natsume Sōseki about Japanese society during the Meiji period (1868–1912).</descrip>
+          </descripGrp>
+          <ntig>
+            <termGrp>
+              <term id="10">I Am a Cat</term>
+              <termNote type="partOfSpeech">Noun</termNote>
+            </termGrp>
+          </ntig>
+        </langSet>
+        <langSet xml:lang="ja-JP">
+          <descripGrp>
+            <descrip type="definition">「私は猫です」は、1905〜1906年に夏目漱石が書いた明治時代（1868〜1912）の日本社会についての風刺小説です。</descrip>
+          </descripGrp>
+          <ntig>
+            <termGrp>
+              <term id="20">吾輩は猫である</term>
+              <termNote type="partOfSpeech">Noun</termNote>
+            </termGrp>
+          </ntig>
+        </langSet>
+      </termEntry>
+    </body>
+  </text>
+</martif>
+```
+
+</details>
 
 ## Contributing
 
