@@ -51,8 +51,12 @@ func TestNew(t *testing.T) {
 		},
 	)
 
+	opts := []tm.EncodeOption{
+		tm.WithXMLHeaderEncodeOption(),
+		tm.XMLEncodeOption("", "  "),
+	}
 	t.Run("case=Encode", func(t *testing.T) {
-		raw, err := tm.Encode(xlf)
+		raw, err := tm.Encode(xlf, opts...)
 		if err != nil {
 			t.Errorf("xliff: %+v", err)
 		}
@@ -60,7 +64,7 @@ func TestNew(t *testing.T) {
 	})
 	t.Run("case=EncodeTo", func(t *testing.T) {
 		buf := &bytes.Buffer{}
-		if err := tm.EncodeTo(buf, xlf); err != nil {
+		if err := tm.EncodeTo(buf, xlf, opts...); err != nil {
 			t.Errorf("xliff: %+v", err)
 		}
 		t.Logf("%s\n", buf.Bytes())

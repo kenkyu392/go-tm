@@ -1,12 +1,11 @@
 # go-tm
 
-[![Test](https://github.com/kenkyu392/go-tm/workflows/test/badge.svg)](https://github.com/kenkyu392/go-tm)
-[![Codecov](https://codecov.io/gh/kenkyu392/go-tm/branch/master/graph/badge.svg)](https://codecov.io/gh/kenkyu392/go-tm)
-[![GoDoc](https://godoc.org/github.com/kenkyu392/go-tm?status.svg)](https://godoc.org/github.com/kenkyu392/go-tm)
-[![Go Report Card](https://goreportcard.com/badge/github.com/kenkyu392/go-tm)](https://goreportcard.com/report/github.com/kenkyu392/go-tm)
-[![License](https://img.shields.io/github/license/kenkyu392/go-tm.svg)](LICENSE)
-[![Go](https://img.shields.io/badge/go-1.14+-00ADD8.svg)](https://golang.org/)
-[![Version](https://img.shields.io/badge/version-0.1.X-00A29C.svg)](README.md)
+[![test](https://github.com/kenkyu392/go-tm/workflows/test/badge.svg)](https://github.com/kenkyu392/go-tm)
+[![codecov](https://codecov.io/gh/kenkyu392/go-tm/branch/master/graph/badge.svg)](https://codecov.io/gh/kenkyu392/go-tm)
+[![go.dev reference](https://img.shields.io/badge/go.dev-reference-00ADD8?logo=go)](https://pkg.go.dev/github.com/kenkyu392/go-tm)
+[![go report card](https://goreportcard.com/badge/github.com/kenkyu392/go-tm)](https://goreportcard.com/report/github.com/kenkyu392/go-tm)
+[![license](https://img.shields.io/github/license/kenkyu392/go-tm.svg)](LICENSE)
+[![version](https://img.shields.io/badge/version-0.2.X-00A29C.svg)](README.md)
 
 **:warning: This package is currently under development and features may change.**
 
@@ -52,7 +51,7 @@ import (
 )
 
 func main() {
-	xlf, err := xliff.New(
+	doc, err := xliff.New(
 		// Set the source and target languages for the XLIFF file.
 		xliff.SourceLanguageOption(tm.Tag_jaJP),
 		xliff.TargetLanguageOption(tm.Tag_enUS),
@@ -64,7 +63,7 @@ func main() {
 	}
 
 	// Add a translation unit to the file.
-	xlf.AddTransUnit(
+	doc.AddTransUnit(
 		// Translation Unit ID.
 		"ID001",
 		// Source text and comments.
@@ -84,7 +83,10 @@ func main() {
 			},
 		},
 	)
-	raw, err := tm.Encode(xlf)
+	raw, err := tm.Encode(doc,
+		tm.WithXMLHeaderEncodeOption(),
+		tm.XMLEncodeOption("", "  "),
+	)
 	if err != nil {
 		panic(err)
 	}
@@ -100,7 +102,7 @@ func main() {
 <xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xml:space="preserve" version="1.2">
   <file date="2020-01-01T00:00:00Z" original="original.xlf" datatype="plaintext" source-language="ja-JP" target-language="en-US">
     <header>
-      <tool tool-id="go-tm" tool-name="GoTM XLIFF" tool-version="0.1.0"></tool>
+      <tool tool-id="go-tm" tool-name="GoTM XLIFF" tool-version="0.2.0"></tool>
     </header>
     <body>
       <trans-unit xml:space="preserve" id="ID001">
@@ -129,7 +131,7 @@ import (
 )
 
 func main() {
-	t, err := tbx.New(
+	doc, err := tbx.New(
 		// You can specify the encoding of the XML file.
 		tbx.UseUTF8XMLEncodingOption(),
 		// Set the language for the TBX file.
@@ -143,7 +145,7 @@ func main() {
 		panic(err)
 	}
 	// Add a term entry to the file.
-	t.AddTermEntry(
+	doc.AddTermEntry(
 		"1905",
 		[]*tbx.LangSet{
 			{
@@ -171,7 +173,11 @@ func main() {
 			},
 		}...,
 	)
-	raw, err := tm.Encode(t)
+
+	raw, err := tm.Encode(doc,
+		tm.WithXMLHeaderEncodeOption(),
+		tm.XMLEncodeOption("", "  "),
+	)
 	if err != nil {
 		panic(err)
 	}

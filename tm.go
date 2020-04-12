@@ -9,8 +9,8 @@ import (
 	"golang.org/x/text/encoding"
 )
 
-// Message ...
-type Message interface {
+// Document ...
+type Document interface {
 	Encoding() encoding.Encoding
 	SetEncoding(enc encoding.Encoding)
 }
@@ -20,39 +20,69 @@ type TM struct {
 	encoding encoding.Encoding
 }
 
-// Encoding is Message interface implements.
+// Encoding is Document interface implements.
 func (t *TM) Encoding() encoding.Encoding {
 	return t.encoding
 }
 
-// SetEncoding Message interface implements.
+// SetEncoding is Document interface implements.
 func (t *TM) SetEncoding(e encoding.Encoding) {
 	t.encoding = e
 }
 
-// Encode ...
-func Encode(v Message) ([]byte, error) {
+// Encode returns XML encoded v.
+func Encode(v Document, opts ...EncodeOption) ([]byte, error) {
 	var b bytes.Buffer
-	if err := EncodeTo(&b, v); err != nil {
+	if err := EncodeTo(&b, v, opts...); err != nil {
 		return nil, err
 	}
 	return b.Bytes(), nil
 }
 
-// EncodeTo ...
-func EncodeTo(w io.Writer, v Message) error {
+// EncodeTo writes XML encoded v to w.
+func EncodeTo(w io.Writer, v Document, opts ...EncodeOption) error {
 	var (
-		e = v.Encoding()
-		h = internal.XMLHeaderByEncoding(e)
+		encOpts = new(EncodeOptions)
+		eng     = v.Encoding()
+		ew      = eng.NewEncoder().Writer(w)
 	)
-	ew := e.NewEncoder().Writer(w)
-	if _, err := ew.Write([]byte(h)); err != nil {
-		return err
+	for _, opt := range opts {
+		opt(encOpts)
+	}
+	if encOpts.header {
+		if _, err := ew.Write([]byte(internal.XMLHeaderByEncoding(eng))); err != nil {
+			return err
+		}
 	}
 	enc := xml.NewEncoder(ew)
-	enc.Indent("", "  ")
+	enc.Indent(encOpts.prefix, encOpts.indent)
 	if err := enc.Encode(v); err != nil {
 		return err
 	}
 	return nil
+}
+
+// EncodeOptions ...
+type EncodeOptions struct {
+	indent string
+	prefix string
+	header bool
+}
+
+// EncodeOption ...
+type EncodeOption func(opts *EncodeOptions)
+
+// XMLEncodeOption ...
+func XMLEncodeOption(prefix, indent string) EncodeOption {
+	return func(opts *EncodeOptions) {
+		opts.prefix = prefix
+		opts.indent = indent
+	}
+}
+
+// WithXMLHeaderEncodeOption ...
+func WithXMLHeaderEncodeOption() EncodeOption {
+	return func(opts *EncodeOptions) {
+		opts.header = true
+	}
 }
