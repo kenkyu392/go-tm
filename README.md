@@ -40,6 +40,93 @@ go get -u github.com/kenkyu392/go-tm
 
 ## Usage
 
+### _TMX 1.4 :_
+
+```go
+package main
+
+import (
+	"time"
+
+	"github.com/kenkyu392/go-tm"
+	tmx "github.com/kenkyu392/go-tm/tmx/1.4"
+)
+
+func main() {
+	modTime := time.Unix(1577836800, 0)
+	doc, err := tmx.New(
+		// You can specify the encoding of the XML file.
+		tmx.UseUTF8XMLEncodingOption(),
+		// Set the source language and admin language for the TMX file.
+		tmx.SourceLanguageOption(tm.Tag_jaJP),
+		tmx.AdminLanguageOption(tm.Tag_jaJP),
+		// In addition, you can set the creation date and change date.
+		tmx.CreationOption(modTime, tmx.DefaultUserName),
+		tmx.ChangeOption(modTime, tmx.DefaultUserName),
+	)
+	if err != nil {
+		panic(err)
+	}
+	// Add a TU to the file.
+	doc.AddTU(
+		"ID001",
+		tmx.NewTUV(
+			tmx.XMLLangTUVOption(tm.Tag_jaJP),
+			tmx.SegmentTUVOption("吾輩は猫である"),
+			tmx.CreationTUVOption(modTime, tmx.DefaultUserName),
+			tmx.ChangeTUVOption(modTime, tmx.DefaultUserName),
+		),
+		// TU can have multiple target languages in addition to the source language.
+		tmx.NewTUV(
+			tmx.XMLLangTUVOption(tm.Tag_enUS),
+			tmx.SegmentTUVOption("I Am a Cat"),
+			tmx.CreationTUVOption(modTime, tmx.DefaultUserName),
+			tmx.ChangeTUVOption(modTime, tmx.DefaultUserName),
+		),
+		tmx.NewTUV(
+			tmx.XMLLangTUVOption(tm.Tag_frFR),
+			tmx.SegmentTUVOption("Je suis un chat"),
+			tmx.CreationTUVOption(modTime, tmx.DefaultUserName),
+			tmx.ChangeTUVOption(modTime, tmx.DefaultUserName),
+		),
+	)
+
+	raw, err := tm.Encode(doc,
+		tm.WithXMLHeaderEncodeOption(),
+		tm.XMLEncodeOption("", "  "),
+	)
+	if err != nil {
+		panic(err)
+	}
+	println(string(raw))
+}
+```
+
+<details>
+<summary><b><i>Output XML :</i></b></summary>
+
+```xml
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tmx xmlns="http://www.lisa.org/tmx14" version="1.4">
+  <header creationtool="go-tm" creationtoolversion="0.2.0" datatype="plaintext" segtype="sentence" o-tmf="GoTM TMX" srclang="ja-JP" adminlang="ja-JP" creationdate="20200101T000000Z" creationid="anonymous" changedate="20200101T000000Z" changeid="anonymous"></header>
+  <body>
+    <tu id="ID001">
+      <tuv xml:lang="ja-JP" creationdate="20200101T000000Z" creationid="anonymous" changedate="20200101T000000Z" changeid="anonymous">
+        <seg>吾輩は猫である</seg>
+      </tuv>
+      <tuv xml:lang="en-US" creationdate="20200101T000000Z" creationid="anonymous" changedate="20200101T000000Z" changeid="anonymous">
+        <seg>I Am a Cat</seg>
+      </tuv>
+      <tuv xml:lang="fr-FR" creationdate="20200101T000000Z" creationid="anonymous" changedate="20200101T000000Z" changeid="anonymous">
+        <seg>Je suis un chat</seg>
+      </tuv>
+    </tu>
+  </body>
+</tmx>
+```
+
+</details>
+
 ### _XLIFF 1.2 :_
 
 ```go
