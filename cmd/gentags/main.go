@@ -31,7 +31,15 @@ TagLanguageDisplayName_%s = "%s"
 TagRegionDisplayName_%s = "%s"
 TagOriginalName_%s = "%s"
 Tag_%s = language.MustParse(TagOriginalName_%s)
-TagName_%s = Tag_%s.String() // The tag name may have changed from the original name after parsing.`
+TagName_%s = Tag_%s.String() // The tag name may have changed from the original name after parsing.
+Language_%s = Language{
+	DisplayName: TagDisplayName_%s,
+	LanguageDisplayName: TagLanguageDisplayName_%s,
+	RegionDisplayName: TagRegionDisplayName_%s,
+	OriginalName: TagOriginalName_%s,
+	Tag: Tag_%s,
+	TagName: TagName_%s,
+}`
 
 func outPath(dir, file string) (string, error) {
 	outDir, err := filepath.Abs(dir)
@@ -68,6 +76,7 @@ func genCode() string {
 			vt, t,
 			vt, vt,
 			vt, vt,
+			vt, vt, vt, vt, vt, vt, vt,
 		))
 	}
 	// sort.Strings(list)

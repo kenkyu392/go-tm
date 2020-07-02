@@ -14,6 +14,14 @@ var (
 	TagOriginalName_aaDJ        = "aa-DJ"
 	Tag_aaDJ                    = language.MustParse(TagOriginalName_aaDJ)
 	TagName_aaDJ                = Tag_aaDJ.String() // The tag name may have changed from the original name after parsing.
+	Language_aaDJ               = Language{
+		DisplayName:         TagDisplayName_aaDJ,
+		LanguageDisplayName: TagLanguageDisplayName_aaDJ,
+		RegionDisplayName:   TagRegionDisplayName_aaDJ,
+		OriginalName:        TagOriginalName_aaDJ,
+		Tag:                 Tag_aaDJ,
+		TagName:             TagName_aaDJ,
+	}
 	// Afar (Eritrea)
 	TagDisplayName_aaER         = "Afar (Eritrea)"
 	TagLanguageDisplayName_aaER = "Afar"
@@ -21,6 +29,14 @@ var (
 	TagOriginalName_aaER        = "aa-ER"
 	Tag_aaER                    = language.MustParse(TagOriginalName_aaER)
 	TagName_aaER                = Tag_aaER.String() // The tag name may have changed from the original name after parsing.
+	Language_aaER               = Language{
+		DisplayName:         TagDisplayName_aaER,
+		LanguageDisplayName: TagLanguageDisplayName_aaER,
+		RegionDisplayName:   TagRegionDisplayName_aaER,
+		OriginalName:        TagOriginalName_aaER,
+		Tag:                 Tag_aaER,
+		TagName:             TagName_aaER,
+	}
 	// Afar (Ethiopia)
 	TagDisplayName_aaET         = "Afar (Ethiopia)"
 	TagLanguageDisplayName_aaET = "Afar"
@@ -28,6 +44,14 @@ var (
 	TagOriginalName_aaET        = "aa-ET"
 	Tag_aaET                    = language.MustParse(TagOriginalName_aaET)
 	TagName_aaET                = Tag_aaET.String() // The tag name may have changed from the original name after parsing.
+	Language_aaET               = Language{
+		DisplayName:         TagDisplayName_aaET,
+		LanguageDisplayName: TagLanguageDisplayName_aaET,
+		RegionDisplayName:   TagRegionDisplayName_aaET,
+		OriginalName:        TagOriginalName_aaET,
+		Tag:                 Tag_aaET,
+		TagName:             TagName_aaET,
+	}
 	// Afrikaans (Namibia)
 	TagDisplayName_afNA         = "Afrikaans (Namibia)"
 	TagLanguageDisplayName_afNA = "Afrikaans"
@@ -35,6 +59,14 @@ var (
 	TagOriginalName_afNA        = "af-NA"
 	Tag_afNA                    = language.MustParse(TagOriginalName_afNA)
 	TagName_afNA                = Tag_afNA.String() // The tag name may have changed from the original name after parsing.
+	Language_afNA               = Language{
+		DisplayName:         TagDisplayName_afNA,
+		LanguageDisplayName: TagLanguageDisplayName_afNA,
+		RegionDisplayName:   TagRegionDisplayName_afNA,
+		OriginalName:        TagOriginalName_afNA,
+		Tag:                 Tag_afNA,
+		TagName:             TagName_afNA,
+	}
 	// Afrikaans (South Africa)
 	TagDisplayName_afZA         = "Afrikaans (South Africa)"
 	TagLanguageDisplayName_afZA = "Afrikaans"
@@ -42,6 +74,14 @@ var (
 	TagOriginalName_afZA        = "af-ZA"
 	Tag_afZA                    = language.MustParse(TagOriginalName_afZA)
 	TagName_afZA                = Tag_afZA.String() // The tag name may have changed from the original name after parsing.
+	Language_afZA               = Language{
+		DisplayName:         TagDisplayName_afZA,
+		LanguageDisplayName: TagLanguageDisplayName_afZA,
+		RegionDisplayName:   TagRegionDisplayName_afZA,
+		OriginalName:        TagOriginalName_afZA,
+		Tag:                 Tag_afZA,
+		TagName:             TagName_afZA,
+	}
 	// Albanian (Albania)
 	TagDisplayName_sqAL         = "Albanian (Albania)"
 	TagLanguageDisplayName_sqAL = "Albanian"
@@ -49,6 +89,14 @@ var (
 	TagOriginalName_sqAL        = "sq-AL"
 	Tag_sqAL                    = language.MustParse(TagOriginalName_sqAL)
 	TagName_sqAL                = Tag_sqAL.String() // The tag name may have changed from the original name after parsing.
+	Language_sqAL               = Language{
+		DisplayName:         TagDisplayName_sqAL,
+		LanguageDisplayName: TagLanguageDisplayName_sqAL,
+		RegionDisplayName:   TagRegionDisplayName_sqAL,
+		OriginalName:        TagOriginalName_sqAL,
+		Tag:                 Tag_sqAL,
+		TagName:             TagName_sqAL,
+	}
 	// Albanian (North Macedonia)
 	TagDisplayName_sqMK         = "Albanian (North Macedonia)"
 	TagLanguageDisplayName_sqMK = "Albanian"
@@ -56,6 +104,14 @@ var (
 	TagOriginalName_sqMK        = "sq-MK"
 	Tag_sqMK                    = language.MustParse(TagOriginalName_sqMK)
 	TagName_sqMK                = Tag_sqMK.String() // The tag name may have changed from the original name after parsing.
+	Language_sqMK               = Language{
+		DisplayName:         TagDisplayName_sqMK,
+		LanguageDisplayName: TagLanguageDisplayName_sqMK,
+		RegionDisplayName:   TagRegionDisplayName_sqMK,
+		OriginalName:        TagOriginalName_sqMK,
+		Tag:                 Tag_sqMK,
+		TagName:             TagName_sqMK,
+	}
 	// Arabic (United Arab Emirates)
 	TagDisplayName_arAE         = "Arabic (United Arab Emirates)"
 	TagLanguageDisplayName_arAE = "Arabic"
@@ -63,6 +119,14 @@ var (
 	TagOriginalName_arAE        = "ar-AE"
 	Tag_arAE                    = language.MustParse(TagOriginalName_arAE)
 	TagName_arAE                = Tag_arAE.String() // The tag name may have changed from the original name after parsing.
+	Language_arAE               = Language{
+		DisplayName:         TagDisplayName_arAE,
+		LanguageDisplayName: TagLanguageDisplayName_arAE,
+		RegionDisplayName:   TagRegionDisplayName_arAE,
+		OriginalName:        TagOriginalName_arAE,
+		Tag:                 Tag_arAE,
+		TagName:             TagName_arAE,
+	}
 	// Arabic (Bahrein)
 	TagDisplayName_arBH         = "Arabic (Bahrein)"
 	TagLanguageDisplayName_arBH = "Arabic"
@@ -70,6 +134,14 @@ var (
 	TagOriginalName_arBH        = "ar-BH"
 	Tag_arBH                    = language.MustParse(TagOriginalName_arBH)
 	TagName_arBH                = Tag_arBH.String() // The tag name may have changed from the original name after parsing.
+	Language_arBH               = Language{
+		DisplayName:         TagDisplayName_arBH,
+		LanguageDisplayName: TagLanguageDisplayName_arBH,
+		RegionDisplayName:   TagRegionDisplayName_arBH,
+		OriginalName:        TagOriginalName_arBH,
+		Tag:                 Tag_arBH,
+		TagName:             TagName_arBH,
+	}
 	// Arabic (Algeria)
 	TagDisplayName_arDZ         = "Arabic (Algeria)"
 	TagLanguageDisplayName_arDZ = "Arabic"
@@ -77,6 +149,14 @@ var (
 	TagOriginalName_arDZ        = "ar-DZ"
 	Tag_arDZ                    = language.MustParse(TagOriginalName_arDZ)
 	TagName_arDZ                = Tag_arDZ.String() // The tag name may have changed from the original name after parsing.
+	Language_arDZ               = Language{
+		DisplayName:         TagDisplayName_arDZ,
+		LanguageDisplayName: TagLanguageDisplayName_arDZ,
+		RegionDisplayName:   TagRegionDisplayName_arDZ,
+		OriginalName:        TagOriginalName_arDZ,
+		Tag:                 Tag_arDZ,
+		TagName:             TagName_arDZ,
+	}
 	// Arabic (Egypt)
 	TagDisplayName_arEG         = "Arabic (Egypt)"
 	TagLanguageDisplayName_arEG = "Arabic"
@@ -84,6 +164,14 @@ var (
 	TagOriginalName_arEG        = "ar-EG"
 	Tag_arEG                    = language.MustParse(TagOriginalName_arEG)
 	TagName_arEG                = Tag_arEG.String() // The tag name may have changed from the original name after parsing.
+	Language_arEG               = Language{
+		DisplayName:         TagDisplayName_arEG,
+		LanguageDisplayName: TagLanguageDisplayName_arEG,
+		RegionDisplayName:   TagRegionDisplayName_arEG,
+		OriginalName:        TagOriginalName_arEG,
+		Tag:                 Tag_arEG,
+		TagName:             TagName_arEG,
+	}
 	// Arabic (Iraq)
 	TagDisplayName_arIQ         = "Arabic (Iraq)"
 	TagLanguageDisplayName_arIQ = "Arabic"
@@ -91,6 +179,14 @@ var (
 	TagOriginalName_arIQ        = "ar-IQ"
 	Tag_arIQ                    = language.MustParse(TagOriginalName_arIQ)
 	TagName_arIQ                = Tag_arIQ.String() // The tag name may have changed from the original name after parsing.
+	Language_arIQ               = Language{
+		DisplayName:         TagDisplayName_arIQ,
+		LanguageDisplayName: TagLanguageDisplayName_arIQ,
+		RegionDisplayName:   TagRegionDisplayName_arIQ,
+		OriginalName:        TagOriginalName_arIQ,
+		Tag:                 Tag_arIQ,
+		TagName:             TagName_arIQ,
+	}
 	// Arabic (Jordan)
 	TagDisplayName_arJO         = "Arabic (Jordan)"
 	TagLanguageDisplayName_arJO = "Arabic"
@@ -98,6 +194,14 @@ var (
 	TagOriginalName_arJO        = "ar-JO"
 	Tag_arJO                    = language.MustParse(TagOriginalName_arJO)
 	TagName_arJO                = Tag_arJO.String() // The tag name may have changed from the original name after parsing.
+	Language_arJO               = Language{
+		DisplayName:         TagDisplayName_arJO,
+		LanguageDisplayName: TagLanguageDisplayName_arJO,
+		RegionDisplayName:   TagRegionDisplayName_arJO,
+		OriginalName:        TagOriginalName_arJO,
+		Tag:                 Tag_arJO,
+		TagName:             TagName_arJO,
+	}
 	// Arabic (Comoros)
 	TagDisplayName_arKM         = "Arabic (Comoros)"
 	TagLanguageDisplayName_arKM = "Arabic"
@@ -105,6 +209,14 @@ var (
 	TagOriginalName_arKM        = "ar-KM"
 	Tag_arKM                    = language.MustParse(TagOriginalName_arKM)
 	TagName_arKM                = Tag_arKM.String() // The tag name may have changed from the original name after parsing.
+	Language_arKM               = Language{
+		DisplayName:         TagDisplayName_arKM,
+		LanguageDisplayName: TagLanguageDisplayName_arKM,
+		RegionDisplayName:   TagRegionDisplayName_arKM,
+		OriginalName:        TagOriginalName_arKM,
+		Tag:                 Tag_arKM,
+		TagName:             TagName_arKM,
+	}
 	// Arabic (Kuwait)
 	TagDisplayName_arKW         = "Arabic (Kuwait)"
 	TagLanguageDisplayName_arKW = "Arabic"
@@ -112,6 +224,14 @@ var (
 	TagOriginalName_arKW        = "ar-KW"
 	Tag_arKW                    = language.MustParse(TagOriginalName_arKW)
 	TagName_arKW                = Tag_arKW.String() // The tag name may have changed from the original name after parsing.
+	Language_arKW               = Language{
+		DisplayName:         TagDisplayName_arKW,
+		LanguageDisplayName: TagLanguageDisplayName_arKW,
+		RegionDisplayName:   TagRegionDisplayName_arKW,
+		OriginalName:        TagOriginalName_arKW,
+		Tag:                 Tag_arKW,
+		TagName:             TagName_arKW,
+	}
 	// Arabic (Lebanon)
 	TagDisplayName_arLB         = "Arabic (Lebanon)"
 	TagLanguageDisplayName_arLB = "Arabic"
@@ -119,6 +239,14 @@ var (
 	TagOriginalName_arLB        = "ar-LB"
 	Tag_arLB                    = language.MustParse(TagOriginalName_arLB)
 	TagName_arLB                = Tag_arLB.String() // The tag name may have changed from the original name after parsing.
+	Language_arLB               = Language{
+		DisplayName:         TagDisplayName_arLB,
+		LanguageDisplayName: TagLanguageDisplayName_arLB,
+		RegionDisplayName:   TagRegionDisplayName_arLB,
+		OriginalName:        TagOriginalName_arLB,
+		Tag:                 Tag_arLB,
+		TagName:             TagName_arLB,
+	}
 	// Arabic (Lybia)
 	TagDisplayName_arLY         = "Arabic (Lybia)"
 	TagLanguageDisplayName_arLY = "Arabic"
@@ -126,6 +254,14 @@ var (
 	TagOriginalName_arLY        = "ar-LY"
 	Tag_arLY                    = language.MustParse(TagOriginalName_arLY)
 	TagName_arLY                = Tag_arLY.String() // The tag name may have changed from the original name after parsing.
+	Language_arLY               = Language{
+		DisplayName:         TagDisplayName_arLY,
+		LanguageDisplayName: TagLanguageDisplayName_arLY,
+		RegionDisplayName:   TagRegionDisplayName_arLY,
+		OriginalName:        TagOriginalName_arLY,
+		Tag:                 Tag_arLY,
+		TagName:             TagName_arLY,
+	}
 	// Arabic (Morocco)
 	TagDisplayName_arMA         = "Arabic (Morocco)"
 	TagLanguageDisplayName_arMA = "Arabic"
@@ -133,6 +269,14 @@ var (
 	TagOriginalName_arMA        = "ar-MA"
 	Tag_arMA                    = language.MustParse(TagOriginalName_arMA)
 	TagName_arMA                = Tag_arMA.String() // The tag name may have changed from the original name after parsing.
+	Language_arMA               = Language{
+		DisplayName:         TagDisplayName_arMA,
+		LanguageDisplayName: TagLanguageDisplayName_arMA,
+		RegionDisplayName:   TagRegionDisplayName_arMA,
+		OriginalName:        TagOriginalName_arMA,
+		Tag:                 Tag_arMA,
+		TagName:             TagName_arMA,
+	}
 	// Arabic (Oman)
 	TagDisplayName_arOM         = "Arabic (Oman)"
 	TagLanguageDisplayName_arOM = "Arabic"
@@ -140,6 +284,14 @@ var (
 	TagOriginalName_arOM        = "ar-OM"
 	Tag_arOM                    = language.MustParse(TagOriginalName_arOM)
 	TagName_arOM                = Tag_arOM.String() // The tag name may have changed from the original name after parsing.
+	Language_arOM               = Language{
+		DisplayName:         TagDisplayName_arOM,
+		LanguageDisplayName: TagLanguageDisplayName_arOM,
+		RegionDisplayName:   TagRegionDisplayName_arOM,
+		OriginalName:        TagOriginalName_arOM,
+		Tag:                 Tag_arOM,
+		TagName:             TagName_arOM,
+	}
 	// Arabic (Quatar)
 	TagDisplayName_arQA         = "Arabic (Quatar)"
 	TagLanguageDisplayName_arQA = "Arabic"
@@ -147,6 +299,14 @@ var (
 	TagOriginalName_arQA        = "ar-QA"
 	Tag_arQA                    = language.MustParse(TagOriginalName_arQA)
 	TagName_arQA                = Tag_arQA.String() // The tag name may have changed from the original name after parsing.
+	Language_arQA               = Language{
+		DisplayName:         TagDisplayName_arQA,
+		LanguageDisplayName: TagLanguageDisplayName_arQA,
+		RegionDisplayName:   TagRegionDisplayName_arQA,
+		OriginalName:        TagOriginalName_arQA,
+		Tag:                 Tag_arQA,
+		TagName:             TagName_arQA,
+	}
 	// Arabic (Saudi Arabia)
 	TagDisplayName_arSA         = "Arabic (Saudi Arabia)"
 	TagLanguageDisplayName_arSA = "Arabic"
@@ -154,6 +314,14 @@ var (
 	TagOriginalName_arSA        = "ar-SA"
 	Tag_arSA                    = language.MustParse(TagOriginalName_arSA)
 	TagName_arSA                = Tag_arSA.String() // The tag name may have changed from the original name after parsing.
+	Language_arSA               = Language{
+		DisplayName:         TagDisplayName_arSA,
+		LanguageDisplayName: TagLanguageDisplayName_arSA,
+		RegionDisplayName:   TagRegionDisplayName_arSA,
+		OriginalName:        TagOriginalName_arSA,
+		Tag:                 Tag_arSA,
+		TagName:             TagName_arSA,
+	}
 	// Arabic (Syria)
 	TagDisplayName_arSY         = "Arabic (Syria)"
 	TagLanguageDisplayName_arSY = "Arabic"
@@ -161,6 +329,14 @@ var (
 	TagOriginalName_arSY        = "ar-SY"
 	Tag_arSY                    = language.MustParse(TagOriginalName_arSY)
 	TagName_arSY                = Tag_arSY.String() // The tag name may have changed from the original name after parsing.
+	Language_arSY               = Language{
+		DisplayName:         TagDisplayName_arSY,
+		LanguageDisplayName: TagLanguageDisplayName_arSY,
+		RegionDisplayName:   TagRegionDisplayName_arSY,
+		OriginalName:        TagOriginalName_arSY,
+		Tag:                 Tag_arSY,
+		TagName:             TagName_arSY,
+	}
 	// Arabic (Chad)
 	TagDisplayName_arTD         = "Arabic (Chad)"
 	TagLanguageDisplayName_arTD = "Arabic"
@@ -168,6 +344,14 @@ var (
 	TagOriginalName_arTD        = "ar-TD"
 	Tag_arTD                    = language.MustParse(TagOriginalName_arTD)
 	TagName_arTD                = Tag_arTD.String() // The tag name may have changed from the original name after parsing.
+	Language_arTD               = Language{
+		DisplayName:         TagDisplayName_arTD,
+		LanguageDisplayName: TagLanguageDisplayName_arTD,
+		RegionDisplayName:   TagRegionDisplayName_arTD,
+		OriginalName:        TagOriginalName_arTD,
+		Tag:                 Tag_arTD,
+		TagName:             TagName_arTD,
+	}
 	// Arabic (Tunisia)
 	TagDisplayName_arTN         = "Arabic (Tunisia)"
 	TagLanguageDisplayName_arTN = "Arabic"
@@ -175,6 +359,14 @@ var (
 	TagOriginalName_arTN        = "ar-TN"
 	Tag_arTN                    = language.MustParse(TagOriginalName_arTN)
 	TagName_arTN                = Tag_arTN.String() // The tag name may have changed from the original name after parsing.
+	Language_arTN               = Language{
+		DisplayName:         TagDisplayName_arTN,
+		LanguageDisplayName: TagLanguageDisplayName_arTN,
+		RegionDisplayName:   TagRegionDisplayName_arTN,
+		OriginalName:        TagOriginalName_arTN,
+		Tag:                 Tag_arTN,
+		TagName:             TagName_arTN,
+	}
 	// Arabic (Yemen)
 	TagDisplayName_arYE         = "Arabic (Yemen)"
 	TagLanguageDisplayName_arYE = "Arabic"
@@ -182,6 +374,14 @@ var (
 	TagOriginalName_arYE        = "ar-YE"
 	Tag_arYE                    = language.MustParse(TagOriginalName_arYE)
 	TagName_arYE                = Tag_arYE.String() // The tag name may have changed from the original name after parsing.
+	Language_arYE               = Language{
+		DisplayName:         TagDisplayName_arYE,
+		LanguageDisplayName: TagLanguageDisplayName_arYE,
+		RegionDisplayName:   TagRegionDisplayName_arYE,
+		OriginalName:        TagOriginalName_arYE,
+		Tag:                 Tag_arYE,
+		TagName:             TagName_arYE,
+	}
 	// Catalan (Andorra)
 	TagDisplayName_caAD         = "Catalan (Andorra)"
 	TagLanguageDisplayName_caAD = "Catalan"
@@ -189,6 +389,14 @@ var (
 	TagOriginalName_caAD        = "ca-AD"
 	Tag_caAD                    = language.MustParse(TagOriginalName_caAD)
 	TagName_caAD                = Tag_caAD.String() // The tag name may have changed from the original name after parsing.
+	Language_caAD               = Language{
+		DisplayName:         TagDisplayName_caAD,
+		LanguageDisplayName: TagLanguageDisplayName_caAD,
+		RegionDisplayName:   TagRegionDisplayName_caAD,
+		OriginalName:        TagOriginalName_caAD,
+		Tag:                 Tag_caAD,
+		TagName:             TagName_caAD,
+	}
 	// Catalan (Spain)
 	TagDisplayName_caES         = "Catalan (Spain)"
 	TagLanguageDisplayName_caES = "Catalan"
@@ -196,6 +404,14 @@ var (
 	TagOriginalName_caES        = "ca-ES"
 	Tag_caES                    = language.MustParse(TagOriginalName_caES)
 	TagName_caES                = Tag_caES.String() // The tag name may have changed from the original name after parsing.
+	Language_caES               = Language{
+		DisplayName:         TagDisplayName_caES,
+		LanguageDisplayName: TagLanguageDisplayName_caES,
+		RegionDisplayName:   TagRegionDisplayName_caES,
+		OriginalName:        TagOriginalName_caES,
+		Tag:                 Tag_caES,
+		TagName:             TagName_caES,
+	}
 	// Catalan (France)
 	TagDisplayName_caFR         = "Catalan (France)"
 	TagLanguageDisplayName_caFR = "Catalan"
@@ -203,6 +419,14 @@ var (
 	TagOriginalName_caFR        = "ca-FR"
 	Tag_caFR                    = language.MustParse(TagOriginalName_caFR)
 	TagName_caFR                = Tag_caFR.String() // The tag name may have changed from the original name after parsing.
+	Language_caFR               = Language{
+		DisplayName:         TagDisplayName_caFR,
+		LanguageDisplayName: TagLanguageDisplayName_caFR,
+		RegionDisplayName:   TagRegionDisplayName_caFR,
+		OriginalName:        TagOriginalName_caFR,
+		Tag:                 Tag_caFR,
+		TagName:             TagName_caFR,
+	}
 	// Catalan (Italy)
 	TagDisplayName_caIT         = "Catalan (Italy)"
 	TagLanguageDisplayName_caIT = "Catalan"
@@ -210,6 +434,14 @@ var (
 	TagOriginalName_caIT        = "ca-IT"
 	Tag_caIT                    = language.MustParse(TagOriginalName_caIT)
 	TagName_caIT                = Tag_caIT.String() // The tag name may have changed from the original name after parsing.
+	Language_caIT               = Language{
+		DisplayName:         TagDisplayName_caIT,
+		LanguageDisplayName: TagLanguageDisplayName_caIT,
+		RegionDisplayName:   TagRegionDisplayName_caIT,
+		OriginalName:        TagOriginalName_caIT,
+		Tag:                 Tag_caIT,
+		TagName:             TagName_caIT,
+	}
 	// Chamorro (Guam)
 	TagDisplayName_chGU         = "Chamorro (Guam)"
 	TagLanguageDisplayName_chGU = "Chamorro"
@@ -217,6 +449,14 @@ var (
 	TagOriginalName_chGU        = "ch-GU"
 	Tag_chGU                    = language.MustParse(TagOriginalName_chGU)
 	TagName_chGU                = Tag_chGU.String() // The tag name may have changed from the original name after parsing.
+	Language_chGU               = Language{
+		DisplayName:         TagDisplayName_chGU,
+		LanguageDisplayName: TagLanguageDisplayName_chGU,
+		RegionDisplayName:   TagRegionDisplayName_chGU,
+		OriginalName:        TagOriginalName_chGU,
+		Tag:                 Tag_chGU,
+		TagName:             TagName_chGU,
+	}
 	// Chamorro (United States of America)
 	TagDisplayName_chUS         = "Chamorro (United States of America)"
 	TagLanguageDisplayName_chUS = "Chamorro"
@@ -224,6 +464,14 @@ var (
 	TagOriginalName_chUS        = "ch-US"
 	Tag_chUS                    = language.MustParse(TagOriginalName_chUS)
 	TagName_chUS                = Tag_chUS.String() // The tag name may have changed from the original name after parsing.
+	Language_chUS               = Language{
+		DisplayName:         TagDisplayName_chUS,
+		LanguageDisplayName: TagLanguageDisplayName_chUS,
+		RegionDisplayName:   TagRegionDisplayName_chUS,
+		OriginalName:        TagOriginalName_chUS,
+		Tag:                 Tag_chUS,
+		TagName:             TagName_chUS,
+	}
 	// Chinese (People's Republic of China)
 	TagDisplayName_zhCN         = "Chinese (People's Republic of China)"
 	TagLanguageDisplayName_zhCN = "Chinese"
@@ -231,6 +479,14 @@ var (
 	TagOriginalName_zhCN        = "zh-CN"
 	Tag_zhCN                    = language.MustParse(TagOriginalName_zhCN)
 	TagName_zhCN                = Tag_zhCN.String() // The tag name may have changed from the original name after parsing.
+	Language_zhCN               = Language{
+		DisplayName:         TagDisplayName_zhCN,
+		LanguageDisplayName: TagLanguageDisplayName_zhCN,
+		RegionDisplayName:   TagRegionDisplayName_zhCN,
+		OriginalName:        TagOriginalName_zhCN,
+		Tag:                 Tag_zhCN,
+		TagName:             TagName_zhCN,
+	}
 	// Chinese (Hong Kong)
 	TagDisplayName_zhHK         = "Chinese (Hong Kong)"
 	TagLanguageDisplayName_zhHK = "Chinese"
@@ -238,6 +494,14 @@ var (
 	TagOriginalName_zhHK        = "zh-HK"
 	Tag_zhHK                    = language.MustParse(TagOriginalName_zhHK)
 	TagName_zhHK                = Tag_zhHK.String() // The tag name may have changed from the original name after parsing.
+	Language_zhHK               = Language{
+		DisplayName:         TagDisplayName_zhHK,
+		LanguageDisplayName: TagLanguageDisplayName_zhHK,
+		RegionDisplayName:   TagRegionDisplayName_zhHK,
+		OriginalName:        TagOriginalName_zhHK,
+		Tag:                 Tag_zhHK,
+		TagName:             TagName_zhHK,
+	}
 	// Chinese (Singapore)
 	TagDisplayName_zhSG         = "Chinese (Singapore)"
 	TagLanguageDisplayName_zhSG = "Chinese"
@@ -245,6 +509,14 @@ var (
 	TagOriginalName_zhSG        = "zh-SG"
 	Tag_zhSG                    = language.MustParse(TagOriginalName_zhSG)
 	TagName_zhSG                = Tag_zhSG.String() // The tag name may have changed from the original name after parsing.
+	Language_zhSG               = Language{
+		DisplayName:         TagDisplayName_zhSG,
+		LanguageDisplayName: TagLanguageDisplayName_zhSG,
+		RegionDisplayName:   TagRegionDisplayName_zhSG,
+		OriginalName:        TagOriginalName_zhSG,
+		Tag:                 Tag_zhSG,
+		TagName:             TagName_zhSG,
+	}
 	// Chinese (Taiwan)
 	TagDisplayName_zhTW         = "Chinese (Taiwan)"
 	TagLanguageDisplayName_zhTW = "Chinese"
@@ -252,6 +524,14 @@ var (
 	TagOriginalName_zhTW        = "zh-TW"
 	Tag_zhTW                    = language.MustParse(TagOriginalName_zhTW)
 	TagName_zhTW                = Tag_zhTW.String() // The tag name may have changed from the original name after parsing.
+	Language_zhTW               = Language{
+		DisplayName:         TagDisplayName_zhTW,
+		LanguageDisplayName: TagLanguageDisplayName_zhTW,
+		RegionDisplayName:   TagRegionDisplayName_zhTW,
+		OriginalName:        TagOriginalName_zhTW,
+		Tag:                 Tag_zhTW,
+		TagName:             TagName_zhTW,
+	}
 	// Croatian (Bosnia and Herzegovina)
 	TagDisplayName_hrBA         = "Croatian (Bosnia and Herzegovina)"
 	TagLanguageDisplayName_hrBA = "Croatian"
@@ -259,6 +539,14 @@ var (
 	TagOriginalName_hrBA        = "hr-BA"
 	Tag_hrBA                    = language.MustParse(TagOriginalName_hrBA)
 	TagName_hrBA                = Tag_hrBA.String() // The tag name may have changed from the original name after parsing.
+	Language_hrBA               = Language{
+		DisplayName:         TagDisplayName_hrBA,
+		LanguageDisplayName: TagLanguageDisplayName_hrBA,
+		RegionDisplayName:   TagRegionDisplayName_hrBA,
+		OriginalName:        TagOriginalName_hrBA,
+		Tag:                 Tag_hrBA,
+		TagName:             TagName_hrBA,
+	}
 	// Croatian (Croatia)
 	TagDisplayName_hrHR         = "Croatian (Croatia)"
 	TagLanguageDisplayName_hrHR = "Croatian"
@@ -266,6 +554,14 @@ var (
 	TagOriginalName_hrHR        = "hr-HR"
 	Tag_hrHR                    = language.MustParse(TagOriginalName_hrHR)
 	TagName_hrHR                = Tag_hrHR.String() // The tag name may have changed from the original name after parsing.
+	Language_hrHR               = Language{
+		DisplayName:         TagDisplayName_hrHR,
+		LanguageDisplayName: TagLanguageDisplayName_hrHR,
+		RegionDisplayName:   TagRegionDisplayName_hrHR,
+		OriginalName:        TagOriginalName_hrHR,
+		Tag:                 Tag_hrHR,
+		TagName:             TagName_hrHR,
+	}
 	// Dhivehi (India)
 	TagDisplayName_dvIN         = "Dhivehi (India)"
 	TagLanguageDisplayName_dvIN = "Dhivehi"
@@ -273,6 +569,14 @@ var (
 	TagOriginalName_dvIN        = "dv-IN"
 	Tag_dvIN                    = language.MustParse(TagOriginalName_dvIN)
 	TagName_dvIN                = Tag_dvIN.String() // The tag name may have changed from the original name after parsing.
+	Language_dvIN               = Language{
+		DisplayName:         TagDisplayName_dvIN,
+		LanguageDisplayName: TagLanguageDisplayName_dvIN,
+		RegionDisplayName:   TagRegionDisplayName_dvIN,
+		OriginalName:        TagOriginalName_dvIN,
+		Tag:                 Tag_dvIN,
+		TagName:             TagName_dvIN,
+	}
 	// Dhivehi (Maldives)
 	TagDisplayName_dvMV         = "Dhivehi (Maldives)"
 	TagLanguageDisplayName_dvMV = "Dhivehi"
@@ -280,6 +584,14 @@ var (
 	TagOriginalName_dvMV        = "dv-MV"
 	Tag_dvMV                    = language.MustParse(TagOriginalName_dvMV)
 	TagName_dvMV                = Tag_dvMV.String() // The tag name may have changed from the original name after parsing.
+	Language_dvMV               = Language{
+		DisplayName:         TagDisplayName_dvMV,
+		LanguageDisplayName: TagLanguageDisplayName_dvMV,
+		RegionDisplayName:   TagRegionDisplayName_dvMV,
+		OriginalName:        TagOriginalName_dvMV,
+		Tag:                 Tag_dvMV,
+		TagName:             TagName_dvMV,
+	}
 	// Dutch (Aruba)
 	TagDisplayName_nlAW         = "Dutch (Aruba)"
 	TagLanguageDisplayName_nlAW = "Dutch"
@@ -287,6 +599,14 @@ var (
 	TagOriginalName_nlAW        = "nl-AW"
 	Tag_nlAW                    = language.MustParse(TagOriginalName_nlAW)
 	TagName_nlAW                = Tag_nlAW.String() // The tag name may have changed from the original name after parsing.
+	Language_nlAW               = Language{
+		DisplayName:         TagDisplayName_nlAW,
+		LanguageDisplayName: TagLanguageDisplayName_nlAW,
+		RegionDisplayName:   TagRegionDisplayName_nlAW,
+		OriginalName:        TagOriginalName_nlAW,
+		Tag:                 Tag_nlAW,
+		TagName:             TagName_nlAW,
+	}
 	// Dutch (Belgium)
 	TagDisplayName_nlBE         = "Dutch (Belgium)"
 	TagLanguageDisplayName_nlBE = "Dutch"
@@ -294,6 +614,14 @@ var (
 	TagOriginalName_nlBE        = "nl-BE"
 	Tag_nlBE                    = language.MustParse(TagOriginalName_nlBE)
 	TagName_nlBE                = Tag_nlBE.String() // The tag name may have changed from the original name after parsing.
+	Language_nlBE               = Language{
+		DisplayName:         TagDisplayName_nlBE,
+		LanguageDisplayName: TagLanguageDisplayName_nlBE,
+		RegionDisplayName:   TagRegionDisplayName_nlBE,
+		OriginalName:        TagOriginalName_nlBE,
+		Tag:                 Tag_nlBE,
+		TagName:             TagName_nlBE,
+	}
 	// Dutch (Bonaire, Sint Eustatius and Saba)
 	TagDisplayName_nlBQ         = "Dutch (Bonaire, Sint Eustatius and Saba)"
 	TagLanguageDisplayName_nlBQ = "Dutch"
@@ -301,6 +629,14 @@ var (
 	TagOriginalName_nlBQ        = "nl-BQ"
 	Tag_nlBQ                    = language.MustParse(TagOriginalName_nlBQ)
 	TagName_nlBQ                = Tag_nlBQ.String() // The tag name may have changed from the original name after parsing.
+	Language_nlBQ               = Language{
+		DisplayName:         TagDisplayName_nlBQ,
+		LanguageDisplayName: TagLanguageDisplayName_nlBQ,
+		RegionDisplayName:   TagRegionDisplayName_nlBQ,
+		OriginalName:        TagOriginalName_nlBQ,
+		Tag:                 Tag_nlBQ,
+		TagName:             TagName_nlBQ,
+	}
 	// Dutch (Curaçao)
 	TagDisplayName_nlCW         = "Dutch (Curaçao)"
 	TagLanguageDisplayName_nlCW = "Dutch"
@@ -308,6 +644,14 @@ var (
 	TagOriginalName_nlCW        = "nl-CW"
 	Tag_nlCW                    = language.MustParse(TagOriginalName_nlCW)
 	TagName_nlCW                = Tag_nlCW.String() // The tag name may have changed from the original name after parsing.
+	Language_nlCW               = Language{
+		DisplayName:         TagDisplayName_nlCW,
+		LanguageDisplayName: TagLanguageDisplayName_nlCW,
+		RegionDisplayName:   TagRegionDisplayName_nlCW,
+		OriginalName:        TagOriginalName_nlCW,
+		Tag:                 Tag_nlCW,
+		TagName:             TagName_nlCW,
+	}
 	// Dutch (Netherlands)
 	TagDisplayName_nlNL         = "Dutch (Netherlands)"
 	TagLanguageDisplayName_nlNL = "Dutch"
@@ -315,6 +659,14 @@ var (
 	TagOriginalName_nlNL        = "nl-NL"
 	Tag_nlNL                    = language.MustParse(TagOriginalName_nlNL)
 	TagName_nlNL                = Tag_nlNL.String() // The tag name may have changed from the original name after parsing.
+	Language_nlNL               = Language{
+		DisplayName:         TagDisplayName_nlNL,
+		LanguageDisplayName: TagLanguageDisplayName_nlNL,
+		RegionDisplayName:   TagRegionDisplayName_nlNL,
+		OriginalName:        TagOriginalName_nlNL,
+		Tag:                 Tag_nlNL,
+		TagName:             TagName_nlNL,
+	}
 	// Dutch (Suriname)
 	TagDisplayName_nlSR         = "Dutch (Suriname)"
 	TagLanguageDisplayName_nlSR = "Dutch"
@@ -322,6 +674,14 @@ var (
 	TagOriginalName_nlSR        = "nl-SR"
 	Tag_nlSR                    = language.MustParse(TagOriginalName_nlSR)
 	TagName_nlSR                = Tag_nlSR.String() // The tag name may have changed from the original name after parsing.
+	Language_nlSR               = Language{
+		DisplayName:         TagDisplayName_nlSR,
+		LanguageDisplayName: TagLanguageDisplayName_nlSR,
+		RegionDisplayName:   TagRegionDisplayName_nlSR,
+		OriginalName:        TagOriginalName_nlSR,
+		Tag:                 Tag_nlSR,
+		TagName:             TagName_nlSR,
+	}
 	// Dutch (Sint Maarten)
 	TagDisplayName_nlSX         = "Dutch (Sint Maarten)"
 	TagLanguageDisplayName_nlSX = "Dutch"
@@ -329,6 +689,14 @@ var (
 	TagOriginalName_nlSX        = "nl-SX"
 	Tag_nlSX                    = language.MustParse(TagOriginalName_nlSX)
 	TagName_nlSX                = Tag_nlSX.String() // The tag name may have changed from the original name after parsing.
+	Language_nlSX               = Language{
+		DisplayName:         TagDisplayName_nlSX,
+		LanguageDisplayName: TagLanguageDisplayName_nlSX,
+		RegionDisplayName:   TagRegionDisplayName_nlSX,
+		OriginalName:        TagOriginalName_nlSX,
+		Tag:                 Tag_nlSX,
+		TagName:             TagName_nlSX,
+	}
 	// English (Australia)
 	TagDisplayName_enAU         = "English (Australia)"
 	TagLanguageDisplayName_enAU = "English"
@@ -336,6 +704,14 @@ var (
 	TagOriginalName_enAU        = "en-AU"
 	Tag_enAU                    = language.MustParse(TagOriginalName_enAU)
 	TagName_enAU                = Tag_enAU.String() // The tag name may have changed from the original name after parsing.
+	Language_enAU               = Language{
+		DisplayName:         TagDisplayName_enAU,
+		LanguageDisplayName: TagLanguageDisplayName_enAU,
+		RegionDisplayName:   TagRegionDisplayName_enAU,
+		OriginalName:        TagOriginalName_enAU,
+		Tag:                 Tag_enAU,
+		TagName:             TagName_enAU,
+	}
 	// English (Belize)
 	TagDisplayName_enBZ         = "English (Belize)"
 	TagLanguageDisplayName_enBZ = "English"
@@ -343,6 +719,14 @@ var (
 	TagOriginalName_enBZ        = "en-BZ"
 	Tag_enBZ                    = language.MustParse(TagOriginalName_enBZ)
 	TagName_enBZ                = Tag_enBZ.String() // The tag name may have changed from the original name after parsing.
+	Language_enBZ               = Language{
+		DisplayName:         TagDisplayName_enBZ,
+		LanguageDisplayName: TagLanguageDisplayName_enBZ,
+		RegionDisplayName:   TagRegionDisplayName_enBZ,
+		OriginalName:        TagOriginalName_enBZ,
+		Tag:                 Tag_enBZ,
+		TagName:             TagName_enBZ,
+	}
 	// English (Canada)
 	TagDisplayName_enCA         = "English (Canada)"
 	TagLanguageDisplayName_enCA = "English"
@@ -350,6 +734,14 @@ var (
 	TagOriginalName_enCA        = "en-CA"
 	Tag_enCA                    = language.MustParse(TagOriginalName_enCA)
 	TagName_enCA                = Tag_enCA.String() // The tag name may have changed from the original name after parsing.
+	Language_enCA               = Language{
+		DisplayName:         TagDisplayName_enCA,
+		LanguageDisplayName: TagLanguageDisplayName_enCA,
+		RegionDisplayName:   TagRegionDisplayName_enCA,
+		OriginalName:        TagOriginalName_enCA,
+		Tag:                 Tag_enCA,
+		TagName:             TagName_enCA,
+	}
 	// English (United Kingdom)
 	TagDisplayName_enGB         = "English (United Kingdom)"
 	TagLanguageDisplayName_enGB = "English"
@@ -357,6 +749,14 @@ var (
 	TagOriginalName_enGB        = "en-GB"
 	Tag_enGB                    = language.MustParse(TagOriginalName_enGB)
 	TagName_enGB                = Tag_enGB.String() // The tag name may have changed from the original name after parsing.
+	Language_enGB               = Language{
+		DisplayName:         TagDisplayName_enGB,
+		LanguageDisplayName: TagLanguageDisplayName_enGB,
+		RegionDisplayName:   TagRegionDisplayName_enGB,
+		OriginalName:        TagOriginalName_enGB,
+		Tag:                 Tag_enGB,
+		TagName:             TagName_enGB,
+	}
 	// English (Ireland)
 	TagDisplayName_enIE         = "English (Ireland)"
 	TagLanguageDisplayName_enIE = "English"
@@ -364,6 +764,14 @@ var (
 	TagOriginalName_enIE        = "en-IE"
 	Tag_enIE                    = language.MustParse(TagOriginalName_enIE)
 	TagName_enIE                = Tag_enIE.String() // The tag name may have changed from the original name after parsing.
+	Language_enIE               = Language{
+		DisplayName:         TagDisplayName_enIE,
+		LanguageDisplayName: TagLanguageDisplayName_enIE,
+		RegionDisplayName:   TagRegionDisplayName_enIE,
+		OriginalName:        TagOriginalName_enIE,
+		Tag:                 Tag_enIE,
+		TagName:             TagName_enIE,
+	}
 	// English (Jamaica)
 	TagDisplayName_enJM         = "English (Jamaica)"
 	TagLanguageDisplayName_enJM = "English"
@@ -371,6 +779,14 @@ var (
 	TagOriginalName_enJM        = "en-JM"
 	Tag_enJM                    = language.MustParse(TagOriginalName_enJM)
 	TagName_enJM                = Tag_enJM.String() // The tag name may have changed from the original name after parsing.
+	Language_enJM               = Language{
+		DisplayName:         TagDisplayName_enJM,
+		LanguageDisplayName: TagLanguageDisplayName_enJM,
+		RegionDisplayName:   TagRegionDisplayName_enJM,
+		OriginalName:        TagOriginalName_enJM,
+		Tag:                 Tag_enJM,
+		TagName:             TagName_enJM,
+	}
 	// English (New Zealand)
 	TagDisplayName_enNZ         = "English (New Zealand)"
 	TagLanguageDisplayName_enNZ = "English"
@@ -378,6 +794,14 @@ var (
 	TagOriginalName_enNZ        = "en-NZ"
 	Tag_enNZ                    = language.MustParse(TagOriginalName_enNZ)
 	TagName_enNZ                = Tag_enNZ.String() // The tag name may have changed from the original name after parsing.
+	Language_enNZ               = Language{
+		DisplayName:         TagDisplayName_enNZ,
+		LanguageDisplayName: TagLanguageDisplayName_enNZ,
+		RegionDisplayName:   TagRegionDisplayName_enNZ,
+		OriginalName:        TagOriginalName_enNZ,
+		Tag:                 Tag_enNZ,
+		TagName:             TagName_enNZ,
+	}
 	// English (Trinidad and Tobago)
 	TagDisplayName_enTT         = "English (Trinidad and Tobago)"
 	TagLanguageDisplayName_enTT = "English"
@@ -385,6 +809,14 @@ var (
 	TagOriginalName_enTT        = "en-TT"
 	Tag_enTT                    = language.MustParse(TagOriginalName_enTT)
 	TagName_enTT                = Tag_enTT.String() // The tag name may have changed from the original name after parsing.
+	Language_enTT               = Language{
+		DisplayName:         TagDisplayName_enTT,
+		LanguageDisplayName: TagLanguageDisplayName_enTT,
+		RegionDisplayName:   TagRegionDisplayName_enTT,
+		OriginalName:        TagOriginalName_enTT,
+		Tag:                 Tag_enTT,
+		TagName:             TagName_enTT,
+	}
 	// English (United States of America)
 	TagDisplayName_enUS         = "English (United States of America)"
 	TagLanguageDisplayName_enUS = "English"
@@ -392,6 +824,14 @@ var (
 	TagOriginalName_enUS        = "en-US"
 	Tag_enUS                    = language.MustParse(TagOriginalName_enUS)
 	TagName_enUS                = Tag_enUS.String() // The tag name may have changed from the original name after parsing.
+	Language_enUS               = Language{
+		DisplayName:         TagDisplayName_enUS,
+		LanguageDisplayName: TagLanguageDisplayName_enUS,
+		RegionDisplayName:   TagRegionDisplayName_enUS,
+		OriginalName:        TagOriginalName_enUS,
+		Tag:                 Tag_enUS,
+		TagName:             TagName_enUS,
+	}
 	// English (South Africa)
 	TagDisplayName_enZA         = "English (South Africa)"
 	TagLanguageDisplayName_enZA = "English"
@@ -399,6 +839,14 @@ var (
 	TagOriginalName_enZA        = "en-ZA"
 	Tag_enZA                    = language.MustParse(TagOriginalName_enZA)
 	TagName_enZA                = Tag_enZA.String() // The tag name may have changed from the original name after parsing.
+	Language_enZA               = Language{
+		DisplayName:         TagDisplayName_enZA,
+		LanguageDisplayName: TagLanguageDisplayName_enZA,
+		RegionDisplayName:   TagRegionDisplayName_enZA,
+		OriginalName:        TagOriginalName_enZA,
+		Tag:                 Tag_enZA,
+		TagName:             TagName_enZA,
+	}
 	// English (Zimbabwe)
 	TagDisplayName_enZW         = "English (Zimbabwe)"
 	TagLanguageDisplayName_enZW = "English"
@@ -406,6 +854,14 @@ var (
 	TagOriginalName_enZW        = "en-ZW"
 	Tag_enZW                    = language.MustParse(TagOriginalName_enZW)
 	TagName_enZW                = Tag_enZW.String() // The tag name may have changed from the original name after parsing.
+	Language_enZW               = Language{
+		DisplayName:         TagDisplayName_enZW,
+		LanguageDisplayName: TagLanguageDisplayName_enZW,
+		RegionDisplayName:   TagRegionDisplayName_enZW,
+		OriginalName:        TagOriginalName_enZW,
+		Tag:                 Tag_enZW,
+		TagName:             TagName_enZW,
+	}
 	// Faroese (Denmark)
 	TagDisplayName_foDK         = "Faroese (Denmark)"
 	TagLanguageDisplayName_foDK = "Faroese"
@@ -413,6 +869,14 @@ var (
 	TagOriginalName_foDK        = "fo-DK"
 	Tag_foDK                    = language.MustParse(TagOriginalName_foDK)
 	TagName_foDK                = Tag_foDK.String() // The tag name may have changed from the original name after parsing.
+	Language_foDK               = Language{
+		DisplayName:         TagDisplayName_foDK,
+		LanguageDisplayName: TagLanguageDisplayName_foDK,
+		RegionDisplayName:   TagRegionDisplayName_foDK,
+		OriginalName:        TagOriginalName_foDK,
+		Tag:                 Tag_foDK,
+		TagName:             TagName_foDK,
+	}
 	// Faroese (Faroe Islands)
 	TagDisplayName_foFO         = "Faroese (Faroe Islands)"
 	TagLanguageDisplayName_foFO = "Faroese"
@@ -420,6 +884,14 @@ var (
 	TagOriginalName_foFO        = "fo-FO"
 	Tag_foFO                    = language.MustParse(TagOriginalName_foFO)
 	TagName_foFO                = Tag_foFO.String() // The tag name may have changed from the original name after parsing.
+	Language_foFO               = Language{
+		DisplayName:         TagDisplayName_foFO,
+		LanguageDisplayName: TagLanguageDisplayName_foFO,
+		RegionDisplayName:   TagRegionDisplayName_foFO,
+		OriginalName:        TagOriginalName_foFO,
+		Tag:                 Tag_foFO,
+		TagName:             TagName_foFO,
+	}
 	// French (Belgium)
 	TagDisplayName_frBE         = "French (Belgium)"
 	TagLanguageDisplayName_frBE = "French"
@@ -427,6 +899,14 @@ var (
 	TagOriginalName_frBE        = "fr-BE"
 	Tag_frBE                    = language.MustParse(TagOriginalName_frBE)
 	TagName_frBE                = Tag_frBE.String() // The tag name may have changed from the original name after parsing.
+	Language_frBE               = Language{
+		DisplayName:         TagDisplayName_frBE,
+		LanguageDisplayName: TagLanguageDisplayName_frBE,
+		RegionDisplayName:   TagRegionDisplayName_frBE,
+		OriginalName:        TagOriginalName_frBE,
+		Tag:                 Tag_frBE,
+		TagName:             TagName_frBE,
+	}
 	// French (Burkina Faso)
 	TagDisplayName_frBF         = "French (Burkina Faso)"
 	TagLanguageDisplayName_frBF = "French"
@@ -434,6 +914,14 @@ var (
 	TagOriginalName_frBF        = "fr-BF"
 	Tag_frBF                    = language.MustParse(TagOriginalName_frBF)
 	TagName_frBF                = Tag_frBF.String() // The tag name may have changed from the original name after parsing.
+	Language_frBF               = Language{
+		DisplayName:         TagDisplayName_frBF,
+		LanguageDisplayName: TagLanguageDisplayName_frBF,
+		RegionDisplayName:   TagRegionDisplayName_frBF,
+		OriginalName:        TagOriginalName_frBF,
+		Tag:                 Tag_frBF,
+		TagName:             TagName_frBF,
+	}
 	// French (Burundi)
 	TagDisplayName_frBI         = "French (Burundi)"
 	TagLanguageDisplayName_frBI = "French"
@@ -441,6 +929,14 @@ var (
 	TagOriginalName_frBI        = "fr-BI"
 	Tag_frBI                    = language.MustParse(TagOriginalName_frBI)
 	TagName_frBI                = Tag_frBI.String() // The tag name may have changed from the original name after parsing.
+	Language_frBI               = Language{
+		DisplayName:         TagDisplayName_frBI,
+		LanguageDisplayName: TagLanguageDisplayName_frBI,
+		RegionDisplayName:   TagRegionDisplayName_frBI,
+		OriginalName:        TagOriginalName_frBI,
+		Tag:                 Tag_frBI,
+		TagName:             TagName_frBI,
+	}
 	// French (Benin)
 	TagDisplayName_frBJ         = "French (Benin)"
 	TagLanguageDisplayName_frBJ = "French"
@@ -448,6 +944,14 @@ var (
 	TagOriginalName_frBJ        = "fr-BJ"
 	Tag_frBJ                    = language.MustParse(TagOriginalName_frBJ)
 	TagName_frBJ                = Tag_frBJ.String() // The tag name may have changed from the original name after parsing.
+	Language_frBJ               = Language{
+		DisplayName:         TagDisplayName_frBJ,
+		LanguageDisplayName: TagLanguageDisplayName_frBJ,
+		RegionDisplayName:   TagRegionDisplayName_frBJ,
+		OriginalName:        TagOriginalName_frBJ,
+		Tag:                 Tag_frBJ,
+		TagName:             TagName_frBJ,
+	}
 	// French (Saint Barthélemy)
 	TagDisplayName_frBL         = "French (Saint Barthélemy)"
 	TagLanguageDisplayName_frBL = "French"
@@ -455,6 +959,14 @@ var (
 	TagOriginalName_frBL        = "fr-BL"
 	Tag_frBL                    = language.MustParse(TagOriginalName_frBL)
 	TagName_frBL                = Tag_frBL.String() // The tag name may have changed from the original name after parsing.
+	Language_frBL               = Language{
+		DisplayName:         TagDisplayName_frBL,
+		LanguageDisplayName: TagLanguageDisplayName_frBL,
+		RegionDisplayName:   TagRegionDisplayName_frBL,
+		OriginalName:        TagOriginalName_frBL,
+		Tag:                 Tag_frBL,
+		TagName:             TagName_frBL,
+	}
 	// French (Canada)
 	TagDisplayName_frCA         = "French (Canada)"
 	TagLanguageDisplayName_frCA = "French"
@@ -462,6 +974,14 @@ var (
 	TagOriginalName_frCA        = "fr-CA"
 	Tag_frCA                    = language.MustParse(TagOriginalName_frCA)
 	TagName_frCA                = Tag_frCA.String() // The tag name may have changed from the original name after parsing.
+	Language_frCA               = Language{
+		DisplayName:         TagDisplayName_frCA,
+		LanguageDisplayName: TagLanguageDisplayName_frCA,
+		RegionDisplayName:   TagRegionDisplayName_frCA,
+		OriginalName:        TagOriginalName_frCA,
+		Tag:                 Tag_frCA,
+		TagName:             TagName_frCA,
+	}
 	// French (Democratic Republic of the Congo)
 	TagDisplayName_frCD         = "French (Democratic Republic of the Congo)"
 	TagLanguageDisplayName_frCD = "French"
@@ -469,6 +989,14 @@ var (
 	TagOriginalName_frCD        = "fr-CD"
 	Tag_frCD                    = language.MustParse(TagOriginalName_frCD)
 	TagName_frCD                = Tag_frCD.String() // The tag name may have changed from the original name after parsing.
+	Language_frCD               = Language{
+		DisplayName:         TagDisplayName_frCD,
+		LanguageDisplayName: TagLanguageDisplayName_frCD,
+		RegionDisplayName:   TagRegionDisplayName_frCD,
+		OriginalName:        TagOriginalName_frCD,
+		Tag:                 Tag_frCD,
+		TagName:             TagName_frCD,
+	}
 	// French (Central African Republic)
 	TagDisplayName_frCF         = "French (Central African Republic)"
 	TagLanguageDisplayName_frCF = "French"
@@ -476,6 +1004,14 @@ var (
 	TagOriginalName_frCF        = "fr-CF"
 	Tag_frCF                    = language.MustParse(TagOriginalName_frCF)
 	TagName_frCF                = Tag_frCF.String() // The tag name may have changed from the original name after parsing.
+	Language_frCF               = Language{
+		DisplayName:         TagDisplayName_frCF,
+		LanguageDisplayName: TagLanguageDisplayName_frCF,
+		RegionDisplayName:   TagRegionDisplayName_frCF,
+		OriginalName:        TagOriginalName_frCF,
+		Tag:                 Tag_frCF,
+		TagName:             TagName_frCF,
+	}
 	// French (Republic of the Congo)
 	TagDisplayName_frCG         = "French (Republic of the Congo)"
 	TagLanguageDisplayName_frCG = "French"
@@ -483,6 +1019,14 @@ var (
 	TagOriginalName_frCG        = "fr-CG"
 	Tag_frCG                    = language.MustParse(TagOriginalName_frCG)
 	TagName_frCG                = Tag_frCG.String() // The tag name may have changed from the original name after parsing.
+	Language_frCG               = Language{
+		DisplayName:         TagDisplayName_frCG,
+		LanguageDisplayName: TagLanguageDisplayName_frCG,
+		RegionDisplayName:   TagRegionDisplayName_frCG,
+		OriginalName:        TagOriginalName_frCG,
+		Tag:                 Tag_frCG,
+		TagName:             TagName_frCG,
+	}
 	// French (Switzerland)
 	TagDisplayName_frCH         = "French (Switzerland)"
 	TagLanguageDisplayName_frCH = "French"
@@ -490,6 +1034,14 @@ var (
 	TagOriginalName_frCH        = "fr-CH"
 	Tag_frCH                    = language.MustParse(TagOriginalName_frCH)
 	TagName_frCH                = Tag_frCH.String() // The tag name may have changed from the original name after parsing.
+	Language_frCH               = Language{
+		DisplayName:         TagDisplayName_frCH,
+		LanguageDisplayName: TagLanguageDisplayName_frCH,
+		RegionDisplayName:   TagRegionDisplayName_frCH,
+		OriginalName:        TagOriginalName_frCH,
+		Tag:                 Tag_frCH,
+		TagName:             TagName_frCH,
+	}
 	// French (Côte d'Ivoire)
 	TagDisplayName_frCI         = "French (Côte d'Ivoire)"
 	TagLanguageDisplayName_frCI = "French"
@@ -497,6 +1049,14 @@ var (
 	TagOriginalName_frCI        = "fr-CI"
 	Tag_frCI                    = language.MustParse(TagOriginalName_frCI)
 	TagName_frCI                = Tag_frCI.String() // The tag name may have changed from the original name after parsing.
+	Language_frCI               = Language{
+		DisplayName:         TagDisplayName_frCI,
+		LanguageDisplayName: TagLanguageDisplayName_frCI,
+		RegionDisplayName:   TagRegionDisplayName_frCI,
+		OriginalName:        TagOriginalName_frCI,
+		Tag:                 Tag_frCI,
+		TagName:             TagName_frCI,
+	}
 	// French (Cameroon)
 	TagDisplayName_frCM         = "French (Cameroon)"
 	TagLanguageDisplayName_frCM = "French"
@@ -504,6 +1064,14 @@ var (
 	TagOriginalName_frCM        = "fr-CM"
 	Tag_frCM                    = language.MustParse(TagOriginalName_frCM)
 	TagName_frCM                = Tag_frCM.String() // The tag name may have changed from the original name after parsing.
+	Language_frCM               = Language{
+		DisplayName:         TagDisplayName_frCM,
+		LanguageDisplayName: TagLanguageDisplayName_frCM,
+		RegionDisplayName:   TagRegionDisplayName_frCM,
+		OriginalName:        TagOriginalName_frCM,
+		Tag:                 Tag_frCM,
+		TagName:             TagName_frCM,
+	}
 	// French (Djibouti)
 	TagDisplayName_frDJ         = "French (Djibouti)"
 	TagLanguageDisplayName_frDJ = "French"
@@ -511,6 +1079,14 @@ var (
 	TagOriginalName_frDJ        = "fr-DJ"
 	Tag_frDJ                    = language.MustParse(TagOriginalName_frDJ)
 	TagName_frDJ                = Tag_frDJ.String() // The tag name may have changed from the original name after parsing.
+	Language_frDJ               = Language{
+		DisplayName:         TagDisplayName_frDJ,
+		LanguageDisplayName: TagLanguageDisplayName_frDJ,
+		RegionDisplayName:   TagRegionDisplayName_frDJ,
+		OriginalName:        TagOriginalName_frDJ,
+		Tag:                 Tag_frDJ,
+		TagName:             TagName_frDJ,
+	}
 	// French (Algeria)
 	TagDisplayName_frDZ         = "French (Algeria)"
 	TagLanguageDisplayName_frDZ = "French"
@@ -518,6 +1094,14 @@ var (
 	TagOriginalName_frDZ        = "fr-DZ"
 	Tag_frDZ                    = language.MustParse(TagOriginalName_frDZ)
 	TagName_frDZ                = Tag_frDZ.String() // The tag name may have changed from the original name after parsing.
+	Language_frDZ               = Language{
+		DisplayName:         TagDisplayName_frDZ,
+		LanguageDisplayName: TagLanguageDisplayName_frDZ,
+		RegionDisplayName:   TagRegionDisplayName_frDZ,
+		OriginalName:        TagOriginalName_frDZ,
+		Tag:                 Tag_frDZ,
+		TagName:             TagName_frDZ,
+	}
 	// French (France)
 	TagDisplayName_frFR         = "French (France)"
 	TagLanguageDisplayName_frFR = "French"
@@ -525,6 +1109,14 @@ var (
 	TagOriginalName_frFR        = "fr-FR"
 	Tag_frFR                    = language.MustParse(TagOriginalName_frFR)
 	TagName_frFR                = Tag_frFR.String() // The tag name may have changed from the original name after parsing.
+	Language_frFR               = Language{
+		DisplayName:         TagDisplayName_frFR,
+		LanguageDisplayName: TagLanguageDisplayName_frFR,
+		RegionDisplayName:   TagRegionDisplayName_frFR,
+		OriginalName:        TagOriginalName_frFR,
+		Tag:                 Tag_frFR,
+		TagName:             TagName_frFR,
+	}
 	// French (Gabon)
 	TagDisplayName_frGA         = "French (Gabon)"
 	TagLanguageDisplayName_frGA = "French"
@@ -532,6 +1124,14 @@ var (
 	TagOriginalName_frGA        = "fr-GA"
 	Tag_frGA                    = language.MustParse(TagOriginalName_frGA)
 	TagName_frGA                = Tag_frGA.String() // The tag name may have changed from the original name after parsing.
+	Language_frGA               = Language{
+		DisplayName:         TagDisplayName_frGA,
+		LanguageDisplayName: TagLanguageDisplayName_frGA,
+		RegionDisplayName:   TagRegionDisplayName_frGA,
+		OriginalName:        TagOriginalName_frGA,
+		Tag:                 Tag_frGA,
+		TagName:             TagName_frGA,
+	}
 	// French (French Guiana)
 	TagDisplayName_frGF         = "French (French Guiana)"
 	TagLanguageDisplayName_frGF = "French"
@@ -539,6 +1139,14 @@ var (
 	TagOriginalName_frGF        = "fr-GF"
 	Tag_frGF                    = language.MustParse(TagOriginalName_frGF)
 	TagName_frGF                = Tag_frGF.String() // The tag name may have changed from the original name after parsing.
+	Language_frGF               = Language{
+		DisplayName:         TagDisplayName_frGF,
+		LanguageDisplayName: TagLanguageDisplayName_frGF,
+		RegionDisplayName:   TagRegionDisplayName_frGF,
+		OriginalName:        TagOriginalName_frGF,
+		Tag:                 Tag_frGF,
+		TagName:             TagName_frGF,
+	}
 	// French (Guinea)
 	TagDisplayName_frGN         = "French (Guinea)"
 	TagLanguageDisplayName_frGN = "French"
@@ -546,6 +1154,14 @@ var (
 	TagOriginalName_frGN        = "fr-GN"
 	Tag_frGN                    = language.MustParse(TagOriginalName_frGN)
 	TagName_frGN                = Tag_frGN.String() // The tag name may have changed from the original name after parsing.
+	Language_frGN               = Language{
+		DisplayName:         TagDisplayName_frGN,
+		LanguageDisplayName: TagLanguageDisplayName_frGN,
+		RegionDisplayName:   TagRegionDisplayName_frGN,
+		OriginalName:        TagOriginalName_frGN,
+		Tag:                 Tag_frGN,
+		TagName:             TagName_frGN,
+	}
 	// French (Guadeloupe)
 	TagDisplayName_frGP         = "French (Guadeloupe)"
 	TagLanguageDisplayName_frGP = "French"
@@ -553,6 +1169,14 @@ var (
 	TagOriginalName_frGP        = "fr-GP"
 	Tag_frGP                    = language.MustParse(TagOriginalName_frGP)
 	TagName_frGP                = Tag_frGP.String() // The tag name may have changed from the original name after parsing.
+	Language_frGP               = Language{
+		DisplayName:         TagDisplayName_frGP,
+		LanguageDisplayName: TagLanguageDisplayName_frGP,
+		RegionDisplayName:   TagRegionDisplayName_frGP,
+		OriginalName:        TagOriginalName_frGP,
+		Tag:                 Tag_frGP,
+		TagName:             TagName_frGP,
+	}
 	// French (Equatorial Guinea)
 	TagDisplayName_frGQ         = "French (Equatorial Guinea)"
 	TagLanguageDisplayName_frGQ = "French"
@@ -560,6 +1184,14 @@ var (
 	TagOriginalName_frGQ        = "fr-GQ"
 	Tag_frGQ                    = language.MustParse(TagOriginalName_frGQ)
 	TagName_frGQ                = Tag_frGQ.String() // The tag name may have changed from the original name after parsing.
+	Language_frGQ               = Language{
+		DisplayName:         TagDisplayName_frGQ,
+		LanguageDisplayName: TagLanguageDisplayName_frGQ,
+		RegionDisplayName:   TagRegionDisplayName_frGQ,
+		OriginalName:        TagOriginalName_frGQ,
+		Tag:                 Tag_frGQ,
+		TagName:             TagName_frGQ,
+	}
 	// French (Haiti)
 	TagDisplayName_frHT         = "French (Haiti)"
 	TagLanguageDisplayName_frHT = "French"
@@ -567,6 +1199,14 @@ var (
 	TagOriginalName_frHT        = "fr-HT"
 	Tag_frHT                    = language.MustParse(TagOriginalName_frHT)
 	TagName_frHT                = Tag_frHT.String() // The tag name may have changed from the original name after parsing.
+	Language_frHT               = Language{
+		DisplayName:         TagDisplayName_frHT,
+		LanguageDisplayName: TagLanguageDisplayName_frHT,
+		RegionDisplayName:   TagRegionDisplayName_frHT,
+		OriginalName:        TagOriginalName_frHT,
+		Tag:                 Tag_frHT,
+		TagName:             TagName_frHT,
+	}
 	// French (Comoros)
 	TagDisplayName_frKM         = "French (Comoros)"
 	TagLanguageDisplayName_frKM = "French"
@@ -574,6 +1214,14 @@ var (
 	TagOriginalName_frKM        = "fr-KM"
 	Tag_frKM                    = language.MustParse(TagOriginalName_frKM)
 	TagName_frKM                = Tag_frKM.String() // The tag name may have changed from the original name after parsing.
+	Language_frKM               = Language{
+		DisplayName:         TagDisplayName_frKM,
+		LanguageDisplayName: TagLanguageDisplayName_frKM,
+		RegionDisplayName:   TagRegionDisplayName_frKM,
+		OriginalName:        TagOriginalName_frKM,
+		Tag:                 Tag_frKM,
+		TagName:             TagName_frKM,
+	}
 	// French (Luxembourg)
 	TagDisplayName_frLU         = "French (Luxembourg)"
 	TagLanguageDisplayName_frLU = "French"
@@ -581,6 +1229,14 @@ var (
 	TagOriginalName_frLU        = "fr-LU"
 	Tag_frLU                    = language.MustParse(TagOriginalName_frLU)
 	TagName_frLU                = Tag_frLU.String() // The tag name may have changed from the original name after parsing.
+	Language_frLU               = Language{
+		DisplayName:         TagDisplayName_frLU,
+		LanguageDisplayName: TagLanguageDisplayName_frLU,
+		RegionDisplayName:   TagRegionDisplayName_frLU,
+		OriginalName:        TagOriginalName_frLU,
+		Tag:                 Tag_frLU,
+		TagName:             TagName_frLU,
+	}
 	// French (Morocco)
 	TagDisplayName_frMA         = "French (Morocco)"
 	TagLanguageDisplayName_frMA = "French"
@@ -588,6 +1244,14 @@ var (
 	TagOriginalName_frMA        = "fr-MA"
 	Tag_frMA                    = language.MustParse(TagOriginalName_frMA)
 	TagName_frMA                = Tag_frMA.String() // The tag name may have changed from the original name after parsing.
+	Language_frMA               = Language{
+		DisplayName:         TagDisplayName_frMA,
+		LanguageDisplayName: TagLanguageDisplayName_frMA,
+		RegionDisplayName:   TagRegionDisplayName_frMA,
+		OriginalName:        TagOriginalName_frMA,
+		Tag:                 Tag_frMA,
+		TagName:             TagName_frMA,
+	}
 	// French (Principality of Monaco)
 	TagDisplayName_frMC         = "French (Principality of Monaco)"
 	TagLanguageDisplayName_frMC = "French"
@@ -595,6 +1259,14 @@ var (
 	TagOriginalName_frMC        = "fr-MC"
 	Tag_frMC                    = language.MustParse(TagOriginalName_frMC)
 	TagName_frMC                = Tag_frMC.String() // The tag name may have changed from the original name after parsing.
+	Language_frMC               = Language{
+		DisplayName:         TagDisplayName_frMC,
+		LanguageDisplayName: TagLanguageDisplayName_frMC,
+		RegionDisplayName:   TagRegionDisplayName_frMC,
+		OriginalName:        TagOriginalName_frMC,
+		Tag:                 Tag_frMC,
+		TagName:             TagName_frMC,
+	}
 	// French (Saint Martin)
 	TagDisplayName_frMF         = "French (Saint Martin)"
 	TagLanguageDisplayName_frMF = "French"
@@ -602,6 +1274,14 @@ var (
 	TagOriginalName_frMF        = "fr-MF"
 	Tag_frMF                    = language.MustParse(TagOriginalName_frMF)
 	TagName_frMF                = Tag_frMF.String() // The tag name may have changed from the original name after parsing.
+	Language_frMF               = Language{
+		DisplayName:         TagDisplayName_frMF,
+		LanguageDisplayName: TagLanguageDisplayName_frMF,
+		RegionDisplayName:   TagRegionDisplayName_frMF,
+		OriginalName:        TagOriginalName_frMF,
+		Tag:                 Tag_frMF,
+		TagName:             TagName_frMF,
+	}
 	// French (Madagascar)
 	TagDisplayName_frMG         = "French (Madagascar)"
 	TagLanguageDisplayName_frMG = "French"
@@ -609,6 +1289,14 @@ var (
 	TagOriginalName_frMG        = "fr-MG"
 	Tag_frMG                    = language.MustParse(TagOriginalName_frMG)
 	TagName_frMG                = Tag_frMG.String() // The tag name may have changed from the original name after parsing.
+	Language_frMG               = Language{
+		DisplayName:         TagDisplayName_frMG,
+		LanguageDisplayName: TagLanguageDisplayName_frMG,
+		RegionDisplayName:   TagRegionDisplayName_frMG,
+		OriginalName:        TagOriginalName_frMG,
+		Tag:                 Tag_frMG,
+		TagName:             TagName_frMG,
+	}
 	// French (Mali)
 	TagDisplayName_frML         = "French (Mali)"
 	TagLanguageDisplayName_frML = "French"
@@ -616,6 +1304,14 @@ var (
 	TagOriginalName_frML        = "fr-ML"
 	Tag_frML                    = language.MustParse(TagOriginalName_frML)
 	TagName_frML                = Tag_frML.String() // The tag name may have changed from the original name after parsing.
+	Language_frML               = Language{
+		DisplayName:         TagDisplayName_frML,
+		LanguageDisplayName: TagLanguageDisplayName_frML,
+		RegionDisplayName:   TagRegionDisplayName_frML,
+		OriginalName:        TagOriginalName_frML,
+		Tag:                 Tag_frML,
+		TagName:             TagName_frML,
+	}
 	// French (Martinique)
 	TagDisplayName_frMQ         = "French (Martinique)"
 	TagLanguageDisplayName_frMQ = "French"
@@ -623,6 +1319,14 @@ var (
 	TagOriginalName_frMQ        = "fr-MQ"
 	Tag_frMQ                    = language.MustParse(TagOriginalName_frMQ)
 	TagName_frMQ                = Tag_frMQ.String() // The tag name may have changed from the original name after parsing.
+	Language_frMQ               = Language{
+		DisplayName:         TagDisplayName_frMQ,
+		LanguageDisplayName: TagLanguageDisplayName_frMQ,
+		RegionDisplayName:   TagRegionDisplayName_frMQ,
+		OriginalName:        TagOriginalName_frMQ,
+		Tag:                 Tag_frMQ,
+		TagName:             TagName_frMQ,
+	}
 	// French (Mauritania)
 	TagDisplayName_frMR         = "French (Mauritania)"
 	TagLanguageDisplayName_frMR = "French"
@@ -630,6 +1334,14 @@ var (
 	TagOriginalName_frMR        = "fr-MR"
 	Tag_frMR                    = language.MustParse(TagOriginalName_frMR)
 	TagName_frMR                = Tag_frMR.String() // The tag name may have changed from the original name after parsing.
+	Language_frMR               = Language{
+		DisplayName:         TagDisplayName_frMR,
+		LanguageDisplayName: TagLanguageDisplayName_frMR,
+		RegionDisplayName:   TagRegionDisplayName_frMR,
+		OriginalName:        TagOriginalName_frMR,
+		Tag:                 Tag_frMR,
+		TagName:             TagName_frMR,
+	}
 	// French (Mauritius)
 	TagDisplayName_frMU         = "French (Mauritius)"
 	TagLanguageDisplayName_frMU = "French"
@@ -637,6 +1349,14 @@ var (
 	TagOriginalName_frMU        = "fr-MU"
 	Tag_frMU                    = language.MustParse(TagOriginalName_frMU)
 	TagName_frMU                = Tag_frMU.String() // The tag name may have changed from the original name after parsing.
+	Language_frMU               = Language{
+		DisplayName:         TagDisplayName_frMU,
+		LanguageDisplayName: TagLanguageDisplayName_frMU,
+		RegionDisplayName:   TagRegionDisplayName_frMU,
+		OriginalName:        TagOriginalName_frMU,
+		Tag:                 Tag_frMU,
+		TagName:             TagName_frMU,
+	}
 	// French (New Caledonia)
 	TagDisplayName_frNC         = "French (New Caledonia)"
 	TagLanguageDisplayName_frNC = "French"
@@ -644,6 +1364,14 @@ var (
 	TagOriginalName_frNC        = "fr-NC"
 	Tag_frNC                    = language.MustParse(TagOriginalName_frNC)
 	TagName_frNC                = Tag_frNC.String() // The tag name may have changed from the original name after parsing.
+	Language_frNC               = Language{
+		DisplayName:         TagDisplayName_frNC,
+		LanguageDisplayName: TagLanguageDisplayName_frNC,
+		RegionDisplayName:   TagRegionDisplayName_frNC,
+		OriginalName:        TagOriginalName_frNC,
+		Tag:                 Tag_frNC,
+		TagName:             TagName_frNC,
+	}
 	// French (Niger)
 	TagDisplayName_frNE         = "French (Niger)"
 	TagLanguageDisplayName_frNE = "French"
@@ -651,6 +1379,14 @@ var (
 	TagOriginalName_frNE        = "fr-NE"
 	Tag_frNE                    = language.MustParse(TagOriginalName_frNE)
 	TagName_frNE                = Tag_frNE.String() // The tag name may have changed from the original name after parsing.
+	Language_frNE               = Language{
+		DisplayName:         TagDisplayName_frNE,
+		LanguageDisplayName: TagLanguageDisplayName_frNE,
+		RegionDisplayName:   TagRegionDisplayName_frNE,
+		OriginalName:        TagOriginalName_frNE,
+		Tag:                 Tag_frNE,
+		TagName:             TagName_frNE,
+	}
 	// French (French Polynesia)
 	TagDisplayName_frPF         = "French (French Polynesia)"
 	TagLanguageDisplayName_frPF = "French"
@@ -658,6 +1394,14 @@ var (
 	TagOriginalName_frPF        = "fr-PF"
 	Tag_frPF                    = language.MustParse(TagOriginalName_frPF)
 	TagName_frPF                = Tag_frPF.String() // The tag name may have changed from the original name after parsing.
+	Language_frPF               = Language{
+		DisplayName:         TagDisplayName_frPF,
+		LanguageDisplayName: TagLanguageDisplayName_frPF,
+		RegionDisplayName:   TagRegionDisplayName_frPF,
+		OriginalName:        TagOriginalName_frPF,
+		Tag:                 Tag_frPF,
+		TagName:             TagName_frPF,
+	}
 	// French (Saint Pierre and Miquelon)
 	TagDisplayName_frPM         = "French (Saint Pierre and Miquelon)"
 	TagLanguageDisplayName_frPM = "French"
@@ -665,6 +1409,14 @@ var (
 	TagOriginalName_frPM        = "fr-PM"
 	Tag_frPM                    = language.MustParse(TagOriginalName_frPM)
 	TagName_frPM                = Tag_frPM.String() // The tag name may have changed from the original name after parsing.
+	Language_frPM               = Language{
+		DisplayName:         TagDisplayName_frPM,
+		LanguageDisplayName: TagLanguageDisplayName_frPM,
+		RegionDisplayName:   TagRegionDisplayName_frPM,
+		OriginalName:        TagOriginalName_frPM,
+		Tag:                 Tag_frPM,
+		TagName:             TagName_frPM,
+	}
 	// French (Reunion)
 	TagDisplayName_frRE         = "French (Reunion)"
 	TagLanguageDisplayName_frRE = "French"
@@ -672,6 +1424,14 @@ var (
 	TagOriginalName_frRE        = "fr-RE"
 	Tag_frRE                    = language.MustParse(TagOriginalName_frRE)
 	TagName_frRE                = Tag_frRE.String() // The tag name may have changed from the original name after parsing.
+	Language_frRE               = Language{
+		DisplayName:         TagDisplayName_frRE,
+		LanguageDisplayName: TagLanguageDisplayName_frRE,
+		RegionDisplayName:   TagRegionDisplayName_frRE,
+		OriginalName:        TagOriginalName_frRE,
+		Tag:                 Tag_frRE,
+		TagName:             TagName_frRE,
+	}
 	// French (Rwanda)
 	TagDisplayName_frRW         = "French (Rwanda)"
 	TagLanguageDisplayName_frRW = "French"
@@ -679,6 +1439,14 @@ var (
 	TagOriginalName_frRW        = "fr-RW"
 	Tag_frRW                    = language.MustParse(TagOriginalName_frRW)
 	TagName_frRW                = Tag_frRW.String() // The tag name may have changed from the original name after parsing.
+	Language_frRW               = Language{
+		DisplayName:         TagDisplayName_frRW,
+		LanguageDisplayName: TagLanguageDisplayName_frRW,
+		RegionDisplayName:   TagRegionDisplayName_frRW,
+		OriginalName:        TagOriginalName_frRW,
+		Tag:                 Tag_frRW,
+		TagName:             TagName_frRW,
+	}
 	// French (Seychelles)
 	TagDisplayName_frSC         = "French (Seychelles)"
 	TagLanguageDisplayName_frSC = "French"
@@ -686,6 +1454,14 @@ var (
 	TagOriginalName_frSC        = "fr-SC"
 	Tag_frSC                    = language.MustParse(TagOriginalName_frSC)
 	TagName_frSC                = Tag_frSC.String() // The tag name may have changed from the original name after parsing.
+	Language_frSC               = Language{
+		DisplayName:         TagDisplayName_frSC,
+		LanguageDisplayName: TagLanguageDisplayName_frSC,
+		RegionDisplayName:   TagRegionDisplayName_frSC,
+		OriginalName:        TagOriginalName_frSC,
+		Tag:                 Tag_frSC,
+		TagName:             TagName_frSC,
+	}
 	// French (Senegal)
 	TagDisplayName_frSN         = "French (Senegal)"
 	TagLanguageDisplayName_frSN = "French"
@@ -693,6 +1469,14 @@ var (
 	TagOriginalName_frSN        = "fr-SN"
 	Tag_frSN                    = language.MustParse(TagOriginalName_frSN)
 	TagName_frSN                = Tag_frSN.String() // The tag name may have changed from the original name after parsing.
+	Language_frSN               = Language{
+		DisplayName:         TagDisplayName_frSN,
+		LanguageDisplayName: TagLanguageDisplayName_frSN,
+		RegionDisplayName:   TagRegionDisplayName_frSN,
+		OriginalName:        TagOriginalName_frSN,
+		Tag:                 Tag_frSN,
+		TagName:             TagName_frSN,
+	}
 	// French (Syria)
 	TagDisplayName_frSY         = "French (Syria)"
 	TagLanguageDisplayName_frSY = "French"
@@ -700,6 +1484,14 @@ var (
 	TagOriginalName_frSY        = "fr-SY"
 	Tag_frSY                    = language.MustParse(TagOriginalName_frSY)
 	TagName_frSY                = Tag_frSY.String() // The tag name may have changed from the original name after parsing.
+	Language_frSY               = Language{
+		DisplayName:         TagDisplayName_frSY,
+		LanguageDisplayName: TagLanguageDisplayName_frSY,
+		RegionDisplayName:   TagRegionDisplayName_frSY,
+		OriginalName:        TagOriginalName_frSY,
+		Tag:                 Tag_frSY,
+		TagName:             TagName_frSY,
+	}
 	// French (Chad)
 	TagDisplayName_frTD         = "French (Chad)"
 	TagLanguageDisplayName_frTD = "French"
@@ -707,6 +1499,14 @@ var (
 	TagOriginalName_frTD        = "fr-TD"
 	Tag_frTD                    = language.MustParse(TagOriginalName_frTD)
 	TagName_frTD                = Tag_frTD.String() // The tag name may have changed from the original name after parsing.
+	Language_frTD               = Language{
+		DisplayName:         TagDisplayName_frTD,
+		LanguageDisplayName: TagLanguageDisplayName_frTD,
+		RegionDisplayName:   TagRegionDisplayName_frTD,
+		OriginalName:        TagOriginalName_frTD,
+		Tag:                 Tag_frTD,
+		TagName:             TagName_frTD,
+	}
 	// French (Togo)
 	TagDisplayName_frTG         = "French (Togo)"
 	TagLanguageDisplayName_frTG = "French"
@@ -714,6 +1514,14 @@ var (
 	TagOriginalName_frTG        = "fr-TG"
 	Tag_frTG                    = language.MustParse(TagOriginalName_frTG)
 	TagName_frTG                = Tag_frTG.String() // The tag name may have changed from the original name after parsing.
+	Language_frTG               = Language{
+		DisplayName:         TagDisplayName_frTG,
+		LanguageDisplayName: TagLanguageDisplayName_frTG,
+		RegionDisplayName:   TagRegionDisplayName_frTG,
+		OriginalName:        TagOriginalName_frTG,
+		Tag:                 Tag_frTG,
+		TagName:             TagName_frTG,
+	}
 	// French (Tunisia)
 	TagDisplayName_frTN         = "French (Tunisia)"
 	TagLanguageDisplayName_frTN = "French"
@@ -721,6 +1529,14 @@ var (
 	TagOriginalName_frTN        = "fr-TN"
 	Tag_frTN                    = language.MustParse(TagOriginalName_frTN)
 	TagName_frTN                = Tag_frTN.String() // The tag name may have changed from the original name after parsing.
+	Language_frTN               = Language{
+		DisplayName:         TagDisplayName_frTN,
+		LanguageDisplayName: TagLanguageDisplayName_frTN,
+		RegionDisplayName:   TagRegionDisplayName_frTN,
+		OriginalName:        TagOriginalName_frTN,
+		Tag:                 Tag_frTN,
+		TagName:             TagName_frTN,
+	}
 	// French (Vanuatu)
 	TagDisplayName_frVU         = "French (Vanuatu)"
 	TagLanguageDisplayName_frVU = "French"
@@ -728,6 +1544,14 @@ var (
 	TagOriginalName_frVU        = "fr-VU"
 	Tag_frVU                    = language.MustParse(TagOriginalName_frVU)
 	TagName_frVU                = Tag_frVU.String() // The tag name may have changed from the original name after parsing.
+	Language_frVU               = Language{
+		DisplayName:         TagDisplayName_frVU,
+		LanguageDisplayName: TagLanguageDisplayName_frVU,
+		RegionDisplayName:   TagRegionDisplayName_frVU,
+		OriginalName:        TagOriginalName_frVU,
+		Tag:                 Tag_frVU,
+		TagName:             TagName_frVU,
+	}
 	// French (Wallis and Futuna)
 	TagDisplayName_frWF         = "French (Wallis and Futuna)"
 	TagLanguageDisplayName_frWF = "French"
@@ -735,6 +1559,14 @@ var (
 	TagOriginalName_frWF        = "fr-WF"
 	Tag_frWF                    = language.MustParse(TagOriginalName_frWF)
 	TagName_frWF                = Tag_frWF.String() // The tag name may have changed from the original name after parsing.
+	Language_frWF               = Language{
+		DisplayName:         TagDisplayName_frWF,
+		LanguageDisplayName: TagLanguageDisplayName_frWF,
+		RegionDisplayName:   TagRegionDisplayName_frWF,
+		OriginalName:        TagOriginalName_frWF,
+		Tag:                 Tag_frWF,
+		TagName:             TagName_frWF,
+	}
 	// French (Mayotte)
 	TagDisplayName_frYT         = "French (Mayotte)"
 	TagLanguageDisplayName_frYT = "French"
@@ -742,6 +1574,14 @@ var (
 	TagOriginalName_frYT        = "fr-YT"
 	Tag_frYT                    = language.MustParse(TagOriginalName_frYT)
 	TagName_frYT                = Tag_frYT.String() // The tag name may have changed from the original name after parsing.
+	Language_frYT               = Language{
+		DisplayName:         TagDisplayName_frYT,
+		LanguageDisplayName: TagLanguageDisplayName_frYT,
+		RegionDisplayName:   TagRegionDisplayName_frYT,
+		OriginalName:        TagOriginalName_frYT,
+		Tag:                 Tag_frYT,
+		TagName:             TagName_frYT,
+	}
 	// German (Austria)
 	TagDisplayName_deAT         = "German (Austria)"
 	TagLanguageDisplayName_deAT = "German"
@@ -749,6 +1589,14 @@ var (
 	TagOriginalName_deAT        = "de-AT"
 	Tag_deAT                    = language.MustParse(TagOriginalName_deAT)
 	TagName_deAT                = Tag_deAT.String() // The tag name may have changed from the original name after parsing.
+	Language_deAT               = Language{
+		DisplayName:         TagDisplayName_deAT,
+		LanguageDisplayName: TagLanguageDisplayName_deAT,
+		RegionDisplayName:   TagRegionDisplayName_deAT,
+		OriginalName:        TagOriginalName_deAT,
+		Tag:                 Tag_deAT,
+		TagName:             TagName_deAT,
+	}
 	// German (Belgium)
 	TagDisplayName_deBE         = "German (Belgium)"
 	TagLanguageDisplayName_deBE = "German"
@@ -756,6 +1604,14 @@ var (
 	TagOriginalName_deBE        = "de-BE"
 	Tag_deBE                    = language.MustParse(TagOriginalName_deBE)
 	TagName_deBE                = Tag_deBE.String() // The tag name may have changed from the original name after parsing.
+	Language_deBE               = Language{
+		DisplayName:         TagDisplayName_deBE,
+		LanguageDisplayName: TagLanguageDisplayName_deBE,
+		RegionDisplayName:   TagRegionDisplayName_deBE,
+		OriginalName:        TagOriginalName_deBE,
+		Tag:                 Tag_deBE,
+		TagName:             TagName_deBE,
+	}
 	// German (Switzerland)
 	TagDisplayName_deCH         = "German (Switzerland)"
 	TagLanguageDisplayName_deCH = "German"
@@ -763,6 +1619,14 @@ var (
 	TagOriginalName_deCH        = "de-CH"
 	Tag_deCH                    = language.MustParse(TagOriginalName_deCH)
 	TagName_deCH                = Tag_deCH.String() // The tag name may have changed from the original name after parsing.
+	Language_deCH               = Language{
+		DisplayName:         TagDisplayName_deCH,
+		LanguageDisplayName: TagLanguageDisplayName_deCH,
+		RegionDisplayName:   TagRegionDisplayName_deCH,
+		OriginalName:        TagOriginalName_deCH,
+		Tag:                 Tag_deCH,
+		TagName:             TagName_deCH,
+	}
 	// German (Germany)
 	TagDisplayName_deDE         = "German (Germany)"
 	TagLanguageDisplayName_deDE = "German"
@@ -770,6 +1634,14 @@ var (
 	TagOriginalName_deDE        = "de-DE"
 	Tag_deDE                    = language.MustParse(TagOriginalName_deDE)
 	TagName_deDE                = Tag_deDE.String() // The tag name may have changed from the original name after parsing.
+	Language_deDE               = Language{
+		DisplayName:         TagDisplayName_deDE,
+		LanguageDisplayName: TagLanguageDisplayName_deDE,
+		RegionDisplayName:   TagRegionDisplayName_deDE,
+		OriginalName:        TagOriginalName_deDE,
+		Tag:                 Tag_deDE,
+		TagName:             TagName_deDE,
+	}
 	// German (Italy)
 	TagDisplayName_deIT         = "German (Italy)"
 	TagLanguageDisplayName_deIT = "German"
@@ -777,6 +1649,14 @@ var (
 	TagOriginalName_deIT        = "de-IT"
 	Tag_deIT                    = language.MustParse(TagOriginalName_deIT)
 	TagName_deIT                = Tag_deIT.String() // The tag name may have changed from the original name after parsing.
+	Language_deIT               = Language{
+		DisplayName:         TagDisplayName_deIT,
+		LanguageDisplayName: TagLanguageDisplayName_deIT,
+		RegionDisplayName:   TagRegionDisplayName_deIT,
+		OriginalName:        TagOriginalName_deIT,
+		Tag:                 Tag_deIT,
+		TagName:             TagName_deIT,
+	}
 	// German (Liechtenstein)
 	TagDisplayName_deLI         = "German (Liechtenstein)"
 	TagLanguageDisplayName_deLI = "German"
@@ -784,6 +1664,14 @@ var (
 	TagOriginalName_deLI        = "de-LI"
 	Tag_deLI                    = language.MustParse(TagOriginalName_deLI)
 	TagName_deLI                = Tag_deLI.String() // The tag name may have changed from the original name after parsing.
+	Language_deLI               = Language{
+		DisplayName:         TagDisplayName_deLI,
+		LanguageDisplayName: TagLanguageDisplayName_deLI,
+		RegionDisplayName:   TagRegionDisplayName_deLI,
+		OriginalName:        TagOriginalName_deLI,
+		Tag:                 Tag_deLI,
+		TagName:             TagName_deLI,
+	}
 	// German (Luxembourg)
 	TagDisplayName_deLU         = "German (Luxembourg)"
 	TagLanguageDisplayName_deLU = "German"
@@ -791,6 +1679,14 @@ var (
 	TagOriginalName_deLU        = "de-LU"
 	Tag_deLU                    = language.MustParse(TagOriginalName_deLU)
 	TagName_deLU                = Tag_deLU.String() // The tag name may have changed from the original name after parsing.
+	Language_deLU               = Language{
+		DisplayName:         TagDisplayName_deLU,
+		LanguageDisplayName: TagLanguageDisplayName_deLU,
+		RegionDisplayName:   TagRegionDisplayName_deLU,
+		OriginalName:        TagOriginalName_deLU,
+		Tag:                 Tag_deLU,
+		TagName:             TagName_deLU,
+	}
 	// Greek (Cyprus)
 	TagDisplayName_elCY         = "Greek (Cyprus)"
 	TagLanguageDisplayName_elCY = "Greek"
@@ -798,6 +1694,14 @@ var (
 	TagOriginalName_elCY        = "el-CY"
 	Tag_elCY                    = language.MustParse(TagOriginalName_elCY)
 	TagName_elCY                = Tag_elCY.String() // The tag name may have changed from the original name after parsing.
+	Language_elCY               = Language{
+		DisplayName:         TagDisplayName_elCY,
+		LanguageDisplayName: TagLanguageDisplayName_elCY,
+		RegionDisplayName:   TagRegionDisplayName_elCY,
+		OriginalName:        TagOriginalName_elCY,
+		Tag:                 Tag_elCY,
+		TagName:             TagName_elCY,
+	}
 	// Greek (Greece)
 	TagDisplayName_elGR         = "Greek (Greece)"
 	TagLanguageDisplayName_elGR = "Greek"
@@ -805,6 +1709,14 @@ var (
 	TagOriginalName_elGR        = "el-GR"
 	Tag_elGR                    = language.MustParse(TagOriginalName_elGR)
 	TagName_elGR                = Tag_elGR.String() // The tag name may have changed from the original name after parsing.
+	Language_elGR               = Language{
+		DisplayName:         TagDisplayName_elGR,
+		LanguageDisplayName: TagLanguageDisplayName_elGR,
+		RegionDisplayName:   TagRegionDisplayName_elGR,
+		OriginalName:        TagOriginalName_elGR,
+		Tag:                 Tag_elGR,
+		TagName:             TagName_elGR,
+	}
 	// Ancient Greek (Greece)
 	TagDisplayName_grcGR         = "Ancient Greek (Greece)"
 	TagLanguageDisplayName_grcGR = "Ancient Greek"
@@ -812,6 +1724,14 @@ var (
 	TagOriginalName_grcGR        = "grc-GR"
 	Tag_grcGR                    = language.MustParse(TagOriginalName_grcGR)
 	TagName_grcGR                = Tag_grcGR.String() // The tag name may have changed from the original name after parsing.
+	Language_grcGR               = Language{
+		DisplayName:         TagDisplayName_grcGR,
+		LanguageDisplayName: TagLanguageDisplayName_grcGR,
+		RegionDisplayName:   TagRegionDisplayName_grcGR,
+		OriginalName:        TagOriginalName_grcGR,
+		Tag:                 Tag_grcGR,
+		TagName:             TagName_grcGR,
+	}
 	// Modern Greek (Greece)
 	TagDisplayName_greGR         = "Modern Greek (Greece)"
 	TagLanguageDisplayName_greGR = "Modern Greek"
@@ -819,6 +1739,14 @@ var (
 	TagOriginalName_greGR        = "gre-GR"
 	Tag_greGR                    = language.MustParse(TagOriginalName_greGR)
 	TagName_greGR                = Tag_greGR.String() // The tag name may have changed from the original name after parsing.
+	Language_greGR               = Language{
+		DisplayName:         TagDisplayName_greGR,
+		LanguageDisplayName: TagLanguageDisplayName_greGR,
+		RegionDisplayName:   TagRegionDisplayName_greGR,
+		OriginalName:        TagOriginalName_greGR,
+		Tag:                 Tag_greGR,
+		TagName:             TagName_greGR,
+	}
 	// Hausa (Republic of Ghana)
 	TagDisplayName_haGH         = "Hausa (Republic of Ghana)"
 	TagLanguageDisplayName_haGH = "Hausa"
@@ -826,6 +1754,14 @@ var (
 	TagOriginalName_haGH        = "ha-GH"
 	Tag_haGH                    = language.MustParse(TagOriginalName_haGH)
 	TagName_haGH                = Tag_haGH.String() // The tag name may have changed from the original name after parsing.
+	Language_haGH               = Language{
+		DisplayName:         TagDisplayName_haGH,
+		LanguageDisplayName: TagLanguageDisplayName_haGH,
+		RegionDisplayName:   TagRegionDisplayName_haGH,
+		OriginalName:        TagOriginalName_haGH,
+		Tag:                 Tag_haGH,
+		TagName:             TagName_haGH,
+	}
 	// Hausa (Niger)
 	TagDisplayName_haNE         = "Hausa (Niger)"
 	TagLanguageDisplayName_haNE = "Hausa"
@@ -833,6 +1769,14 @@ var (
 	TagOriginalName_haNE        = "ha-NE"
 	Tag_haNE                    = language.MustParse(TagOriginalName_haNE)
 	TagName_haNE                = Tag_haNE.String() // The tag name may have changed from the original name after parsing.
+	Language_haNE               = Language{
+		DisplayName:         TagDisplayName_haNE,
+		LanguageDisplayName: TagLanguageDisplayName_haNE,
+		RegionDisplayName:   TagRegionDisplayName_haNE,
+		OriginalName:        TagOriginalName_haNE,
+		Tag:                 Tag_haNE,
+		TagName:             TagName_haNE,
+	}
 	// Hausa (Nigeria)
 	TagDisplayName_haNG         = "Hausa (Nigeria)"
 	TagLanguageDisplayName_haNG = "Hausa"
@@ -840,6 +1784,14 @@ var (
 	TagOriginalName_haNG        = "ha-NG"
 	Tag_haNG                    = language.MustParse(TagOriginalName_haNG)
 	TagName_haNG                = Tag_haNG.String() // The tag name may have changed from the original name after parsing.
+	Language_haNG               = Language{
+		DisplayName:         TagDisplayName_haNG,
+		LanguageDisplayName: TagLanguageDisplayName_haNG,
+		RegionDisplayName:   TagRegionDisplayName_haNG,
+		OriginalName:        TagOriginalName_haNG,
+		Tag:                 Tag_haNG,
+		TagName:             TagName_haNG,
+	}
 	// Hindi (India)
 	TagDisplayName_hiIN         = "Hindi (India)"
 	TagLanguageDisplayName_hiIN = "Hindi"
@@ -847,6 +1799,14 @@ var (
 	TagOriginalName_hiIN        = "hi-IN"
 	Tag_hiIN                    = language.MustParse(TagOriginalName_hiIN)
 	TagName_hiIN                = Tag_hiIN.String() // The tag name may have changed from the original name after parsing.
+	Language_hiIN               = Language{
+		DisplayName:         TagDisplayName_hiIN,
+		LanguageDisplayName: TagLanguageDisplayName_hiIN,
+		RegionDisplayName:   TagRegionDisplayName_hiIN,
+		OriginalName:        TagOriginalName_hiIN,
+		Tag:                 Tag_hiIN,
+		TagName:             TagName_hiIN,
+	}
 	// Esperanto (World)
 	TagDisplayName_eo         = "Esperanto (World)"
 	TagLanguageDisplayName_eo = "Esperanto"
@@ -854,6 +1814,14 @@ var (
 	TagOriginalName_eo        = "eo"
 	Tag_eo                    = language.MustParse(TagOriginalName_eo)
 	TagName_eo                = Tag_eo.String() // The tag name may have changed from the original name after parsing.
+	Language_eo               = Language{
+		DisplayName:         TagDisplayName_eo,
+		LanguageDisplayName: TagLanguageDisplayName_eo,
+		RegionDisplayName:   TagRegionDisplayName_eo,
+		OriginalName:        TagOriginalName_eo,
+		Tag:                 Tag_eo,
+		TagName:             TagName_eo,
+	}
 	// Ido (World)
 	TagDisplayName_io         = "Ido (World)"
 	TagLanguageDisplayName_io = "Ido"
@@ -861,6 +1829,14 @@ var (
 	TagOriginalName_io        = "io"
 	Tag_io                    = language.MustParse(TagOriginalName_io)
 	TagName_io                = Tag_io.String() // The tag name may have changed from the original name after parsing.
+	Language_io               = Language{
+		DisplayName:         TagDisplayName_io,
+		LanguageDisplayName: TagLanguageDisplayName_io,
+		RegionDisplayName:   TagRegionDisplayName_io,
+		OriginalName:        TagOriginalName_io,
+		Tag:                 Tag_io,
+		TagName:             TagName_io,
+	}
 	// Volapük (World)
 	TagDisplayName_vo         = "Volapük (World)"
 	TagLanguageDisplayName_vo = "Volapük"
@@ -868,6 +1844,14 @@ var (
 	TagOriginalName_vo        = "vo"
 	Tag_vo                    = language.MustParse(TagOriginalName_vo)
 	TagName_vo                = Tag_vo.String() // The tag name may have changed from the original name after parsing.
+	Language_vo               = Language{
+		DisplayName:         TagDisplayName_vo,
+		LanguageDisplayName: TagLanguageDisplayName_vo,
+		RegionDisplayName:   TagRegionDisplayName_vo,
+		OriginalName:        TagOriginalName_vo,
+		Tag:                 Tag_vo,
+		TagName:             TagName_vo,
+	}
 	// Italian (Switzerland)
 	TagDisplayName_itCH         = "Italian (Switzerland)"
 	TagLanguageDisplayName_itCH = "Italian"
@@ -875,6 +1859,14 @@ var (
 	TagOriginalName_itCH        = "it-CH"
 	Tag_itCH                    = language.MustParse(TagOriginalName_itCH)
 	TagName_itCH                = Tag_itCH.String() // The tag name may have changed from the original name after parsing.
+	Language_itCH               = Language{
+		DisplayName:         TagDisplayName_itCH,
+		LanguageDisplayName: TagLanguageDisplayName_itCH,
+		RegionDisplayName:   TagRegionDisplayName_itCH,
+		OriginalName:        TagOriginalName_itCH,
+		Tag:                 Tag_itCH,
+		TagName:             TagName_itCH,
+	}
 	// Italian (Italy)
 	TagDisplayName_itIT         = "Italian (Italy)"
 	TagLanguageDisplayName_itIT = "Italian"
@@ -882,6 +1874,14 @@ var (
 	TagOriginalName_itIT        = "it-IT"
 	Tag_itIT                    = language.MustParse(TagOriginalName_itIT)
 	TagName_itIT                = Tag_itIT.String() // The tag name may have changed from the original name after parsing.
+	Language_itIT               = Language{
+		DisplayName:         TagDisplayName_itIT,
+		LanguageDisplayName: TagLanguageDisplayName_itIT,
+		RegionDisplayName:   TagRegionDisplayName_itIT,
+		OriginalName:        TagOriginalName_itIT,
+		Tag:                 Tag_itIT,
+		TagName:             TagName_itIT,
+	}
 	// Italian (San Marino)
 	TagDisplayName_itSM         = "Italian (San Marino)"
 	TagLanguageDisplayName_itSM = "Italian"
@@ -889,6 +1889,14 @@ var (
 	TagOriginalName_itSM        = "it-SM"
 	Tag_itSM                    = language.MustParse(TagOriginalName_itSM)
 	TagName_itSM                = Tag_itSM.String() // The tag name may have changed from the original name after parsing.
+	Language_itSM               = Language{
+		DisplayName:         TagDisplayName_itSM,
+		LanguageDisplayName: TagLanguageDisplayName_itSM,
+		RegionDisplayName:   TagRegionDisplayName_itSM,
+		OriginalName:        TagOriginalName_itSM,
+		Tag:                 Tag_itSM,
+		TagName:             TagName_itSM,
+	}
 	// Italian (Vatican City State)
 	TagDisplayName_itVA         = "Italian (Vatican City State)"
 	TagLanguageDisplayName_itVA = "Italian"
@@ -896,6 +1904,14 @@ var (
 	TagOriginalName_itVA        = "it-VA"
 	Tag_itVA                    = language.MustParse(TagOriginalName_itVA)
 	TagName_itVA                = Tag_itVA.String() // The tag name may have changed from the original name after parsing.
+	Language_itVA               = Language{
+		DisplayName:         TagDisplayName_itVA,
+		LanguageDisplayName: TagLanguageDisplayName_itVA,
+		RegionDisplayName:   TagRegionDisplayName_itVA,
+		OriginalName:        TagOriginalName_itVA,
+		Tag:                 Tag_itVA,
+		TagName:             TagName_itVA,
+	}
 	// Japanese (Japan)
 	TagDisplayName_jaJP         = "Japanese (Japan)"
 	TagLanguageDisplayName_jaJP = "Japanese"
@@ -903,6 +1919,14 @@ var (
 	TagOriginalName_jaJP        = "ja-JP"
 	Tag_jaJP                    = language.MustParse(TagOriginalName_jaJP)
 	TagName_jaJP                = Tag_jaJP.String() // The tag name may have changed from the original name after parsing.
+	Language_jaJP               = Language{
+		DisplayName:         TagDisplayName_jaJP,
+		LanguageDisplayName: TagLanguageDisplayName_jaJP,
+		RegionDisplayName:   TagRegionDisplayName_jaJP,
+		OriginalName:        TagOriginalName_jaJP,
+		Tag:                 Tag_jaJP,
+		TagName:             TagName_jaJP,
+	}
 	// Korean (North Korea)
 	TagDisplayName_koKP         = "Korean (North Korea)"
 	TagLanguageDisplayName_koKP = "Korean"
@@ -910,6 +1934,14 @@ var (
 	TagOriginalName_koKP        = "ko-KP"
 	Tag_koKP                    = language.MustParse(TagOriginalName_koKP)
 	TagName_koKP                = Tag_koKP.String() // The tag name may have changed from the original name after parsing.
+	Language_koKP               = Language{
+		DisplayName:         TagDisplayName_koKP,
+		LanguageDisplayName: TagLanguageDisplayName_koKP,
+		RegionDisplayName:   TagRegionDisplayName_koKP,
+		OriginalName:        TagOriginalName_koKP,
+		Tag:                 Tag_koKP,
+		TagName:             TagName_koKP,
+	}
 	// Korean (Korea)
 	TagDisplayName_koKR         = "Korean (Korea)"
 	TagLanguageDisplayName_koKR = "Korean"
@@ -917,6 +1949,14 @@ var (
 	TagOriginalName_koKR        = "ko-KR"
 	Tag_koKR                    = language.MustParse(TagOriginalName_koKR)
 	TagName_koKR                = Tag_koKR.String() // The tag name may have changed from the original name after parsing.
+	Language_koKR               = Language{
+		DisplayName:         TagDisplayName_koKR,
+		LanguageDisplayName: TagLanguageDisplayName_koKR,
+		RegionDisplayName:   TagRegionDisplayName_koKR,
+		OriginalName:        TagOriginalName_koKR,
+		Tag:                 Tag_koKR,
+		TagName:             TagName_koKR,
+	}
 	// Kurdish (Iraq)
 	TagDisplayName_kuIQ         = "Kurdish (Iraq)"
 	TagLanguageDisplayName_kuIQ = "Kurdish"
@@ -924,6 +1964,14 @@ var (
 	TagOriginalName_kuIQ        = "ku-IQ"
 	Tag_kuIQ                    = language.MustParse(TagOriginalName_kuIQ)
 	TagName_kuIQ                = Tag_kuIQ.String() // The tag name may have changed from the original name after parsing.
+	Language_kuIQ               = Language{
+		DisplayName:         TagDisplayName_kuIQ,
+		LanguageDisplayName: TagLanguageDisplayName_kuIQ,
+		RegionDisplayName:   TagRegionDisplayName_kuIQ,
+		OriginalName:        TagOriginalName_kuIQ,
+		Tag:                 Tag_kuIQ,
+		TagName:             TagName_kuIQ,
+	}
 	// Kurdish (Islamic Republic of Iran)
 	TagDisplayName_kuIR         = "Kurdish (Islamic Republic of Iran)"
 	TagLanguageDisplayName_kuIR = "Kurdish"
@@ -931,6 +1979,14 @@ var (
 	TagOriginalName_kuIR        = "ku-IR"
 	Tag_kuIR                    = language.MustParse(TagOriginalName_kuIR)
 	TagName_kuIR                = Tag_kuIR.String() // The tag name may have changed from the original name after parsing.
+	Language_kuIR               = Language{
+		DisplayName:         TagDisplayName_kuIR,
+		LanguageDisplayName: TagLanguageDisplayName_kuIR,
+		RegionDisplayName:   TagRegionDisplayName_kuIR,
+		OriginalName:        TagOriginalName_kuIR,
+		Tag:                 Tag_kuIR,
+		TagName:             TagName_kuIR,
+	}
 	// Lingala (Angola)
 	TagDisplayName_lnAO         = "Lingala (Angola)"
 	TagLanguageDisplayName_lnAO = "Lingala"
@@ -938,6 +1994,14 @@ var (
 	TagOriginalName_lnAO        = "ln-AO"
 	Tag_lnAO                    = language.MustParse(TagOriginalName_lnAO)
 	TagName_lnAO                = Tag_lnAO.String() // The tag name may have changed from the original name after parsing.
+	Language_lnAO               = Language{
+		DisplayName:         TagDisplayName_lnAO,
+		LanguageDisplayName: TagLanguageDisplayName_lnAO,
+		RegionDisplayName:   TagRegionDisplayName_lnAO,
+		OriginalName:        TagOriginalName_lnAO,
+		Tag:                 Tag_lnAO,
+		TagName:             TagName_lnAO,
+	}
 	// Lingala (Democratic Republic of the Congo)
 	TagDisplayName_lnCD         = "Lingala (Democratic Republic of the Congo)"
 	TagLanguageDisplayName_lnCD = "Lingala"
@@ -945,6 +2009,14 @@ var (
 	TagOriginalName_lnCD        = "ln-CD"
 	Tag_lnCD                    = language.MustParse(TagOriginalName_lnCD)
 	TagName_lnCD                = Tag_lnCD.String() // The tag name may have changed from the original name after parsing.
+	Language_lnCD               = Language{
+		DisplayName:         TagDisplayName_lnCD,
+		LanguageDisplayName: TagLanguageDisplayName_lnCD,
+		RegionDisplayName:   TagRegionDisplayName_lnCD,
+		OriginalName:        TagOriginalName_lnCD,
+		Tag:                 Tag_lnCD,
+		TagName:             TagName_lnCD,
+	}
 	// Lingala (Central African Republic)
 	TagDisplayName_lnCF         = "Lingala (Central African Republic)"
 	TagLanguageDisplayName_lnCF = "Lingala"
@@ -952,6 +2024,14 @@ var (
 	TagOriginalName_lnCF        = "ln-CF"
 	Tag_lnCF                    = language.MustParse(TagOriginalName_lnCF)
 	TagName_lnCF                = Tag_lnCF.String() // The tag name may have changed from the original name after parsing.
+	Language_lnCF               = Language{
+		DisplayName:         TagDisplayName_lnCF,
+		LanguageDisplayName: TagLanguageDisplayName_lnCF,
+		RegionDisplayName:   TagRegionDisplayName_lnCF,
+		OriginalName:        TagOriginalName_lnCF,
+		Tag:                 Tag_lnCF,
+		TagName:             TagName_lnCF,
+	}
 	// Lingala (Republic of the Congo)
 	TagDisplayName_lnCG         = "Lingala (Republic of the Congo)"
 	TagLanguageDisplayName_lnCG = "Lingala"
@@ -959,6 +2039,14 @@ var (
 	TagOriginalName_lnCG        = "ln-CG"
 	Tag_lnCG                    = language.MustParse(TagOriginalName_lnCG)
 	TagName_lnCG                = Tag_lnCG.String() // The tag name may have changed from the original name after parsing.
+	Language_lnCG               = Language{
+		DisplayName:         TagDisplayName_lnCG,
+		LanguageDisplayName: TagLanguageDisplayName_lnCG,
+		RegionDisplayName:   TagRegionDisplayName_lnCG,
+		OriginalName:        TagOriginalName_lnCG,
+		Tag:                 Tag_lnCG,
+		TagName:             TagName_lnCG,
+	}
 	// Malay (Brunei Darussalam)
 	TagDisplayName_msBN         = "Malay (Brunei Darussalam)"
 	TagLanguageDisplayName_msBN = "Malay"
@@ -966,6 +2054,14 @@ var (
 	TagOriginalName_msBN        = "ms-BN"
 	Tag_msBN                    = language.MustParse(TagOriginalName_msBN)
 	TagName_msBN                = Tag_msBN.String() // The tag name may have changed from the original name after parsing.
+	Language_msBN               = Language{
+		DisplayName:         TagDisplayName_msBN,
+		LanguageDisplayName: TagLanguageDisplayName_msBN,
+		RegionDisplayName:   TagRegionDisplayName_msBN,
+		OriginalName:        TagOriginalName_msBN,
+		Tag:                 Tag_msBN,
+		TagName:             TagName_msBN,
+	}
 	// Malay (Malaysia)
 	TagDisplayName_msMY         = "Malay (Malaysia)"
 	TagLanguageDisplayName_msMY = "Malay"
@@ -973,6 +2069,14 @@ var (
 	TagOriginalName_msMY        = "ms-MY"
 	Tag_msMY                    = language.MustParse(TagOriginalName_msMY)
 	TagName_msMY                = Tag_msMY.String() // The tag name may have changed from the original name after parsing.
+	Language_msMY               = Language{
+		DisplayName:         TagDisplayName_msMY,
+		LanguageDisplayName: TagLanguageDisplayName_msMY,
+		RegionDisplayName:   TagRegionDisplayName_msMY,
+		OriginalName:        TagOriginalName_msMY,
+		Tag:                 Tag_msMY,
+		TagName:             TagName_msMY,
+	}
 	// Nepali (India)
 	TagDisplayName_neIN         = "Nepali (India)"
 	TagLanguageDisplayName_neIN = "Nepali"
@@ -980,6 +2084,14 @@ var (
 	TagOriginalName_neIN        = "ne-IN"
 	Tag_neIN                    = language.MustParse(TagOriginalName_neIN)
 	TagName_neIN                = Tag_neIN.String() // The tag name may have changed from the original name after parsing.
+	Language_neIN               = Language{
+		DisplayName:         TagDisplayName_neIN,
+		LanguageDisplayName: TagLanguageDisplayName_neIN,
+		RegionDisplayName:   TagRegionDisplayName_neIN,
+		OriginalName:        TagOriginalName_neIN,
+		Tag:                 Tag_neIN,
+		TagName:             TagName_neIN,
+	}
 	// Nepali (Federal Democratic Republic of Nepal)
 	TagDisplayName_neNP         = "Nepali (Federal Democratic Republic of Nepal)"
 	TagLanguageDisplayName_neNP = "Nepali"
@@ -987,6 +2099,14 @@ var (
 	TagOriginalName_neNP        = "ne-NP"
 	Tag_neNP                    = language.MustParse(TagOriginalName_neNP)
 	TagName_neNP                = Tag_neNP.String() // The tag name may have changed from the original name after parsing.
+	Language_neNP               = Language{
+		DisplayName:         TagDisplayName_neNP,
+		LanguageDisplayName: TagLanguageDisplayName_neNP,
+		RegionDisplayName:   TagRegionDisplayName_neNP,
+		OriginalName:        TagOriginalName_neNP,
+		Tag:                 Tag_neNP,
+		TagName:             TagName_neNP,
+	}
 	// Oromo (Ethiopia)
 	TagDisplayName_omET         = "Oromo (Ethiopia)"
 	TagLanguageDisplayName_omET = "Oromo"
@@ -994,6 +2114,14 @@ var (
 	TagOriginalName_omET        = "om-ET"
 	Tag_omET                    = language.MustParse(TagOriginalName_omET)
 	TagName_omET                = Tag_omET.String() // The tag name may have changed from the original name after parsing.
+	Language_omET               = Language{
+		DisplayName:         TagDisplayName_omET,
+		LanguageDisplayName: TagLanguageDisplayName_omET,
+		RegionDisplayName:   TagRegionDisplayName_omET,
+		OriginalName:        TagOriginalName_omET,
+		Tag:                 Tag_omET,
+		TagName:             TagName_omET,
+	}
 	// Oromo (Kenya)
 	TagDisplayName_omKE         = "Oromo (Kenya)"
 	TagLanguageDisplayName_omKE = "Oromo"
@@ -1001,6 +2129,14 @@ var (
 	TagOriginalName_omKE        = "om-KE"
 	Tag_omKE                    = language.MustParse(TagOriginalName_omKE)
 	TagName_omKE                = Tag_omKE.String() // The tag name may have changed from the original name after parsing.
+	Language_omKE               = Language{
+		DisplayName:         TagDisplayName_omKE,
+		LanguageDisplayName: TagLanguageDisplayName_omKE,
+		RegionDisplayName:   TagRegionDisplayName_omKE,
+		OriginalName:        TagOriginalName_omKE,
+		Tag:                 Tag_omKE,
+		TagName:             TagName_omKE,
+	}
 	// Persian (Afghanistan)
 	TagDisplayName_faAF         = "Persian (Afghanistan)"
 	TagLanguageDisplayName_faAF = "Persian"
@@ -1008,6 +2144,14 @@ var (
 	TagOriginalName_faAF        = "fa-AF"
 	Tag_faAF                    = language.MustParse(TagOriginalName_faAF)
 	TagName_faAF                = Tag_faAF.String() // The tag name may have changed from the original name after parsing.
+	Language_faAF               = Language{
+		DisplayName:         TagDisplayName_faAF,
+		LanguageDisplayName: TagLanguageDisplayName_faAF,
+		RegionDisplayName:   TagRegionDisplayName_faAF,
+		OriginalName:        TagOriginalName_faAF,
+		Tag:                 Tag_faAF,
+		TagName:             TagName_faAF,
+	}
 	// Persian (Islamic Republic of Iran)
 	TagDisplayName_faIR         = "Persian (Islamic Republic of Iran)"
 	TagLanguageDisplayName_faIR = "Persian"
@@ -1015,6 +2159,14 @@ var (
 	TagOriginalName_faIR        = "fa-IR"
 	Tag_faIR                    = language.MustParse(TagOriginalName_faIR)
 	TagName_faIR                = Tag_faIR.String() // The tag name may have changed from the original name after parsing.
+	Language_faIR               = Language{
+		DisplayName:         TagDisplayName_faIR,
+		LanguageDisplayName: TagLanguageDisplayName_faIR,
+		RegionDisplayName:   TagRegionDisplayName_faIR,
+		OriginalName:        TagOriginalName_faIR,
+		Tag:                 Tag_faIR,
+		TagName:             TagName_faIR,
+	}
 	// Portuguese (Brazil)
 	TagDisplayName_ptBR         = "Portuguese (Brazil)"
 	TagLanguageDisplayName_ptBR = "Portuguese"
@@ -1022,6 +2174,14 @@ var (
 	TagOriginalName_ptBR        = "pt-BR"
 	Tag_ptBR                    = language.MustParse(TagOriginalName_ptBR)
 	TagName_ptBR                = Tag_ptBR.String() // The tag name may have changed from the original name after parsing.
+	Language_ptBR               = Language{
+		DisplayName:         TagDisplayName_ptBR,
+		LanguageDisplayName: TagLanguageDisplayName_ptBR,
+		RegionDisplayName:   TagRegionDisplayName_ptBR,
+		OriginalName:        TagOriginalName_ptBR,
+		Tag:                 Tag_ptBR,
+		TagName:             TagName_ptBR,
+	}
 	// Portuguese (Portugal)
 	TagDisplayName_ptPT         = "Portuguese (Portugal)"
 	TagLanguageDisplayName_ptPT = "Portuguese"
@@ -1029,6 +2189,14 @@ var (
 	TagOriginalName_ptPT        = "pt-PT"
 	Tag_ptPT                    = language.MustParse(TagOriginalName_ptPT)
 	TagName_ptPT                = Tag_ptPT.String() // The tag name may have changed from the original name after parsing.
+	Language_ptPT               = Language{
+		DisplayName:         TagDisplayName_ptPT,
+		LanguageDisplayName: TagLanguageDisplayName_ptPT,
+		RegionDisplayName:   TagRegionDisplayName_ptPT,
+		OriginalName:        TagOriginalName_ptPT,
+		Tag:                 Tag_ptPT,
+		TagName:             TagName_ptPT,
+	}
 	// Quechua (Bolivia)
 	TagDisplayName_quBO         = "Quechua (Bolivia)"
 	TagLanguageDisplayName_quBO = "Quechua"
@@ -1036,6 +2204,14 @@ var (
 	TagOriginalName_quBO        = "qu-BO"
 	Tag_quBO                    = language.MustParse(TagOriginalName_quBO)
 	TagName_quBO                = Tag_quBO.String() // The tag name may have changed from the original name after parsing.
+	Language_quBO               = Language{
+		DisplayName:         TagDisplayName_quBO,
+		LanguageDisplayName: TagLanguageDisplayName_quBO,
+		RegionDisplayName:   TagRegionDisplayName_quBO,
+		OriginalName:        TagOriginalName_quBO,
+		Tag:                 Tag_quBO,
+		TagName:             TagName_quBO,
+	}
 	// Quechua (Ecuador)
 	TagDisplayName_quEC         = "Quechua (Ecuador)"
 	TagLanguageDisplayName_quEC = "Quechua"
@@ -1043,6 +2219,14 @@ var (
 	TagOriginalName_quEC        = "qu-EC"
 	Tag_quEC                    = language.MustParse(TagOriginalName_quEC)
 	TagName_quEC                = Tag_quEC.String() // The tag name may have changed from the original name after parsing.
+	Language_quEC               = Language{
+		DisplayName:         TagDisplayName_quEC,
+		LanguageDisplayName: TagLanguageDisplayName_quEC,
+		RegionDisplayName:   TagRegionDisplayName_quEC,
+		OriginalName:        TagOriginalName_quEC,
+		Tag:                 Tag_quEC,
+		TagName:             TagName_quEC,
+	}
 	// Quechua (Peru)
 	TagDisplayName_quPE         = "Quechua (Peru)"
 	TagLanguageDisplayName_quPE = "Quechua"
@@ -1050,6 +2234,14 @@ var (
 	TagOriginalName_quPE        = "qu-PE"
 	Tag_quPE                    = language.MustParse(TagOriginalName_quPE)
 	TagName_quPE                = Tag_quPE.String() // The tag name may have changed from the original name after parsing.
+	Language_quPE               = Language{
+		DisplayName:         TagDisplayName_quPE,
+		LanguageDisplayName: TagLanguageDisplayName_quPE,
+		RegionDisplayName:   TagRegionDisplayName_quPE,
+		OriginalName:        TagOriginalName_quPE,
+		Tag:                 Tag_quPE,
+		TagName:             TagName_quPE,
+	}
 	// Romanian (Moldova)
 	TagDisplayName_roMD         = "Romanian (Moldova)"
 	TagLanguageDisplayName_roMD = "Romanian"
@@ -1057,6 +2249,14 @@ var (
 	TagOriginalName_roMD        = "ro-MD"
 	Tag_roMD                    = language.MustParse(TagOriginalName_roMD)
 	TagName_roMD                = Tag_roMD.String() // The tag name may have changed from the original name after parsing.
+	Language_roMD               = Language{
+		DisplayName:         TagDisplayName_roMD,
+		LanguageDisplayName: TagLanguageDisplayName_roMD,
+		RegionDisplayName:   TagRegionDisplayName_roMD,
+		OriginalName:        TagOriginalName_roMD,
+		Tag:                 Tag_roMD,
+		TagName:             TagName_roMD,
+	}
 	// Romanian (Romania)
 	TagDisplayName_roRO         = "Romanian (Romania)"
 	TagLanguageDisplayName_roRO = "Romanian"
@@ -1064,6 +2264,14 @@ var (
 	TagOriginalName_roRO        = "ro-RO"
 	Tag_roRO                    = language.MustParse(TagOriginalName_roRO)
 	TagName_roRO                = Tag_roRO.String() // The tag name may have changed from the original name after parsing.
+	Language_roRO               = Language{
+		DisplayName:         TagDisplayName_roRO,
+		LanguageDisplayName: TagLanguageDisplayName_roRO,
+		RegionDisplayName:   TagRegionDisplayName_roRO,
+		OriginalName:        TagOriginalName_roRO,
+		Tag:                 Tag_roRO,
+		TagName:             TagName_roRO,
+	}
 	// Russian (Belarus)
 	TagDisplayName_ruBY         = "Russian (Belarus)"
 	TagLanguageDisplayName_ruBY = "Russian"
@@ -1071,6 +2279,14 @@ var (
 	TagOriginalName_ruBY        = "ru-BY"
 	Tag_ruBY                    = language.MustParse(TagOriginalName_ruBY)
 	TagName_ruBY                = Tag_ruBY.String() // The tag name may have changed from the original name after parsing.
+	Language_ruBY               = Language{
+		DisplayName:         TagDisplayName_ruBY,
+		LanguageDisplayName: TagLanguageDisplayName_ruBY,
+		RegionDisplayName:   TagRegionDisplayName_ruBY,
+		OriginalName:        TagOriginalName_ruBY,
+		Tag:                 Tag_ruBY,
+		TagName:             TagName_ruBY,
+	}
 	// Russian (Kyrgyzstan)
 	TagDisplayName_ruKG         = "Russian (Kyrgyzstan)"
 	TagLanguageDisplayName_ruKG = "Russian"
@@ -1078,6 +2294,14 @@ var (
 	TagOriginalName_ruKG        = "ru-KG"
 	Tag_ruKG                    = language.MustParse(TagOriginalName_ruKG)
 	TagName_ruKG                = Tag_ruKG.String() // The tag name may have changed from the original name after parsing.
+	Language_ruKG               = Language{
+		DisplayName:         TagDisplayName_ruKG,
+		LanguageDisplayName: TagLanguageDisplayName_ruKG,
+		RegionDisplayName:   TagRegionDisplayName_ruKG,
+		OriginalName:        TagOriginalName_ruKG,
+		Tag:                 Tag_ruKG,
+		TagName:             TagName_ruKG,
+	}
 	// Russian (Kazakhstan)
 	TagDisplayName_ruKZ         = "Russian (Kazakhstan)"
 	TagLanguageDisplayName_ruKZ = "Russian"
@@ -1085,6 +2309,14 @@ var (
 	TagOriginalName_ruKZ        = "ru-KZ"
 	Tag_ruKZ                    = language.MustParse(TagOriginalName_ruKZ)
 	TagName_ruKZ                = Tag_ruKZ.String() // The tag name may have changed from the original name after parsing.
+	Language_ruKZ               = Language{
+		DisplayName:         TagDisplayName_ruKZ,
+		LanguageDisplayName: TagLanguageDisplayName_ruKZ,
+		RegionDisplayName:   TagRegionDisplayName_ruKZ,
+		OriginalName:        TagOriginalName_ruKZ,
+		Tag:                 Tag_ruKZ,
+		TagName:             TagName_ruKZ,
+	}
 	// Russian (Moldova)
 	TagDisplayName_ruMD         = "Russian (Moldova)"
 	TagLanguageDisplayName_ruMD = "Russian"
@@ -1092,6 +2324,14 @@ var (
 	TagOriginalName_ruMD        = "ru-MD"
 	Tag_ruMD                    = language.MustParse(TagOriginalName_ruMD)
 	TagName_ruMD                = Tag_ruMD.String() // The tag name may have changed from the original name after parsing.
+	Language_ruMD               = Language{
+		DisplayName:         TagDisplayName_ruMD,
+		LanguageDisplayName: TagLanguageDisplayName_ruMD,
+		RegionDisplayName:   TagRegionDisplayName_ruMD,
+		OriginalName:        TagOriginalName_ruMD,
+		Tag:                 Tag_ruMD,
+		TagName:             TagName_ruMD,
+	}
 	// Russian (Russia)
 	TagDisplayName_ruRU         = "Russian (Russia)"
 	TagLanguageDisplayName_ruRU = "Russian"
@@ -1099,6 +2339,14 @@ var (
 	TagOriginalName_ruRU        = "ru-RU"
 	Tag_ruRU                    = language.MustParse(TagOriginalName_ruRU)
 	TagName_ruRU                = Tag_ruRU.String() // The tag name may have changed from the original name after parsing.
+	Language_ruRU               = Language{
+		DisplayName:         TagDisplayName_ruRU,
+		LanguageDisplayName: TagLanguageDisplayName_ruRU,
+		RegionDisplayName:   TagRegionDisplayName_ruRU,
+		OriginalName:        TagOriginalName_ruRU,
+		Tag:                 Tag_ruRU,
+		TagName:             TagName_ruRU,
+	}
 	// Russian (Ukraine)
 	TagDisplayName_ruUA         = "Russian (Ukraine)"
 	TagLanguageDisplayName_ruUA = "Russian"
@@ -1106,6 +2354,14 @@ var (
 	TagOriginalName_ruUA        = "ru-UA"
 	Tag_ruUA                    = language.MustParse(TagOriginalName_ruUA)
 	TagName_ruUA                = Tag_ruUA.String() // The tag name may have changed from the original name after parsing.
+	Language_ruUA               = Language{
+		DisplayName:         TagDisplayName_ruUA,
+		LanguageDisplayName: TagLanguageDisplayName_ruUA,
+		RegionDisplayName:   TagRegionDisplayName_ruUA,
+		OriginalName:        TagOriginalName_ruUA,
+		Tag:                 Tag_ruUA,
+		TagName:             TagName_ruUA,
+	}
 	// Southern Sami (Norway)
 	TagDisplayName_smaNO         = "Southern Sami (Norway)"
 	TagLanguageDisplayName_smaNO = "Southern Sami"
@@ -1113,6 +2369,14 @@ var (
 	TagOriginalName_smaNO        = "sma-NO"
 	Tag_smaNO                    = language.MustParse(TagOriginalName_smaNO)
 	TagName_smaNO                = Tag_smaNO.String() // The tag name may have changed from the original name after parsing.
+	Language_smaNO               = Language{
+		DisplayName:         TagDisplayName_smaNO,
+		LanguageDisplayName: TagLanguageDisplayName_smaNO,
+		RegionDisplayName:   TagRegionDisplayName_smaNO,
+		OriginalName:        TagOriginalName_smaNO,
+		Tag:                 Tag_smaNO,
+		TagName:             TagName_smaNO,
+	}
 	// Southern Sami (Sweden)
 	TagDisplayName_smaSE         = "Southern Sami (Sweden)"
 	TagLanguageDisplayName_smaSE = "Southern Sami"
@@ -1120,6 +2384,14 @@ var (
 	TagOriginalName_smaSE        = "sma-SE"
 	Tag_smaSE                    = language.MustParse(TagOriginalName_smaSE)
 	TagName_smaSE                = Tag_smaSE.String() // The tag name may have changed from the original name after parsing.
+	Language_smaSE               = Language{
+		DisplayName:         TagDisplayName_smaSE,
+		LanguageDisplayName: TagLanguageDisplayName_smaSE,
+		RegionDisplayName:   TagRegionDisplayName_smaSE,
+		OriginalName:        TagOriginalName_smaSE,
+		Tag:                 Tag_smaSE,
+		TagName:             TagName_smaSE,
+	}
 	// Northern Sami (Finland)
 	TagDisplayName_smeFI         = "Northern Sami (Finland)"
 	TagLanguageDisplayName_smeFI = "Northern Sami"
@@ -1127,6 +2399,14 @@ var (
 	TagOriginalName_smeFI        = "sme-FI"
 	Tag_smeFI                    = language.MustParse(TagOriginalName_smeFI)
 	TagName_smeFI                = Tag_smeFI.String() // The tag name may have changed from the original name after parsing.
+	Language_smeFI               = Language{
+		DisplayName:         TagDisplayName_smeFI,
+		LanguageDisplayName: TagLanguageDisplayName_smeFI,
+		RegionDisplayName:   TagRegionDisplayName_smeFI,
+		OriginalName:        TagOriginalName_smeFI,
+		Tag:                 Tag_smeFI,
+		TagName:             TagName_smeFI,
+	}
 	// Northern Sami (Norway)
 	TagDisplayName_smeNO         = "Northern Sami (Norway)"
 	TagLanguageDisplayName_smeNO = "Northern Sami"
@@ -1134,6 +2414,14 @@ var (
 	TagOriginalName_smeNO        = "sme-NO"
 	Tag_smeNO                    = language.MustParse(TagOriginalName_smeNO)
 	TagName_smeNO                = Tag_smeNO.String() // The tag name may have changed from the original name after parsing.
+	Language_smeNO               = Language{
+		DisplayName:         TagDisplayName_smeNO,
+		LanguageDisplayName: TagLanguageDisplayName_smeNO,
+		RegionDisplayName:   TagRegionDisplayName_smeNO,
+		OriginalName:        TagOriginalName_smeNO,
+		Tag:                 Tag_smeNO,
+		TagName:             TagName_smeNO,
+	}
 	// Northern Sami (Sweden)
 	TagDisplayName_smeSE         = "Northern Sami (Sweden)"
 	TagLanguageDisplayName_smeSE = "Northern Sami"
@@ -1141,6 +2429,14 @@ var (
 	TagOriginalName_smeSE        = "sme-SE"
 	Tag_smeSE                    = language.MustParse(TagOriginalName_smeSE)
 	TagName_smeSE                = Tag_smeSE.String() // The tag name may have changed from the original name after parsing.
+	Language_smeSE               = Language{
+		DisplayName:         TagDisplayName_smeSE,
+		LanguageDisplayName: TagLanguageDisplayName_smeSE,
+		RegionDisplayName:   TagRegionDisplayName_smeSE,
+		OriginalName:        TagOriginalName_smeSE,
+		Tag:                 Tag_smeSE,
+		TagName:             TagName_smeSE,
+	}
 	// Lule Sami (Norway)
 	TagDisplayName_smjNO         = "Lule Sami (Norway)"
 	TagLanguageDisplayName_smjNO = "Lule Sami"
@@ -1148,6 +2444,14 @@ var (
 	TagOriginalName_smjNO        = "smj-NO"
 	Tag_smjNO                    = language.MustParse(TagOriginalName_smjNO)
 	TagName_smjNO                = Tag_smjNO.String() // The tag name may have changed from the original name after parsing.
+	Language_smjNO               = Language{
+		DisplayName:         TagDisplayName_smjNO,
+		LanguageDisplayName: TagLanguageDisplayName_smjNO,
+		RegionDisplayName:   TagRegionDisplayName_smjNO,
+		OriginalName:        TagOriginalName_smjNO,
+		Tag:                 Tag_smjNO,
+		TagName:             TagName_smjNO,
+	}
 	// Lule Sami (Sweden)
 	TagDisplayName_smjSE         = "Lule Sami (Sweden)"
 	TagLanguageDisplayName_smjSE = "Lule Sami"
@@ -1155,6 +2459,14 @@ var (
 	TagOriginalName_smjSE        = "smj-SE"
 	Tag_smjSE                    = language.MustParse(TagOriginalName_smjSE)
 	TagName_smjSE                = Tag_smjSE.String() // The tag name may have changed from the original name after parsing.
+	Language_smjSE               = Language{
+		DisplayName:         TagDisplayName_smjSE,
+		LanguageDisplayName: TagLanguageDisplayName_smjSE,
+		RegionDisplayName:   TagRegionDisplayName_smjSE,
+		OriginalName:        TagOriginalName_smjSE,
+		Tag:                 Tag_smjSE,
+		TagName:             TagName_smjSE,
+	}
 	// Inari Sami (Finland)
 	TagDisplayName_smnFI         = "Inari Sami (Finland)"
 	TagLanguageDisplayName_smnFI = "Inari Sami"
@@ -1162,6 +2474,14 @@ var (
 	TagOriginalName_smnFI        = "smn-FI"
 	Tag_smnFI                    = language.MustParse(TagOriginalName_smnFI)
 	TagName_smnFI                = Tag_smnFI.String() // The tag name may have changed from the original name after parsing.
+	Language_smnFI               = Language{
+		DisplayName:         TagDisplayName_smnFI,
+		LanguageDisplayName: TagLanguageDisplayName_smnFI,
+		RegionDisplayName:   TagRegionDisplayName_smnFI,
+		OriginalName:        TagOriginalName_smnFI,
+		Tag:                 Tag_smnFI,
+		TagName:             TagName_smnFI,
+	}
 	// Skolt Sami (Finland)
 	TagDisplayName_smsFI         = "Skolt Sami (Finland)"
 	TagLanguageDisplayName_smsFI = "Skolt Sami"
@@ -1169,6 +2489,14 @@ var (
 	TagOriginalName_smsFI        = "sms-FI"
 	Tag_smsFI                    = language.MustParse(TagOriginalName_smsFI)
 	TagName_smsFI                = Tag_smsFI.String() // The tag name may have changed from the original name after parsing.
+	Language_smsFI               = Language{
+		DisplayName:         TagDisplayName_smsFI,
+		LanguageDisplayName: TagLanguageDisplayName_smsFI,
+		RegionDisplayName:   TagRegionDisplayName_smsFI,
+		OriginalName:        TagOriginalName_smsFI,
+		Tag:                 Tag_smsFI,
+		TagName:             TagName_smsFI,
+	}
 	// Serbian (Bosnia and Herzegovina)
 	TagDisplayName_srBA         = "Serbian (Bosnia and Herzegovina)"
 	TagLanguageDisplayName_srBA = "Serbian"
@@ -1176,6 +2504,14 @@ var (
 	TagOriginalName_srBA        = "sr-BA"
 	Tag_srBA                    = language.MustParse(TagOriginalName_srBA)
 	TagName_srBA                = Tag_srBA.String() // The tag name may have changed from the original name after parsing.
+	Language_srBA               = Language{
+		DisplayName:         TagDisplayName_srBA,
+		LanguageDisplayName: TagLanguageDisplayName_srBA,
+		RegionDisplayName:   TagRegionDisplayName_srBA,
+		OriginalName:        TagOriginalName_srBA,
+		Tag:                 Tag_srBA,
+		TagName:             TagName_srBA,
+	}
 	// Serbian (Serbia and Montenegro)
 	TagDisplayName_srCS         = "Serbian (Serbia and Montenegro)"
 	TagLanguageDisplayName_srCS = "Serbian"
@@ -1183,6 +2519,14 @@ var (
 	TagOriginalName_srCS        = "sr-CS"
 	Tag_srCS                    = language.MustParse(TagOriginalName_srCS)
 	TagName_srCS                = Tag_srCS.String() // The tag name may have changed from the original name after parsing.
+	Language_srCS               = Language{
+		DisplayName:         TagDisplayName_srCS,
+		LanguageDisplayName: TagLanguageDisplayName_srCS,
+		RegionDisplayName:   TagRegionDisplayName_srCS,
+		OriginalName:        TagOriginalName_srCS,
+		Tag:                 Tag_srCS,
+		TagName:             TagName_srCS,
+	}
 	// Serbian (Montenegro)
 	TagDisplayName_srME         = "Serbian (Montenegro)"
 	TagLanguageDisplayName_srME = "Serbian"
@@ -1190,6 +2534,14 @@ var (
 	TagOriginalName_srME        = "sr-ME"
 	Tag_srME                    = language.MustParse(TagOriginalName_srME)
 	TagName_srME                = Tag_srME.String() // The tag name may have changed from the original name after parsing.
+	Language_srME               = Language{
+		DisplayName:         TagDisplayName_srME,
+		LanguageDisplayName: TagLanguageDisplayName_srME,
+		RegionDisplayName:   TagRegionDisplayName_srME,
+		OriginalName:        TagOriginalName_srME,
+		Tag:                 Tag_srME,
+		TagName:             TagName_srME,
+	}
 	// Serbian (Serbia)
 	TagDisplayName_srRS         = "Serbian (Serbia)"
 	TagLanguageDisplayName_srRS = "Serbian"
@@ -1197,6 +2549,14 @@ var (
 	TagOriginalName_srRS        = "sr-RS"
 	Tag_srRS                    = language.MustParse(TagOriginalName_srRS)
 	TagName_srRS                = Tag_srRS.String() // The tag name may have changed from the original name after parsing.
+	Language_srRS               = Language{
+		DisplayName:         TagDisplayName_srRS,
+		LanguageDisplayName: TagLanguageDisplayName_srRS,
+		RegionDisplayName:   TagRegionDisplayName_srRS,
+		OriginalName:        TagOriginalName_srRS,
+		Tag:                 Tag_srRS,
+		TagName:             TagName_srRS,
+	}
 	// Setswana (Botswana)
 	TagDisplayName_tnBW         = "Setswana (Botswana)"
 	TagLanguageDisplayName_tnBW = "Setswana"
@@ -1204,6 +2564,14 @@ var (
 	TagOriginalName_tnBW        = "tn-BW"
 	Tag_tnBW                    = language.MustParse(TagOriginalName_tnBW)
 	TagName_tnBW                = Tag_tnBW.String() // The tag name may have changed from the original name after parsing.
+	Language_tnBW               = Language{
+		DisplayName:         TagDisplayName_tnBW,
+		LanguageDisplayName: TagLanguageDisplayName_tnBW,
+		RegionDisplayName:   TagRegionDisplayName_tnBW,
+		OriginalName:        TagOriginalName_tnBW,
+		Tag:                 Tag_tnBW,
+		TagName:             TagName_tnBW,
+	}
 	// Setswana (South Africa)
 	TagDisplayName_tnZA         = "Setswana (South Africa)"
 	TagLanguageDisplayName_tnZA = "Setswana"
@@ -1211,6 +2579,14 @@ var (
 	TagOriginalName_tnZA        = "tn-ZA"
 	Tag_tnZA                    = language.MustParse(TagOriginalName_tnZA)
 	TagName_tnZA                = Tag_tnZA.String() // The tag name may have changed from the original name after parsing.
+	Language_tnZA               = Language{
+		DisplayName:         TagDisplayName_tnZA,
+		LanguageDisplayName: TagLanguageDisplayName_tnZA,
+		RegionDisplayName:   TagRegionDisplayName_tnZA,
+		OriginalName:        TagOriginalName_tnZA,
+		Tag:                 Tag_tnZA,
+		TagName:             TagName_tnZA,
+	}
 	// Somali (Djibouti)
 	TagDisplayName_soDJ         = "Somali (Djibouti)"
 	TagLanguageDisplayName_soDJ = "Somali"
@@ -1218,6 +2594,14 @@ var (
 	TagOriginalName_soDJ        = "so-DJ"
 	Tag_soDJ                    = language.MustParse(TagOriginalName_soDJ)
 	TagName_soDJ                = Tag_soDJ.String() // The tag name may have changed from the original name after parsing.
+	Language_soDJ               = Language{
+		DisplayName:         TagDisplayName_soDJ,
+		LanguageDisplayName: TagLanguageDisplayName_soDJ,
+		RegionDisplayName:   TagRegionDisplayName_soDJ,
+		OriginalName:        TagOriginalName_soDJ,
+		Tag:                 Tag_soDJ,
+		TagName:             TagName_soDJ,
+	}
 	// Somali (Ethiopia)
 	TagDisplayName_soET         = "Somali (Ethiopia)"
 	TagLanguageDisplayName_soET = "Somali"
@@ -1225,6 +2609,14 @@ var (
 	TagOriginalName_soET        = "so-ET"
 	Tag_soET                    = language.MustParse(TagOriginalName_soET)
 	TagName_soET                = Tag_soET.String() // The tag name may have changed from the original name after parsing.
+	Language_soET               = Language{
+		DisplayName:         TagDisplayName_soET,
+		LanguageDisplayName: TagLanguageDisplayName_soET,
+		RegionDisplayName:   TagRegionDisplayName_soET,
+		OriginalName:        TagOriginalName_soET,
+		Tag:                 Tag_soET,
+		TagName:             TagName_soET,
+	}
 	// Somali (Kenya)
 	TagDisplayName_soKE         = "Somali (Kenya)"
 	TagLanguageDisplayName_soKE = "Somali"
@@ -1232,6 +2624,14 @@ var (
 	TagOriginalName_soKE        = "so-KE"
 	Tag_soKE                    = language.MustParse(TagOriginalName_soKE)
 	TagName_soKE                = Tag_soKE.String() // The tag name may have changed from the original name after parsing.
+	Language_soKE               = Language{
+		DisplayName:         TagDisplayName_soKE,
+		LanguageDisplayName: TagLanguageDisplayName_soKE,
+		RegionDisplayName:   TagRegionDisplayName_soKE,
+		OriginalName:        TagOriginalName_soKE,
+		Tag:                 Tag_soKE,
+		TagName:             TagName_soKE,
+	}
 	// Somali (Somalia)
 	TagDisplayName_soSO         = "Somali (Somalia)"
 	TagLanguageDisplayName_soSO = "Somali"
@@ -1239,6 +2639,14 @@ var (
 	TagOriginalName_soSO        = "so-SO"
 	Tag_soSO                    = language.MustParse(TagOriginalName_soSO)
 	TagName_soSO                = Tag_soSO.String() // The tag name may have changed from the original name after parsing.
+	Language_soSO               = Language{
+		DisplayName:         TagDisplayName_soSO,
+		LanguageDisplayName: TagLanguageDisplayName_soSO,
+		RegionDisplayName:   TagRegionDisplayName_soSO,
+		OriginalName:        TagOriginalName_soSO,
+		Tag:                 Tag_soSO,
+		TagName:             TagName_soSO,
+	}
 	// Spanish (Argentina)
 	TagDisplayName_esAR         = "Spanish (Argentina)"
 	TagLanguageDisplayName_esAR = "Spanish"
@@ -1246,6 +2654,14 @@ var (
 	TagOriginalName_esAR        = "es-AR"
 	Tag_esAR                    = language.MustParse(TagOriginalName_esAR)
 	TagName_esAR                = Tag_esAR.String() // The tag name may have changed from the original name after parsing.
+	Language_esAR               = Language{
+		DisplayName:         TagDisplayName_esAR,
+		LanguageDisplayName: TagLanguageDisplayName_esAR,
+		RegionDisplayName:   TagRegionDisplayName_esAR,
+		OriginalName:        TagOriginalName_esAR,
+		Tag:                 Tag_esAR,
+		TagName:             TagName_esAR,
+	}
 	// Spanish (Bolivia)
 	TagDisplayName_esBO         = "Spanish (Bolivia)"
 	TagLanguageDisplayName_esBO = "Spanish"
@@ -1253,6 +2669,14 @@ var (
 	TagOriginalName_esBO        = "es-BO"
 	Tag_esBO                    = language.MustParse(TagOriginalName_esBO)
 	TagName_esBO                = Tag_esBO.String() // The tag name may have changed from the original name after parsing.
+	Language_esBO               = Language{
+		DisplayName:         TagDisplayName_esBO,
+		LanguageDisplayName: TagLanguageDisplayName_esBO,
+		RegionDisplayName:   TagRegionDisplayName_esBO,
+		OriginalName:        TagOriginalName_esBO,
+		Tag:                 Tag_esBO,
+		TagName:             TagName_esBO,
+	}
 	// Spanish (Chile)
 	TagDisplayName_esCL         = "Spanish (Chile)"
 	TagLanguageDisplayName_esCL = "Spanish"
@@ -1260,6 +2684,14 @@ var (
 	TagOriginalName_esCL        = "es-CL"
 	Tag_esCL                    = language.MustParse(TagOriginalName_esCL)
 	TagName_esCL                = Tag_esCL.String() // The tag name may have changed from the original name after parsing.
+	Language_esCL               = Language{
+		DisplayName:         TagDisplayName_esCL,
+		LanguageDisplayName: TagLanguageDisplayName_esCL,
+		RegionDisplayName:   TagRegionDisplayName_esCL,
+		OriginalName:        TagOriginalName_esCL,
+		Tag:                 Tag_esCL,
+		TagName:             TagName_esCL,
+	}
 	// Spanish (Colombia)
 	TagDisplayName_esCO         = "Spanish (Colombia)"
 	TagLanguageDisplayName_esCO = "Spanish"
@@ -1267,6 +2699,14 @@ var (
 	TagOriginalName_esCO        = "es-CO"
 	Tag_esCO                    = language.MustParse(TagOriginalName_esCO)
 	TagName_esCO                = Tag_esCO.String() // The tag name may have changed from the original name after parsing.
+	Language_esCO               = Language{
+		DisplayName:         TagDisplayName_esCO,
+		LanguageDisplayName: TagLanguageDisplayName_esCO,
+		RegionDisplayName:   TagRegionDisplayName_esCO,
+		OriginalName:        TagOriginalName_esCO,
+		Tag:                 Tag_esCO,
+		TagName:             TagName_esCO,
+	}
 	// Spanish (Costa Rica)
 	TagDisplayName_esCR         = "Spanish (Costa Rica)"
 	TagLanguageDisplayName_esCR = "Spanish"
@@ -1274,6 +2714,14 @@ var (
 	TagOriginalName_esCR        = "es-CR"
 	Tag_esCR                    = language.MustParse(TagOriginalName_esCR)
 	TagName_esCR                = Tag_esCR.String() // The tag name may have changed from the original name after parsing.
+	Language_esCR               = Language{
+		DisplayName:         TagDisplayName_esCR,
+		LanguageDisplayName: TagLanguageDisplayName_esCR,
+		RegionDisplayName:   TagRegionDisplayName_esCR,
+		OriginalName:        TagOriginalName_esCR,
+		Tag:                 Tag_esCR,
+		TagName:             TagName_esCR,
+	}
 	// Spanish (Dominican Republic)
 	TagDisplayName_esDO         = "Spanish (Dominican Republic)"
 	TagLanguageDisplayName_esDO = "Spanish"
@@ -1281,6 +2729,14 @@ var (
 	TagOriginalName_esDO        = "es-DO"
 	Tag_esDO                    = language.MustParse(TagOriginalName_esDO)
 	TagName_esDO                = Tag_esDO.String() // The tag name may have changed from the original name after parsing.
+	Language_esDO               = Language{
+		DisplayName:         TagDisplayName_esDO,
+		LanguageDisplayName: TagLanguageDisplayName_esDO,
+		RegionDisplayName:   TagRegionDisplayName_esDO,
+		OriginalName:        TagOriginalName_esDO,
+		Tag:                 Tag_esDO,
+		TagName:             TagName_esDO,
+	}
 	// Spanish (Ecuador)
 	TagDisplayName_esEC         = "Spanish (Ecuador)"
 	TagLanguageDisplayName_esEC = "Spanish"
@@ -1288,6 +2744,14 @@ var (
 	TagOriginalName_esEC        = "es-EC"
 	Tag_esEC                    = language.MustParse(TagOriginalName_esEC)
 	TagName_esEC                = Tag_esEC.String() // The tag name may have changed from the original name after parsing.
+	Language_esEC               = Language{
+		DisplayName:         TagDisplayName_esEC,
+		LanguageDisplayName: TagLanguageDisplayName_esEC,
+		RegionDisplayName:   TagRegionDisplayName_esEC,
+		OriginalName:        TagOriginalName_esEC,
+		Tag:                 Tag_esEC,
+		TagName:             TagName_esEC,
+	}
 	// Spanish (Spain)
 	TagDisplayName_esES         = "Spanish (Spain)"
 	TagLanguageDisplayName_esES = "Spanish"
@@ -1295,6 +2759,14 @@ var (
 	TagOriginalName_esES        = "es-ES"
 	Tag_esES                    = language.MustParse(TagOriginalName_esES)
 	TagName_esES                = Tag_esES.String() // The tag name may have changed from the original name after parsing.
+	Language_esES               = Language{
+		DisplayName:         TagDisplayName_esES,
+		LanguageDisplayName: TagLanguageDisplayName_esES,
+		RegionDisplayName:   TagRegionDisplayName_esES,
+		OriginalName:        TagOriginalName_esES,
+		Tag:                 Tag_esES,
+		TagName:             TagName_esES,
+	}
 	// Spanish (Guatemala)
 	TagDisplayName_esGT         = "Spanish (Guatemala)"
 	TagLanguageDisplayName_esGT = "Spanish"
@@ -1302,6 +2774,14 @@ var (
 	TagOriginalName_esGT        = "es-GT"
 	Tag_esGT                    = language.MustParse(TagOriginalName_esGT)
 	TagName_esGT                = Tag_esGT.String() // The tag name may have changed from the original name after parsing.
+	Language_esGT               = Language{
+		DisplayName:         TagDisplayName_esGT,
+		LanguageDisplayName: TagLanguageDisplayName_esGT,
+		RegionDisplayName:   TagRegionDisplayName_esGT,
+		OriginalName:        TagOriginalName_esGT,
+		Tag:                 Tag_esGT,
+		TagName:             TagName_esGT,
+	}
 	// Spanish (Honduras)
 	TagDisplayName_esHN         = "Spanish (Honduras)"
 	TagLanguageDisplayName_esHN = "Spanish"
@@ -1309,6 +2789,14 @@ var (
 	TagOriginalName_esHN        = "es-HN"
 	Tag_esHN                    = language.MustParse(TagOriginalName_esHN)
 	TagName_esHN                = Tag_esHN.String() // The tag name may have changed from the original name after parsing.
+	Language_esHN               = Language{
+		DisplayName:         TagDisplayName_esHN,
+		LanguageDisplayName: TagLanguageDisplayName_esHN,
+		RegionDisplayName:   TagRegionDisplayName_esHN,
+		OriginalName:        TagOriginalName_esHN,
+		Tag:                 Tag_esHN,
+		TagName:             TagName_esHN,
+	}
 	// Spanish (Mexico)
 	TagDisplayName_esMX         = "Spanish (Mexico)"
 	TagLanguageDisplayName_esMX = "Spanish"
@@ -1316,6 +2804,14 @@ var (
 	TagOriginalName_esMX        = "es-MX"
 	Tag_esMX                    = language.MustParse(TagOriginalName_esMX)
 	TagName_esMX                = Tag_esMX.String() // The tag name may have changed from the original name after parsing.
+	Language_esMX               = Language{
+		DisplayName:         TagDisplayName_esMX,
+		LanguageDisplayName: TagLanguageDisplayName_esMX,
+		RegionDisplayName:   TagRegionDisplayName_esMX,
+		OriginalName:        TagOriginalName_esMX,
+		Tag:                 Tag_esMX,
+		TagName:             TagName_esMX,
+	}
 	// Spanish (Nicaragua)
 	TagDisplayName_esNI         = "Spanish (Nicaragua)"
 	TagLanguageDisplayName_esNI = "Spanish"
@@ -1323,6 +2819,14 @@ var (
 	TagOriginalName_esNI        = "es-NI"
 	Tag_esNI                    = language.MustParse(TagOriginalName_esNI)
 	TagName_esNI                = Tag_esNI.String() // The tag name may have changed from the original name after parsing.
+	Language_esNI               = Language{
+		DisplayName:         TagDisplayName_esNI,
+		LanguageDisplayName: TagLanguageDisplayName_esNI,
+		RegionDisplayName:   TagRegionDisplayName_esNI,
+		OriginalName:        TagOriginalName_esNI,
+		Tag:                 Tag_esNI,
+		TagName:             TagName_esNI,
+	}
 	// Spanish (Panama)
 	TagDisplayName_esPA         = "Spanish (Panama)"
 	TagLanguageDisplayName_esPA = "Spanish"
@@ -1330,6 +2834,14 @@ var (
 	TagOriginalName_esPA        = "es-PA"
 	Tag_esPA                    = language.MustParse(TagOriginalName_esPA)
 	TagName_esPA                = Tag_esPA.String() // The tag name may have changed from the original name after parsing.
+	Language_esPA               = Language{
+		DisplayName:         TagDisplayName_esPA,
+		LanguageDisplayName: TagLanguageDisplayName_esPA,
+		RegionDisplayName:   TagRegionDisplayName_esPA,
+		OriginalName:        TagOriginalName_esPA,
+		Tag:                 Tag_esPA,
+		TagName:             TagName_esPA,
+	}
 	// Spanish (Peru)
 	TagDisplayName_esPE         = "Spanish (Peru)"
 	TagLanguageDisplayName_esPE = "Spanish"
@@ -1337,6 +2849,14 @@ var (
 	TagOriginalName_esPE        = "es-PE"
 	Tag_esPE                    = language.MustParse(TagOriginalName_esPE)
 	TagName_esPE                = Tag_esPE.String() // The tag name may have changed from the original name after parsing.
+	Language_esPE               = Language{
+		DisplayName:         TagDisplayName_esPE,
+		LanguageDisplayName: TagLanguageDisplayName_esPE,
+		RegionDisplayName:   TagRegionDisplayName_esPE,
+		OriginalName:        TagOriginalName_esPE,
+		Tag:                 Tag_esPE,
+		TagName:             TagName_esPE,
+	}
 	// Spanish (Puerto-Rico)
 	TagDisplayName_esPR         = "Spanish (Puerto-Rico)"
 	TagLanguageDisplayName_esPR = "Spanish"
@@ -1344,6 +2864,14 @@ var (
 	TagOriginalName_esPR        = "es-PR"
 	Tag_esPR                    = language.MustParse(TagOriginalName_esPR)
 	TagName_esPR                = Tag_esPR.String() // The tag name may have changed from the original name after parsing.
+	Language_esPR               = Language{
+		DisplayName:         TagDisplayName_esPR,
+		LanguageDisplayName: TagLanguageDisplayName_esPR,
+		RegionDisplayName:   TagRegionDisplayName_esPR,
+		OriginalName:        TagOriginalName_esPR,
+		Tag:                 Tag_esPR,
+		TagName:             TagName_esPR,
+	}
 	// Spanish (Paraguay)
 	TagDisplayName_esPY         = "Spanish (Paraguay)"
 	TagLanguageDisplayName_esPY = "Spanish"
@@ -1351,6 +2879,14 @@ var (
 	TagOriginalName_esPY        = "es-PY"
 	Tag_esPY                    = language.MustParse(TagOriginalName_esPY)
 	TagName_esPY                = Tag_esPY.String() // The tag name may have changed from the original name after parsing.
+	Language_esPY               = Language{
+		DisplayName:         TagDisplayName_esPY,
+		LanguageDisplayName: TagLanguageDisplayName_esPY,
+		RegionDisplayName:   TagRegionDisplayName_esPY,
+		OriginalName:        TagOriginalName_esPY,
+		Tag:                 Tag_esPY,
+		TagName:             TagName_esPY,
+	}
 	// Spanish (El Salvador)
 	TagDisplayName_esSV         = "Spanish (El Salvador)"
 	TagLanguageDisplayName_esSV = "Spanish"
@@ -1358,6 +2894,14 @@ var (
 	TagOriginalName_esSV        = "es-SV"
 	Tag_esSV                    = language.MustParse(TagOriginalName_esSV)
 	TagName_esSV                = Tag_esSV.String() // The tag name may have changed from the original name after parsing.
+	Language_esSV               = Language{
+		DisplayName:         TagDisplayName_esSV,
+		LanguageDisplayName: TagLanguageDisplayName_esSV,
+		RegionDisplayName:   TagRegionDisplayName_esSV,
+		OriginalName:        TagOriginalName_esSV,
+		Tag:                 Tag_esSV,
+		TagName:             TagName_esSV,
+	}
 	// Spanish (Uruguay)
 	TagDisplayName_esUY         = "Spanish (Uruguay)"
 	TagLanguageDisplayName_esUY = "Spanish"
@@ -1365,6 +2909,14 @@ var (
 	TagOriginalName_esUY        = "es-UY"
 	Tag_esUY                    = language.MustParse(TagOriginalName_esUY)
 	TagName_esUY                = Tag_esUY.String() // The tag name may have changed from the original name after parsing.
+	Language_esUY               = Language{
+		DisplayName:         TagDisplayName_esUY,
+		LanguageDisplayName: TagLanguageDisplayName_esUY,
+		RegionDisplayName:   TagRegionDisplayName_esUY,
+		OriginalName:        TagOriginalName_esUY,
+		Tag:                 Tag_esUY,
+		TagName:             TagName_esUY,
+	}
 	// Spanish (Venezuela)
 	TagDisplayName_esVE         = "Spanish (Venezuela)"
 	TagLanguageDisplayName_esVE = "Spanish"
@@ -1372,6 +2924,14 @@ var (
 	TagOriginalName_esVE        = "es-VE"
 	Tag_esVE                    = language.MustParse(TagOriginalName_esVE)
 	TagName_esVE                = Tag_esVE.String() // The tag name may have changed from the original name after parsing.
+	Language_esVE               = Language{
+		DisplayName:         TagDisplayName_esVE,
+		LanguageDisplayName: TagLanguageDisplayName_esVE,
+		RegionDisplayName:   TagRegionDisplayName_esVE,
+		OriginalName:        TagOriginalName_esVE,
+		Tag:                 Tag_esVE,
+		TagName:             TagName_esVE,
+	}
 	// Swahili (Kenya)
 	TagDisplayName_swKE         = "Swahili (Kenya)"
 	TagLanguageDisplayName_swKE = "Swahili"
@@ -1379,6 +2939,14 @@ var (
 	TagOriginalName_swKE        = "sw-KE"
 	Tag_swKE                    = language.MustParse(TagOriginalName_swKE)
 	TagName_swKE                = Tag_swKE.String() // The tag name may have changed from the original name after parsing.
+	Language_swKE               = Language{
+		DisplayName:         TagDisplayName_swKE,
+		LanguageDisplayName: TagLanguageDisplayName_swKE,
+		RegionDisplayName:   TagRegionDisplayName_swKE,
+		OriginalName:        TagOriginalName_swKE,
+		Tag:                 Tag_swKE,
+		TagName:             TagName_swKE,
+	}
 	// Swahili (Tanzania)
 	TagDisplayName_swTZ         = "Swahili (Tanzania)"
 	TagLanguageDisplayName_swTZ = "Swahili"
@@ -1386,6 +2954,14 @@ var (
 	TagOriginalName_swTZ        = "sw-TZ"
 	Tag_swTZ                    = language.MustParse(TagOriginalName_swTZ)
 	TagName_swTZ                = Tag_swTZ.String() // The tag name may have changed from the original name after parsing.
+	Language_swTZ               = Language{
+		DisplayName:         TagDisplayName_swTZ,
+		LanguageDisplayName: TagLanguageDisplayName_swTZ,
+		RegionDisplayName:   TagRegionDisplayName_swTZ,
+		OriginalName:        TagOriginalName_swTZ,
+		Tag:                 Tag_swTZ,
+		TagName:             TagName_swTZ,
+	}
 	// Swahili (Uganda)
 	TagDisplayName_swUG         = "Swahili (Uganda)"
 	TagLanguageDisplayName_swUG = "Swahili"
@@ -1393,6 +2969,14 @@ var (
 	TagOriginalName_swUG        = "sw-UG"
 	Tag_swUG                    = language.MustParse(TagOriginalName_swUG)
 	TagName_swUG                = Tag_swUG.String() // The tag name may have changed from the original name after parsing.
+	Language_swUG               = Language{
+		DisplayName:         TagDisplayName_swUG,
+		LanguageDisplayName: TagLanguageDisplayName_swUG,
+		RegionDisplayName:   TagRegionDisplayName_swUG,
+		OriginalName:        TagOriginalName_swUG,
+		Tag:                 Tag_swUG,
+		TagName:             TagName_swUG,
+	}
 	// Swedish (Finland)
 	TagDisplayName_svFI         = "Swedish (Finland)"
 	TagLanguageDisplayName_svFI = "Swedish"
@@ -1400,6 +2984,14 @@ var (
 	TagOriginalName_svFI        = "sv-FI"
 	Tag_svFI                    = language.MustParse(TagOriginalName_svFI)
 	TagName_svFI                = Tag_svFI.String() // The tag name may have changed from the original name after parsing.
+	Language_svFI               = Language{
+		DisplayName:         TagDisplayName_svFI,
+		LanguageDisplayName: TagLanguageDisplayName_svFI,
+		RegionDisplayName:   TagRegionDisplayName_svFI,
+		OriginalName:        TagOriginalName_svFI,
+		Tag:                 Tag_svFI,
+		TagName:             TagName_svFI,
+	}
 	// Swedish (Sweden)
 	TagDisplayName_svSE         = "Swedish (Sweden)"
 	TagLanguageDisplayName_svSE = "Swedish"
@@ -1407,6 +2999,14 @@ var (
 	TagOriginalName_svSE        = "sv-SE"
 	Tag_svSE                    = language.MustParse(TagOriginalName_svSE)
 	TagName_svSE                = Tag_svSE.String() // The tag name may have changed from the original name after parsing.
+	Language_svSE               = Language{
+		DisplayName:         TagDisplayName_svSE,
+		LanguageDisplayName: TagLanguageDisplayName_svSE,
+		RegionDisplayName:   TagRegionDisplayName_svSE,
+		OriginalName:        TagOriginalName_svSE,
+		Tag:                 Tag_svSE,
+		TagName:             TagName_svSE,
+	}
 	// Tibetan (People's Republic of China)
 	TagDisplayName_boCN         = "Tibetan (People's Republic of China)"
 	TagLanguageDisplayName_boCN = "Tibetan"
@@ -1414,6 +3014,14 @@ var (
 	TagOriginalName_boCN        = "bo-CN"
 	Tag_boCN                    = language.MustParse(TagOriginalName_boCN)
 	TagName_boCN                = Tag_boCN.String() // The tag name may have changed from the original name after parsing.
+	Language_boCN               = Language{
+		DisplayName:         TagDisplayName_boCN,
+		LanguageDisplayName: TagLanguageDisplayName_boCN,
+		RegionDisplayName:   TagRegionDisplayName_boCN,
+		OriginalName:        TagOriginalName_boCN,
+		Tag:                 Tag_boCN,
+		TagName:             TagName_boCN,
+	}
 	// Tibetan (India)
 	TagDisplayName_boIN         = "Tibetan (India)"
 	TagLanguageDisplayName_boIN = "Tibetan"
@@ -1421,6 +3029,14 @@ var (
 	TagOriginalName_boIN        = "bo-IN"
 	Tag_boIN                    = language.MustParse(TagOriginalName_boIN)
 	TagName_boIN                = Tag_boIN.String() // The tag name may have changed from the original name after parsing.
+	Language_boIN               = Language{
+		DisplayName:         TagDisplayName_boIN,
+		LanguageDisplayName: TagLanguageDisplayName_boIN,
+		RegionDisplayName:   TagRegionDisplayName_boIN,
+		OriginalName:        TagOriginalName_boIN,
+		Tag:                 Tag_boIN,
+		TagName:             TagName_boIN,
+	}
 	// Tibetan (Federal Democratic Republic of Nepal)
 	TagDisplayName_boNP         = "Tibetan (Federal Democratic Republic of Nepal)"
 	TagLanguageDisplayName_boNP = "Tibetan"
@@ -1428,6 +3044,14 @@ var (
 	TagOriginalName_boNP        = "bo-NP"
 	Tag_boNP                    = language.MustParse(TagOriginalName_boNP)
 	TagName_boNP                = Tag_boNP.String() // The tag name may have changed from the original name after parsing.
+	Language_boNP               = Language{
+		DisplayName:         TagDisplayName_boNP,
+		LanguageDisplayName: TagLanguageDisplayName_boNP,
+		RegionDisplayName:   TagRegionDisplayName_boNP,
+		OriginalName:        TagOriginalName_boNP,
+		Tag:                 Tag_boNP,
+		TagName:             TagName_boNP,
+	}
 	// Tigrinya (Eritrea)
 	TagDisplayName_tiER         = "Tigrinya (Eritrea)"
 	TagLanguageDisplayName_tiER = "Tigrinya"
@@ -1435,6 +3059,14 @@ var (
 	TagOriginalName_tiER        = "ti-ER"
 	Tag_tiER                    = language.MustParse(TagOriginalName_tiER)
 	TagName_tiER                = Tag_tiER.String() // The tag name may have changed from the original name after parsing.
+	Language_tiER               = Language{
+		DisplayName:         TagDisplayName_tiER,
+		LanguageDisplayName: TagLanguageDisplayName_tiER,
+		RegionDisplayName:   TagRegionDisplayName_tiER,
+		OriginalName:        TagOriginalName_tiER,
+		Tag:                 Tag_tiER,
+		TagName:             TagName_tiER,
+	}
 	// Tigrinya (Ethiopia)
 	TagDisplayName_tiET         = "Tigrinya (Ethiopia)"
 	TagLanguageDisplayName_tiET = "Tigrinya"
@@ -1442,6 +3074,14 @@ var (
 	TagOriginalName_tiET        = "ti-ET"
 	Tag_tiET                    = language.MustParse(TagOriginalName_tiET)
 	TagName_tiET                = Tag_tiET.String() // The tag name may have changed from the original name after parsing.
+	Language_tiET               = Language{
+		DisplayName:         TagDisplayName_tiET,
+		LanguageDisplayName: TagLanguageDisplayName_tiET,
+		RegionDisplayName:   TagRegionDisplayName_tiET,
+		OriginalName:        TagOriginalName_tiET,
+		Tag:                 Tag_tiET,
+		TagName:             TagName_tiET,
+	}
 	// Turkish (Cyprus)
 	TagDisplayName_trCY         = "Turkish (Cyprus)"
 	TagLanguageDisplayName_trCY = "Turkish"
@@ -1449,6 +3089,14 @@ var (
 	TagOriginalName_trCY        = "tr-CY"
 	Tag_trCY                    = language.MustParse(TagOriginalName_trCY)
 	TagName_trCY                = Tag_trCY.String() // The tag name may have changed from the original name after parsing.
+	Language_trCY               = Language{
+		DisplayName:         TagDisplayName_trCY,
+		LanguageDisplayName: TagLanguageDisplayName_trCY,
+		RegionDisplayName:   TagRegionDisplayName_trCY,
+		OriginalName:        TagOriginalName_trCY,
+		Tag:                 Tag_trCY,
+		TagName:             TagName_trCY,
+	}
 	// Turkish (Turkey)
 	TagDisplayName_trTR         = "Turkish (Turkey)"
 	TagLanguageDisplayName_trTR = "Turkish"
@@ -1456,6 +3104,14 @@ var (
 	TagOriginalName_trTR        = "tr-TR"
 	Tag_trTR                    = language.MustParse(TagOriginalName_trTR)
 	TagName_trTR                = Tag_trTR.String() // The tag name may have changed from the original name after parsing.
+	Language_trTR               = Language{
+		DisplayName:         TagDisplayName_trTR,
+		LanguageDisplayName: TagLanguageDisplayName_trTR,
+		RegionDisplayName:   TagRegionDisplayName_trTR,
+		OriginalName:        TagOriginalName_trTR,
+		Tag:                 Tag_trTR,
+		TagName:             TagName_trTR,
+	}
 	// Urdu (India)
 	TagDisplayName_urIN         = "Urdu (India)"
 	TagLanguageDisplayName_urIN = "Urdu"
@@ -1463,6 +3119,14 @@ var (
 	TagOriginalName_urIN        = "ur-IN"
 	Tag_urIN                    = language.MustParse(TagOriginalName_urIN)
 	TagName_urIN                = Tag_urIN.String() // The tag name may have changed from the original name after parsing.
+	Language_urIN               = Language{
+		DisplayName:         TagDisplayName_urIN,
+		LanguageDisplayName: TagLanguageDisplayName_urIN,
+		RegionDisplayName:   TagRegionDisplayName_urIN,
+		OriginalName:        TagOriginalName_urIN,
+		Tag:                 Tag_urIN,
+		TagName:             TagName_urIN,
+	}
 	// Urdu (Islamic Republic of Pakistan)
 	TagDisplayName_urPK         = "Urdu (Islamic Republic of Pakistan)"
 	TagLanguageDisplayName_urPK = "Urdu"
@@ -1470,6 +3134,14 @@ var (
 	TagOriginalName_urPK        = "ur-PK"
 	Tag_urPK                    = language.MustParse(TagOriginalName_urPK)
 	TagName_urPK                = Tag_urPK.String() // The tag name may have changed from the original name after parsing.
+	Language_urPK               = Language{
+		DisplayName:         TagDisplayName_urPK,
+		LanguageDisplayName: TagLanguageDisplayName_urPK,
+		RegionDisplayName:   TagRegionDisplayName_urPK,
+		OriginalName:        TagOriginalName_urPK,
+		Tag:                 Tag_urPK,
+		TagName:             TagName_urPK,
+	}
 	// Uzbek (Afghanistan)
 	TagDisplayName_uzAF         = "Uzbek (Afghanistan)"
 	TagLanguageDisplayName_uzAF = "Uzbek"
@@ -1477,6 +3149,14 @@ var (
 	TagOriginalName_uzAF        = "uz-AF"
 	Tag_uzAF                    = language.MustParse(TagOriginalName_uzAF)
 	TagName_uzAF                = Tag_uzAF.String() // The tag name may have changed from the original name after parsing.
+	Language_uzAF               = Language{
+		DisplayName:         TagDisplayName_uzAF,
+		LanguageDisplayName: TagLanguageDisplayName_uzAF,
+		RegionDisplayName:   TagRegionDisplayName_uzAF,
+		OriginalName:        TagOriginalName_uzAF,
+		Tag:                 Tag_uzAF,
+		TagName:             TagName_uzAF,
+	}
 	// Uzbek (Uzbekistan)
 	TagDisplayName_uzUZ         = "Uzbek (Uzbekistan)"
 	TagLanguageDisplayName_uzUZ = "Uzbek"
@@ -1484,6 +3164,14 @@ var (
 	TagOriginalName_uzUZ        = "uz-UZ"
 	Tag_uzUZ                    = language.MustParse(TagOriginalName_uzUZ)
 	TagName_uzUZ                = Tag_uzUZ.String() // The tag name may have changed from the original name after parsing.
+	Language_uzUZ               = Language{
+		DisplayName:         TagDisplayName_uzUZ,
+		LanguageDisplayName: TagLanguageDisplayName_uzUZ,
+		RegionDisplayName:   TagRegionDisplayName_uzUZ,
+		OriginalName:        TagOriginalName_uzUZ,
+		Tag:                 Tag_uzUZ,
+		TagName:             TagName_uzUZ,
+	}
 	// Yoruba (Benin)
 	TagDisplayName_yoBJ         = "Yoruba (Benin)"
 	TagLanguageDisplayName_yoBJ = "Yoruba"
@@ -1491,6 +3179,14 @@ var (
 	TagOriginalName_yoBJ        = "yo-BJ"
 	Tag_yoBJ                    = language.MustParse(TagOriginalName_yoBJ)
 	TagName_yoBJ                = Tag_yoBJ.String() // The tag name may have changed from the original name after parsing.
+	Language_yoBJ               = Language{
+		DisplayName:         TagDisplayName_yoBJ,
+		LanguageDisplayName: TagLanguageDisplayName_yoBJ,
+		RegionDisplayName:   TagRegionDisplayName_yoBJ,
+		OriginalName:        TagOriginalName_yoBJ,
+		Tag:                 Tag_yoBJ,
+		TagName:             TagName_yoBJ,
+	}
 	// Yoruba (Nigeria)
 	TagDisplayName_yoNG         = "Yoruba (Nigeria)"
 	TagLanguageDisplayName_yoNG = "Yoruba"
@@ -1498,6 +3194,14 @@ var (
 	TagOriginalName_yoNG        = "yo-NG"
 	Tag_yoNG                    = language.MustParse(TagOriginalName_yoNG)
 	TagName_yoNG                = Tag_yoNG.String() // The tag name may have changed from the original name after parsing.
+	Language_yoNG               = Language{
+		DisplayName:         TagDisplayName_yoNG,
+		LanguageDisplayName: TagLanguageDisplayName_yoNG,
+		RegionDisplayName:   TagRegionDisplayName_yoNG,
+		OriginalName:        TagOriginalName_yoNG,
+		Tag:                 Tag_yoNG,
+		TagName:             TagName_yoNG,
+	}
 	// Abkhaz (Russia)
 	TagDisplayName_abRU         = "Abkhaz (Russia)"
 	TagLanguageDisplayName_abRU = "Abkhaz"
@@ -1505,6 +3209,14 @@ var (
 	TagOriginalName_abRU        = "ab-RU"
 	Tag_abRU                    = language.MustParse(TagOriginalName_abRU)
 	TagName_abRU                = Tag_abRU.String() // The tag name may have changed from the original name after parsing.
+	Language_abRU               = Language{
+		DisplayName:         TagDisplayName_abRU,
+		LanguageDisplayName: TagLanguageDisplayName_abRU,
+		RegionDisplayName:   TagRegionDisplayName_abRU,
+		OriginalName:        TagOriginalName_abRU,
+		Tag:                 Tag_abRU,
+		TagName:             TagName_abRU,
+	}
 	// Avestan (Islamic Republic of Iran)
 	TagDisplayName_aeIR         = "Avestan (Islamic Republic of Iran)"
 	TagLanguageDisplayName_aeIR = "Avestan"
@@ -1512,6 +3224,14 @@ var (
 	TagOriginalName_aeIR        = "ae-IR"
 	Tag_aeIR                    = language.MustParse(TagOriginalName_aeIR)
 	TagName_aeIR                = Tag_aeIR.String() // The tag name may have changed from the original name after parsing.
+	Language_aeIR               = Language{
+		DisplayName:         TagDisplayName_aeIR,
+		LanguageDisplayName: TagLanguageDisplayName_aeIR,
+		RegionDisplayName:   TagRegionDisplayName_aeIR,
+		OriginalName:        TagOriginalName_aeIR,
+		Tag:                 Tag_aeIR,
+		TagName:             TagName_aeIR,
+	}
 	// Akan (Republic of Ghana)
 	TagDisplayName_akGH         = "Akan (Republic of Ghana)"
 	TagLanguageDisplayName_akGH = "Akan"
@@ -1519,6 +3239,14 @@ var (
 	TagOriginalName_akGH        = "ak-GH"
 	Tag_akGH                    = language.MustParse(TagOriginalName_akGH)
 	TagName_akGH                = Tag_akGH.String() // The tag name may have changed from the original name after parsing.
+	Language_akGH               = Language{
+		DisplayName:         TagDisplayName_akGH,
+		LanguageDisplayName: TagLanguageDisplayName_akGH,
+		RegionDisplayName:   TagRegionDisplayName_akGH,
+		OriginalName:        TagOriginalName_akGH,
+		Tag:                 Tag_akGH,
+		TagName:             TagName_akGH,
+	}
 	// Amharic (Ethiopia)
 	TagDisplayName_amET         = "Amharic (Ethiopia)"
 	TagLanguageDisplayName_amET = "Amharic"
@@ -1526,6 +3254,14 @@ var (
 	TagOriginalName_amET        = "am-ET"
 	Tag_amET                    = language.MustParse(TagOriginalName_amET)
 	TagName_amET                = Tag_amET.String() // The tag name may have changed from the original name after parsing.
+	Language_amET               = Language{
+		DisplayName:         TagDisplayName_amET,
+		LanguageDisplayName: TagLanguageDisplayName_amET,
+		RegionDisplayName:   TagRegionDisplayName_amET,
+		OriginalName:        TagOriginalName_amET,
+		Tag:                 Tag_amET,
+		TagName:             TagName_amET,
+	}
 	// Assamese (India)
 	TagDisplayName_asIN         = "Assamese (India)"
 	TagLanguageDisplayName_asIN = "Assamese"
@@ -1533,6 +3269,14 @@ var (
 	TagOriginalName_asIN        = "as-IN"
 	Tag_asIN                    = language.MustParse(TagOriginalName_asIN)
 	TagName_asIN                = Tag_asIN.String() // The tag name may have changed from the original name after parsing.
+	Language_asIN               = Language{
+		DisplayName:         TagDisplayName_asIN,
+		LanguageDisplayName: TagLanguageDisplayName_asIN,
+		RegionDisplayName:   TagRegionDisplayName_asIN,
+		OriginalName:        TagOriginalName_asIN,
+		Tag:                 Tag_asIN,
+		TagName:             TagName_asIN,
+	}
 	// Asturian (Spain)
 	TagDisplayName_astES         = "Asturian (Spain)"
 	TagLanguageDisplayName_astES = "Asturian"
@@ -1540,6 +3284,14 @@ var (
 	TagOriginalName_astES        = "ast-ES"
 	Tag_astES                    = language.MustParse(TagOriginalName_astES)
 	TagName_astES                = Tag_astES.String() // The tag name may have changed from the original name after parsing.
+	Language_astES               = Language{
+		DisplayName:         TagDisplayName_astES,
+		LanguageDisplayName: TagLanguageDisplayName_astES,
+		RegionDisplayName:   TagRegionDisplayName_astES,
+		OriginalName:        TagOriginalName_astES,
+		Tag:                 Tag_astES,
+		TagName:             TagName_astES,
+	}
 	// Aymara (Bolivia)
 	TagDisplayName_ayBO         = "Aymara (Bolivia)"
 	TagLanguageDisplayName_ayBO = "Aymara"
@@ -1547,6 +3299,14 @@ var (
 	TagOriginalName_ayBO        = "ay-BO"
 	Tag_ayBO                    = language.MustParse(TagOriginalName_ayBO)
 	TagName_ayBO                = Tag_ayBO.String() // The tag name may have changed from the original name after parsing.
+	Language_ayBO               = Language{
+		DisplayName:         TagDisplayName_ayBO,
+		LanguageDisplayName: TagLanguageDisplayName_ayBO,
+		RegionDisplayName:   TagRegionDisplayName_ayBO,
+		OriginalName:        TagOriginalName_ayBO,
+		Tag:                 Tag_ayBO,
+		TagName:             TagName_ayBO,
+	}
 	// Azerbaijani (Azerbaijan)
 	TagDisplayName_azAZ         = "Azerbaijani (Azerbaijan)"
 	TagLanguageDisplayName_azAZ = "Azerbaijani"
@@ -1554,6 +3314,14 @@ var (
 	TagOriginalName_azAZ        = "az-AZ"
 	Tag_azAZ                    = language.MustParse(TagOriginalName_azAZ)
 	TagName_azAZ                = Tag_azAZ.String() // The tag name may have changed from the original name after parsing.
+	Language_azAZ               = Language{
+		DisplayName:         TagDisplayName_azAZ,
+		LanguageDisplayName: TagLanguageDisplayName_azAZ,
+		RegionDisplayName:   TagRegionDisplayName_azAZ,
+		OriginalName:        TagOriginalName_azAZ,
+		Tag:                 Tag_azAZ,
+		TagName:             TagName_azAZ,
+	}
 	// Bashkir (Russia)
 	TagDisplayName_baRU         = "Bashkir (Russia)"
 	TagLanguageDisplayName_baRU = "Bashkir"
@@ -1561,6 +3329,14 @@ var (
 	TagOriginalName_baRU        = "ba-RU"
 	Tag_baRU                    = language.MustParse(TagOriginalName_baRU)
 	TagName_baRU                = Tag_baRU.String() // The tag name may have changed from the original name after parsing.
+	Language_baRU               = Language{
+		DisplayName:         TagDisplayName_baRU,
+		LanguageDisplayName: TagLanguageDisplayName_baRU,
+		RegionDisplayName:   TagRegionDisplayName_baRU,
+		OriginalName:        TagOriginalName_baRU,
+		Tag:                 Tag_baRU,
+		TagName:             TagName_baRU,
+	}
 	// Belarusian (Belarus)
 	TagDisplayName_beBY         = "Belarusian (Belarus)"
 	TagLanguageDisplayName_beBY = "Belarusian"
@@ -1568,6 +3344,14 @@ var (
 	TagOriginalName_beBY        = "be-BY"
 	Tag_beBY                    = language.MustParse(TagOriginalName_beBY)
 	TagName_beBY                = Tag_beBY.String() // The tag name may have changed from the original name after parsing.
+	Language_beBY               = Language{
+		DisplayName:         TagDisplayName_beBY,
+		LanguageDisplayName: TagLanguageDisplayName_beBY,
+		RegionDisplayName:   TagRegionDisplayName_beBY,
+		OriginalName:        TagOriginalName_beBY,
+		Tag:                 Tag_beBY,
+		TagName:             TagName_beBY,
+	}
 	// Bulgarian (Bulgaria)
 	TagDisplayName_bgBG         = "Bulgarian (Bulgaria)"
 	TagLanguageDisplayName_bgBG = "Bulgarian"
@@ -1575,6 +3359,14 @@ var (
 	TagOriginalName_bgBG        = "bg-BG"
 	Tag_bgBG                    = language.MustParse(TagOriginalName_bgBG)
 	TagName_bgBG                = Tag_bgBG.String() // The tag name may have changed from the original name after parsing.
+	Language_bgBG               = Language{
+		DisplayName:         TagDisplayName_bgBG,
+		LanguageDisplayName: TagLanguageDisplayName_bgBG,
+		RegionDisplayName:   TagRegionDisplayName_bgBG,
+		OriginalName:        TagOriginalName_bgBG,
+		Tag:                 Tag_bgBG,
+		TagName:             TagName_bgBG,
+	}
 	// Bihari (India)
 	TagDisplayName_bhIN         = "Bihari (India)"
 	TagLanguageDisplayName_bhIN = "Bihari"
@@ -1582,6 +3374,14 @@ var (
 	TagOriginalName_bhIN        = "bh-IN"
 	Tag_bhIN                    = language.MustParse(TagOriginalName_bhIN)
 	TagName_bhIN                = Tag_bhIN.String() // The tag name may have changed from the original name after parsing.
+	Language_bhIN               = Language{
+		DisplayName:         TagDisplayName_bhIN,
+		LanguageDisplayName: TagLanguageDisplayName_bhIN,
+		RegionDisplayName:   TagRegionDisplayName_bhIN,
+		OriginalName:        TagOriginalName_bhIN,
+		Tag:                 Tag_bhIN,
+		TagName:             TagName_bhIN,
+	}
 	// Bislama (Vanuatu)
 	TagDisplayName_biVU         = "Bislama (Vanuatu)"
 	TagLanguageDisplayName_biVU = "Bislama"
@@ -1589,6 +3389,14 @@ var (
 	TagOriginalName_biVU        = "bi-VU"
 	Tag_biVU                    = language.MustParse(TagOriginalName_biVU)
 	TagName_biVU                = Tag_biVU.String() // The tag name may have changed from the original name after parsing.
+	Language_biVU               = Language{
+		DisplayName:         TagDisplayName_biVU,
+		LanguageDisplayName: TagLanguageDisplayName_biVU,
+		RegionDisplayName:   TagRegionDisplayName_biVU,
+		OriginalName:        TagOriginalName_biVU,
+		Tag:                 Tag_biVU,
+		TagName:             TagName_biVU,
+	}
 	// Bengali (India)
 	TagDisplayName_bnIN         = "Bengali (India)"
 	TagLanguageDisplayName_bnIN = "Bengali"
@@ -1596,6 +3404,14 @@ var (
 	TagOriginalName_bnIN        = "bn-IN"
 	Tag_bnIN                    = language.MustParse(TagOriginalName_bnIN)
 	TagName_bnIN                = Tag_bnIN.String() // The tag name may have changed from the original name after parsing.
+	Language_bnIN               = Language{
+		DisplayName:         TagDisplayName_bnIN,
+		LanguageDisplayName: TagLanguageDisplayName_bnIN,
+		RegionDisplayName:   TagRegionDisplayName_bnIN,
+		OriginalName:        TagOriginalName_bnIN,
+		Tag:                 Tag_bnIN,
+		TagName:             TagName_bnIN,
+	}
 	// Breton (France)
 	TagDisplayName_brFR         = "Breton (France)"
 	TagLanguageDisplayName_brFR = "Breton"
@@ -1603,6 +3419,14 @@ var (
 	TagOriginalName_brFR        = "br-FR"
 	Tag_brFR                    = language.MustParse(TagOriginalName_brFR)
 	TagName_brFR                = Tag_brFR.String() // The tag name may have changed from the original name after parsing.
+	Language_brFR               = Language{
+		DisplayName:         TagDisplayName_brFR,
+		LanguageDisplayName: TagLanguageDisplayName_brFR,
+		RegionDisplayName:   TagRegionDisplayName_brFR,
+		OriginalName:        TagOriginalName_brFR,
+		Tag:                 Tag_brFR,
+		TagName:             TagName_brFR,
+	}
 	// Bosnian (Bosnia and Herzegovina)
 	TagDisplayName_bsBA         = "Bosnian (Bosnia and Herzegovina)"
 	TagLanguageDisplayName_bsBA = "Bosnian"
@@ -1610,6 +3434,14 @@ var (
 	TagOriginalName_bsBA        = "bs-BA"
 	Tag_bsBA                    = language.MustParse(TagOriginalName_bsBA)
 	TagName_bsBA                = Tag_bsBA.String() // The tag name may have changed from the original name after parsing.
+	Language_bsBA               = Language{
+		DisplayName:         TagDisplayName_bsBA,
+		LanguageDisplayName: TagLanguageDisplayName_bsBA,
+		RegionDisplayName:   TagRegionDisplayName_bsBA,
+		OriginalName:        TagOriginalName_bsBA,
+		Tag:                 Tag_bsBA,
+		TagName:             TagName_bsBA,
+	}
 	// Chechen (Russia)
 	TagDisplayName_ceRU         = "Chechen (Russia)"
 	TagLanguageDisplayName_ceRU = "Chechen"
@@ -1617,6 +3449,14 @@ var (
 	TagOriginalName_ceRU        = "ce-RU"
 	Tag_ceRU                    = language.MustParse(TagOriginalName_ceRU)
 	TagName_ceRU                = Tag_ceRU.String() // The tag name may have changed from the original name after parsing.
+	Language_ceRU               = Language{
+		DisplayName:         TagDisplayName_ceRU,
+		LanguageDisplayName: TagLanguageDisplayName_ceRU,
+		RegionDisplayName:   TagRegionDisplayName_ceRU,
+		OriginalName:        TagOriginalName_ceRU,
+		Tag:                 Tag_ceRU,
+		TagName:             TagName_ceRU,
+	}
 	// Corsican (France)
 	TagDisplayName_coFR         = "Corsican (France)"
 	TagLanguageDisplayName_coFR = "Corsican"
@@ -1624,6 +3464,14 @@ var (
 	TagOriginalName_coFR        = "co-FR"
 	Tag_coFR                    = language.MustParse(TagOriginalName_coFR)
 	TagName_coFR                = Tag_coFR.String() // The tag name may have changed from the original name after parsing.
+	Language_coFR               = Language{
+		DisplayName:         TagDisplayName_coFR,
+		LanguageDisplayName: TagLanguageDisplayName_coFR,
+		RegionDisplayName:   TagRegionDisplayName_coFR,
+		OriginalName:        TagOriginalName_coFR,
+		Tag:                 Tag_coFR,
+		TagName:             TagName_coFR,
+	}
 	// Czech (Czech Republic)
 	TagDisplayName_csCZ         = "Czech (Czech Republic)"
 	TagLanguageDisplayName_csCZ = "Czech"
@@ -1631,6 +3479,14 @@ var (
 	TagOriginalName_csCZ        = "cs-CZ"
 	Tag_csCZ                    = language.MustParse(TagOriginalName_csCZ)
 	TagName_csCZ                = Tag_csCZ.String() // The tag name may have changed from the original name after parsing.
+	Language_csCZ               = Language{
+		DisplayName:         TagDisplayName_csCZ,
+		LanguageDisplayName: TagLanguageDisplayName_csCZ,
+		RegionDisplayName:   TagRegionDisplayName_csCZ,
+		OriginalName:        TagOriginalName_csCZ,
+		Tag:                 Tag_csCZ,
+		TagName:             TagName_csCZ,
+	}
 	// Chuvash (Russia)
 	TagDisplayName_cvRU         = "Chuvash (Russia)"
 	TagLanguageDisplayName_cvRU = "Chuvash"
@@ -1638,6 +3494,14 @@ var (
 	TagOriginalName_cvRU        = "cv-RU"
 	Tag_cvRU                    = language.MustParse(TagOriginalName_cvRU)
 	TagName_cvRU                = Tag_cvRU.String() // The tag name may have changed from the original name after parsing.
+	Language_cvRU               = Language{
+		DisplayName:         TagDisplayName_cvRU,
+		LanguageDisplayName: TagLanguageDisplayName_cvRU,
+		RegionDisplayName:   TagRegionDisplayName_cvRU,
+		OriginalName:        TagOriginalName_cvRU,
+		Tag:                 Tag_cvRU,
+		TagName:             TagName_cvRU,
+	}
 	// Welsh (United Kingdom)
 	TagDisplayName_cyGB         = "Welsh (United Kingdom)"
 	TagLanguageDisplayName_cyGB = "Welsh"
@@ -1645,6 +3509,14 @@ var (
 	TagOriginalName_cyGB        = "cy-GB"
 	Tag_cyGB                    = language.MustParse(TagOriginalName_cyGB)
 	TagName_cyGB                = Tag_cyGB.String() // The tag name may have changed from the original name after parsing.
+	Language_cyGB               = Language{
+		DisplayName:         TagDisplayName_cyGB,
+		LanguageDisplayName: TagLanguageDisplayName_cyGB,
+		RegionDisplayName:   TagRegionDisplayName_cyGB,
+		OriginalName:        TagOriginalName_cyGB,
+		Tag:                 Tag_cyGB,
+		TagName:             TagName_cyGB,
+	}
 	// Danish (Denmark)
 	TagDisplayName_daDK         = "Danish (Denmark)"
 	TagLanguageDisplayName_daDK = "Danish"
@@ -1652,6 +3524,14 @@ var (
 	TagOriginalName_daDK        = "da-DK"
 	Tag_daDK                    = language.MustParse(TagOriginalName_daDK)
 	TagName_daDK                = Tag_daDK.String() // The tag name may have changed from the original name after parsing.
+	Language_daDK               = Language{
+		DisplayName:         TagDisplayName_daDK,
+		LanguageDisplayName: TagLanguageDisplayName_daDK,
+		RegionDisplayName:   TagRegionDisplayName_daDK,
+		OriginalName:        TagOriginalName_daDK,
+		Tag:                 Tag_daDK,
+		TagName:             TagName_daDK,
+	}
 	// Lower Sorbian (Germany)
 	TagDisplayName_dsbDE         = "Lower Sorbian (Germany)"
 	TagLanguageDisplayName_dsbDE = "Lower Sorbian"
@@ -1659,6 +3539,14 @@ var (
 	TagOriginalName_dsbDE        = "dsb-DE"
 	Tag_dsbDE                    = language.MustParse(TagOriginalName_dsbDE)
 	TagName_dsbDE                = Tag_dsbDE.String() // The tag name may have changed from the original name after parsing.
+	Language_dsbDE               = Language{
+		DisplayName:         TagDisplayName_dsbDE,
+		LanguageDisplayName: TagLanguageDisplayName_dsbDE,
+		RegionDisplayName:   TagRegionDisplayName_dsbDE,
+		OriginalName:        TagOriginalName_dsbDE,
+		Tag:                 Tag_dsbDE,
+		TagName:             TagName_dsbDE,
+	}
 	// Dzongkha (Bhutan)
 	TagDisplayName_dzBT         = "Dzongkha (Bhutan)"
 	TagLanguageDisplayName_dzBT = "Dzongkha"
@@ -1666,6 +3554,14 @@ var (
 	TagOriginalName_dzBT        = "dz-BT"
 	Tag_dzBT                    = language.MustParse(TagOriginalName_dzBT)
 	TagName_dzBT                = Tag_dzBT.String() // The tag name may have changed from the original name after parsing.
+	Language_dzBT               = Language{
+		DisplayName:         TagDisplayName_dzBT,
+		LanguageDisplayName: TagLanguageDisplayName_dzBT,
+		RegionDisplayName:   TagRegionDisplayName_dzBT,
+		OriginalName:        TagOriginalName_dzBT,
+		Tag:                 Tag_dzBT,
+		TagName:             TagName_dzBT,
+	}
 	// Estonian (Estonia)
 	TagDisplayName_etEE         = "Estonian (Estonia)"
 	TagLanguageDisplayName_etEE = "Estonian"
@@ -1673,6 +3569,14 @@ var (
 	TagOriginalName_etEE        = "et-EE"
 	Tag_etEE                    = language.MustParse(TagOriginalName_etEE)
 	TagName_etEE                = Tag_etEE.String() // The tag name may have changed from the original name after parsing.
+	Language_etEE               = Language{
+		DisplayName:         TagDisplayName_etEE,
+		LanguageDisplayName: TagLanguageDisplayName_etEE,
+		RegionDisplayName:   TagRegionDisplayName_etEE,
+		OriginalName:        TagOriginalName_etEE,
+		Tag:                 Tag_etEE,
+		TagName:             TagName_etEE,
+	}
 	// Basque (Spain)
 	TagDisplayName_euES         = "Basque (Spain)"
 	TagLanguageDisplayName_euES = "Basque"
@@ -1680,6 +3584,14 @@ var (
 	TagOriginalName_euES        = "eu-ES"
 	Tag_euES                    = language.MustParse(TagOriginalName_euES)
 	TagName_euES                = Tag_euES.String() // The tag name may have changed from the original name after parsing.
+	Language_euES               = Language{
+		DisplayName:         TagDisplayName_euES,
+		LanguageDisplayName: TagLanguageDisplayName_euES,
+		RegionDisplayName:   TagRegionDisplayName_euES,
+		OriginalName:        TagOriginalName_euES,
+		Tag:                 Tag_euES,
+		TagName:             TagName_euES,
+	}
 	// Finnish (Finland)
 	TagDisplayName_fiFI         = "Finnish (Finland)"
 	TagLanguageDisplayName_fiFI = "Finnish"
@@ -1687,6 +3599,14 @@ var (
 	TagOriginalName_fiFI        = "fi-FI"
 	Tag_fiFI                    = language.MustParse(TagOriginalName_fiFI)
 	TagName_fiFI                = Tag_fiFI.String() // The tag name may have changed from the original name after parsing.
+	Language_fiFI               = Language{
+		DisplayName:         TagDisplayName_fiFI,
+		LanguageDisplayName: TagLanguageDisplayName_fiFI,
+		RegionDisplayName:   TagRegionDisplayName_fiFI,
+		OriginalName:        TagOriginalName_fiFI,
+		Tag:                 Tag_fiFI,
+		TagName:             TagName_fiFI,
+	}
 	// Fijian (Fiji)
 	TagDisplayName_fjFJ         = "Fijian (Fiji)"
 	TagLanguageDisplayName_fjFJ = "Fijian"
@@ -1694,6 +3614,14 @@ var (
 	TagOriginalName_fjFJ        = "fj-FJ"
 	Tag_fjFJ                    = language.MustParse(TagOriginalName_fjFJ)
 	TagName_fjFJ                = Tag_fjFJ.String() // The tag name may have changed from the original name after parsing.
+	Language_fjFJ               = Language{
+		DisplayName:         TagDisplayName_fjFJ,
+		LanguageDisplayName: TagLanguageDisplayName_fjFJ,
+		RegionDisplayName:   TagRegionDisplayName_fjFJ,
+		OriginalName:        TagOriginalName_fjFJ,
+		Tag:                 Tag_fjFJ,
+		TagName:             TagName_fjFJ,
+	}
 	// Frisian (Netherlands)
 	TagDisplayName_fyNL         = "Frisian (Netherlands)"
 	TagLanguageDisplayName_fyNL = "Frisian"
@@ -1701,6 +3629,14 @@ var (
 	TagOriginalName_fyNL        = "fy-NL"
 	Tag_fyNL                    = language.MustParse(TagOriginalName_fyNL)
 	TagName_fyNL                = Tag_fyNL.String() // The tag name may have changed from the original name after parsing.
+	Language_fyNL               = Language{
+		DisplayName:         TagDisplayName_fyNL,
+		LanguageDisplayName: TagLanguageDisplayName_fyNL,
+		RegionDisplayName:   TagRegionDisplayName_fyNL,
+		OriginalName:        TagOriginalName_fyNL,
+		Tag:                 Tag_fyNL,
+		TagName:             TagName_fyNL,
+	}
 	// Irish (Ireland)
 	TagDisplayName_gaIE         = "Irish (Ireland)"
 	TagLanguageDisplayName_gaIE = "Irish"
@@ -1708,6 +3644,14 @@ var (
 	TagOriginalName_gaIE        = "ga-IE"
 	Tag_gaIE                    = language.MustParse(TagOriginalName_gaIE)
 	TagName_gaIE                = Tag_gaIE.String() // The tag name may have changed from the original name after parsing.
+	Language_gaIE               = Language{
+		DisplayName:         TagDisplayName_gaIE,
+		LanguageDisplayName: TagLanguageDisplayName_gaIE,
+		RegionDisplayName:   TagRegionDisplayName_gaIE,
+		OriginalName:        TagOriginalName_gaIE,
+		Tag:                 Tag_gaIE,
+		TagName:             TagName_gaIE,
+	}
 	// Scottish Gaelic (United Kingdom)
 	TagDisplayName_gdGB         = "Scottish Gaelic (United Kingdom)"
 	TagLanguageDisplayName_gdGB = "Scottish Gaelic"
@@ -1715,6 +3659,14 @@ var (
 	TagOriginalName_gdGB        = "gd-GB"
 	Tag_gdGB                    = language.MustParse(TagOriginalName_gdGB)
 	TagName_gdGB                = Tag_gdGB.String() // The tag name may have changed from the original name after parsing.
+	Language_gdGB               = Language{
+		DisplayName:         TagDisplayName_gdGB,
+		LanguageDisplayName: TagLanguageDisplayName_gdGB,
+		RegionDisplayName:   TagRegionDisplayName_gdGB,
+		OriginalName:        TagOriginalName_gdGB,
+		Tag:                 Tag_gdGB,
+		TagName:             TagName_gdGB,
+	}
 	// Galician (Spain)
 	TagDisplayName_glES         = "Galician (Spain)"
 	TagLanguageDisplayName_glES = "Galician"
@@ -1722,6 +3674,14 @@ var (
 	TagOriginalName_glES        = "gl-ES"
 	Tag_glES                    = language.MustParse(TagOriginalName_glES)
 	TagName_glES                = Tag_glES.String() // The tag name may have changed from the original name after parsing.
+	Language_glES               = Language{
+		DisplayName:         TagDisplayName_glES,
+		LanguageDisplayName: TagLanguageDisplayName_glES,
+		RegionDisplayName:   TagRegionDisplayName_glES,
+		OriginalName:        TagOriginalName_glES,
+		Tag:                 Tag_glES,
+		TagName:             TagName_glES,
+	}
 	// Guarani (Paraguay)
 	TagDisplayName_gnPY         = "Guarani (Paraguay)"
 	TagLanguageDisplayName_gnPY = "Guarani"
@@ -1729,6 +3689,14 @@ var (
 	TagOriginalName_gnPY        = "gn-PY"
 	Tag_gnPY                    = language.MustParse(TagOriginalName_gnPY)
 	TagName_gnPY                = Tag_gnPY.String() // The tag name may have changed from the original name after parsing.
+	Language_gnPY               = Language{
+		DisplayName:         TagDisplayName_gnPY,
+		LanguageDisplayName: TagLanguageDisplayName_gnPY,
+		RegionDisplayName:   TagRegionDisplayName_gnPY,
+		OriginalName:        TagOriginalName_gnPY,
+		Tag:                 Tag_gnPY,
+		TagName:             TagName_gnPY,
+	}
 	// Gujarati (India)
 	TagDisplayName_guIN         = "Gujarati (India)"
 	TagLanguageDisplayName_guIN = "Gujarati"
@@ -1736,6 +3704,14 @@ var (
 	TagOriginalName_guIN        = "gu-IN"
 	Tag_guIN                    = language.MustParse(TagOriginalName_guIN)
 	TagName_guIN                = Tag_guIN.String() // The tag name may have changed from the original name after parsing.
+	Language_guIN               = Language{
+		DisplayName:         TagDisplayName_guIN,
+		LanguageDisplayName: TagLanguageDisplayName_guIN,
+		RegionDisplayName:   TagRegionDisplayName_guIN,
+		OriginalName:        TagOriginalName_guIN,
+		Tag:                 Tag_guIN,
+		TagName:             TagName_guIN,
+	}
 	// Manx (Isle of Man)
 	TagDisplayName_gvIM         = "Manx (Isle of Man)"
 	TagLanguageDisplayName_gvIM = "Manx"
@@ -1743,6 +3719,14 @@ var (
 	TagOriginalName_gvIM        = "gv-IM"
 	Tag_gvIM                    = language.MustParse(TagOriginalName_gvIM)
 	TagName_gvIM                = Tag_gvIM.String() // The tag name may have changed from the original name after parsing.
+	Language_gvIM               = Language{
+		DisplayName:         TagDisplayName_gvIM,
+		LanguageDisplayName: TagLanguageDisplayName_gvIM,
+		RegionDisplayName:   TagRegionDisplayName_gvIM,
+		OriginalName:        TagOriginalName_gvIM,
+		Tag:                 Tag_gvIM,
+		TagName:             TagName_gvIM,
+	}
 	// Hebrew (Israel)
 	TagDisplayName_heIL         = "Hebrew (Israel)"
 	TagLanguageDisplayName_heIL = "Hebrew"
@@ -1750,6 +3734,14 @@ var (
 	TagOriginalName_heIL        = "he-IL"
 	Tag_heIL                    = language.MustParse(TagOriginalName_heIL)
 	TagName_heIL                = Tag_heIL.String() // The tag name may have changed from the original name after parsing.
+	Language_heIL               = Language{
+		DisplayName:         TagDisplayName_heIL,
+		LanguageDisplayName: TagLanguageDisplayName_heIL,
+		RegionDisplayName:   TagRegionDisplayName_heIL,
+		OriginalName:        TagOriginalName_heIL,
+		Tag:                 Tag_heIL,
+		TagName:             TagName_heIL,
+	}
 	// Hiri Motu (Independent State of Papua New Guinea)
 	TagDisplayName_hoPG         = "Hiri Motu (Independent State of Papua New Guinea)"
 	TagLanguageDisplayName_hoPG = "Hiri Motu"
@@ -1757,6 +3749,14 @@ var (
 	TagOriginalName_hoPG        = "ho-PG"
 	Tag_hoPG                    = language.MustParse(TagOriginalName_hoPG)
 	TagName_hoPG                = Tag_hoPG.String() // The tag name may have changed from the original name after parsing.
+	Language_hoPG               = Language{
+		DisplayName:         TagDisplayName_hoPG,
+		LanguageDisplayName: TagLanguageDisplayName_hoPG,
+		RegionDisplayName:   TagRegionDisplayName_hoPG,
+		OriginalName:        TagOriginalName_hoPG,
+		Tag:                 Tag_hoPG,
+		TagName:             TagName_hoPG,
+	}
 	// Upper Sorbian (Germany)
 	TagDisplayName_hsbDE         = "Upper Sorbian (Germany)"
 	TagLanguageDisplayName_hsbDE = "Upper Sorbian"
@@ -1764,6 +3764,14 @@ var (
 	TagOriginalName_hsbDE        = "hsb-DE"
 	Tag_hsbDE                    = language.MustParse(TagOriginalName_hsbDE)
 	TagName_hsbDE                = Tag_hsbDE.String() // The tag name may have changed from the original name after parsing.
+	Language_hsbDE               = Language{
+		DisplayName:         TagDisplayName_hsbDE,
+		LanguageDisplayName: TagLanguageDisplayName_hsbDE,
+		RegionDisplayName:   TagRegionDisplayName_hsbDE,
+		OriginalName:        TagOriginalName_hsbDE,
+		Tag:                 Tag_hsbDE,
+		TagName:             TagName_hsbDE,
+	}
 	// Haitian (Republic of Haiti)
 	TagDisplayName_htHT         = "Haitian (Republic of Haiti)"
 	TagLanguageDisplayName_htHT = "Haitian"
@@ -1771,6 +3779,14 @@ var (
 	TagOriginalName_htHT        = "ht-HT"
 	Tag_htHT                    = language.MustParse(TagOriginalName_htHT)
 	TagName_htHT                = Tag_htHT.String() // The tag name may have changed from the original name after parsing.
+	Language_htHT               = Language{
+		DisplayName:         TagDisplayName_htHT,
+		LanguageDisplayName: TagLanguageDisplayName_htHT,
+		RegionDisplayName:   TagRegionDisplayName_htHT,
+		OriginalName:        TagOriginalName_htHT,
+		Tag:                 Tag_htHT,
+		TagName:             TagName_htHT,
+	}
 	// Hungarian (Hungary)
 	TagDisplayName_huHU         = "Hungarian (Hungary)"
 	TagLanguageDisplayName_huHU = "Hungarian"
@@ -1778,6 +3794,14 @@ var (
 	TagOriginalName_huHU        = "hu-HU"
 	Tag_huHU                    = language.MustParse(TagOriginalName_huHU)
 	TagName_huHU                = Tag_huHU.String() // The tag name may have changed from the original name after parsing.
+	Language_huHU               = Language{
+		DisplayName:         TagDisplayName_huHU,
+		LanguageDisplayName: TagLanguageDisplayName_huHU,
+		RegionDisplayName:   TagRegionDisplayName_huHU,
+		OriginalName:        TagOriginalName_huHU,
+		Tag:                 Tag_huHU,
+		TagName:             TagName_huHU,
+	}
 	// Armenian (Armenia)
 	TagDisplayName_hyAM         = "Armenian (Armenia)"
 	TagLanguageDisplayName_hyAM = "Armenian"
@@ -1785,6 +3809,14 @@ var (
 	TagOriginalName_hyAM        = "hy-AM"
 	Tag_hyAM                    = language.MustParse(TagOriginalName_hyAM)
 	TagName_hyAM                = Tag_hyAM.String() // The tag name may have changed from the original name after parsing.
+	Language_hyAM               = Language{
+		DisplayName:         TagDisplayName_hyAM,
+		LanguageDisplayName: TagLanguageDisplayName_hyAM,
+		RegionDisplayName:   TagRegionDisplayName_hyAM,
+		OriginalName:        TagOriginalName_hyAM,
+		Tag:                 Tag_hyAM,
+		TagName:             TagName_hyAM,
+	}
 	// Herero (Republic of Namibia)
 	TagDisplayName_hzNA         = "Herero (Republic of Namibia)"
 	TagLanguageDisplayName_hzNA = "Herero"
@@ -1792,6 +3824,14 @@ var (
 	TagOriginalName_hzNA        = "hz-NA"
 	Tag_hzNA                    = language.MustParse(TagOriginalName_hzNA)
 	TagName_hzNA                = Tag_hzNA.String() // The tag name may have changed from the original name after parsing.
+	Language_hzNA               = Language{
+		DisplayName:         TagDisplayName_hzNA,
+		LanguageDisplayName: TagLanguageDisplayName_hzNA,
+		RegionDisplayName:   TagRegionDisplayName_hzNA,
+		OriginalName:        TagOriginalName_hzNA,
+		Tag:                 Tag_hzNA,
+		TagName:             TagName_hzNA,
+	}
 	// Indonesian (Indonesia)
 	TagDisplayName_idID         = "Indonesian (Indonesia)"
 	TagLanguageDisplayName_idID = "Indonesian"
@@ -1799,6 +3839,14 @@ var (
 	TagOriginalName_idID        = "id-ID"
 	Tag_idID                    = language.MustParse(TagOriginalName_idID)
 	TagName_idID                = Tag_idID.String() // The tag name may have changed from the original name after parsing.
+	Language_idID               = Language{
+		DisplayName:         TagDisplayName_idID,
+		LanguageDisplayName: TagLanguageDisplayName_idID,
+		RegionDisplayName:   TagRegionDisplayName_idID,
+		OriginalName:        TagOriginalName_idID,
+		Tag:                 Tag_idID,
+		TagName:             TagName_idID,
+	}
 	// Inupiaq (United States of America)
 	TagDisplayName_ikUS         = "Inupiaq (United States of America)"
 	TagLanguageDisplayName_ikUS = "Inupiaq"
@@ -1806,6 +3854,14 @@ var (
 	TagOriginalName_ikUS        = "ik-US"
 	Tag_ikUS                    = language.MustParse(TagOriginalName_ikUS)
 	TagName_ikUS                = Tag_ikUS.String() // The tag name may have changed from the original name after parsing.
+	Language_ikUS               = Language{
+		DisplayName:         TagDisplayName_ikUS,
+		LanguageDisplayName: TagLanguageDisplayName_ikUS,
+		RegionDisplayName:   TagRegionDisplayName_ikUS,
+		OriginalName:        TagOriginalName_ikUS,
+		Tag:                 Tag_ikUS,
+		TagName:             TagName_ikUS,
+	}
 	// Icelandic (Iceland)
 	TagDisplayName_isIS         = "Icelandic (Iceland)"
 	TagLanguageDisplayName_isIS = "Icelandic"
@@ -1813,6 +3869,14 @@ var (
 	TagOriginalName_isIS        = "is-IS"
 	Tag_isIS                    = language.MustParse(TagOriginalName_isIS)
 	TagName_isIS                = Tag_isIS.String() // The tag name may have changed from the original name after parsing.
+	Language_isIS               = Language{
+		DisplayName:         TagDisplayName_isIS,
+		LanguageDisplayName: TagLanguageDisplayName_isIS,
+		RegionDisplayName:   TagRegionDisplayName_isIS,
+		OriginalName:        TagOriginalName_isIS,
+		Tag:                 Tag_isIS,
+		TagName:             TagName_isIS,
+	}
 	// Inuktitut (Canada)
 	TagDisplayName_iuCA         = "Inuktitut (Canada)"
 	TagLanguageDisplayName_iuCA = "Inuktitut"
@@ -1820,6 +3884,14 @@ var (
 	TagOriginalName_iuCA        = "iu-CA"
 	Tag_iuCA                    = language.MustParse(TagOriginalName_iuCA)
 	TagName_iuCA                = Tag_iuCA.String() // The tag name may have changed from the original name after parsing.
+	Language_iuCA               = Language{
+		DisplayName:         TagDisplayName_iuCA,
+		LanguageDisplayName: TagLanguageDisplayName_iuCA,
+		RegionDisplayName:   TagRegionDisplayName_iuCA,
+		OriginalName:        TagOriginalName_iuCA,
+		Tag:                 Tag_iuCA,
+		TagName:             TagName_iuCA,
+	}
 	// Javanese (Indonesia)
 	TagDisplayName_jvID         = "Javanese (Indonesia)"
 	TagLanguageDisplayName_jvID = "Javanese"
@@ -1827,6 +3899,14 @@ var (
 	TagOriginalName_jvID        = "jv-ID"
 	Tag_jvID                    = language.MustParse(TagOriginalName_jvID)
 	TagName_jvID                = Tag_jvID.String() // The tag name may have changed from the original name after parsing.
+	Language_jvID               = Language{
+		DisplayName:         TagDisplayName_jvID,
+		LanguageDisplayName: TagLanguageDisplayName_jvID,
+		RegionDisplayName:   TagRegionDisplayName_jvID,
+		OriginalName:        TagOriginalName_jvID,
+		Tag:                 Tag_jvID,
+		TagName:             TagName_jvID,
+	}
 	// Georgian (Georgia)
 	TagDisplayName_kaGE         = "Georgian (Georgia)"
 	TagLanguageDisplayName_kaGE = "Georgian"
@@ -1834,6 +3914,14 @@ var (
 	TagOriginalName_kaGE        = "ka-GE"
 	Tag_kaGE                    = language.MustParse(TagOriginalName_kaGE)
 	TagName_kaGE                = Tag_kaGE.String() // The tag name may have changed from the original name after parsing.
+	Language_kaGE               = Language{
+		DisplayName:         TagDisplayName_kaGE,
+		LanguageDisplayName: TagLanguageDisplayName_kaGE,
+		RegionDisplayName:   TagRegionDisplayName_kaGE,
+		OriginalName:        TagOriginalName_kaGE,
+		Tag:                 Tag_kaGE,
+		TagName:             TagName_kaGE,
+	}
 	// Kongo (Republic of the Congo)
 	TagDisplayName_kgCG         = "Kongo (Republic of the Congo)"
 	TagLanguageDisplayName_kgCG = "Kongo"
@@ -1841,6 +3929,14 @@ var (
 	TagOriginalName_kgCG        = "kg-CG"
 	Tag_kgCG                    = language.MustParse(TagOriginalName_kgCG)
 	TagName_kgCG                = Tag_kgCG.String() // The tag name may have changed from the original name after parsing.
+	Language_kgCG               = Language{
+		DisplayName:         TagDisplayName_kgCG,
+		LanguageDisplayName: TagLanguageDisplayName_kgCG,
+		RegionDisplayName:   TagRegionDisplayName_kgCG,
+		OriginalName:        TagOriginalName_kgCG,
+		Tag:                 Tag_kgCG,
+		TagName:             TagName_kgCG,
+	}
 	// Kazakh (Kazakhstan)
 	TagDisplayName_kkKZ         = "Kazakh (Kazakhstan)"
 	TagLanguageDisplayName_kkKZ = "Kazakh"
@@ -1848,6 +3944,14 @@ var (
 	TagOriginalName_kkKZ        = "kk-KZ"
 	Tag_kkKZ                    = language.MustParse(TagOriginalName_kkKZ)
 	TagName_kkKZ                = Tag_kkKZ.String() // The tag name may have changed from the original name after parsing.
+	Language_kkKZ               = Language{
+		DisplayName:         TagDisplayName_kkKZ,
+		LanguageDisplayName: TagLanguageDisplayName_kkKZ,
+		RegionDisplayName:   TagRegionDisplayName_kkKZ,
+		OriginalName:        TagOriginalName_kkKZ,
+		Tag:                 Tag_kkKZ,
+		TagName:             TagName_kkKZ,
+	}
 	// Kalaallisut/Greenlandic (Greenland)
 	TagDisplayName_klGL         = "Kalaallisut/Greenlandic (Greenland)"
 	TagLanguageDisplayName_klGL = "Kalaallisut/Greenlandic"
@@ -1855,6 +3959,14 @@ var (
 	TagOriginalName_klGL        = "kl-GL"
 	Tag_klGL                    = language.MustParse(TagOriginalName_klGL)
 	TagName_klGL                = Tag_klGL.String() // The tag name may have changed from the original name after parsing.
+	Language_klGL               = Language{
+		DisplayName:         TagDisplayName_klGL,
+		LanguageDisplayName: TagLanguageDisplayName_klGL,
+		RegionDisplayName:   TagRegionDisplayName_klGL,
+		OriginalName:        TagOriginalName_klGL,
+		Tag:                 Tag_klGL,
+		TagName:             TagName_klGL,
+	}
 	// Khmer (Cambodia)
 	TagDisplayName_kmKH         = "Khmer (Cambodia)"
 	TagLanguageDisplayName_kmKH = "Khmer"
@@ -1862,6 +3974,14 @@ var (
 	TagOriginalName_kmKH        = "km-KH"
 	Tag_kmKH                    = language.MustParse(TagOriginalName_kmKH)
 	TagName_kmKH                = Tag_kmKH.String() // The tag name may have changed from the original name after parsing.
+	Language_kmKH               = Language{
+		DisplayName:         TagDisplayName_kmKH,
+		LanguageDisplayName: TagLanguageDisplayName_kmKH,
+		RegionDisplayName:   TagRegionDisplayName_kmKH,
+		OriginalName:        TagOriginalName_kmKH,
+		Tag:                 Tag_kmKH,
+		TagName:             TagName_kmKH,
+	}
 	// Kannada (India)
 	TagDisplayName_knIN         = "Kannada (India)"
 	TagLanguageDisplayName_knIN = "Kannada"
@@ -1869,6 +3989,14 @@ var (
 	TagOriginalName_knIN        = "kn-IN"
 	Tag_knIN                    = language.MustParse(TagOriginalName_knIN)
 	TagName_knIN                = Tag_knIN.String() // The tag name may have changed from the original name after parsing.
+	Language_knIN               = Language{
+		DisplayName:         TagDisplayName_knIN,
+		LanguageDisplayName: TagLanguageDisplayName_knIN,
+		RegionDisplayName:   TagRegionDisplayName_knIN,
+		OriginalName:        TagOriginalName_knIN,
+		Tag:                 Tag_knIN,
+		TagName:             TagName_knIN,
+	}
 	// Konkani (India)
 	TagDisplayName_kokIN         = "Konkani (India)"
 	TagLanguageDisplayName_kokIN = "Konkani"
@@ -1876,6 +4004,14 @@ var (
 	TagOriginalName_kokIN        = "kok-IN"
 	Tag_kokIN                    = language.MustParse(TagOriginalName_kokIN)
 	TagName_kokIN                = Tag_kokIN.String() // The tag name may have changed from the original name after parsing.
+	Language_kokIN               = Language{
+		DisplayName:         TagDisplayName_kokIN,
+		LanguageDisplayName: TagLanguageDisplayName_kokIN,
+		RegionDisplayName:   TagRegionDisplayName_kokIN,
+		OriginalName:        TagOriginalName_kokIN,
+		Tag:                 Tag_kokIN,
+		TagName:             TagName_kokIN,
+	}
 	// Kashmiri (India)
 	TagDisplayName_ksIN         = "Kashmiri (India)"
 	TagLanguageDisplayName_ksIN = "Kashmiri"
@@ -1883,6 +4019,14 @@ var (
 	TagOriginalName_ksIN        = "ks-IN"
 	Tag_ksIN                    = language.MustParse(TagOriginalName_ksIN)
 	TagName_ksIN                = Tag_ksIN.String() // The tag name may have changed from the original name after parsing.
+	Language_ksIN               = Language{
+		DisplayName:         TagDisplayName_ksIN,
+		LanguageDisplayName: TagLanguageDisplayName_ksIN,
+		RegionDisplayName:   TagRegionDisplayName_ksIN,
+		OriginalName:        TagOriginalName_ksIN,
+		Tag:                 Tag_ksIN,
+		TagName:             TagName_ksIN,
+	}
 	// Komi (Russia)
 	TagDisplayName_kvRU         = "Komi (Russia)"
 	TagLanguageDisplayName_kvRU = "Komi"
@@ -1890,6 +4034,14 @@ var (
 	TagOriginalName_kvRU        = "kv-RU"
 	Tag_kvRU                    = language.MustParse(TagOriginalName_kvRU)
 	TagName_kvRU                = Tag_kvRU.String() // The tag name may have changed from the original name after parsing.
+	Language_kvRU               = Language{
+		DisplayName:         TagDisplayName_kvRU,
+		LanguageDisplayName: TagLanguageDisplayName_kvRU,
+		RegionDisplayName:   TagRegionDisplayName_kvRU,
+		OriginalName:        TagOriginalName_kvRU,
+		Tag:                 Tag_kvRU,
+		TagName:             TagName_kvRU,
+	}
 	// Cornish (United Kingdom)
 	TagDisplayName_kwGB         = "Cornish (United Kingdom)"
 	TagLanguageDisplayName_kwGB = "Cornish"
@@ -1897,6 +4049,14 @@ var (
 	TagOriginalName_kwGB        = "kw-GB"
 	Tag_kwGB                    = language.MustParse(TagOriginalName_kwGB)
 	TagName_kwGB                = Tag_kwGB.String() // The tag name may have changed from the original name after parsing.
+	Language_kwGB               = Language{
+		DisplayName:         TagDisplayName_kwGB,
+		LanguageDisplayName: TagLanguageDisplayName_kwGB,
+		RegionDisplayName:   TagRegionDisplayName_kwGB,
+		OriginalName:        TagOriginalName_kwGB,
+		Tag:                 Tag_kwGB,
+		TagName:             TagName_kwGB,
+	}
 	// Kyrgyz (Kyrgyz Republic)
 	TagDisplayName_kyKG         = "Kyrgyz (Kyrgyz Republic)"
 	TagLanguageDisplayName_kyKG = "Kyrgyz"
@@ -1904,6 +4064,14 @@ var (
 	TagOriginalName_kyKG        = "ky-KG"
 	Tag_kyKG                    = language.MustParse(TagOriginalName_kyKG)
 	TagName_kyKG                = Tag_kyKG.String() // The tag name may have changed from the original name after parsing.
+	Language_kyKG               = Language{
+		DisplayName:         TagDisplayName_kyKG,
+		LanguageDisplayName: TagLanguageDisplayName_kyKG,
+		RegionDisplayName:   TagRegionDisplayName_kyKG,
+		OriginalName:        TagOriginalName_kyKG,
+		Tag:                 Tag_kyKG,
+		TagName:             TagName_kyKG,
+	}
 	// Latin (Vatican City State)
 	TagDisplayName_laVA         = "Latin (Vatican City State)"
 	TagLanguageDisplayName_laVA = "Latin"
@@ -1911,6 +4079,14 @@ var (
 	TagOriginalName_laVA        = "la-VA"
 	Tag_laVA                    = language.MustParse(TagOriginalName_laVA)
 	TagName_laVA                = Tag_laVA.String() // The tag name may have changed from the original name after parsing.
+	Language_laVA               = Language{
+		DisplayName:         TagDisplayName_laVA,
+		LanguageDisplayName: TagLanguageDisplayName_laVA,
+		RegionDisplayName:   TagRegionDisplayName_laVA,
+		OriginalName:        TagOriginalName_laVA,
+		Tag:                 Tag_laVA,
+		TagName:             TagName_laVA,
+	}
 	// Luxembourgish (Luxembourg)
 	TagDisplayName_lbLU         = "Luxembourgish (Luxembourg)"
 	TagLanguageDisplayName_lbLU = "Luxembourgish"
@@ -1918,6 +4094,14 @@ var (
 	TagOriginalName_lbLU        = "lb-LU"
 	Tag_lbLU                    = language.MustParse(TagOriginalName_lbLU)
 	TagName_lbLU                = Tag_lbLU.String() // The tag name may have changed from the original name after parsing.
+	Language_lbLU               = Language{
+		DisplayName:         TagDisplayName_lbLU,
+		LanguageDisplayName: TagLanguageDisplayName_lbLU,
+		RegionDisplayName:   TagRegionDisplayName_lbLU,
+		OriginalName:        TagOriginalName_lbLU,
+		Tag:                 Tag_lbLU,
+		TagName:             TagName_lbLU,
+	}
 	// Limburgish (Luxembourg)
 	TagDisplayName_liLU         = "Limburgish (Luxembourg)"
 	TagLanguageDisplayName_liLU = "Limburgish"
@@ -1925,6 +4109,14 @@ var (
 	TagOriginalName_liLU        = "li-LU"
 	Tag_liLU                    = language.MustParse(TagOriginalName_liLU)
 	TagName_liLU                = Tag_liLU.String() // The tag name may have changed from the original name after parsing.
+	Language_liLU               = Language{
+		DisplayName:         TagDisplayName_liLU,
+		LanguageDisplayName: TagLanguageDisplayName_liLU,
+		RegionDisplayName:   TagRegionDisplayName_liLU,
+		OriginalName:        TagOriginalName_liLU,
+		Tag:                 Tag_liLU,
+		TagName:             TagName_liLU,
+	}
 	// Lao (Lao People's Democratic Republic)
 	TagDisplayName_loLA         = "Lao (Lao People's Democratic Republic)"
 	TagLanguageDisplayName_loLA = "Lao"
@@ -1932,6 +4124,14 @@ var (
 	TagOriginalName_loLA        = "lo-LA"
 	Tag_loLA                    = language.MustParse(TagOriginalName_loLA)
 	TagName_loLA                = Tag_loLA.String() // The tag name may have changed from the original name after parsing.
+	Language_loLA               = Language{
+		DisplayName:         TagDisplayName_loLA,
+		LanguageDisplayName: TagLanguageDisplayName_loLA,
+		RegionDisplayName:   TagRegionDisplayName_loLA,
+		OriginalName:        TagOriginalName_loLA,
+		Tag:                 Tag_loLA,
+		TagName:             TagName_loLA,
+	}
 	// Lithuanian (Lithuania)
 	TagDisplayName_ltLT         = "Lithuanian (Lithuania)"
 	TagLanguageDisplayName_ltLT = "Lithuanian"
@@ -1939,6 +4139,14 @@ var (
 	TagOriginalName_ltLT        = "lt-LT"
 	Tag_ltLT                    = language.MustParse(TagOriginalName_ltLT)
 	TagName_ltLT                = Tag_ltLT.String() // The tag name may have changed from the original name after parsing.
+	Language_ltLT               = Language{
+		DisplayName:         TagDisplayName_ltLT,
+		LanguageDisplayName: TagLanguageDisplayName_ltLT,
+		RegionDisplayName:   TagRegionDisplayName_ltLT,
+		OriginalName:        TagOriginalName_ltLT,
+		Tag:                 Tag_ltLT,
+		TagName:             TagName_ltLT,
+	}
 	// Latvian (Latvia)
 	TagDisplayName_lvLV         = "Latvian (Latvia)"
 	TagLanguageDisplayName_lvLV = "Latvian"
@@ -1946,6 +4154,14 @@ var (
 	TagOriginalName_lvLV        = "lv-LV"
 	Tag_lvLV                    = language.MustParse(TagOriginalName_lvLV)
 	TagName_lvLV                = Tag_lvLV.String() // The tag name may have changed from the original name after parsing.
+	Language_lvLV               = Language{
+		DisplayName:         TagDisplayName_lvLV,
+		LanguageDisplayName: TagLanguageDisplayName_lvLV,
+		RegionDisplayName:   TagRegionDisplayName_lvLV,
+		OriginalName:        TagOriginalName_lvLV,
+		Tag:                 Tag_lvLV,
+		TagName:             TagName_lvLV,
+	}
 	// Malagasy (Madagascar)
 	TagDisplayName_mgMG         = "Malagasy (Madagascar)"
 	TagLanguageDisplayName_mgMG = "Malagasy"
@@ -1953,6 +4169,14 @@ var (
 	TagOriginalName_mgMG        = "mg-MG"
 	Tag_mgMG                    = language.MustParse(TagOriginalName_mgMG)
 	TagName_mgMG                = Tag_mgMG.String() // The tag name may have changed from the original name after parsing.
+	Language_mgMG               = Language{
+		DisplayName:         TagDisplayName_mgMG,
+		LanguageDisplayName: TagLanguageDisplayName_mgMG,
+		RegionDisplayName:   TagRegionDisplayName_mgMG,
+		OriginalName:        TagOriginalName_mgMG,
+		Tag:                 Tag_mgMG,
+		TagName:             TagName_mgMG,
+	}
 	// Marshallese (Republic of the Marshall Islands)
 	TagDisplayName_mhMH         = "Marshallese (Republic of the Marshall Islands)"
 	TagLanguageDisplayName_mhMH = "Marshallese"
@@ -1960,6 +4184,14 @@ var (
 	TagOriginalName_mhMH        = "mh-MH"
 	Tag_mhMH                    = language.MustParse(TagOriginalName_mhMH)
 	TagName_mhMH                = Tag_mhMH.String() // The tag name may have changed from the original name after parsing.
+	Language_mhMH               = Language{
+		DisplayName:         TagDisplayName_mhMH,
+		LanguageDisplayName: TagLanguageDisplayName_mhMH,
+		RegionDisplayName:   TagRegionDisplayName_mhMH,
+		OriginalName:        TagOriginalName_mhMH,
+		Tag:                 Tag_mhMH,
+		TagName:             TagName_mhMH,
+	}
 	// Maori (New Zealand)
 	TagDisplayName_miNZ         = "Maori (New Zealand)"
 	TagLanguageDisplayName_miNZ = "Maori"
@@ -1967,6 +4199,14 @@ var (
 	TagOriginalName_miNZ        = "mi-NZ"
 	Tag_miNZ                    = language.MustParse(TagOriginalName_miNZ)
 	TagName_miNZ                = Tag_miNZ.String() // The tag name may have changed from the original name after parsing.
+	Language_miNZ               = Language{
+		DisplayName:         TagDisplayName_miNZ,
+		LanguageDisplayName: TagLanguageDisplayName_miNZ,
+		RegionDisplayName:   TagRegionDisplayName_miNZ,
+		OriginalName:        TagOriginalName_miNZ,
+		Tag:                 Tag_miNZ,
+		TagName:             TagName_miNZ,
+	}
 	// Macedonian (North Macedonia)
 	TagDisplayName_mkMK         = "Macedonian (North Macedonia)"
 	TagLanguageDisplayName_mkMK = "Macedonian"
@@ -1974,6 +4214,14 @@ var (
 	TagOriginalName_mkMK        = "mk-MK"
 	Tag_mkMK                    = language.MustParse(TagOriginalName_mkMK)
 	TagName_mkMK                = Tag_mkMK.String() // The tag name may have changed from the original name after parsing.
+	Language_mkMK               = Language{
+		DisplayName:         TagDisplayName_mkMK,
+		LanguageDisplayName: TagLanguageDisplayName_mkMK,
+		RegionDisplayName:   TagRegionDisplayName_mkMK,
+		OriginalName:        TagOriginalName_mkMK,
+		Tag:                 Tag_mkMK,
+		TagName:             TagName_mkMK,
+	}
 	// Malayalam (India)
 	TagDisplayName_mlIN         = "Malayalam (India)"
 	TagLanguageDisplayName_mlIN = "Malayalam"
@@ -1981,6 +4229,14 @@ var (
 	TagOriginalName_mlIN        = "ml-IN"
 	Tag_mlIN                    = language.MustParse(TagOriginalName_mlIN)
 	TagName_mlIN                = Tag_mlIN.String() // The tag name may have changed from the original name after parsing.
+	Language_mlIN               = Language{
+		DisplayName:         TagDisplayName_mlIN,
+		LanguageDisplayName: TagLanguageDisplayName_mlIN,
+		RegionDisplayName:   TagRegionDisplayName_mlIN,
+		OriginalName:        TagOriginalName_mlIN,
+		Tag:                 Tag_mlIN,
+		TagName:             TagName_mlIN,
+	}
 	// Mongolian (Mongolia)
 	TagDisplayName_mnMN         = "Mongolian (Mongolia)"
 	TagLanguageDisplayName_mnMN = "Mongolian"
@@ -1988,6 +4244,14 @@ var (
 	TagOriginalName_mnMN        = "mn-MN"
 	Tag_mnMN                    = language.MustParse(TagOriginalName_mnMN)
 	TagName_mnMN                = Tag_mnMN.String() // The tag name may have changed from the original name after parsing.
+	Language_mnMN               = Language{
+		DisplayName:         TagDisplayName_mnMN,
+		LanguageDisplayName: TagLanguageDisplayName_mnMN,
+		RegionDisplayName:   TagRegionDisplayName_mnMN,
+		OriginalName:        TagOriginalName_mnMN,
+		Tag:                 Tag_mnMN,
+		TagName:             TagName_mnMN,
+	}
 	// Moldovan (Republic of Moldova)
 	TagDisplayName_moMD         = "Moldovan (Republic of Moldova)"
 	TagLanguageDisplayName_moMD = "Moldovan"
@@ -1995,6 +4259,14 @@ var (
 	TagOriginalName_moMD        = "mo-MD"
 	Tag_moMD                    = language.MustParse(TagOriginalName_moMD)
 	TagName_moMD                = Tag_moMD.String() // The tag name may have changed from the original name after parsing.
+	Language_moMD               = Language{
+		DisplayName:         TagDisplayName_moMD,
+		LanguageDisplayName: TagLanguageDisplayName_moMD,
+		RegionDisplayName:   TagRegionDisplayName_moMD,
+		OriginalName:        TagOriginalName_moMD,
+		Tag:                 Tag_moMD,
+		TagName:             TagName_moMD,
+	}
 	// Marathi (India)
 	TagDisplayName_mrIN         = "Marathi (India)"
 	TagLanguageDisplayName_mrIN = "Marathi"
@@ -2002,6 +4274,14 @@ var (
 	TagOriginalName_mrIN        = "mr-IN"
 	Tag_mrIN                    = language.MustParse(TagOriginalName_mrIN)
 	TagName_mrIN                = Tag_mrIN.String() // The tag name may have changed from the original name after parsing.
+	Language_mrIN               = Language{
+		DisplayName:         TagDisplayName_mrIN,
+		LanguageDisplayName: TagLanguageDisplayName_mrIN,
+		RegionDisplayName:   TagRegionDisplayName_mrIN,
+		OriginalName:        TagOriginalName_mrIN,
+		Tag:                 Tag_mrIN,
+		TagName:             TagName_mrIN,
+	}
 	// Maltese (Malta)
 	TagDisplayName_mtMT         = "Maltese (Malta)"
 	TagLanguageDisplayName_mtMT = "Maltese"
@@ -2009,6 +4289,14 @@ var (
 	TagOriginalName_mtMT        = "mt-MT"
 	Tag_mtMT                    = language.MustParse(TagOriginalName_mtMT)
 	TagName_mtMT                = Tag_mtMT.String() // The tag name may have changed from the original name after parsing.
+	Language_mtMT               = Language{
+		DisplayName:         TagDisplayName_mtMT,
+		LanguageDisplayName: TagLanguageDisplayName_mtMT,
+		RegionDisplayName:   TagRegionDisplayName_mtMT,
+		OriginalName:        TagOriginalName_mtMT,
+		Tag:                 Tag_mtMT,
+		TagName:             TagName_mtMT,
+	}
 	// Burmese (Myanmar)
 	TagDisplayName_myMM         = "Burmese (Myanmar)"
 	TagLanguageDisplayName_myMM = "Burmese"
@@ -2016,6 +4304,14 @@ var (
 	TagOriginalName_myMM        = "my-MM"
 	Tag_myMM                    = language.MustParse(TagOriginalName_myMM)
 	TagName_myMM                = Tag_myMM.String() // The tag name may have changed from the original name after parsing.
+	Language_myMM               = Language{
+		DisplayName:         TagDisplayName_myMM,
+		LanguageDisplayName: TagLanguageDisplayName_myMM,
+		RegionDisplayName:   TagRegionDisplayName_myMM,
+		OriginalName:        TagOriginalName_myMM,
+		Tag:                 Tag_myMM,
+		TagName:             TagName_myMM,
+	}
 	// Nauruan (Republic of Nauru)
 	TagDisplayName_naNR         = "Nauruan (Republic of Nauru)"
 	TagLanguageDisplayName_naNR = "Nauruan"
@@ -2023,6 +4319,14 @@ var (
 	TagOriginalName_naNR        = "na-NR"
 	Tag_naNR                    = language.MustParse(TagOriginalName_naNR)
 	TagName_naNR                = Tag_naNR.String() // The tag name may have changed from the original name after parsing.
+	Language_naNR               = Language{
+		DisplayName:         TagDisplayName_naNR,
+		LanguageDisplayName: TagLanguageDisplayName_naNR,
+		RegionDisplayName:   TagRegionDisplayName_naNR,
+		OriginalName:        TagOriginalName_naNR,
+		Tag:                 Tag_naNR,
+		TagName:             TagName_naNR,
+	}
 	// Norwegian (Bokmål)
 	TagDisplayName_nbNO         = "Norwegian (Bokmål)"
 	TagLanguageDisplayName_nbNO = "Norwegian"
@@ -2030,6 +4334,14 @@ var (
 	TagOriginalName_nbNO        = "nb-NO"
 	Tag_nbNO                    = language.MustParse(TagOriginalName_nbNO)
 	TagName_nbNO                = Tag_nbNO.String() // The tag name may have changed from the original name after parsing.
+	Language_nbNO               = Language{
+		DisplayName:         TagDisplayName_nbNO,
+		LanguageDisplayName: TagLanguageDisplayName_nbNO,
+		RegionDisplayName:   TagRegionDisplayName_nbNO,
+		OriginalName:        TagOriginalName_nbNO,
+		Tag:                 Tag_nbNO,
+		TagName:             TagName_nbNO,
+	}
 	// North Ndebele (Zimbabwe)
 	TagDisplayName_ndZW         = "North Ndebele (Zimbabwe)"
 	TagLanguageDisplayName_ndZW = "North Ndebele"
@@ -2037,6 +4349,14 @@ var (
 	TagOriginalName_ndZW        = "nd-ZW"
 	Tag_ndZW                    = language.MustParse(TagOriginalName_ndZW)
 	TagName_ndZW                = Tag_ndZW.String() // The tag name may have changed from the original name after parsing.
+	Language_ndZW               = Language{
+		DisplayName:         TagDisplayName_ndZW,
+		LanguageDisplayName: TagLanguageDisplayName_ndZW,
+		RegionDisplayName:   TagRegionDisplayName_ndZW,
+		OriginalName:        TagOriginalName_ndZW,
+		Tag:                 Tag_ndZW,
+		TagName:             TagName_ndZW,
+	}
 	// Ndonga (Republic of Namibia)
 	TagDisplayName_ngNA         = "Ndonga (Republic of Namibia)"
 	TagLanguageDisplayName_ngNA = "Ndonga"
@@ -2044,6 +4364,14 @@ var (
 	TagOriginalName_ngNA        = "ng-NA"
 	Tag_ngNA                    = language.MustParse(TagOriginalName_ngNA)
 	TagName_ngNA                = Tag_ngNA.String() // The tag name may have changed from the original name after parsing.
+	Language_ngNA               = Language{
+		DisplayName:         TagDisplayName_ngNA,
+		LanguageDisplayName: TagLanguageDisplayName_ngNA,
+		RegionDisplayName:   TagRegionDisplayName_ngNA,
+		OriginalName:        TagOriginalName_ngNA,
+		Tag:                 Tag_ngNA,
+		TagName:             TagName_ngNA,
+	}
 	// Norwegian (Nynorsk)
 	TagDisplayName_nnNO         = "Norwegian (Nynorsk)"
 	TagLanguageDisplayName_nnNO = "Norwegian"
@@ -2051,6 +4379,14 @@ var (
 	TagOriginalName_nnNO        = "nn-NO"
 	Tag_nnNO                    = language.MustParse(TagOriginalName_nnNO)
 	TagName_nnNO                = Tag_nnNO.String() // The tag name may have changed from the original name after parsing.
+	Language_nnNO               = Language{
+		DisplayName:         TagDisplayName_nnNO,
+		LanguageDisplayName: TagLanguageDisplayName_nnNO,
+		RegionDisplayName:   TagRegionDisplayName_nnNO,
+		OriginalName:        TagOriginalName_nnNO,
+		Tag:                 Tag_nnNO,
+		TagName:             TagName_nnNO,
+	}
 	// Northern Sotho (South Africa)
 	TagDisplayName_nsoZA         = "Northern Sotho (South Africa)"
 	TagLanguageDisplayName_nsoZA = "Northern Sotho"
@@ -2058,6 +4394,14 @@ var (
 	TagOriginalName_nsoZA        = "nso-ZA"
 	Tag_nsoZA                    = language.MustParse(TagOriginalName_nsoZA)
 	TagName_nsoZA                = Tag_nsoZA.String() // The tag name may have changed from the original name after parsing.
+	Language_nsoZA               = Language{
+		DisplayName:         TagDisplayName_nsoZA,
+		LanguageDisplayName: TagLanguageDisplayName_nsoZA,
+		RegionDisplayName:   TagRegionDisplayName_nsoZA,
+		OriginalName:        TagOriginalName_nsoZA,
+		Tag:                 Tag_nsoZA,
+		TagName:             TagName_nsoZA,
+	}
 	// Chewa (Malawi)
 	TagDisplayName_nyMW         = "Chewa (Malawi)"
 	TagLanguageDisplayName_nyMW = "Chewa"
@@ -2065,6 +4409,14 @@ var (
 	TagOriginalName_nyMW        = "ny-MW"
 	Tag_nyMW                    = language.MustParse(TagOriginalName_nyMW)
 	TagName_nyMW                = Tag_nyMW.String() // The tag name may have changed from the original name after parsing.
+	Language_nyMW               = Language{
+		DisplayName:         TagDisplayName_nyMW,
+		LanguageDisplayName: TagLanguageDisplayName_nyMW,
+		RegionDisplayName:   TagRegionDisplayName_nyMW,
+		OriginalName:        TagOriginalName_nyMW,
+		Tag:                 Tag_nyMW,
+		TagName:             TagName_nyMW,
+	}
 	// Occitan (France)
 	TagDisplayName_ocFR         = "Occitan (France)"
 	TagLanguageDisplayName_ocFR = "Occitan"
@@ -2072,6 +4424,14 @@ var (
 	TagOriginalName_ocFR        = "oc-FR"
 	Tag_ocFR                    = language.MustParse(TagOriginalName_ocFR)
 	TagName_ocFR                = Tag_ocFR.String() // The tag name may have changed from the original name after parsing.
+	Language_ocFR               = Language{
+		DisplayName:         TagDisplayName_ocFR,
+		LanguageDisplayName: TagLanguageDisplayName_ocFR,
+		RegionDisplayName:   TagRegionDisplayName_ocFR,
+		OriginalName:        TagOriginalName_ocFR,
+		Tag:                 Tag_ocFR,
+		TagName:             TagName_ocFR,
+	}
 	// Oriya (India)
 	TagDisplayName_orIN         = "Oriya (India)"
 	TagLanguageDisplayName_orIN = "Oriya"
@@ -2079,6 +4439,14 @@ var (
 	TagOriginalName_orIN        = "or-IN"
 	Tag_orIN                    = language.MustParse(TagOriginalName_orIN)
 	TagName_orIN                = Tag_orIN.String() // The tag name may have changed from the original name after parsing.
+	Language_orIN               = Language{
+		DisplayName:         TagDisplayName_orIN,
+		LanguageDisplayName: TagLanguageDisplayName_orIN,
+		RegionDisplayName:   TagRegionDisplayName_orIN,
+		OriginalName:        TagOriginalName_orIN,
+		Tag:                 Tag_orIN,
+		TagName:             TagName_orIN,
+	}
 	// Ossetian (Georgia)
 	TagDisplayName_osGE         = "Ossetian (Georgia)"
 	TagLanguageDisplayName_osGE = "Ossetian"
@@ -2086,6 +4454,14 @@ var (
 	TagOriginalName_osGE        = "os-GE"
 	Tag_osGE                    = language.MustParse(TagOriginalName_osGE)
 	TagName_osGE                = Tag_osGE.String() // The tag name may have changed from the original name after parsing.
+	Language_osGE               = Language{
+		DisplayName:         TagDisplayName_osGE,
+		LanguageDisplayName: TagLanguageDisplayName_osGE,
+		RegionDisplayName:   TagRegionDisplayName_osGE,
+		OriginalName:        TagOriginalName_osGE,
+		Tag:                 Tag_osGE,
+		TagName:             TagName_osGE,
+	}
 	// Ossetian (Russia)
 	TagDisplayName_osRU         = "Ossetian (Russia)"
 	TagLanguageDisplayName_osRU = "Ossetian"
@@ -2093,6 +4469,14 @@ var (
 	TagOriginalName_osRU        = "os-RU"
 	Tag_osRU                    = language.MustParse(TagOriginalName_osRU)
 	TagName_osRU                = Tag_osRU.String() // The tag name may have changed from the original name after parsing.
+	Language_osRU               = Language{
+		DisplayName:         TagDisplayName_osRU,
+		LanguageDisplayName: TagLanguageDisplayName_osRU,
+		RegionDisplayName:   TagRegionDisplayName_osRU,
+		OriginalName:        TagOriginalName_osRU,
+		Tag:                 Tag_osRU,
+		TagName:             TagName_osRU,
+	}
 	// Panjabi/Punjabi (India)
 	TagDisplayName_paIN         = "Panjabi/Punjabi (India)"
 	TagLanguageDisplayName_paIN = "Panjabi/Punjabi"
@@ -2100,6 +4484,14 @@ var (
 	TagOriginalName_paIN        = "pa-IN"
 	Tag_paIN                    = language.MustParse(TagOriginalName_paIN)
 	TagName_paIN                = Tag_paIN.String() // The tag name may have changed from the original name after parsing.
+	Language_paIN               = Language{
+		DisplayName:         TagDisplayName_paIN,
+		LanguageDisplayName: TagLanguageDisplayName_paIN,
+		RegionDisplayName:   TagRegionDisplayName_paIN,
+		OriginalName:        TagOriginalName_paIN,
+		Tag:                 Tag_paIN,
+		TagName:             TagName_paIN,
+	}
 	// Pali (India)
 	TagDisplayName_piIN         = "Pali (India)"
 	TagLanguageDisplayName_piIN = "Pali"
@@ -2107,6 +4499,14 @@ var (
 	TagOriginalName_piIN        = "pi-IN"
 	Tag_piIN                    = language.MustParse(TagOriginalName_piIN)
 	TagName_piIN                = Tag_piIN.String() // The tag name may have changed from the original name after parsing.
+	Language_piIN               = Language{
+		DisplayName:         TagDisplayName_piIN,
+		LanguageDisplayName: TagLanguageDisplayName_piIN,
+		RegionDisplayName:   TagRegionDisplayName_piIN,
+		OriginalName:        TagOriginalName_piIN,
+		Tag:                 Tag_piIN,
+		TagName:             TagName_piIN,
+	}
 	// Polish (Poland)
 	TagDisplayName_plPL         = "Polish (Poland)"
 	TagLanguageDisplayName_plPL = "Polish"
@@ -2114,6 +4514,14 @@ var (
 	TagOriginalName_plPL        = "pl-PL"
 	Tag_plPL                    = language.MustParse(TagOriginalName_plPL)
 	TagName_plPL                = Tag_plPL.String() // The tag name may have changed from the original name after parsing.
+	Language_plPL               = Language{
+		DisplayName:         TagDisplayName_plPL,
+		LanguageDisplayName: TagLanguageDisplayName_plPL,
+		RegionDisplayName:   TagRegionDisplayName_plPL,
+		OriginalName:        TagOriginalName_plPL,
+		Tag:                 Tag_plPL,
+		TagName:             TagName_plPL,
+	}
 	// Pushto/Pashto (Afghanistan)
 	TagDisplayName_psAF         = "Pushto/Pashto (Afghanistan)"
 	TagLanguageDisplayName_psAF = "Pushto/Pashto"
@@ -2121,6 +4529,14 @@ var (
 	TagOriginalName_psAF        = "ps-AF"
 	Tag_psAF                    = language.MustParse(TagOriginalName_psAF)
 	TagName_psAF                = Tag_psAF.String() // The tag name may have changed from the original name after parsing.
+	Language_psAF               = Language{
+		DisplayName:         TagDisplayName_psAF,
+		LanguageDisplayName: TagLanguageDisplayName_psAF,
+		RegionDisplayName:   TagRegionDisplayName_psAF,
+		OriginalName:        TagOriginalName_psAF,
+		Tag:                 Tag_psAF,
+		TagName:             TagName_psAF,
+	}
 	// Romansh (Switzerland)
 	TagDisplayName_rmCH         = "Romansh (Switzerland)"
 	TagLanguageDisplayName_rmCH = "Romansh"
@@ -2128,6 +4544,14 @@ var (
 	TagOriginalName_rmCH        = "rm-CH"
 	Tag_rmCH                    = language.MustParse(TagOriginalName_rmCH)
 	TagName_rmCH                = Tag_rmCH.String() // The tag name may have changed from the original name after parsing.
+	Language_rmCH               = Language{
+		DisplayName:         TagDisplayName_rmCH,
+		LanguageDisplayName: TagLanguageDisplayName_rmCH,
+		RegionDisplayName:   TagRegionDisplayName_rmCH,
+		OriginalName:        TagOriginalName_rmCH,
+		Tag:                 Tag_rmCH,
+		TagName:             TagName_rmCH,
+	}
 	// Rundi (Burundi)
 	TagDisplayName_rnBI         = "Rundi (Burundi)"
 	TagLanguageDisplayName_rnBI = "Rundi"
@@ -2135,6 +4559,14 @@ var (
 	TagOriginalName_rnBI        = "rn-BI"
 	Tag_rnBI                    = language.MustParse(TagOriginalName_rnBI)
 	TagName_rnBI                = Tag_rnBI.String() // The tag name may have changed from the original name after parsing.
+	Language_rnBI               = Language{
+		DisplayName:         TagDisplayName_rnBI,
+		LanguageDisplayName: TagLanguageDisplayName_rnBI,
+		RegionDisplayName:   TagRegionDisplayName_rnBI,
+		OriginalName:        TagOriginalName_rnBI,
+		Tag:                 Tag_rnBI,
+		TagName:             TagName_rnBI,
+	}
 	// Kinyarwanda (Rwanda)
 	TagDisplayName_rwRW         = "Kinyarwanda (Rwanda)"
 	TagLanguageDisplayName_rwRW = "Kinyarwanda"
@@ -2142,6 +4574,14 @@ var (
 	TagOriginalName_rwRW        = "rw-RW"
 	Tag_rwRW                    = language.MustParse(TagOriginalName_rwRW)
 	TagName_rwRW                = Tag_rwRW.String() // The tag name may have changed from the original name after parsing.
+	Language_rwRW               = Language{
+		DisplayName:         TagDisplayName_rwRW,
+		LanguageDisplayName: TagLanguageDisplayName_rwRW,
+		RegionDisplayName:   TagRegionDisplayName_rwRW,
+		OriginalName:        TagOriginalName_rwRW,
+		Tag:                 Tag_rwRW,
+		TagName:             TagName_rwRW,
+	}
 	// Sanskrit (India)
 	TagDisplayName_saIN         = "Sanskrit (India)"
 	TagLanguageDisplayName_saIN = "Sanskrit"
@@ -2149,6 +4589,14 @@ var (
 	TagOriginalName_saIN        = "sa-IN"
 	Tag_saIN                    = language.MustParse(TagOriginalName_saIN)
 	TagName_saIN                = Tag_saIN.String() // The tag name may have changed from the original name after parsing.
+	Language_saIN               = Language{
+		DisplayName:         TagDisplayName_saIN,
+		LanguageDisplayName: TagLanguageDisplayName_saIN,
+		RegionDisplayName:   TagRegionDisplayName_saIN,
+		OriginalName:        TagOriginalName_saIN,
+		Tag:                 Tag_saIN,
+		TagName:             TagName_saIN,
+	}
 	// Sardinian (Italy)
 	TagDisplayName_scIT         = "Sardinian (Italy)"
 	TagLanguageDisplayName_scIT = "Sardinian"
@@ -2156,6 +4604,14 @@ var (
 	TagOriginalName_scIT        = "sc-IT"
 	Tag_scIT                    = language.MustParse(TagOriginalName_scIT)
 	TagName_scIT                = Tag_scIT.String() // The tag name may have changed from the original name after parsing.
+	Language_scIT               = Language{
+		DisplayName:         TagDisplayName_scIT,
+		LanguageDisplayName: TagLanguageDisplayName_scIT,
+		RegionDisplayName:   TagRegionDisplayName_scIT,
+		OriginalName:        TagOriginalName_scIT,
+		Tag:                 Tag_scIT,
+		TagName:             TagName_scIT,
+	}
 	// Sindhi (Islamic Republic of Pakistan)
 	TagDisplayName_sdPK         = "Sindhi (Islamic Republic of Pakistan)"
 	TagLanguageDisplayName_sdPK = "Sindhi"
@@ -2163,6 +4619,14 @@ var (
 	TagOriginalName_sdPK        = "sd-PK"
 	Tag_sdPK                    = language.MustParse(TagOriginalName_sdPK)
 	TagName_sdPK                = Tag_sdPK.String() // The tag name may have changed from the original name after parsing.
+	Language_sdPK               = Language{
+		DisplayName:         TagDisplayName_sdPK,
+		LanguageDisplayName: TagLanguageDisplayName_sdPK,
+		RegionDisplayName:   TagRegionDisplayName_sdPK,
+		OriginalName:        TagOriginalName_sdPK,
+		Tag:                 Tag_sdPK,
+		TagName:             TagName_sdPK,
+	}
 	// Sango (Central African Republic)
 	TagDisplayName_sgCF         = "Sango (Central African Republic)"
 	TagLanguageDisplayName_sgCF = "Sango"
@@ -2170,6 +4634,14 @@ var (
 	TagOriginalName_sgCF        = "sg-CF"
 	Tag_sgCF                    = language.MustParse(TagOriginalName_sgCF)
 	TagName_sgCF                = Tag_sgCF.String() // The tag name may have changed from the original name after parsing.
+	Language_sgCF               = Language{
+		DisplayName:         TagDisplayName_sgCF,
+		LanguageDisplayName: TagLanguageDisplayName_sgCF,
+		RegionDisplayName:   TagRegionDisplayName_sgCF,
+		OriginalName:        TagOriginalName_sgCF,
+		Tag:                 Tag_sgCF,
+		TagName:             TagName_sgCF,
+	}
 	// Sinhalese (India)
 	TagDisplayName_siIN         = "Sinhalese (India)"
 	TagLanguageDisplayName_siIN = "Sinhalese"
@@ -2177,6 +4649,14 @@ var (
 	TagOriginalName_siIN        = "si-IN"
 	Tag_siIN                    = language.MustParse(TagOriginalName_siIN)
 	TagName_siIN                = Tag_siIN.String() // The tag name may have changed from the original name after parsing.
+	Language_siIN               = Language{
+		DisplayName:         TagDisplayName_siIN,
+		LanguageDisplayName: TagLanguageDisplayName_siIN,
+		RegionDisplayName:   TagRegionDisplayName_siIN,
+		OriginalName:        TagOriginalName_siIN,
+		Tag:                 Tag_siIN,
+		TagName:             TagName_siIN,
+	}
 	// Sinhala (Democratic Socialist Republic of Sri Lanka)
 	TagDisplayName_siLK         = "Sinhala (Democratic Socialist Republic of Sri Lanka)"
 	TagLanguageDisplayName_siLK = "Sinhala"
@@ -2184,6 +4664,14 @@ var (
 	TagOriginalName_siLK        = "si-LK"
 	Tag_siLK                    = language.MustParse(TagOriginalName_siLK)
 	TagName_siLK                = Tag_siLK.String() // The tag name may have changed from the original name after parsing.
+	Language_siLK               = Language{
+		DisplayName:         TagDisplayName_siLK,
+		LanguageDisplayName: TagLanguageDisplayName_siLK,
+		RegionDisplayName:   TagRegionDisplayName_siLK,
+		OriginalName:        TagOriginalName_siLK,
+		Tag:                 Tag_siLK,
+		TagName:             TagName_siLK,
+	}
 	// Slovak (Slovakia)
 	TagDisplayName_skSK         = "Slovak (Slovakia)"
 	TagLanguageDisplayName_skSK = "Slovak"
@@ -2191,6 +4679,14 @@ var (
 	TagOriginalName_skSK        = "sk-SK"
 	Tag_skSK                    = language.MustParse(TagOriginalName_skSK)
 	TagName_skSK                = Tag_skSK.String() // The tag name may have changed from the original name after parsing.
+	Language_skSK               = Language{
+		DisplayName:         TagDisplayName_skSK,
+		LanguageDisplayName: TagLanguageDisplayName_skSK,
+		RegionDisplayName:   TagRegionDisplayName_skSK,
+		OriginalName:        TagOriginalName_skSK,
+		Tag:                 Tag_skSK,
+		TagName:             TagName_skSK,
+	}
 	// Slovenian (Slovenia)
 	TagDisplayName_slSI         = "Slovenian (Slovenia)"
 	TagLanguageDisplayName_slSI = "Slovenian"
@@ -2198,6 +4694,14 @@ var (
 	TagOriginalName_slSI        = "sl-SI"
 	Tag_slSI                    = language.MustParse(TagOriginalName_slSI)
 	TagName_slSI                = Tag_slSI.String() // The tag name may have changed from the original name after parsing.
+	Language_slSI               = Language{
+		DisplayName:         TagDisplayName_slSI,
+		LanguageDisplayName: TagLanguageDisplayName_slSI,
+		RegionDisplayName:   TagRegionDisplayName_slSI,
+		OriginalName:        TagOriginalName_slSI,
+		Tag:                 Tag_slSI,
+		TagName:             TagName_slSI,
+	}
 	// Samoan (Independent State of Samoa)
 	TagDisplayName_smWS         = "Samoan (Independent State of Samoa)"
 	TagLanguageDisplayName_smWS = "Samoan"
@@ -2205,6 +4709,14 @@ var (
 	TagOriginalName_smWS        = "sm-WS"
 	Tag_smWS                    = language.MustParse(TagOriginalName_smWS)
 	TagName_smWS                = Tag_smWS.String() // The tag name may have changed from the original name after parsing.
+	Language_smWS               = Language{
+		DisplayName:         TagDisplayName_smWS,
+		LanguageDisplayName: TagLanguageDisplayName_smWS,
+		RegionDisplayName:   TagRegionDisplayName_smWS,
+		OriginalName:        TagOriginalName_smWS,
+		Tag:                 Tag_smWS,
+		TagName:             TagName_smWS,
+	}
 	// Shona (Zimbabwe)
 	TagDisplayName_snZW         = "Shona (Zimbabwe)"
 	TagLanguageDisplayName_snZW = "Shona"
@@ -2212,6 +4724,14 @@ var (
 	TagOriginalName_snZW        = "sn-ZW"
 	Tag_snZW                    = language.MustParse(TagOriginalName_snZW)
 	TagName_snZW                = Tag_snZW.String() // The tag name may have changed from the original name after parsing.
+	Language_snZW               = Language{
+		DisplayName:         TagDisplayName_snZW,
+		LanguageDisplayName: TagLanguageDisplayName_snZW,
+		RegionDisplayName:   TagRegionDisplayName_snZW,
+		OriginalName:        TagOriginalName_snZW,
+		Tag:                 Tag_snZW,
+		TagName:             TagName_snZW,
+	}
 	// Sundanese (Indonesia)
 	TagDisplayName_suID         = "Sundanese (Indonesia)"
 	TagLanguageDisplayName_suID = "Sundanese"
@@ -2219,6 +4739,14 @@ var (
 	TagOriginalName_suID        = "su-ID"
 	Tag_suID                    = language.MustParse(TagOriginalName_suID)
 	TagName_suID                = Tag_suID.String() // The tag name may have changed from the original name after parsing.
+	Language_suID               = Language{
+		DisplayName:         TagDisplayName_suID,
+		LanguageDisplayName: TagLanguageDisplayName_suID,
+		RegionDisplayName:   TagRegionDisplayName_suID,
+		OriginalName:        TagOriginalName_suID,
+		Tag:                 Tag_suID,
+		TagName:             TagName_suID,
+	}
 	// Syriac (Syria)
 	TagDisplayName_syrTR         = "Syriac (Syria)"
 	TagLanguageDisplayName_syrTR = "Syriac"
@@ -2226,6 +4754,14 @@ var (
 	TagOriginalName_syrTR        = "syr-TR"
 	Tag_syrTR                    = language.MustParse(TagOriginalName_syrTR)
 	TagName_syrTR                = Tag_syrTR.String() // The tag name may have changed from the original name after parsing.
+	Language_syrTR               = Language{
+		DisplayName:         TagDisplayName_syrTR,
+		LanguageDisplayName: TagLanguageDisplayName_syrTR,
+		RegionDisplayName:   TagRegionDisplayName_syrTR,
+		OriginalName:        TagOriginalName_syrTR,
+		Tag:                 Tag_syrTR,
+		TagName:             TagName_syrTR,
+	}
 	// Tamil (India)
 	TagDisplayName_taIN         = "Tamil (India)"
 	TagLanguageDisplayName_taIN = "Tamil"
@@ -2233,6 +4769,14 @@ var (
 	TagOriginalName_taIN        = "ta-IN"
 	Tag_taIN                    = language.MustParse(TagOriginalName_taIN)
 	TagName_taIN                = Tag_taIN.String() // The tag name may have changed from the original name after parsing.
+	Language_taIN               = Language{
+		DisplayName:         TagDisplayName_taIN,
+		LanguageDisplayName: TagLanguageDisplayName_taIN,
+		RegionDisplayName:   TagRegionDisplayName_taIN,
+		OriginalName:        TagOriginalName_taIN,
+		Tag:                 Tag_taIN,
+		TagName:             TagName_taIN,
+	}
 	// Telugu (India)
 	TagDisplayName_teIN         = "Telugu (India)"
 	TagLanguageDisplayName_teIN = "Telugu"
@@ -2240,6 +4784,14 @@ var (
 	TagOriginalName_teIN        = "te-IN"
 	Tag_teIN                    = language.MustParse(TagOriginalName_teIN)
 	TagName_teIN                = Tag_teIN.String() // The tag name may have changed from the original name after parsing.
+	Language_teIN               = Language{
+		DisplayName:         TagDisplayName_teIN,
+		LanguageDisplayName: TagLanguageDisplayName_teIN,
+		RegionDisplayName:   TagRegionDisplayName_teIN,
+		OriginalName:        TagOriginalName_teIN,
+		Tag:                 Tag_teIN,
+		TagName:             TagName_teIN,
+	}
 	// Tetum (Indonesia)
 	TagDisplayName_tetID         = "Tetum (Indonesia)"
 	TagLanguageDisplayName_tetID = "Tetum"
@@ -2247,6 +4799,14 @@ var (
 	TagOriginalName_tetID        = "tet-ID"
 	Tag_tetID                    = language.MustParse(TagOriginalName_tetID)
 	TagName_tetID                = Tag_tetID.String() // The tag name may have changed from the original name after parsing.
+	Language_tetID               = Language{
+		DisplayName:         TagDisplayName_tetID,
+		LanguageDisplayName: TagLanguageDisplayName_tetID,
+		RegionDisplayName:   TagRegionDisplayName_tetID,
+		OriginalName:        TagOriginalName_tetID,
+		Tag:                 Tag_tetID,
+		TagName:             TagName_tetID,
+	}
 	// Tetum (Democratic Republic of Timor-Leste)
 	TagDisplayName_tetTL         = "Tetum (Democratic Republic of Timor-Leste)"
 	TagLanguageDisplayName_tetTL = "Tetum"
@@ -2254,6 +4814,14 @@ var (
 	TagOriginalName_tetTL        = "tet-TL"
 	Tag_tetTL                    = language.MustParse(TagOriginalName_tetTL)
 	TagName_tetTL                = Tag_tetTL.String() // The tag name may have changed from the original name after parsing.
+	Language_tetTL               = Language{
+		DisplayName:         TagDisplayName_tetTL,
+		LanguageDisplayName: TagLanguageDisplayName_tetTL,
+		RegionDisplayName:   TagRegionDisplayName_tetTL,
+		OriginalName:        TagOriginalName_tetTL,
+		Tag:                 Tag_tetTL,
+		TagName:             TagName_tetTL,
+	}
 	// Tajik (Tajikistan)
 	TagDisplayName_tgTJ         = "Tajik (Tajikistan)"
 	TagLanguageDisplayName_tgTJ = "Tajik"
@@ -2261,6 +4829,14 @@ var (
 	TagOriginalName_tgTJ        = "tg-TJ"
 	Tag_tgTJ                    = language.MustParse(TagOriginalName_tgTJ)
 	TagName_tgTJ                = Tag_tgTJ.String() // The tag name may have changed from the original name after parsing.
+	Language_tgTJ               = Language{
+		DisplayName:         TagDisplayName_tgTJ,
+		LanguageDisplayName: TagLanguageDisplayName_tgTJ,
+		RegionDisplayName:   TagRegionDisplayName_tgTJ,
+		OriginalName:        TagOriginalName_tgTJ,
+		Tag:                 Tag_tgTJ,
+		TagName:             TagName_tgTJ,
+	}
 	// Thai (Thailand)
 	TagDisplayName_thTH         = "Thai (Thailand)"
 	TagLanguageDisplayName_thTH = "Thai"
@@ -2268,6 +4844,14 @@ var (
 	TagOriginalName_thTH        = "th-TH"
 	Tag_thTH                    = language.MustParse(TagOriginalName_thTH)
 	TagName_thTH                = Tag_thTH.String() // The tag name may have changed from the original name after parsing.
+	Language_thTH               = Language{
+		DisplayName:         TagDisplayName_thTH,
+		LanguageDisplayName: TagLanguageDisplayName_thTH,
+		RegionDisplayName:   TagRegionDisplayName_thTH,
+		OriginalName:        TagOriginalName_thTH,
+		Tag:                 Tag_thTH,
+		TagName:             TagName_thTH,
+	}
 	// Turkmen (Turkmenistan)
 	TagDisplayName_tkTM         = "Turkmen (Turkmenistan)"
 	TagLanguageDisplayName_tkTM = "Turkmen"
@@ -2275,6 +4859,14 @@ var (
 	TagOriginalName_tkTM        = "tk-TM"
 	Tag_tkTM                    = language.MustParse(TagOriginalName_tkTM)
 	TagName_tkTM                = Tag_tkTM.String() // The tag name may have changed from the original name after parsing.
+	Language_tkTM               = Language{
+		DisplayName:         TagDisplayName_tkTM,
+		LanguageDisplayName: TagLanguageDisplayName_tkTM,
+		RegionDisplayName:   TagRegionDisplayName_tkTM,
+		OriginalName:        TagOriginalName_tkTM,
+		Tag:                 Tag_tkTM,
+		TagName:             TagName_tkTM,
+	}
 	// Tagalog (Philippines)
 	TagDisplayName_tlPH         = "Tagalog (Philippines)"
 	TagLanguageDisplayName_tlPH = "Tagalog"
@@ -2282,6 +4874,14 @@ var (
 	TagOriginalName_tlPH        = "tl-PH"
 	Tag_tlPH                    = language.MustParse(TagOriginalName_tlPH)
 	TagName_tlPH                = Tag_tlPH.String() // The tag name may have changed from the original name after parsing.
+	Language_tlPH               = Language{
+		DisplayName:         TagDisplayName_tlPH,
+		LanguageDisplayName: TagLanguageDisplayName_tlPH,
+		RegionDisplayName:   TagRegionDisplayName_tlPH,
+		OriginalName:        TagOriginalName_tlPH,
+		Tag:                 Tag_tlPH,
+		TagName:             TagName_tlPH,
+	}
 	// Tongan (Tonga)
 	TagDisplayName_toTO         = "Tongan (Tonga)"
 	TagLanguageDisplayName_toTO = "Tongan"
@@ -2289,6 +4889,14 @@ var (
 	TagOriginalName_toTO        = "to-TO"
 	Tag_toTO                    = language.MustParse(TagOriginalName_toTO)
 	TagName_toTO                = Tag_toTO.String() // The tag name may have changed from the original name after parsing.
+	Language_toTO               = Language{
+		DisplayName:         TagDisplayName_toTO,
+		LanguageDisplayName: TagLanguageDisplayName_toTO,
+		RegionDisplayName:   TagRegionDisplayName_toTO,
+		OriginalName:        TagOriginalName_toTO,
+		Tag:                 Tag_toTO,
+		TagName:             TagName_toTO,
+	}
 	// Tsonga (South Africa)
 	TagDisplayName_tsZA         = "Tsonga (South Africa)"
 	TagLanguageDisplayName_tsZA = "Tsonga"
@@ -2296,6 +4904,14 @@ var (
 	TagOriginalName_tsZA        = "ts-ZA"
 	Tag_tsZA                    = language.MustParse(TagOriginalName_tsZA)
 	TagName_tsZA                = Tag_tsZA.String() // The tag name may have changed from the original name after parsing.
+	Language_tsZA               = Language{
+		DisplayName:         TagDisplayName_tsZA,
+		LanguageDisplayName: TagLanguageDisplayName_tsZA,
+		RegionDisplayName:   TagRegionDisplayName_tsZA,
+		OriginalName:        TagOriginalName_tsZA,
+		Tag:                 Tag_tsZA,
+		TagName:             TagName_tsZA,
+	}
 	// Tatar (Russia)
 	TagDisplayName_ttRU         = "Tatar (Russia)"
 	TagLanguageDisplayName_ttRU = "Tatar"
@@ -2303,6 +4919,14 @@ var (
 	TagOriginalName_ttRU        = "tt-RU"
 	Tag_ttRU                    = language.MustParse(TagOriginalName_ttRU)
 	TagName_ttRU                = Tag_ttRU.String() // The tag name may have changed from the original name after parsing.
+	Language_ttRU               = Language{
+		DisplayName:         TagDisplayName_ttRU,
+		LanguageDisplayName: TagLanguageDisplayName_ttRU,
+		RegionDisplayName:   TagRegionDisplayName_ttRU,
+		OriginalName:        TagOriginalName_ttRU,
+		Tag:                 Tag_ttRU,
+		TagName:             TagName_ttRU,
+	}
 	// Twi (Ghana)
 	TagDisplayName_twGH         = "Twi (Ghana)"
 	TagLanguageDisplayName_twGH = "Twi"
@@ -2310,6 +4934,14 @@ var (
 	TagOriginalName_twGH        = "tw-GH"
 	Tag_twGH                    = language.MustParse(TagOriginalName_twGH)
 	TagName_twGH                = Tag_twGH.String() // The tag name may have changed from the original name after parsing.
+	Language_twGH               = Language{
+		DisplayName:         TagDisplayName_twGH,
+		LanguageDisplayName: TagLanguageDisplayName_twGH,
+		RegionDisplayName:   TagRegionDisplayName_twGH,
+		OriginalName:        TagOriginalName_twGH,
+		Tag:                 Tag_twGH,
+		TagName:             TagName_twGH,
+	}
 	// Tahitian (French Polynesia)
 	TagDisplayName_tyPF         = "Tahitian (French Polynesia)"
 	TagLanguageDisplayName_tyPF = "Tahitian"
@@ -2317,6 +4949,14 @@ var (
 	TagOriginalName_tyPF        = "ty-PF"
 	Tag_tyPF                    = language.MustParse(TagOriginalName_tyPF)
 	TagName_tyPF                = Tag_tyPF.String() // The tag name may have changed from the original name after parsing.
+	Language_tyPF               = Language{
+		DisplayName:         TagDisplayName_tyPF,
+		LanguageDisplayName: TagLanguageDisplayName_tyPF,
+		RegionDisplayName:   TagRegionDisplayName_tyPF,
+		OriginalName:        TagOriginalName_tyPF,
+		Tag:                 Tag_tyPF,
+		TagName:             TagName_tyPF,
+	}
 	// Uyghur (People's Republic of China)
 	TagDisplayName_ugCN         = "Uyghur (People's Republic of China)"
 	TagLanguageDisplayName_ugCN = "Uyghur"
@@ -2324,6 +4964,14 @@ var (
 	TagOriginalName_ugCN        = "ug-CN"
 	Tag_ugCN                    = language.MustParse(TagOriginalName_ugCN)
 	TagName_ugCN                = Tag_ugCN.String() // The tag name may have changed from the original name after parsing.
+	Language_ugCN               = Language{
+		DisplayName:         TagDisplayName_ugCN,
+		LanguageDisplayName: TagLanguageDisplayName_ugCN,
+		RegionDisplayName:   TagRegionDisplayName_ugCN,
+		OriginalName:        TagOriginalName_ugCN,
+		Tag:                 Tag_ugCN,
+		TagName:             TagName_ugCN,
+	}
 	// Ukrainian (Ukraine)
 	TagDisplayName_ukUA         = "Ukrainian (Ukraine)"
 	TagLanguageDisplayName_ukUA = "Ukrainian"
@@ -2331,6 +4979,14 @@ var (
 	TagOriginalName_ukUA        = "uk-UA"
 	Tag_ukUA                    = language.MustParse(TagOriginalName_ukUA)
 	TagName_ukUA                = Tag_ukUA.String() // The tag name may have changed from the original name after parsing.
+	Language_ukUA               = Language{
+		DisplayName:         TagDisplayName_ukUA,
+		LanguageDisplayName: TagLanguageDisplayName_ukUA,
+		RegionDisplayName:   TagRegionDisplayName_ukUA,
+		OriginalName:        TagOriginalName_ukUA,
+		Tag:                 Tag_ukUA,
+		TagName:             TagName_ukUA,
+	}
 	// Vietnamese (Vietnam)
 	TagDisplayName_viVN         = "Vietnamese (Vietnam)"
 	TagLanguageDisplayName_viVN = "Vietnamese"
@@ -2338,6 +4994,14 @@ var (
 	TagOriginalName_viVN        = "vi-VN"
 	Tag_viVN                    = language.MustParse(TagOriginalName_viVN)
 	TagName_viVN                = Tag_viVN.String() // The tag name may have changed from the original name after parsing.
+	Language_viVN               = Language{
+		DisplayName:         TagDisplayName_viVN,
+		LanguageDisplayName: TagLanguageDisplayName_viVN,
+		RegionDisplayName:   TagRegionDisplayName_viVN,
+		OriginalName:        TagOriginalName_viVN,
+		Tag:                 Tag_viVN,
+		TagName:             TagName_viVN,
+	}
 	// Walloon (Belgium)
 	TagDisplayName_waBE         = "Walloon (Belgium)"
 	TagLanguageDisplayName_waBE = "Walloon"
@@ -2345,6 +5009,14 @@ var (
 	TagOriginalName_waBE        = "wa-BE"
 	Tag_waBE                    = language.MustParse(TagOriginalName_waBE)
 	TagName_waBE                = Tag_waBE.String() // The tag name may have changed from the original name after parsing.
+	Language_waBE               = Language{
+		DisplayName:         TagDisplayName_waBE,
+		LanguageDisplayName: TagLanguageDisplayName_waBE,
+		RegionDisplayName:   TagRegionDisplayName_waBE,
+		OriginalName:        TagOriginalName_waBE,
+		Tag:                 Tag_waBE,
+		TagName:             TagName_waBE,
+	}
 	// Wolof (Senegal)
 	TagDisplayName_woSN         = "Wolof (Senegal)"
 	TagLanguageDisplayName_woSN = "Wolof"
@@ -2352,6 +5024,14 @@ var (
 	TagOriginalName_woSN        = "wo-SN"
 	Tag_woSN                    = language.MustParse(TagOriginalName_woSN)
 	TagName_woSN                = Tag_woSN.String() // The tag name may have changed from the original name after parsing.
+	Language_woSN               = Language{
+		DisplayName:         TagDisplayName_woSN,
+		LanguageDisplayName: TagLanguageDisplayName_woSN,
+		RegionDisplayName:   TagRegionDisplayName_woSN,
+		OriginalName:        TagOriginalName_woSN,
+		Tag:                 Tag_woSN,
+		TagName:             TagName_woSN,
+	}
 	// Xhosa (South Africa)
 	TagDisplayName_xhZA         = "Xhosa (South Africa)"
 	TagLanguageDisplayName_xhZA = "Xhosa"
@@ -2359,6 +5039,14 @@ var (
 	TagOriginalName_xhZA        = "xh-ZA"
 	Tag_xhZA                    = language.MustParse(TagOriginalName_xhZA)
 	TagName_xhZA                = Tag_xhZA.String() // The tag name may have changed from the original name after parsing.
+	Language_xhZA               = Language{
+		DisplayName:         TagDisplayName_xhZA,
+		LanguageDisplayName: TagLanguageDisplayName_xhZA,
+		RegionDisplayName:   TagRegionDisplayName_xhZA,
+		OriginalName:        TagOriginalName_xhZA,
+		Tag:                 Tag_xhZA,
+		TagName:             TagName_xhZA,
+	}
 	// Yiddish (Bosnia and Herzegovina)
 	TagDisplayName_yiBA         = "Yiddish (Bosnia and Herzegovina)"
 	TagLanguageDisplayName_yiBA = "Yiddish"
@@ -2366,6 +5054,14 @@ var (
 	TagOriginalName_yiBA        = "yi-BA"
 	Tag_yiBA                    = language.MustParse(TagOriginalName_yiBA)
 	TagName_yiBA                = Tag_yiBA.String() // The tag name may have changed from the original name after parsing.
+	Language_yiBA               = Language{
+		DisplayName:         TagDisplayName_yiBA,
+		LanguageDisplayName: TagLanguageDisplayName_yiBA,
+		RegionDisplayName:   TagRegionDisplayName_yiBA,
+		OriginalName:        TagOriginalName_yiBA,
+		Tag:                 Tag_yiBA,
+		TagName:             TagName_yiBA,
+	}
 	// Zulu (South Africa)
 	TagDisplayName_zuZA         = "Zulu (South Africa)"
 	TagLanguageDisplayName_zuZA = "Zulu"
@@ -2373,4 +5069,12 @@ var (
 	TagOriginalName_zuZA        = "zu-ZA"
 	Tag_zuZA                    = language.MustParse(TagOriginalName_zuZA)
 	TagName_zuZA                = Tag_zuZA.String() // The tag name may have changed from the original name after parsing.
+	Language_zuZA               = Language{
+		DisplayName:         TagDisplayName_zuZA,
+		LanguageDisplayName: TagLanguageDisplayName_zuZA,
+		RegionDisplayName:   TagRegionDisplayName_zuZA,
+		OriginalName:        TagOriginalName_zuZA,
+		Tag:                 Tag_zuZA,
+		TagName:             TagName_zuZA,
+	}
 )
