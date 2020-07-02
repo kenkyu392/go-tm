@@ -910,9 +910,9 @@ var (
 	TagOriginalName_koKP        = "ko-KP"
 	Tag_koKP                    = language.MustParse(TagOriginalName_koKP)
 	TagName_koKP                = Tag_koKP.String() // The tag name may have changed from the original name after parsing.
-	// (Korea)
-	TagDisplayName_koKR         = "(Korea)"
-	TagLanguageDisplayName_koKR = ""
+	// Korean (Korea)
+	TagDisplayName_koKR         = "Korean (Korea)"
+	TagLanguageDisplayName_koKR = "Korean"
 	TagRegionDisplayName_koKR   = "Korea"
 	TagOriginalName_koKR        = "ko-KR"
 	Tag_koKR                    = language.MustParse(TagOriginalName_koKR)

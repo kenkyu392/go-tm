@@ -11,5 +11,5 @@ ko-KR,Korean (Korea)
 
 func init() {
 	tag.Register("ko-KP", "Korean (North Korea)")
-	tag.Register("ko-KR", "(Korea)")
+	tag.Register("ko-KR", "Korean (Korea)")
 }
