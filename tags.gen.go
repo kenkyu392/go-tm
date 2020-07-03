@@ -5,7 +5,7 @@ import (
 	"golang.org/x/text/language"
 )
 
-// The following 338 languages are defined.
+// The following 339 languages are defined.
 var (
 	// Afar (Djibouti)
 	TagDisplayName_aaDJ         = "Afar (Djibouti)"
@@ -2931,6 +2931,21 @@ var (
 		OriginalName:        TagOriginalName_esVE,
 		Tag:                 Tag_esVE,
 		TagName:             TagName_esVE,
+	}
+	// Spanish (Latin America)
+	TagDisplayName_es419         = "Spanish (Latin America)"
+	TagLanguageDisplayName_es419 = "Spanish"
+	TagRegionDisplayName_es419   = "Latin America"
+	TagOriginalName_es419        = "es-419"
+	Tag_es419                    = language.MustParse(TagOriginalName_es419)
+	TagName_es419                = Tag_es419.String() // The tag name may have changed from the original name after parsing.
+	Language_es419               = Language{
+		DisplayName:         TagDisplayName_es419,
+		LanguageDisplayName: TagLanguageDisplayName_es419,
+		RegionDisplayName:   TagRegionDisplayName_es419,
+		OriginalName:        TagOriginalName_es419,
+		Tag:                 Tag_es419,
+		TagName:             TagName_es419,
 	}
 	// Swahili (Kenya)
 	TagDisplayName_swKE         = "Swahili (Kenya)"

@@ -100,6 +100,7 @@
 | es-SV  | Spanish (El Salvador)                                |
 | es-UY  | Spanish (uruguay)                                    |
 | es-VE  | Spanish (Venezuela)                                  |
+| es-419 | Spanish (Latin America)                              |
 | et-EE  | Estonian (Estonia)                                   |
 | eu-ES  | Basque (Spain)                                       |
 | fa-AF  | Persian (Afghanistan)                                |

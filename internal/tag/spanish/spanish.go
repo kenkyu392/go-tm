@@ -24,6 +24,7 @@ es-PY,Spanish (Paraguay)
 es-SV,Spanish (El Salvador)
 es-UY,Spanish (Uruguay)
 es-VE,Spanish (Venezuela)
+es-419,Spanish (Latin America)
 */
 
 func init() {
@@ -46,4 +47,5 @@ func init() {
 	tag.Register("es-SV", "Spanish (El Salvador)")
 	tag.Register("es-UY", "Spanish (Uruguay)")
 	tag.Register("es-VE", "Spanish (Venezuela)")
+	tag.Register("es-419", "Spanish (Latin America)")
 }
