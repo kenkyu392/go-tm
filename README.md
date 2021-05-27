@@ -7,15 +7,15 @@
 [![license](https://img.shields.io/github/license/kenkyu392/go-tm.svg)](LICENSE)
 [![version](https://img.shields.io/badge/version-0.2.X-00A29C.svg)](README.md)
 
-**:warning: This package is currently under development and features may change.**
+**:warning: This package is currently under development and features are subject to change.**
 
 L10N and T9N file format (TMX, TBX, XLIFF, etc.) library for [Go](https://golang.org/).
 
 ## Overview
 
-go-tm is a package that provides functions and utilities for reading and writing translation and localization format XML files such as translation memories and term-bases.
+go-tm is a package that provides functions and utilities for reading and writing XML files in translation and localization formats such as translation memory and termbase.
 
-The functions and utilities provided by this package are useful for developing programs that generate localization files such as translation memories and term-bases from existing translation files (XLSX, CSV, and other types of files).
+The functions and utilities provided by this package are useful for developing programs that generate localization files such as translation memories and termbases from existing translation files (XLSX, CSV, etc.).
 
 - **Supports file formats such as TMX, TBX, and XLIFF.**
   - _Translation Memory eXchange_
@@ -30,7 +30,7 @@ The functions and utilities provided by this package are useful for developing p
     - [ ] SDL XLIFF (OASIS XLIFF 1.2)
 - **Over 300 [IETF BCP 47 language tags](docs/ietf-bcp-47-language-tags.md) are defined.**
 
-Other useful functions and utilities will be added to the package.
+Other useful features and utilities will be added to the package.
 
 ## Installation
 
